@@ -1,0 +1,45 @@
+name: Validación del repositorio
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  markdown:
+    name: Validar Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v6
+
+      - name: Revisar documentos Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v23
+        with:
+          globs: "**/*.md"
+
+  estructura:
+    name: Validar estructura
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v6
+
+      - name: Comprobar carpetas y archivos obligatorios
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(README.md .gitignore .github/workflows/ci.yml Plantilles/plantilla-practica.md)
+          for unit in UD{1..6}; do
+            for section in Teoria Activitats Practiques Recursos; do
+              required+=("$unit/$section")
+            done
+          done
+          for path in "${required[@]}"; do
+            if [[ ! -e "$path" ]]; then
+              echo "Falta: $path"
+              exit 1
+            fi
+          done
