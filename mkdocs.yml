@@ -1,0 +1,110 @@
+site_name: Sistemas Informáticos · 1.º DAW
+site_description: Material de consulta y apoyo para la asignatura Sistemas Informáticos
+site_url: https://davidmolinafernadez.github.io/DAM-SI/
+docs_dir: .site-src
+site_dir: site
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Activar modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Activar modo claro
+
+plugins:
+  - search:
+      lang: es
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - UD1 · Arquitectura:
+      - Presentación: ud1/index.md
+      - Sistema y arquitectura: ud1/01-sistema-y-arquitectura.md
+      - Componentes y compatibilidad: ud1/02-componentes-y-compatibilidad.md
+      - Representación de la información: ud1/03-representacion-informacion.md
+      - PRL y diagnóstico: ud1/04-prl-y-diagnostico.md
+      - Apuntes de referencia: ud1/apuntes.md
+  - UD2 · Sistemas operativos:
+      - Presentación: ud2/index.md
+      - Arquitectura y funciones: ud2/01-arquitectura-y-funciones.md
+      - Procesos, memoria y E/S: ud2/02-procesos-memoria-e-io.md
+      - Familias y licencias: ud2/03-familias-licencias-y-eleccion.md
+      - Apuntes de referencia: ud2/apuntes.md
+  - UD3 · Instalación y virtualización:
+      - Presentación: ud3/index.md
+      - Planificación y particionado: ud3/01-planificacion-y-particionado.md
+      - Instalación y recuperación: ud3/02-instalacion-y-recuperacion.md
+      - VirtualBox: ud3/03-virtualbox.md
+      - Docker: ud3/04-docker.md
+      - Apuntes de referencia: ud3/apuntes.md
+  - UD4 · Sistemas de archivos:
+      - Presentación: ud4/index.md
+      - Sistemas de archivos: ud4/01-sistemas-de-archivos.md
+      - Particiones y volúmenes: ud4/02-particiones-y-volumenes.md
+      - Terminal y automatización: ud4/03-terminal-y-automatizacion.md
+      - Copias y recuperación: ud4/04-copias-y-recuperacion.md
+      - Apuntes de referencia: ud4/apuntes.md
+  - UD5 · Administración:
+      - Presentación: ud5/index.md
+      - Identidades y permisos: ud5/01-identidades-y-permisos.md
+      - Procesos y servicios: ud5/02-procesos-y-servicios.md
+      - Monitorización y diagnóstico: ud5/03-monitorizacion-y-diagnostico.md
+      - Automatización y mantenimiento: ud5/04-automatizacion-y-mantenimiento.md
+      - Apuntes de referencia: ud5/apuntes.md
+  - UD6 · Redes TCP/IP:
+      - Presentación: ud6/index.md
+      - Fundamentos y dispositivos: ud6/01-fundamentos-y-dispositivos.md
+      - Modelos y protocolos: ud6/02-modelos-y-protocolos.md
+      - IPv4 y subnetting: ud6/03-ipv4-y-subnetting.md
+      - Configuración y diagnóstico: ud6/04-configuracion-y-diagnostico.md
+      - Apuntes de referencia: ud6/apuntes.md
+  - UD7 · Servicios y seguridad:
+      - Presentación: ud7/index.md
+      - Servicios y recursos: ud7/01-servicios-y-recursos.md
+      - Seguridad y bastionado: ud7/02-seguridad-y-bastionado.md
+      - Firewall y acceso remoto: ud7/03-firewall-y-acceso-remoto.md
+      - Incidentes y documentación: ud7/04-incidentes-y-documentacion.md
+      - Apuntes de referencia: ud7/apuntes.md

@@ -50,3 +50,6 @@ $RECYCLE.BIN/
 .env.*
 !.env.example
 
+# Web docente generada
+.site-src/
+site/

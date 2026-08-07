@@ -1,0 +1,19 @@
+:root {
+  --md-primary-fg-color: #173b57;
+  --md-primary-fg-color--light: #2c668c;
+  --md-primary-fg-color--dark: #102a3d;
+  --md-accent-fg-color: #d97706;
+}
+
+.md-header { box-shadow: 0 2px 12px rgba(0, 0, 0, .14); }
+.md-main__inner { margin-top: 1.2rem; }
+.md-content h1 { font-weight: 750; letter-spacing: -.025em; }
+.md-content h2 { border-bottom: 1px solid var(--md-default-fg-color--lightest); padding-bottom: .3rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1.4rem 0 2rem; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.2rem 0 2rem; }
+.unit-grid > p { margin: 0; }
+.unit-grid a { display: block; height: 100%; padding: 1.1rem; color: var(--md-default-fg-color); border: 1px solid var(--md-default-fg-color--lightest); border-radius: .65rem; background: var(--md-default-bg-color); box-shadow: 0 3px 12px rgba(0, 0, 0, .06); transition: transform .15s ease, box-shadow .15s ease; }
+.unit-grid a:hover { transform: translateY(-2px); box-shadow: 0 7px 18px rgba(0, 0, 0, .10); text-decoration: none; }
+.unit-grid .twemoji { color: var(--md-accent-fg-color); }
+table:not([class]) { font-size: .82rem; }
+@media (max-width: 600px) { .unit-grid { grid-template-columns: 1fr; } }
