@@ -12,12 +12,13 @@ Repositorio educativo de la asignatura **Sistemas Informáticos** del ciclo form
 
 | Unidad | Contenido |
 | --- | --- |
-| [UD1](UD1/) | Arquitectura y componentes del ordenador |
-| [UD2](UD2/) | Sistemas operativos |
-| [UD3](UD3/) | Virtualización |
-| [UD4](UD4/) | Administración de sistemas |
-| [UD5](UD5/) | Redes y servicios |
-| [UD6](UD6/) | Seguridad y copias de seguridad |
+| [UD1](UD1/) | Arquitectura HW/SW, PRL y diagnóstico |
+| [UD2](UD2/) | Fundamentos de sistemas operativos |
+| [UD3](UD3/) | Instalación de sistemas y virtualización |
+| [UD4](UD4/) | Sistemas de archivos, particionado y copias |
+| [UD5](UD5/) | Administración de sistemas operativos |
+| [UD6](UD6/) | Redes TCP/IP y diagnóstico |
+| [UD7](UD7/) | Recursos en red, seguridad y documentación |
 
 Cada unidad contiene cuatro apartados:
 

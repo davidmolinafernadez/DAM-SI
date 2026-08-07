@@ -32,7 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           required=(README.md .gitignore .github/workflows/ci.yml Plantilles/plantilla-practica.md)
-          for unit in UD{1..6}; do
+          for unit in UD{1..7}; do
             for section in Teoria Activitats Practiques Recursos; do
               required+=("$unit/$section")
             done
