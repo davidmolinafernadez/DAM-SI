@@ -4,6 +4,41 @@
 
 La placa base distribuye alimentación y comunica CPU, RAM, almacenamiento, tarjetas y periféricos. Su formato determina dimensiones, puntos de anclaje y capacidad de expansión.
 
+### Anatomía visual de una placa moderna
+
+![Vista superior didáctica de una placa base ATX moderna](imagenes/placa-base-moderna.png)
+
+**Leyenda orientativa:**
+
+1. alimentación auxiliar de la CPU (EPS); 2. zócalo de la CPU; 3. ranuras DIMM para RAM; 4. alimentación ATX de 24 pines;
+5. ranura PCIe x16; 6. ranuras PCIe de menor tamaño; 7 y 10. posiciones M.2 con disipador; 8. chipset con disipador;
+9. conectores SATA; 11. batería CMOS y cabeceras inferiores; 12. panel de conexiones trasero.
+
+En una placa actual llaman la atención los disipadores del VRM y de las unidades M.2, la desaparición de los grandes buses paralelos y la concentración de enlaces rápidos alrededor de CPU y chipset. La apariencia exacta cambia según formato y gama: la ilustración representa una ATX genérica, no un modelo comercial.
+
+### Anatomía visual de una placa clásica (aprox. 1998–2002)
+
+![Vista superior didáctica de una placa base ATX clásica](imagenes/placa-base-clasica.png)
+
+Los elementos más característicos son los puertos PS/2, serie y paralelo; el conector ATX de 20 pines; el zócalo de CPU; los bancos SDRAM; el chipset dividido en **puente norte** y **puente sur**; la ranura AGP para gráficos; las ranuras PCI e ISA; y los conectores IDE/PATA y de disquetera. Los puentes o *jumpers* tenían mayor protagonismo para configurar manualmente determinados parámetros.
+
+!!! warning "Ilustraciones para aprender a reconocer componentes"
+    Son reconstrucciones didácticas propias y plausibles, no fotografías ni esquemas de servicio. Para montar o reparar una placa concreta siempre debe consultarse el manual exacto del fabricante.
+
+### Qué ha cambiado
+
+| Placa clásica | Placa moderna |
+|---|---|
+| SDRAM y buses paralelos | DDR4/DDR5 y enlaces serie de alta velocidad |
+| ISA, PCI y AGP | PCI Express |
+| IDE/PATA y disquetera | SATA y M.2 NVMe |
+| Puente norte y puente sur separados | Muchas funciones migran a la CPU; queda un chipset/PCH |
+| BIOS y configuración frecuente mediante *jumpers* | UEFI, actualización integrada y configuración por firmware |
+| Serie, paralelo y PS/2 habituales | USB, Ethernet rápido, vídeo digital, audio y, según modelo, Wi-Fi |
+| Poca refrigeración sobre la propia placa | Disipadores de VRM, chipset y M.2 |
+
+La evolución no cambia su misión fundamental: proporcionar alimentación, temporización e interconexión compatible a todos los subsistemas.
+
 ```mermaid
 flowchart TB
     CPU["CPU"] <--> RAM["RAM"]
@@ -16,6 +51,20 @@ flowchart TB
 ```
 
 El diagrama es conceptual: en plataformas modernas muchas funciones antes situadas en el chipset están integradas en la CPU.
+
+### Para observar placas reales
+
+- [Anatomía y elección de una placa base moderna — Intel](https://www.intel.com/content/www/us/en/gaming/resources/how-to-choose-a-motherboard.html): recorrido por formato, zócalo, chipset, PCIe, RAM y conectividad.
+- [Galería de una placa ATX moderna — ASUS ROG Strix B850-A](https://rog.asus.com/us/motherboards/rog-strix/rog-strix-b850-a-gaming-wifi7-neo/gallery/): fotografías superiores y en perspectiva con M.2, VRM, DDR5 y panel trasero.
+- [Placa Intel D425KT con elementos numerados (PDF)](https://www.intel.com/content/dam/doc/product-brief/desktop-board-d425kt-innovation-brief.pdf): ejemplo de transición con PCI, SATA, DDR3 y conectividad heredada.
+
+### Vídeos recomendados
+
+- [Elementos de una placa base — utilidadTV](https://www.youtube.com/watch?v=yGknqrIlhXc) (en español, explicación visual introductoria).
+- [Todas las placas base explicadas en 7 minutos — Un Poco de Tech](https://www.youtube.com/watch?v=BzreiTu4vNY) (formatos, chipsets, VRM, DDR y criterios de elección).
+
+!!! question "Mientras ves el vídeo"
+    Localiza zócalo, VRM, DIMM, PCIe, chipset, M.2/SATA, alimentación y panel trasero. Después compara sus posiciones con las dos ilustraciones anteriores y anota qué conexiones han desaparecido o cambiado.
 
 ### Qué mirar en una ficha técnica
 

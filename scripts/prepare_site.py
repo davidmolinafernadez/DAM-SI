@@ -19,9 +19,10 @@ def main() -> None:
         destination = DESTINATION / f"ud{number}"
         destination.mkdir(parents=True)
 
-        for document in source.glob("*.md"):
-            filename = "index.md" if document.name == "README.md" else document.name
-            shutil.copy2(document, destination / filename)
+        shutil.copytree(source, destination, dirs_exist_ok=True)
+        readme = destination / "README.md"
+        if readme.exists():
+            readme.rename(destination / "index.md")
 
     print(f"Web preparada en {DESTINATION}")
 
