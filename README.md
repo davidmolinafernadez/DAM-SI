@@ -43,4 +43,3 @@ El flujo de GitHub Actions comprueba la sintaxis básica de los documentos Markd
 - Redacta los documentos en español o valenciano neutro y con lenguaje claro.
 - Evita subir contraseñas, datos personales, binarios generados o archivos temporales.
 - Describe cada cambio con un mensaje de commit breve y significativo.
-

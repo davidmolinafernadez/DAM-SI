@@ -38,4 +38,3 @@ Resume lo aprendido, las dificultades encontradas y las posibles mejoras.
 - Corrección técnica.
 - Claridad de la documentación.
 - Organización y presentación de la entrega.
-
