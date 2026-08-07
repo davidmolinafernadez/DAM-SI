@@ -8,11 +8,22 @@ La placa base distribuye alimentación y comunica CPU, RAM, almacenamiento, tarj
 
 ![Vista superior didáctica de una placa base ATX moderna](imagenes/placa-base-moderna.png)
 
-**Leyenda orientativa:**
+#### Componentes numerados de la placa moderna
 
-1. alimentación auxiliar de la CPU (EPS); 2. zócalo de la CPU; 3. ranuras DIMM para RAM; 4. alimentación ATX de 24 pines;
-5. ranura PCIe x16; 6. ranuras PCIe de menor tamaño; 7 y 10. posiciones M.2 con disipador; 8. chipset con disipador;
-9. conectores SATA; 11. batería CMOS y cabeceras inferiores; 12. panel de conexiones trasero.
+| N.º | Componente | Para qué sirve |
+|---:|---|---|
+| **1** | Conector EPS de 8 pines | Lleva alimentación específica al procesador y a su etapa de potencia. |
+| **2** | Zócalo de la CPU | Aloja el procesador y determina qué familias son físicamente compatibles. |
+| **3** | Ranuras DIMM | Permiten instalar los módulos de memoria RAM DDR4 o DDR5, según la placa. |
+| **4** | Conector ATX de 24 pines | Proporciona la alimentación principal a la placa base. |
+| **5** | Ranura PCIe x16 principal | Se utiliza normalmente para la tarjeta gráfica. |
+| **6** | Ranuras PCIe secundarias | Admiten tarjetas de red, sonido, captura, almacenamiento u otras ampliaciones. |
+| **7** | Primera posición M.2 | Aloja un SSD M.2, normalmente NVMe sobre PCIe. |
+| **8** | Chipset o PCH | Gestiona buena parte de la entrada/salida que no conecta directamente con la CPU. |
+| **9** | Puertos SATA | Conectan SSD, discos duros y unidades ópticas SATA. |
+| **10** | Segunda posición M.2 | Permite añadir otra unidad M.2; puede compartir líneas con otros puertos. |
+| **11** | Batería CMOS y cabeceras inferiores | La batería mantiene el reloj y ciertos ajustes; las cabeceras conectan caja, USB y otros dispositivos. |
+| **12** | Panel trasero de E/S | Reúne USB, red, audio, vídeo y antenas, según el modelo. |
 
 En una placa actual llaman la atención los disipadores del VRM y de las unidades M.2, la desaparición de los grandes buses paralelos y la concentración de enlaces rápidos alrededor de CPU y chipset. La apariencia exacta cambia según formato y gama: la ilustración representa una ATX genérica, no un modelo comercial.
 
@@ -20,7 +31,24 @@ En una placa actual llaman la atención los disipadores del VRM y de las unidade
 
 ![Vista superior didáctica de una placa base ATX clásica](imagenes/placa-base-clasica.png)
 
-Los elementos más característicos son los puertos PS/2, serie y paralelo; el conector ATX de 20 pines; el zócalo de CPU; los bancos SDRAM; el chipset dividido en **puente norte** y **puente sur**; la ranura AGP para gráficos; las ranuras PCI e ISA; y los conectores IDE/PATA y de disquetera. Los puentes o *jumpers* tenían mayor protagonismo para configurar manualmente determinados parámetros.
+#### Componentes numerados de la placa clásica
+
+| N.º | Componente | Para qué servía |
+|---:|---|---|
+| **1** | Panel trasero heredado | Incluía PS/2, serie, paralelo y otros conectores externos. |
+| **2** | Conector ATX de 20 pines | Suministraba la alimentación principal a la placa. |
+| **3** | Zócalo de la CPU | Recibía procesadores de la generación compatible con la placa. |
+| **4** | Regulación eléctrica y condensadores | Estabilizaban la tensión suministrada al procesador y demás circuitos. |
+| **5** | Ranuras PCI | Permitían instalar sonido, red, módem y otras tarjetas de ampliación. |
+| **6** | Ranura ISA | Bus heredado para tarjetas antiguas y dispositivos industriales. |
+| **7** | Ranura AGP | Conexión dedicada a la tarjeta gráfica antes de PCI Express. |
+| **8** | Puente sur | Gestionaba dispositivos más lentos, almacenamiento y conexiones de entrada/salida. |
+| **9** | Bancos de memoria SDRAM | Alojaban la memoria principal del equipo. |
+| **10** | Conectores IDE/PATA | Conectaban discos y unidades ópticas mediante cables planos. |
+| **11** | Conector de disquetera | Permitía conectar una unidad de disco flexible. |
+| **12** | BIOS y batería CMOS | Iniciaban el hardware y conservaban el reloj y la configuración básica. |
+
+El gran circuito situado entre las ranuras y la CPU actuaba como **puente norte**, comunicando procesador, memoria y gráficos. Los puentes o *jumpers* tenían mayor protagonismo para configurar manualmente determinados parámetros.
 
 !!! warning "Ilustraciones para aprender a reconocer componentes"
     Son reconstrucciones didácticas propias y plausibles, no fotografías ni esquemas de servicio. Para montar o reparar una placa concreta siempre debe consultarse el manual exacto del fabricante.
