@@ -1,200 +1,125 @@
-# 2. Componentes, prestaciones y compatibilidad
+# UD1.2 · Componentes y compatibilidad del hardware
 
-## 2.1 La placa base como sistema de interconexión
+## Qué aprenderemos
 
-La placa base distribuye alimentación y comunica CPU, RAM, almacenamiento, tarjetas y periféricos. Su formato determina dimensiones, puntos de anclaje y capacidad de expansión.
+Identificaremos componentes, leeremos fichas técnicas y justificaremos una
+configuración. La respuesta válida no será «parece que encaja», sino una
+conclusión apoyada en documentación oficial.
 
-### Anatomía visual de una placa moderna
+## 1. Mapa ordenado de componentes
 
-![Vista superior didáctica de una placa base ATX moderna](imagenes/placa-base-moderna.png)
+### 1.1 Procesamiento
 
-#### Componentes numerados de la placa moderna
+- **CPU:** arquitectura, núcleos, frecuencia, caché, límites de potencia,
+  gráficos integrados y juego de instrucciones.
+- **GPU:** gráficos y cargas paralelas; integrada o dedicada con memoria propia.
+- **Refrigeración:** compatible con anclaje, consumo térmico y caja.
 
-| N.º | Componente | Para qué sirve |
-|---:|---|---|
-| **1** | Conector EPS de 8 pines | Lleva alimentación específica al procesador y a su etapa de potencia. |
-| **2** | Zócalo de la CPU | Aloja el procesador y determina qué familias son físicamente compatibles. |
-| **3** | Ranuras DIMM | Permiten instalar los módulos de memoria RAM DDR4 o DDR5, según la placa. |
-| **4** | Conector ATX de 24 pines | Proporciona la alimentación principal a la placa base. |
-| **5** | Ranura PCIe x16 principal | Se utiliza normalmente para la tarjeta gráfica. |
-| **6** | Ranuras PCIe secundarias | Admiten tarjetas de red, sonido, captura, almacenamiento u otras ampliaciones. |
-| **7** | Primera posición M.2 | Aloja un SSD M.2, normalmente NVMe sobre PCIe. |
-| **8** | Chipset o PCH | Gestiona buena parte de la entrada/salida que no conecta directamente con la CPU. |
-| **9** | Puertos SATA | Conectan SSD, discos duros y unidades ópticas SATA. |
-| **10** | Segunda posición M.2 | Permite añadir otra unidad M.2; puede compartir líneas con otros puertos. |
-| **11** | Batería CMOS y cabeceras inferiores | La batería mantiene el reloj y ciertos ajustes; las cabeceras conectan caja, USB y otros dispositivos. |
-| **12** | Panel trasero de E/S | Reúne USB, red, audio, vídeo y antenas, según el modelo. |
+### 1.2 Memoria y almacenamiento
 
-En una placa actual llaman la atención los disipadores del VRM y de las unidades M.2, la desaparición de los grandes buses paralelos y la concentración de enlaces rápidos alrededor de CPU y chipset. La apariencia exacta cambia según formato y gama: la ilustración representa una ATX genérica, no un modelo comercial.
+- **RAM:** generación DDR, capacidad, módulos, velocidad, perfiles, ECC y QVL.
+- **SSD NVMe/SATA y HDD:** persistencia. M.2 es un formato; no garantiza que la
+  interfaz sea NVMe ni que todas las ranuras ofrezcan las mismas líneas PCIe.
 
-### Anatomía visual de una placa clásica (aprox. 1998–2002)
+### 1.3 Interconexión y expansión
 
-![Vista superior didáctica de una placa base ATX clásica](imagenes/placa-base-clasica.png)
+- **Placa base:** une subsistemas y distribuye alimentación y señales.
+- **PCI Express:** conecta GPU, red y almacenamiento. Una ranura física grande
+  puede funcionar con menos líneas eléctricas.
+- **Chipset y CPU:** aportan puertos y expansión; algunos recursos se comparten.
 
-#### Componentes numerados de la placa clásica
+### 1.4 Alimentación, chasis y periféricos
 
-| N.º | Componente | Para qué servía |
-|---:|---|---|
-| **1** | Panel trasero heredado | Incluía PS/2, serie, paralelo y otros conectores externos. |
-| **2** | Conector ATX de 20 pines | Suministraba la alimentación principal a la placa. |
-| **3** | Zócalo de la CPU | Recibía procesadores de la generación compatible con la placa. |
-| **4** | Regulación eléctrica y condensadores | Estabilizaban la tensión suministrada al procesador y demás circuitos. |
-| **5** | Ranuras PCI | Permitían instalar sonido, red, módem y otras tarjetas de ampliación. |
-| **6** | Ranura ISA | Bus heredado para tarjetas antiguas y dispositivos industriales. |
-| **7** | Ranura AGP | Conexión dedicada a la tarjeta gráfica antes de PCI Express. |
-| **8** | Puente sur | Gestionaba dispositivos más lentos, almacenamiento y conexiones de entrada/salida. |
-| **9** | Bancos de memoria SDRAM | Alojaban la memoria principal del equipo. |
-| **10** | Conectores IDE/PATA | Conectaban discos y unidades ópticas mediante cables planos. |
-| **11** | Conector de disquetera | Permitía conectar una unidad de disco flexible. |
-| **12** | BIOS y batería CMOS | Iniciaban el hardware y conservaban el reloj y la configuración básica. |
+- **Fuente:** transforma la corriente y aplica protecciones.
+- **Caja:** limita formato, GPU, disipador, radiadores y flujo de aire.
+- **Periféricos y red:** entrada, salida, comunicación y accesibilidad.
 
-El gran circuito situado entre las ranuras y la CPU actuaba como **puente norte**, comunicando procesador, memoria y gráficos. Los puentes o *jumpers* tenían mayor protagonismo para configurar manualmente determinados parámetros.
+## 2. La placa base, antes y ahora
 
-!!! warning "Ilustraciones para aprender a reconocer componentes"
-    Son reconstrucciones didácticas propias y plausibles, no fotografías ni esquemas de servicio. Para montar o reparar una placa concreta siempre debe consultarse el manual exacto del fabricante.
+### Placa moderna
 
-### Qué ha cambiado
+![Esquema didáctico de una placa base moderna](imagenes/placa-base-moderna.png)
 
-| Placa clásica | Placa moderna |
-|---|---|
-| SDRAM y buses paralelos | DDR4/DDR5 y enlaces serie de alta velocidad |
-| ISA, PCI y AGP | PCI Express |
-| IDE/PATA y disquetera | SATA y M.2 NVMe |
-| Puente norte y puente sur separados | Muchas funciones migran a la CPU; queda un chipset/PCH |
-| BIOS y configuración frecuente mediante *jumpers* | UEFI, actualización integrada y configuración por firmware |
-| Serie, paralelo y PS/2 habituales | USB, Ethernet rápido, vídeo digital, audio y, según modelo, Wi-Fi |
-| Poca refrigeración sobre la propia placa | Disipadores de VRM, chipset y M.2 |
+Orden de lectura: zócalo y retención; VRM y alimentación CPU; DIMM; M.2; PCIe;
+chipset y SATA; cabeceras USB, ventilación y panel frontal; conexiones traseras;
+firmware UEFI y pila.
 
-La evolución no cambia su misión fundamental: proporcionar alimentación, temporización e interconexión compatible a todos los subsistemas.
+### Placa clásica (aprox. 1998–2002)
 
-```mermaid
-flowchart TB
-    CPU["CPU"] <--> RAM["RAM"]
-    CPU <--> PCIE["PCI Express · GPU y expansión"]
-    CPU <--> CHIP["Chipset / controladores de E/S"]
-    CHIP <--> SATA["SATA"]
-    CHIP <--> USB["USB y periféricos"]
-    CHIP <--> NET["Red y audio"]
-    FIRM["UEFI"] --> CPU
-```
+![Esquema didáctico de una placa base clásica](imagenes/placa-base-clasica.png)
 
-El diagrama es conceptual: en plataformas modernas muchas funciones antes situadas en el chipset están integradas en la CPU.
+En diseños antiguos eran visibles puente norte y sur, AGP/PCI e IDE. Hoy el
+controlador de memoria y parte de las líneas rápidas suelen estar en la CPU; el
+chipset concentra E/S adicional. Las posiciones varían en cada modelo.
 
-### Para observar placas reales
-
-- [Anatomía y elección de una placa base moderna — Intel](https://www.intel.com/content/www/us/en/gaming/resources/how-to-choose-a-motherboard.html): recorrido por formato, zócalo, chipset, PCIe, RAM y conectividad.
-- [Galería de una placa ATX moderna — ASUS ROG Strix B850-A](https://rog.asus.com/us/motherboards/rog-strix/rog-strix-b850-a-gaming-wifi7-neo/gallery/): fotografías superiores y en perspectiva con M.2, VRM, DDR5 y panel trasero.
-- [Placa Intel D425KT con elementos numerados (PDF)](https://www.intel.com/content/dam/doc/product-brief/desktop-board-d425kt-innovation-brief.pdf): ejemplo de transición con PCI, SATA, DDR3 y conectividad heredada.
-
-### Vídeos recomendados
-
-- [Elementos de una placa base — utilidadTV](https://www.youtube.com/watch?v=yGknqrIlhXc) (en español, explicación visual introductoria).
-- [Todas las placas base explicadas en 7 minutos — Un Poco de Tech](https://www.youtube.com/watch?v=BzreiTu4vNY) (formatos, chipsets, VRM, DDR y criterios de elección).
-
-!!! question "Mientras ves el vídeo"
-    Localiza zócalo, VRM, DIMM, PCIe, chipset, M.2/SATA, alimentación y panel trasero. Después compara sus posiciones con las dos ilustraciones anteriores y anota qué conexiones han desaparecido o cambiado.
-
-### Qué mirar en una ficha técnica
-
-- formato y dimensiones;
-- zócalo y generaciones de CPU admitidas;
-- chipset y versión de firmware necesaria;
-- tipo, número de canales y capacidad máxima de RAM;
-- distribución de líneas PCIe;
-- conectores M.2 y sus modos SATA/PCIe;
-- puertos, red, audio y cabeceras internas;
-- conectores de alimentación y límites térmicos.
-
-## 2.2 Procesador y refrigeración
-
-Los núcleos ejecutan flujos de instrucciones. SMT o tecnologías equivalentes permiten mantener más de un hilo lógico por núcleo, mejorando la utilización, pero un hilo lógico no equivale a un núcleo completo.
-
-El consumo real varía con la carga. La potencia térmica orienta el diseño de refrigeración, aunque no siempre coincide con el máximo eléctrico. Si se alcanza un límite térmico, el procesador reduce frecuencia para protegerse: es el *thermal throttling*.
-
-### Ejemplo de decisión
-
-Un equipo para compilación, máquinas virtuales y contenedores se beneficia de más núcleos y RAM. Un puesto destinado a tareas ofimáticas puede priorizar eficiencia, silencio y coste. Una estación 3D debe equilibrar CPU y GPU y asegurar potencia y refrigeración.
-
-## 2.3 Memoria RAM
-
-La compatibilidad exige que coincidan generación, formato y soporte de plataforma. DDR4 y DDR5 no son intercambiables física ni eléctricamente.
-
-La capacidad evita paginación; la velocidad y latencia afectan el tiempo de acceso; los canales aumentan ancho de banda. Instalar módulos en ranuras incorrectas puede dejar el sistema en un único canal.
-
-### Cálculo sencillo
-
-Una memoria anunciada como DDR5-5600 realiza 5.600 millones de transferencias por segundo por pin. Con un bus de 64 bits, el ancho de banda teórico de un canal es:
-
-`5.600 MT/s × 8 bytes = 44.800 MB/s`
-
-Dos canales pueden duplicar teóricamente esta cifra, aunque la carga real, el controlador y las latencias reducen el rendimiento efectivo.
-
-## 2.4 Almacenamiento
-
-Un HDD utiliza platos y cabezales mecánicos. Su latencia depende del movimiento. Un SSD usa memoria flash y un controlador; no tiene piezas móviles.
-
-SATA limita el enlace a cifras próximas a 600 MB/s. NVMe trabaja sobre PCIe y permite muchas colas de órdenes paralelas. La mejora es especialmente visible en cargas aleatorias y concurrentes, pero no todas las aplicaciones aprovechan el máximo secuencial.
-
-```mermaid
-flowchart LR
-    APP["Aplicación"] --> FS["Sistema de archivos"]
-    FS --> DRIVER["Controlador"]
-    DRIVER --> PROTO["SATA/AHCI o NVMe/PCIe"]
-    PROTO --> DEVICE["HDD o SSD"]
-```
-
-### Capacidad y unidades
-
-Un fabricante expresa 1 TB como `10¹²` bytes. Si una herramienta muestra TiB, divide por `2⁴⁰`. Por ello, 1 TB decimal equivale aproximadamente a 0,91 TiB. No faltan datos: se han usado unidades distintas.
-
-## 2.5 Fuente de alimentación
-
-La fuente debe aportar potencia estable y conectores adecuados. No basta sumar consumos nominales: se considera el pico de GPU, la línea de 12 V, eficiencia, temperatura, envejecimiento y margen.
-
-La certificación 80 PLUS mide eficiencia en condiciones definidas. Una eficiencia del 90 % significa que para entregar 450 W el equipo toma aproximadamente 500 W de la red; los 50 W restantes se convierten principalmente en calor.
-
-Protecciones deseables incluyen sobretensión, subtensión, sobrecorriente, sobrepotencia, cortocircuito y temperatura.
-
-## 2.6 GPU y periféricos
-
-Una GPU integra muchas unidades orientadas al paralelismo. Para seleccionarla se revisan carga, VRAM, API, controladores, dimensiones, alimentación y salidas de vídeo.
-
-Los periféricos requieren interfaz física, protocolo y controlador. USB describe varias capas y versiones; la forma del conector no garantiza la velocidad ni funciones disponibles. Un USB-C puede ofrecer solo USB 2.0 o incluir datos rápidos, vídeo y carga, según el equipo.
-
-## 2.7 Método de compatibilidad
+## 3. Método profesional de compatibilidad
 
 ```mermaid
 flowchart TD
-    USE["Definir uso y presupuesto"] --> CPU["Elegir plataforma y CPU"]
-    CPU --> BOARD["Comprobar zócalo, chipset y UEFI"]
-    BOARD --> RAM["Verificar RAM y canales"]
-    RAM --> CASE["Comprobar caja y dimensiones"]
-    CASE --> POWER["Dimensionar fuente y conectores"]
-    POWER --> COOL["Validar refrigeración"]
-    COOL --> IO["Confirmar almacenamiento, puertos y red"]
-    IO --> REVIEW["Revisión cruzada de fichas técnicas"]
+  N[Necesidad] --> C[CPU]
+  C --> S[Zócalo + chipset]
+  S --> B[Lista CPU + versión UEFI/BIOS]
+  B --> R[RAM: tipo, canales y QVL]
+  R --> X[PCIe, M.2, SATA y recursos compartidos]
+  X --> F[Fuente, conectores y potencia]
+  F --> M[Medidas, refrigeración y caja]
+  M --> P[SO y controladores]
+  P --> E[Conclusión con enlaces y fecha]
 ```
 
-### Caso resuelto
+### CPU, zócalo y firmware
 
-Se desea instalar una CPU de 170 W, una GPU con recomendación de fuente de 650 W, dos módulos DDR5 y un SSD NVMe.
+Coincidir físicamente no basta. Consulta la página del modelo exacto y su **CPU
+Support List**. Anota la versión mínima de UEFI/BIOS y si puede actualizarse sin
+una CPU ya compatible.
 
-1. Se verifica que placa y CPU comparten zócalo y que UEFI admite el modelo.
-2. Se confirma DDR5, capacidad y ranuras recomendadas para doble canal.
-3. Se revisa que usar el M.2 no desactive un puerto o reduzca líneas de otra ranura.
-4. Se comprueban longitud y grosor de GPU, altura del disipador y flujo de aire.
-5. Se elige una fuente de calidad con margen y conectores nativos para GPU y CPU.
-6. Se confirma que la regleta y el SAI soportan el consumo total.
+### RAM
 
-## Errores frecuentes
+Comprueba generación DDR, capacidad total y por módulo, canales, velocidades,
+QVL y soporte ECC/Registered. XMP o EXPO es un perfil de rendimiento, no una
+garantía universal; llenar todos los bancos puede reducir la velocidad estable.
 
-- Confundir el conector M.2 con el protocolo NVMe.
-- Comprar RAM de una generación incompatible.
-- Suponer que cualquier CPU del mismo zócalo funciona sin revisar UEFI.
-- Dimensionar la fuente únicamente por su potencia impresa.
-- Montar módulos de RAM contiguos cuando la placa recomienda ranuras alternas.
-- Olvidar dimensiones físicas y conectores.
+### Almacenamiento y expansión
 
-## Comprobación de comprensión
+Lee el diagrama de bloques y las notas: un M.2 puede desactivar SATA o compartir
+ancho de banda con PCIe. Verifica interfaz, longitud, generación y líneas.
 
-Explica qué consultarías antes de añadir RAM, un SSD M.2 y una GPU a un equipo existente. La respuesta debe mencionar documentación, compatibilidad eléctrica, lógica, física y térmica.
+### Alimentación y dimensiones
+
+Comprueba potencia continua, conectores CPU/GPU, calidad y protecciones. Contrasta
+formato de placa, longitud y grosor de GPU, disipador y radiadores.
+
+### SO y controladores
+
+Valida arranque UEFI, TPM cuando proceda y soporte del sistema. Conserva URL,
+modelo, revisión y fecha: las páginas de soporte cambian.
+
+## 4. Caso guiado
+
+Una placa tiene el zócalo correcto, pero no arranca con una CPU nueva. La lista
+oficial incluye la CPU desde UEFI `2.10`, mientras la placa tiene `1.40`. Encaja,
+pero todavía no funciona. Se planifica la actualización siguiendo el manual y,
+si no existe actualización sin CPU, se consigue temporalmente una CPU admitida.
+
+**Conclusión:** deben coincidir compatibilidad física, eléctrica, lógica y de
+firmware.
+
+## 5. Prestaciones con contexto
+
+Compara rendimiento por núcleo y multinúcleo, memoria, rendimiento sostenido,
+E/S, consumo, ruido, reparación y coste total. La elección cambia si el uso es
+desarrollo, virtualización, edición, IA, servidor o juego.
+
+## Comprueba que lo entiendes
+
+1. ¿Por qué el zócalo no es prueba suficiente?
+2. Diferencia formato M.2 e interfaz NVMe.
+3. ¿Qué evidencias guardarías para defender una configuración?
+4. Propón un orden de diagnóstico para un equipo sin imagen.
+
+## Fuentes y herramientas
+
+- [Intel: localizar chipsets compatibles](https://www.intel.com/content/www/us/en/support/articles/000092715/processors.html)
+- [Intel: zócalos y soporte BIOS](https://www.intel.com/content/www/us/en/support/articles/000005670/processors.html)
+- [CPU-Z (CPUID)](https://www.cpuid.com/softwares/cpu-z.html)
+- Manual, lista de CPU, QVL y controladores del fabricante del modelo concreto.
