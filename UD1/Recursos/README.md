@@ -1,9 +1,12 @@
 # Recursos de la UD1
 
-Los PDF del curso anterior sobre componentes, ciclo de instrucción,
-compatibilidad y SAI se han usado como punto de partida. La teoría nueva corrige
-simplificaciones, evita depender de modelos obsoletos y dirige a las listas
-oficiales de soporte.
+El PDF **Componentes del sistema informático** establece el Tema 1 general. Los
+materiales de ciclo de instrucción, compatibilidad y SAI se organizan después
+como subunidades 1.1, 1.2 y 1.3. La teoría nueva corrige simplificaciones, evita
+depender de modelos obsoletos y dirige a fuentes técnicas oficiales.
+
+La actividad original de placas se ha transformado en un reto visual con una
+placa moderna y otra clásica, tres fases de trabajo, producto definido y rúbrica.
 
 El vídeo **«Dins la Màquina»** se conserva como recurso del profesor y puede
 subirse a Aules. No se duplica en GitHub para mantener control sobre su

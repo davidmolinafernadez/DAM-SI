@@ -17,3 +17,61 @@
 .unit-grid .twemoji { color: var(--md-accent-fg-color); }
 table:not([class]) { font-size: .82rem; }
 @media (max-width: 600px) { .unit-grid { grid-template-columns: 1fr; } }
+
+.lesson-banner {
+  display: grid;
+  grid-template-columns: 4.2rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0 1.6rem;
+  padding: 1rem 1.2rem;
+  border-left: .35rem solid var(--md-accent-fg-color);
+  border-radius: .55rem;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, var(--md-default-bg-color));
+}
+.lesson-banner .lesson-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--md-primary-fg-color);
+  text-align: center;
+}
+.lesson-banner p { margin: .15rem 0; }
+.activity-card {
+  margin: 2rem 0 1rem;
+  padding: 1.15rem 1.25rem;
+  border: 2px solid var(--md-accent-fg-color);
+  border-radius: .7rem;
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-bg-color));
+  box-shadow: 0 5px 16px rgba(0, 0, 0, .08);
+}
+.activity-card h2, .activity-card h3 { margin-top: 0; border: 0; }
+.activity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin: .7rem 0 1rem;
+}
+.activity-meta span {
+  padding: .2rem .55rem;
+  border-radius: 2rem;
+  background: var(--md-primary-fg-color);
+  color: white;
+  font-size: .72rem;
+  font-weight: 700;
+}
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: .75rem;
+}
+.component-grid > div {
+  padding: .8rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .55rem;
+  background: var(--md-default-bg-color);
+}
+.component-grid strong { color: var(--md-primary-fg-color); }
+@media (max-width: 600px) {
+  .lesson-banner { grid-template-columns: 1fr; }
+  .lesson-banner .lesson-number { text-align: left; }
+}

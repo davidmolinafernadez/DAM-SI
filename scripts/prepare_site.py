@@ -1,4 +1,4 @@
-"""Prepara exclusivamente la teoría para publicarla con MkDocs."""
+"""Prepara la teoría y las actividades del alumnado para MkDocs."""
 
 from pathlib import Path
 import shutil
@@ -20,11 +20,18 @@ def main() -> None:
         destination.mkdir(parents=True)
 
         shutil.copytree(source, destination, dirs_exist_ok=True)
+        activities = ROOT / f"UD{number}" / "Activitats"
+        if activities.exists():
+            shutil.copytree(
+                activities,
+                destination / "actividades",
+                dirs_exist_ok=True,
+            )
         readme = destination / "README.md"
         if readme.exists():
             readme.rename(destination / "index.md")
 
-    print(f"Web preparada en {DESTINATION}")
+    print(f"Web docente preparada en {DESTINATION}")
 
 
 if __name__ == "__main__":
