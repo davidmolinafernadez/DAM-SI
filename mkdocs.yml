@@ -62,16 +62,20 @@ nav:
   - Inicio: index.md
   - Tema 1 · Componentes:
       - Presentación: ud1/index.md
-      - Tema 1 · Componentes del sistema: ud1/01-componentes-sistema-informatico.md
-      - Actividad · Placa base: ud1/actividades/A1-placa-base.md
-      - Actividad · Representación numérica: ud1/actividades/A2-representacion-numerica.md
-      - Ampliación · Supercomputador: ud1/actividades/A3-supercomputador.md
-      - 1.1 · Instrucciones de la CPU: ud1/11-instrucciones-cpu.md
-      - Actividad 1.1 · Ciclo de instrucción: ud1/actividades/A11-ciclo-instruccion.md
-      - 1.2 · Compatibilidad: ud1/12-compatibilidad-hardware.md
-      - Actividad 1.2 · Compatibilidad: ud1/actividades/A12-compatibilidad.md
-      - 1.3 · Alimentación y SAI: ud1/13-alimentacion-sai.md
-      - Actividad 1.3 · Dimensionado de SAI: ud1/actividades/A13-sai.md
+      - 1 · Componentes del sistema:
+          - Teoría: ud1/01-componentes-sistema-informatico.md
+          - Tarea 1.1 · Placa base: ud1/actividades/A1-placa-base.md
+          - Tarea 1.2 · Representación numérica: ud1/actividades/A2-representacion-numerica.md
+          - Tarea 1.3 · Supercomputador: ud1/actividades/A3-supercomputador.md
+      - 1.1 · Instrucciones de la CPU:
+          - Teoría: ud1/11-instrucciones-cpu.md
+          - Tarea 1.1.1 · Ciclo de instrucción: ud1/actividades/A11-ciclo-instruccion.md
+      - 1.2 · Compatibilidad:
+          - Teoría: ud1/12-compatibilidad-hardware.md
+          - Tarea 1.2.1 · Auditoría: ud1/actividades/A12-compatibilidad.md
+      - 1.3 · Alimentación y SAI:
+          - Teoría: ud1/13-alimentacion-sai.md
+          - Tarea 1.3.1 · Dimensionado: ud1/actividades/A13-sai.md
   - UD2 · Sistemas operativos:
       - Presentación: ud2/index.md
       - Arquitectura y funciones: ud2/01-arquitectura-y-funciones.md

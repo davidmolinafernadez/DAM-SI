@@ -1,7 +1,7 @@
-# A1.3 · Plan de protección eléctrica con SAI
+# Tarea 1.3.1 · Plan de protección eléctrica con SAI
 
 <div class="activity-meta" markdown>
-<span>110 min</span><span>Parejas</span><span>10 puntos</span><span>Aules</span>
+<span>110 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
 </div>
 
 ## Escenario
@@ -23,7 +23,7 @@ guardar y apagar ordenadamente.
 
 ## Entrega
 
-PDF de 3–5 páginas, `A13_Equipo_N.pdf`, con cálculos visibles, fichas enlazadas
+PDF de 3–5 páginas, `Tarea_1_3_1_Apellidos_Nombre.pdf`, con cálculos visibles, fichas enlazadas
 y recomendación final.
 
 ## Rúbrica

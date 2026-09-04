@@ -85,16 +85,16 @@ pero no sustituye la fuente técnica.
 
 <div class="activity-card" markdown>
 
-## :material-clipboard-search-outline: Actividad 1.2 · Auditoría de compatibilidad
+## :material-clipboard-search-outline: Tarea 1.2.1 · Auditoría de compatibilidad
 
 <div class="activity-meta" markdown>
-<span>110 min</span><span>Parejas</span><span>Entrega en Aules</span>
+<span>110 min</span><span>Individual</span><span>Entrega en Aules</span>
 </div>
 
 Diseñarás un equipo para desarrollo multiplataforma y demostrarás cada decisión
 con documentación oficial y una matriz visual de compatibilidad.
 
-[Abrir la actividad 1.2](actividades/A12-compatibilidad.md){ .md-button .md-button--primary }
+[Abrir la Tarea 1.2.1](actividades/A12-compatibilidad.md){ .md-button .md-button--primary }
 
 </div>
 

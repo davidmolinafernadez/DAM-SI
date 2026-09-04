@@ -114,10 +114,10 @@ entrada/salida adicional.
 
 <div class="activity-card" markdown>
 
-## :material-clipboard-edit-outline: Actividad del bloque · Anatomía de una placa
+## :material-clipboard-edit-outline: Tarea 1.1 · Anatomía de una placa base
 
 <div class="activity-meta" markdown>
-<span>50 min</span><span>Parejas</span><span>Entrega en Aules</span>
+<span>50 min</span><span>Individual</span><span>Entrega en Aules</span>
 </div>
 
 Reconocerás los elementos numerados de una placa moderna, los compararás con
@@ -190,7 +190,7 @@ Resultado: `45₁₀ = 101101₂`.
 
 <div class="activity-card" markdown>
 
-## :material-calculator-variant-outline: Actividad del bloque · Laboratorio RN
+## :material-calculator-variant-outline: Tarea 1.2 · Representación numérica
 
 <div class="activity-meta" markdown>
 <span>55 min</span><span>Individual</span><span>Entrega en Aules</span>
@@ -211,7 +211,7 @@ de planificación, refrigeración y energía. MareNostrum 5 permite observar có
 la misma arquitectura funcional se escala para resolver problemas científicos.
 
 !!! tip "Actividad de ampliación"
-    [Radiografía de un supercomputador](actividades/A3-supercomputador.md)
+    [Tarea 1.3 · Radiografía de un supercomputador](actividades/A3-supercomputador.md)
     conecta todos los componentes estudiados y diferencia rendimiento máximo de
     rendimiento medido.
 

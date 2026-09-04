@@ -1,4 +1,4 @@
-# A1.1 · Viaje de una instrucción
+# Tarea 1.1.1 · Viaje de una instrucción
 
 <div class="activity-meta" markdown>
 <span>55 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
@@ -27,7 +27,7 @@ Estado inicial: `PC=100`, memoria `[500]=7`, `R2=-7` y bandera `Z=0`.
 
 ## Entrega
 
-PDF de 2–3 páginas, `A11_Apellidos_Nombre.pdf`, con tabla, diagrama propio y
+PDF de 2–3 páginas, `Tarea_1_1_1_Apellidos_Nombre.pdf`, con tabla, diagrama propio y
 explicación. Una captura sin interpretación no sirve como evidencia.
 
 ## Rúbrica

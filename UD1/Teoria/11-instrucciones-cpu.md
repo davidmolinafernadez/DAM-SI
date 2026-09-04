@@ -103,7 +103,7 @@ se originan al ejecutar una instrucción, por ejemplo una división por cero.
 
 <div class="activity-card" markdown>
 
-## :material-chip: Actividad 1.1 · Viaje de una instrucción
+## :material-chip: Tarea 1.1.1 · Viaje de una instrucción
 
 <div class="activity-meta" markdown>
 <span>55 min</span><span>Individual</span><span>Entrega en Aules</span>
@@ -112,6 +112,6 @@ se originan al ejecutar una instrucción, por ejemplo una división por cero.
 Trazarás un programa corto, justificarás cada cambio de registro y distinguirás
 accesos a memoria, instrucciones y ciclos de reloj.
 
-[Abrir la actividad 1.1](actividades/A11-ciclo-instruccion.md){ .md-button .md-button--primary }
+[Abrir la Tarea 1.1.1](actividades/A11-ciclo-instruccion.md){ .md-button .md-button--primary }
 
 </div>

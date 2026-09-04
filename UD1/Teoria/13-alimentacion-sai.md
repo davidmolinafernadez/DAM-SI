@@ -94,16 +94,16 @@ conectan cuando el fabricante lo permite y el cálculo los contempla.
 
 <div class="activity-card" markdown>
 
-## :material-battery-charging: Actividad 1.3 · Protege el aula
+## :material-battery-charging: Tarea 1.3.1 · Protege el aula
 
 <div class="activity-meta" markdown>
-<span>110 min</span><span>Parejas</span><span>Entrega en Aules</span>
+<span>110 min</span><span>Individual</span><span>Entrega en Aules</span>
 </div>
 
 Calcularás la carga, compararás dos modelos mediante sus curvas de autonomía y
 diseñarás el apagado seguro de un pequeño servicio del aula.
 
-[Abrir la actividad 1.3](actividades/A13-sai.md){ .md-button .md-button--primary }
+[Abrir la Tarea 1.3.1](actividades/A13-sai.md){ .md-button .md-button--primary }
 
 </div>
 

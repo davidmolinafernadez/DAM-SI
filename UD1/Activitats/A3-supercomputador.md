@@ -1,7 +1,7 @@
-# T1-C · Radiografía de un supercomputador
+# Tarea 1.3 · Radiografía de un supercomputador
 
 <div class="activity-meta" markdown>
-<span>55 min</span><span>Parejas</span><span>Ampliación</span><span>Aules</span>
+<span>55 min</span><span>Individual</span><span>Ampliación</span><span>Aules</span>
 </div>
 
 Investiga un sistema de TOP500 y compáralo con un equipo del aula. MareNostrum
@@ -14,8 +14,9 @@ Investiga un sistema de TOP500 y compáralo con un equipo del aula. MareNostrum
 5. Explica por qué muchos PC conectados no equivalen automáticamente a un
    supercomputador.
 
-Entrega un informe visual de 3–4 páginas con ficha del centro, [TOP500](https://www.top500.org/)
-y otra fuente técnica. Toda imagen lleva pie y procedencia.
+Entrega `Tarea_1_3_Apellidos_Nombre.pdf`, un informe visual de 3–4 páginas con
+ficha del centro, [TOP500](https://www.top500.org/) y otra fuente técnica. Toda
+imagen lleva pie y procedencia.
 
 | Criterio | Puntos |
 |---|---:|

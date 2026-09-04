@@ -1,7 +1,7 @@
-# A1.2 · Auditoría de compatibilidad
+# Tarea 1.2.1 · Auditoría de compatibilidad
 
 <div class="activity-meta" markdown>
-<span>110 min</span><span>Parejas</span><span>10 puntos</span><span>Aules</span>
+<span>110 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
 </div>
 
 ## Encargo
@@ -40,6 +40,8 @@ Añade tres incompatibilidades descartadas y explica cómo las detectaste.
 Dictamen PDF y hoja de cálculo de componentes. Cada evidencia incluye modelo,
 revisión, URL y fecha. Se valora el conjunto, no escoger lo más caro.
 
+Archivo PDF: `Tarea_1_2_1_Apellidos_Nombre.pdf`.
+
 ## Rúbrica
 
 | Criterio | Puntos |
@@ -49,4 +51,4 @@ revisión, URL y fecha. Se valora el conjunto, no escoger lo más caro.
 | RAM, almacenamiento y expansión | 2 |
 | Alimentación, medidas y refrigeración | 1,5 |
 | Evidencias y trazabilidad | 1,5 |
-| Claridad y colaboración | 0,5 |
+| Claridad, autonomía y presentación | 0,5 |

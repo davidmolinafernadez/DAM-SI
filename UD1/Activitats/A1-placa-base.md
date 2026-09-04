@@ -1,7 +1,7 @@
-# T1-A · Anatomía de una placa base
+# Tarea 1.1 · Anatomía de una placa base
 
 <div class="lesson-banner" markdown>
-<div class="lesson-number">T1-A</div>
+<div class="lesson-number">1.1</div>
 <div markdown>
 **Reto visual**
 
@@ -10,13 +10,13 @@ Reconoce componentes, explica su función y compara dos generaciones de placas.
 </div>
 
 <div class="activity-meta" markdown>
-<span>50 min</span><span>Parejas</span><span>10 puntos</span><span>Aules</span>
+<span>50 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
 </div>
 
 ## Producto final
 
 Una ficha PDF de 3 páginas: placa moderna, comparación histórica y conclusión.
-Nombre: `T1A_Apellidos_Nombres.pdf`.
+Nombre: `Tarea_1_1_Apellidos_Nombre.pdf`.
 
 ## Fase 1 · Identifica una placa moderna
 
