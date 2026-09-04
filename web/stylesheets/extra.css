@@ -75,3 +75,49 @@ table:not([class]) { font-size: .82rem; }
   .lesson-banner { grid-template-columns: 1fr; }
   .lesson-banner .lesson-number { text-align: left; }
 }
+
+/* Modo clase: elimina distracciones y ensancha la teoría al proyectarla. */
+.class-mode-button {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 20;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  padding: .65rem .9rem;
+  border: 0;
+  border-radius: 2rem;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .25);
+  cursor: pointer;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 700;
+}
+.class-mode-button:hover { background: var(--md-accent-fg-color); }
+.class-mode-button svg { width: 1.15rem; height: 1.15rem; fill: currentColor; }
+
+body.class-mode .md-sidebar--primary,
+body.class-mode .md-sidebar--secondary { display: none; }
+body.class-mode .md-main__inner {
+  display: block;
+  max-width: 92rem;
+  margin-inline: auto;
+}
+body.class-mode .md-content {
+  max-width: none;
+  margin: 0;
+}
+body.class-mode .md-content__inner {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 4rem);
+}
+body.class-mode .class-mode-button { background: var(--md-accent-fg-color); }
+
+@media (max-width: 600px) {
+  .class-mode-button span { display: none; }
+  .class-mode-button { right: .75rem; bottom: .75rem; padding: .7rem; }
+}

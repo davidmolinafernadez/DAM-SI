@@ -58,6 +58,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/modo-clase.js
+
 nav:
   - Inicio: index.md
   - Tema 1 · Componentes:
