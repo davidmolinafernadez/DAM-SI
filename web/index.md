@@ -1,9 +1,9 @@
-# Sistemas Informáticos · 1.º DAW
+# Sistemas Informáticos · 1.º DAM
 
 Bienvenido al espacio de consulta de **Sistemas Informáticos**. Aquí encontrarás la teoría organizada por unidades, con explicaciones, ejemplos, esquemas y procedimientos de diagnóstico.
 
 <div class="hero-actions" markdown>
-[Empezar por la UD1](ud1/){ .md-button .md-button--primary }
+[Empezar por la UD1](ud1/index.md){ .md-button .md-button--primary }
 [Consultar todas las unidades](#unidades-didacticas){ .md-button }
 </div>
 
@@ -15,25 +15,25 @@ Bienvenido al espacio de consulta de **Sistemas Informáticos**. Aquí encontrar
 <div class="unit-grid" markdown>
 
 [:material-desktop-tower-monitor: **UD1 · Arquitectura HW/SW**  
-Componentes, representación de la información, prevención y diagnóstico.](ud1/)
+Sistema e instrucciones, compatibilidad, alimentación y SAI.](ud1/index.md)
 
 [:material-cog-outline: **UD2 · Sistemas operativos**  
-Arquitectura, procesos, memoria, entrada/salida, familias y licencias.](ud2/)
+Arquitectura, procesos, memoria, entrada/salida, familias y licencias.](ud2/index.md)
 
 [:material-monitor-dashboard: **UD3 · Instalación y virtualización**  
-Arranque, particionado, recuperación, VirtualBox y Docker.](ud3/)
+Arranque, particionado, recuperación, VirtualBox y Docker.](ud3/index.md)
 
 [:material-folder-cog-outline: **UD4 · Sistemas de archivos**  
-Particiones, terminal, automatización, copias e integridad.](ud4/)
+Particiones, terminal, automatización, copias e integridad.](ud4/index.md)
 
 [:material-account-cog-outline: **UD5 · Administración de sistemas**  
-Identidades, permisos, procesos, servicios, registros y mantenimiento.](ud5/)
+Identidades, permisos, procesos, servicios, registros y mantenimiento.](ud5/index.md)
 
 [:material-lan: **UD6 · Redes TCP/IP**  
-Dispositivos, protocolos, IPv4, subnetting y diagnóstico.](ud6/)
+Dispositivos, protocolos, IPv4, subnetting y diagnóstico.](ud6/index.md)
 
 [:material-shield-lock-outline: **UD7 · Servicios y seguridad**  
-Recursos compartidos, bastionado, firewall e incidentes.](ud7/)
+Recursos compartidos, bastionado, firewall e incidentes.](ud7/index.md)
 
 </div>
 

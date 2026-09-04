@@ -1,4 +1,4 @@
-site_name: Sistemas Informáticos · 1.º DAW
+site_name: Sistemas Informáticos · 1.º DAM
 site_description: Material de consulta y apoyo para la asignatura Sistemas Informáticos
 site_url: https://davidmolinafernadez.github.io/DAM-SI/
 docs_dir: .site-src
@@ -62,11 +62,9 @@ nav:
   - Inicio: index.md
   - UD1 · Arquitectura:
       - Presentación: ud1/index.md
-      - Sistema y arquitectura: ud1/01-sistema-y-arquitectura.md
-      - Componentes y compatibilidad: ud1/02-componentes-y-compatibilidad.md
-      - Representación de la información: ud1/03-representacion-informacion.md
-      - PRL y diagnóstico: ud1/04-prl-y-diagnostico.md
-      - Apuntes de referencia: ud1/apuntes.md
+      - 1. Sistema e instrucciones: ud1/01-sistema-y-arquitectura.md
+      - 2. Componentes y compatibilidad: ud1/02-componentes-y-compatibilidad.md
+      - 3. Alimentación y SAI: ud1/03-alimentacion-y-sai.md
   - UD2 · Sistemas operativos:
       - Presentación: ud2/index.md
       - Arquitectura y funciones: ud2/01-arquitectura-y-funciones.md
