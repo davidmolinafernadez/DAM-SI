@@ -51,7 +51,13 @@ flowchart LR
 
 - **CPU:** interpreta y ejecuta instrucciones.
 - **GPU:** acelera gráficos y cálculos muy paralelos.
+- **NPU/acelerador de IA:** ejecuta determinadas cargas matriciales con alta
+  eficiencia; no sustituye a CPU o GPU en cualquier tarea.
 - **Controladores:** coordinan memoria, almacenamiento y periféricos.
+
+En equipos actuales pueden convivir CPU, GPU integrada o dedicada y NPU. La
+presencia de un acelerador no garantiza que una aplicación lo utilice: hacen
+falta controladores, bibliotecas y soporte explícito del software.
 
 ### 2.2 Memoria y almacenamiento
 
@@ -111,6 +117,30 @@ entrada/salida adicional.
 | AGP y PCI | PCI Express | Enlace serie escalable por líneas |
 | BIOS tradicional | UEFI | Mejor arranque, seguridad y configuración |
 | Puente norte separado | Funciones integradas en CPU | Menor latencia |
+
+En una placa actual es frecuente encontrar UEFI, DDR5, varias ranuras M.2 NVMe,
+PCI Express y conectividad USB de distintas velocidades. No debe deducirse la
+versión por el aspecto del conector: siempre se consulta el manual del modelo y
+la distribución de líneas, porque instalar un M.2 puede compartir recursos o
+deshabilitar otro puerto.
+
+<div class="video-card" markdown>
+
+### Vídeo · Componentes de una placa base
+
+Explicación animada de zócalo, chipset, VRM, RAM, PCIe y conectores. Aunque el
+vídeo muestra una generación concreta, los bloques funcionales siguen siendo
+válidos; para compatibilidad siempre prevalece el manual de la placa elegida.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/b2pd3Y6aBag"
+title="Motherboards Explained - PowerCert" loading="lazy"
+allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=b2pd3Y6aBag)
+
+</div>
 
 <div class="activity-card" markdown>
 
@@ -188,6 +218,23 @@ Resultado: `45₁₀ = 101101₂`.
 - La coma flotante aproxima muchos decimales, por lo que `0.1 + 0.2` puede no
   compararse exactamente con `0.3`.
 
+<div class="video-card" markdown>
+
+### Vídeo · Cómo se representan números y caracteres
+
+Crash Course relaciona bits, enteros, caracteres y Unicode. Es un buen refuerzo
+después de practicar las conversiones; dispone de subtítulos.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/1GSjbWt0c9M"
+title="Representing Numbers and Letters with Binary - Crash Course"
+loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=1GSjbWt0c9M)
+
+</div>
+
 <div class="activity-card" markdown>
 
 ## :material-calculator-variant-outline: Tarea 1.2 · Representación numérica
@@ -213,7 +260,24 @@ la misma arquitectura funcional se escala para resolver problemas científicos.
 !!! tip "Actividad de ampliación"
     [Tarea 1.3 · Radiografía de un supercomputador](actividades/A3-supercomputador.md)
     conecta todos los componentes estudiados y diferencia rendimiento máximo de
-    rendimiento medido.
+rendimiento medido.
+
+<div class="video-card" markdown>
+
+### Vídeo actual · Dentro de MareNostrum 5
+
+Recorrido publicado en 2025 por la infraestructura del Barcelona Supercomputing
+Center, con aceleración, visualización y ejemplos de investigación científica.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/rk-CKed4c7U"
+title="MareNostrum 5 - Barcelona Supercomputing Center" loading="lazy"
+allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=rk-CKed4c7U)
+
+</div>
 
 ## Mapa final del tema
 

@@ -49,6 +49,23 @@ ni copias de respaldo.
 La regulación AVR corrige ciertas variaciones sin gastar batería. La doble
 conversión aísla mejor, pero aumenta coste, calor y consumo propio.
 
+```mermaid
+flowchart TB
+  subgraph OFF[Offline / standby]
+    O1[Red] --> O2[Conmutador] --> O3[Carga]
+    OB[Batería + inversor] -. corte .-> O2
+  end
+  subgraph LIN[Line-interactive]
+    L1[Red] --> AVR[AVR] --> L2[Carga]
+    LB[Batería + inversor] <--> AVR
+  end
+  subgraph ON[Online / doble conversión]
+    N1[Red] --> REC[Rectificador] --> BUS[Bus CC]
+    BAT[Batería] <--> BUS
+    BUS --> INV[Inversor] --> N2[Carga]
+  end
+```
+
 ## 4. Dimensionado
 
 Un SAI posee límites en **W** (potencia activa) y **VA** (potencia aparente); no
@@ -85,6 +102,24 @@ el límite VA y ofrecer la autonomía necesaria a unos `315 W` reales.
 Motores, calefactores e impresoras láser pueden tener picos elevados; solo se
 conectan cuando el fabricante lo permite y el cálculo los contempla.
 
+<div class="video-card" markdown>
+
+### Vídeo · Comparación real de topologías SAI
+
+Demostración práctica de cómo responden un SAI line-interactive y uno online a
+variaciones de tensión. Los principios eléctricos no han cambiado; contrasta
+siempre potencias y autonomías con la ficha actual del modelo que vayas a usar.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/ijdB8szpmdA"
+title="UPS topologies - standby, line interactive and online"
+loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=ijdB8szpmdA)
+
+</div>
+
 ## Comprueba que lo entiendes
 
 1. Diferencia corte, subtensión y transitorio.
@@ -110,4 +145,5 @@ diseñarás el apagado seguro de un pequeño servicio del aula.
 ## Fuente de consulta
 
 - [APC: W, VA, factor de potencia y selección](https://www.apc.com/us/en/support/product-support/ups-buying-guide-for-selecting-a-battery-backup-system.jsp)
+- [Eaton: elección de la topología adecuada](https://www.eaton.com/us/en-us/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/choosing-the-optimal-ups-topology-.html)
 - Manual y curva de autonomía del modelo analizado.

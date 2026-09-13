@@ -71,6 +71,31 @@ table:not([class]) { font-size: .82rem; }
   background: var(--md-default-bg-color);
 }
 .component-grid strong { color: var(--md-primary-fg-color); }
+.video-card {
+  margin: 1.3rem 0 2rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .7rem;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .07);
+}
+.video-card h3 { margin-top: 0; color: var(--md-primary-fg-color); }
+.video-frame {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: .55rem;
+  background: #0b1720;
+}
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 @media (max-width: 600px) {
   .lesson-banner { grid-template-columns: 1fr; }
   .lesson-banner .lesson-number { text-align: left; }
