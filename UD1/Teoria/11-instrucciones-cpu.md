@@ -11,12 +11,17 @@ muchas instrucciones en vuelo sin alterar el resultado del programa.
 </div>
 </div>
 
-!!! info "PDF de ampliación · Instrucciones de la CPU"
-    [:material-file-pdf-box: **Abrir Cómo ejecuta instrucciones la CPU**](recursos-pdf/UD1-1-Instrucciones-de-la-CPU.pdf){ .md-button .md-button--primary target="_blank" }
+<div class="pdf-resource" markdown>
 
-    Material visual complementario sobre *fetch*, *decode*, *execute*, PC, MAR,
-    MDR, IR, unidad de control, *opcode* y tipos de instrucciones. La web contiene
-    la explicación actualizada y el PDF sirve como refuerzo gráfico.
+## PDF de ampliación · Instrucciones de la CPU
+
+[:material-file-pdf-box: **Abrir Cómo ejecuta instrucciones la CPU**](recursos-pdf/UD1-1-Instrucciones-de-la-CPU.pdf){ .md-button .md-button--primary target="_blank" }
+
+Material visual complementario sobre *fetch*, *decode*, *execute*, PC, MAR,
+MDR, IR, unidad de control, *opcode* y tipos de instrucciones. La web contiene
+la explicación actualizada y el PDF sirve como refuerzo gráfico.
+
+</div>
 
 ## Qué aprenderás
 
