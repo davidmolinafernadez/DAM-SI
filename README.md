@@ -4,6 +4,11 @@
 
 Repositorio educativo de la asignatura **Sistemas Informáticos** del ciclo formativo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
 
+## Documentación docente
+
+- [Guía didáctica de Sistemas Informáticos · 1.º DAM · Curso 2026-2027](Guias/Guia_didactica_Sistemas_Informaticos_1_DAM_2026_2027.pdf)
+- [Guías y documentos de apoyo](Guias/)
+
 ## Objetivos
 
 - Organizar materiales, actividades y prácticas por unidades didácticas.
