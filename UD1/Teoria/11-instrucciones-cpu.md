@@ -134,6 +134,75 @@ mil millones de ciclos por segundo, pero no implica cuatro mil millones de
 instrucciones terminadas: cada instrucción atraviesa etapas distintas y pueden
 completarse varias o ninguna en un ciclo concreto.
 
+### 4.3 La CPU física: del silicio al socket
+
+Lo que llamamos «procesador» reúne varias capas:
+
+| Capa | Qué es | Por qué importa |
+|---|---|---|
+| *Die* | Fragmento de silicio con transistores | Integra núcleos, caché y controladores |
+| *Chiplet* | Die especializado dentro de un mismo producto | Permite combinar cálculo, E/S y gráficos |
+| Encapsulado | Soporte que protege y conecta los dies | Determina contactos y dimensiones |
+| IHS | Cubierta metálica que reparte calor | Contacta con pasta térmica y disipador |
+| Socket | Conector y retención de la placa | Debe coincidir mecánica y eléctricamente |
+
+Una CPU moderna puede integrar CPU, GPU, NPU, controlador de memoria y líneas
+PCIe. Eso no significa que todas las CPU incorporen los mismos bloques ni que
+una salida de vídeo de la placa funcione sin gráficos integrados.
+
+### 4.4 Núcleos, hilos y procesadores híbridos
+
+Un **núcleo** mantiene su propio estado de ejecución. SMT —Hyper-Threading es
+una implementación comercial— permite que un núcleo exponga más de un hilo
+lógico y aproveche recursos que quedarían libres. Dos hilos lógicos no equivalen
+a dos núcleos completos.
+
+En diseños híbridos pueden convivir núcleos de prestaciones y características
+distintas. El planificador del sistema operativo decide dónde ejecutar cada hilo.
+Para una carga DAM importa el comportamiento completo: compilación, máquinas
+virtuales, base de datos, contenedores, consumo y respuesta interactiva.
+
+```mermaid
+flowchart TB
+  P[Proceso Java] --> T1[Hilo 1]
+  P --> T2[Hilo 2]
+  T1 --> SCH[Planificador del SO]
+  T2 --> SCH
+  SCH --> C1[Núcleo físico 1]
+  SCH --> C2[Núcleo físico 2]
+  C1 --> L1[Hilos lógicos]
+  C2 --> L2[Hilos lógicos]
+```
+
+### 4.5 Potencia, temperatura y frecuencia dinámica
+
+La frecuencia anunciada no permanece fija. El procesador ajusta tensión y
+frecuencia según carga, temperatura, límites eléctricos y política energética.
+Puede alcanzar un turbo alto durante poco tiempo y reducirlo después para no
+superar sus límites. El **throttling** es una reducción protectora; no se arregla
+comparando únicamente el TDP impreso en dos cajas.
+
+!!! warning "TDP no es consumo máximo universal"
+    TDP es un parámetro de diseño térmico definido por cada fabricante. Para
+    dimensionar placa, refrigeración o fuente se consultan también los límites
+    de potencia y la ficha técnica del modelo concreto.
+
+### 4.6 Cómo comparar rendimiento con criterio
+
+El tiempo de un programa puede aproximarse conceptualmente como:
+
+`tiempo = instrucciones × ciclos por instrucción × tiempo de ciclo`
+
+El compilador cambia el número de instrucciones; la microarquitectura y la
+memoria cambian los ciclos necesarios; la frecuencia cambia el tiempo de ciclo.
+Por eso no existe una única cifra que describa todas las cargas.
+
+- Usa pruebas que representen la tarea real y especifica versión y configuración.
+- Separa rendimiento de un hilo y de varios hilos.
+- Observa consumo, temperatura y rendimiento sostenido, no solo el pico.
+- Comprueba RAM, almacenamiento y refrigeración para no medir otro cuello de botella.
+- Distingue latencia —tiempo de una tarea— de throughput —trabajo por unidad de tiempo—.
+
 ## 5. Ciclo de una instrucción, paso a paso
 
 El esquema escolar se resume como **fetch - decode - execute**. Para explicar
@@ -391,7 +460,7 @@ loading="lazy" allowfullscreen></iframe>
 ## :material-chip: Tarea 1.1.1 · Viaje de una instrucción
 
 <div class="activity-meta" markdown>
-<span>55 min</span><span>Individual</span><span>Entrega en Aules</span>
+<span>110 min</span><span>Individual</span><span>Entrega en Aules</span>
 </div>
 
 Trazarás un programa corto, justificarás cada cambio de registro y distinguirás

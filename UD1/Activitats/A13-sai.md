@@ -27,17 +27,38 @@ guardar y apagar ordenadamente.
 7. Propón prueba trimestral, registro y cinco normas de seguridad.
 8. Explica por qué una impresora láser requiere comprobación específica.
 
+## Parte técnica Linux
+
+Diseña, sin aplicarlo sobre un servidor real, el esquema de monitorización con
+Network UPS Tools:
+
+1. identifica driver, `upsd` y `upsmon`;
+2. decide qué equipo actuaría como primario y cuáles como secundarios;
+3. define los eventos «en batería», «batería baja» y «apagado forzado»;
+4. redacta la secuencia de parada de aplicación, base de datos, VM y sistema;
+5. explica cómo protegerías las credenciales de `upsmon.conf`;
+6. prepara una lista de comprobación para una prueba controlada y recuperación.
+
+## Análisis de autonomía
+
+Para cada modelo seleccionado, registra la autonomía oficial al 25 %, 50 % y
+75 % de carga. Dibuja una gráfica sencilla y explica por qué la relación entre
+carga y minutos no es lineal. Añade un escenario tras envejecimiento de batería:
+no inventes un porcentaje fijo, describe cómo lo verificarías mediante prueba,
+autodiagnóstico y criterio del fabricante.
+
 ## Entrega
 
-PDF de 3–5 páginas, `Tarea_1_3_1_Apellidos_Nombre.pdf`, con cálculos visibles, fichas enlazadas
+PDF de 5–8 páginas, `Tarea_1_3_1_Apellidos_Nombre.pdf`, con cálculos visibles, fichas enlazadas
 y recomendación final.
 
 ## Rúbrica
 
 | Criterio | Puntos |
 |---|---:|
-| Carga, margen y límites W/VA | 2,5 |
-| Autonomía basada en datos | 2 |
-| Comparación y elección | 2 |
-| Instalación y mantenimiento | 2 |
-| Seguridad y fuentes | 1,5 |
+| Carga, margen y límites W/VA | 2 |
+| Curvas y análisis de autonomía | 2 |
+| Comparación y elección | 1,5 |
+| Diseño NUT y apagado coordinado | 2 |
+| Instalación, mantenimiento y prueba | 1,5 |
+| Seguridad y fuentes | 1 |

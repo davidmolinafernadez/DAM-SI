@@ -26,6 +26,25 @@ protecciones. Un SAI mantiene las cargas críticas durante un corte y, según su
 topología, acondiciona la señal. No sustituye toma de tierra, instalación segura
 ni copias de respaldo.
 
+### 1.1 Potencia activa, aparente y factor de potencia
+
+- **W (vatios):** potencia activa que realiza trabajo y se transforma en calor,
+  movimiento o cálculo.
+- **VA (voltamperios):** potencia aparente, producto de tensión eficaz por
+  corriente eficaz.
+- **Factor de potencia (PF):** relación aproximada `W / VA` en una carga dada.
+
+Un SAI puede anunciar, por ejemplo, `1 000 VA / 600 W`. Una carga de 650 W lo
+sobrecarga aunque su potencia aparente parezca inferior a 1 000 VA. Siempre se
+comprueban ambos límites y la ficha del fabricante.
+
+### 1.2 Fuente, PFC y forma de onda
+
+Muchas fuentes de PC actuales incorporan **PFC activo**. Para cargas sensibles o
+fuentes exigentes se prefiere una salida senoidal adecuada; expresiones como
+«senoidal simulada» describen una señal escalonada y no equivalen a una senoide
+pura. La compatibilidad se verifica en la documentación del SAI y del equipo.
+
 ## 2. Problemas de la red
 
 | Fenómeno | Descripción | Riesgo |
@@ -48,6 +67,13 @@ ni copias de respaldo.
 
 La regulación AVR corrige ciertas variaciones sin gastar batería. La doble
 conversión aísla mejor, pero aumenta coste, calor y consumo propio.
+
+### 3.1 Bypass y disponibilidad
+
+Un SAI online puede disponer de **bypass** para alimentar la carga desde la red
+cuando existe sobrecarga, fallo interno o mantenimiento. Bypass no significa que
+la batería siga protegiendo frente a un corte. En servicios importantes se
+documenta qué activa el bypass y qué alarma recibe el administrador.
 
 ```mermaid
 flowchart TB
@@ -89,6 +115,35 @@ el límite VA y ofrecer la autonomía necesaria a unos `315 W` reales.
     `VA = W / 0,6` fue una aproximación frecuente, no una ley. Los equipos
     actuales publican ambos límites; se comprueban directamente.
 
+### 4.1 La autonomía no es proporcional de forma perfecta
+
+Duplicar la carga suele reducir la autonomía en más de la mitad porque batería,
+inversor, temperatura y tasa de descarga introducen pérdidas. Por eso la
+estimación energética sirve para detectar órdenes de magnitud, pero la selección
+final usa la **curva de autonomía del modelo**.
+
+| Dato | Fuente válida | Evidencia que se guarda |
+|---|---|---|
+| Potencia de la carga | Medidor o ficha del equipo | W simultáneos y escenario |
+| Límites del SAI | Ficha técnica oficial | W y VA máximos |
+| Autonomía | Curva/calculadora oficial | Minutos a la carga prevista |
+| Batería | Manual y referencia | Tecnología, cantidad y sustitución |
+| Comunicación | Manual/software | USB, red, protocolo y SO compatible |
+
+### 4.2 Baterías y envejecimiento
+
+Las baterías pierden capacidad con los ciclos, la edad y, especialmente, la
+temperatura elevada. Los modelos pueden usar baterías de plomo selladas o
+litio, con comportamientos, costes y procedimientos distintos. No se fija una
+fecha universal de sustitución: se sigue el diagnóstico, las pruebas y el manual
+del fabricante.
+
+!!! danger "Seguridad eléctrica"
+    Un banco de baterías puede entregar corrientes muy elevadas y conservar
+    energía con el equipo desconectado. El alumnado no abrirá el SAI ni sustituirá
+    baterías. Las prácticas se limitan a inspección externa, software y pruebas
+    controladas autorizadas.
+
 ## 5. Instalación y seguridad
 
 - Sitúa el SAI seco, estable y ventilado.
@@ -101,6 +156,49 @@ el límite VA y ofrecer la autonomía necesaria a unos `315 W` reales.
 
 Motores, calefactores e impresoras láser pueden tener picos elevados; solo se
 conectan cuando el fabricante lo permite y el cálculo los contempla.
+
+## 6. Monitorización y apagado coordinado en Linux
+
+Un cable USB por sí solo no protege los datos. Debe existir un servicio que lea
+el SAI, registre eventos y ordene apagar antes de alcanzar una batería crítica.
+**Network UPS Tools (NUT)** separa normalmente tres funciones:
+
+```mermaid
+flowchart LR
+  UPS[SAI por USB/serie/red] --> DRIVER[Driver NUT]
+  DRIVER --> UPSD[upsd: servidor de datos]
+  UPSD --> MON1[upsmon primario]
+  UPSD --> MON2[upsmon secundario]
+  MON1 --> SH1[Apagado del host principal]
+  MON2 --> SH2[Apagado de otro host]
+```
+
+- El **driver** habla con el modelo concreto.
+- `upsd` publica estado de manera controlada.
+- `upsmon` vigila alimentación y batería y ejecuta el apagado configurado.
+- En un SAI compartido, los secundarios deben apagarse antes de que el primario
+  ordene cortar la salida.
+
+Una configuración real contiene credenciales y órdenes con privilegios. No se
+copia desde Internet sin revisar permisos. La prueba inicial se hace con cargas
+no críticas, tiempo suficiente y un plan de recuperación.
+
+### 6.1 Secuencia de una prueba segura
+
+1. Confirmar carga, batería cargada, registro y autorización.
+2. Verificar que el software recibe estado, tensión y autonomía.
+3. Guardar trabajo y detener servicios de prueba.
+4. Simular el evento según el manual; no improvisar conexiones.
+5. Comprobar notificación y apagado antes del nivel crítico.
+6. Restaurar red, validar arranque y revisar los registros.
+
+## 7. Mantenimiento y ciclo de vida
+
+El plan debe registrar fecha, carga, autonomía observada, temperatura, alarmas,
+versión de software y estado de batería. También contempla ventilación, limpieza
+externa, prueba periódica, sustitución autorizada y reciclaje. Una prueba que
+vacía completamente la batería puede reducir la disponibilidad; se diseña con
+un objetivo y siguiendo el fabricante.
 
 <div class="video-card" markdown>
 
@@ -146,4 +244,6 @@ diseñarás el apagado seguro de un pequeño servicio del aula.
 
 - [APC: W, VA, factor de potencia y selección](https://www.apc.com/us/en/support/product-support/ups-buying-guide-for-selecting-a-battery-backup-system.jsp)
 - [Eaton: elección de la topología adecuada](https://www.eaton.com/us/en-us/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/choosing-the-optimal-ups-topology-.html)
+- [Network UPS Tools: manual de usuario](https://networkupstools.org/docs/user-manual.pdf)
+- [NUT `upsmon`: monitorización y apagado](https://networkupstools.org/docs/man/upsmon.html)
 - Manual y curva de autonomía del modelo analizado.

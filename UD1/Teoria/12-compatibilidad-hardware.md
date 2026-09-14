@@ -54,6 +54,49 @@ Además de zócalo y chipset se revisan límites de potencia, refrigeración, ve
 de firmware y prestaciones que dependen de la CPU instalada. Una placa puede
 ofrecer físicamente una ranura o salida y no habilitarla con todas las CPU.
 
+### 3.1 Socket no significa compatibilidad completa
+
+El socket define contactos, dimensiones y retención. Hay tres tecnologías que
+conviene distinguir:
+
+| Tipo | Contactos | Ejemplo de uso | Riesgo al manipular |
+|---|---|---|---|
+| LGA | Pines elásticos en la placa | AMD AM5, Intel LGA1851 | Dañar el socket de la placa |
+| PGA | Pines en la CPU | AMD AM4 y plataformas anteriores | Doblar pines del procesador |
+| BGA | Soldado a la placa | Portátiles y sistemas integrados | No es sustituible de forma ordinaria |
+
+ZIF describe el mecanismo de inserción con poca fuerza, no una familia de
+procesadores. Tampoco se deben deducir compatibilidades porque dos sockets midan
+lo mismo: Intel documenta que LGA1851 y LGA1700 no son intercambiables.
+
+### 3.2 Ejemplos de plataforma vigentes en 2026
+
+| Plataforma | CPU de referencia | Memoria | Comprobación imprescindible |
+|---|---|---|---|
+| AMD AM5 | Ryzen 7000/8000/9000 y familias admitidas | DDR5 | CPU Support List y versión de UEFI |
+| Intel LGA1851 | Core Ultra de sobremesa Serie 2 | DDR5 | Chipset serie 800 y lista del fabricante |
+| AMD AM4 | Ryzen de generaciones compatibles | DDR4 | El mismo socket abarca combinaciones no válidas sin firmware adecuado |
+| Intel LGA1700 | Core de 12.ª a 14.ª generación según placa | DDR4 o DDR5 según placa | Chipset, revisión, tipo de RAM y BIOS |
+
+La tabla es una fotografía docente, no una autorización de compra. AMD indica
+que una placa AM5 de la serie 600 puede requerir actualización de firmware para
+CPU posteriores. La página de soporte del **modelo y revisión exactos** decide.
+
+### 3.3 Chipset y VRM
+
+El chipset amplía las líneas de entrada/salida y habilita funciones, pero no es
+«el cerebro» que controla toda la RAM: en equipos actuales el controlador de
+memoria suele estar en la CPU. El VRM transforma la alimentación para el
+procesador; su capacidad y refrigeración influyen en el rendimiento sostenido.
+
+Dos placas con el mismo chipset pueden diferir en:
+
+- calidad y límites del VRM;
+- número de ranuras y reparto de líneas PCIe;
+- red, audio, USB y controladores adicionales;
+- posibilidad de actualizar UEFI sin una CPU compatible;
+- tamaño de la memoria de firmware y soporte real de generaciones.
+
 ## 4. Memoria RAM
 
 Hay que comprobar generación DDR, capacidad total y por módulo, número de
@@ -62,6 +105,29 @@ XMP o EXPO configura parámetros de rendimiento, pero no garantiza estabilidad
 en cualquier combinación; poblar todos los bancos puede reducir la velocidad.
 La velocidad anunciada en un kit puede corresponder a un perfil de overclock y
 no a la velocidad estándar admitida oficialmente por el controlador de memoria.
+
+### 4.1 Frecuencia, transferencias y canales
+
+En DDR se anuncian normalmente **MT/s**, no MHz de reloj. Un módulo DDR5-6000
+transfiere 6 000 millones de operaciones por segundo por pin, pero su reloj de
+E/S no se expresa simplemente como «6 000 MHz». Para estimar ancho de banda de
+un canal de 64 bits:
+
+`6 000 MT/s × 8 bytes = 48 000 MB/s` teóricos.
+
+Dos canales poblados correctamente pueden duplicar el ancho de banda teórico,
+pero no duplican el rendimiento de todas las aplicaciones.
+
+### 4.2 QVL, perfiles y estabilidad
+
+Una QVL demuestra que el fabricante probó una referencia concreta, capacidad,
+número de módulos y configuración. Que un módulo no figure no demuestra que sea
+incompatible; sí obliga a justificarlo con más cuidado. Que figure tampoco
+garantiza la misma velocidad al usar cuatro módulos o una revisión distinta.
+
+XMP y EXPO almacenan perfiles de temporización y tensión. Activarlos puede
+considerarse overclock del subsistema de memoria. Antes de entregar un equipo se
+realiza una prueba de memoria y se documenta la configuración estable.
 
 ## 5. Almacenamiento y expansión
 
@@ -72,6 +138,24 @@ ranura comparte líneas con SATA o PCIe y si desactiva otros puertos.
 PCIe mantiene compatibilidad entre generaciones en muchos casos, pero el enlace
 negocia la combinación posible y queda limitado por el extremo más lento. La
 forma `x16` de una ranura tampoco asegura que tenga dieciséis líneas eléctricas.
+
+### 5.1 Leer el reparto de líneas
+
+```mermaid
+flowchart TD
+  CPU[CPU: líneas directas] --> GPU[PCIe x16 / x8]
+  CPU --> NV1[M.2 principal]
+  CPU --> LINK[Enlace al chipset]
+  LINK --> PCH[Chipset]
+  PCH --> NV2[M.2 adicionales]
+  PCH --> SATA[SATA]
+  PCH --> USB[USB y red]
+```
+
+Si varios dispositivos atraviesan el enlace del chipset, comparten su ancho de
+banda. El manual puede indicar expresiones como «M2_2 comparte ancho de banda
+con SATA_3» o «PCIEX16_2 funciona a x4». Esa nota es tan importante como el
+dibujo de la ranura.
 
 ## 6. Alimentación, refrigeración y caja
 
@@ -93,6 +177,45 @@ Para el aula no basta con que el equipo arranque. Conviene comprobar:
 Una configuración con 8 GB puede ejecutar herramientas por separado, pero queda
 muy limitada al combinar IDE, navegador y una VM. La necesidad real se justifica
 por la carga de trabajo y no solo por el requisito mínimo de cada producto.
+
+### 7.1 Inventario desde Linux
+
+En los equipos del aula se puede obtener un primer inventario sin instalar CPU-Z:
+
+```bash
+lscpu
+sudo dmidecode -t baseboard -t bios -t memory
+lsblk -o NAME,MODEL,SIZE,TRAN
+lspci -nn
+sudo fwupdmgr get-devices
+```
+
+Estos comandos identifican lo instalado, pero no sustituyen las listas de
+soporte. `dmidecode` muestra lo que declara el firmware y puede contener campos
+vacíos o imprecisos. Antes de usar `sudo`, se explica qué lee el comando y se
+respeta la política del aula.
+
+### 7.2 Dictamen técnico
+
+Una conclusión profesional no dice solo «compatible». Usa uno de estos estados:
+
+- **compatible y verificado**;
+- **compatible con condición** —por ejemplo, actualizar UEFI antes—;
+- **no compatible**, indicando la causa exacta;
+- **no verificable con la evidencia disponible**, indicando qué falta.
+
+```mermaid
+flowchart TD
+  A[Modelo y revisión exactos] --> B{Socket coincide}
+  B -- no --> X[No compatible]
+  B -- sí --> C{CPU en lista oficial}
+  C -- no --> Y[No verificado / no compatible]
+  C -- sí --> D{UEFI instalada suficiente}
+  D -- no --> E[Compatible con actualización planificada]
+  D -- sí --> F{RAM, energía, espacio y SO válidos}
+  F -- no --> G[Corregir condición]
+  F -- sí --> H[Compatible y verificado]
+```
 
 ## 8. Evidencias de calidad
 
@@ -147,3 +270,6 @@ con documentación oficial y una matriz visual de compatibilidad.
 - [Intel: zócalos y soporte de BIOS](https://www.intel.com/content/www/us/en/support/articles/000005670/processors.html)
 - Manual, CPU Support List y QVL de la placa concreta.
 - [PCI-SIG: información oficial de PCI Express](https://pcisig.com/pci-express)
+- [AMD: plataformas y chipsets AM5](https://www.amd.com/en/products/processors/chipsets/am5.html)
+- [Intel: incompatibilidad entre LGA1851 y LGA1700](https://www.intel.com/content/www/us/en/support/articles/000099723/processors.html)
+- [AMD: cuándo es necesaria una actualización de BIOS](https://www.amd.com/en/resources/support-articles/faqs/cpu-99.html)

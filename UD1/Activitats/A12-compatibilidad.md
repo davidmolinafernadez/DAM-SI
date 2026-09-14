@@ -25,6 +25,15 @@ configuración equilibrada y demuestra su compatibilidad.
 - vida útil prevista de cuatro años;
 - GPU dedicada únicamente si se justifica.
 
+## Condiciones del encargo
+
+- Presupuesto máximo orientativo por equipo: `1 050 €`, IVA incluido.
+- La configuración debe poder comprarse y montarse en la fecha de realización.
+- El equipo ejecutará Linux como anfitrión y una VM Windows para pruebas.
+- No se acepta un configurador comercial como única prueba de compatibilidad.
+- Una fuente secundaria puede orientar, pero cada decisión crítica necesita
+  documentación oficial del fabricante.
+
 ## Matriz obligatoria
 
 | Comprobación | Evidencia oficial | Resultado | Riesgo o condición |
@@ -41,6 +50,28 @@ configuración equilibrada y demuestra su compatibilidad.
 
 Añade tres incompatibilidades descartadas y explica cómo las detectaste.
 
+## Casos obligatorios que debes resolver
+
+1. **Socket parecido, plataforma distinta:** explica por qué una CPU LGA1851 no
+   funciona en una placa LGA1700 aunque sus dimensiones sean semejantes.
+2. **Firmware:** encuentra una CPU admitida desde una versión concreta de UEFI y
+   diseña el procedimiento si la placa llega con una versión anterior.
+3. **RAM:** calcula el ancho de banda teórico por canal del kit elegido a partir
+   de sus MT/s y explica QVL, XMP/EXPO y configuración de dos módulos.
+4. **Líneas compartidas:** localiza una nota real del manual donde una ranura M.2
+   comparta recursos o modifique otra ranura/puerto.
+5. **Térmica y energía:** comprueba límites de CPU, VRM, refrigeración, conectores
+   EPS y espacio en la caja.
+
+## Evidencias mínimas
+
+- ficha oficial de CPU;
+- página del chipset o plataforma;
+- CPU Support List y versión mínima de UEFI;
+- manual de placa y QVL;
+- ficha de RAM, SSD, fuente, caja y disipador;
+- salida comentada de `lscpu`, `dmidecode`, `lsblk` o `lspci` en un equipo Linux.
+
 ## Entrega
 
 Dictamen PDF y hoja de cálculo de componentes. Cada evidencia incluye modelo,
@@ -52,9 +83,10 @@ Archivo PDF: `Tarea_1_2_1_Apellidos_Nombre.pdf`.
 
 | Criterio | Puntos |
 |---|---:|
-| Adecuación a DAM | 2 |
-| CPU, placa y firmware | 2,5 |
-| RAM, almacenamiento y expansión | 2 |
-| Alimentación, medidas y refrigeración | 1,5 |
-| Evidencias y trazabilidad | 1,5 |
+| Adecuación a DAM y presupuesto | 1,5 |
+| CPU, socket, chipset y firmware | 2,5 |
+| RAM, QVL y cálculo de ancho de banda | 1,5 |
+| Almacenamiento, PCIe y líneas compartidas | 1,5 |
+| Alimentación, VRM, medidas y refrigeración | 1,5 |
+| Evidencias y trazabilidad | 1 |
 | Claridad, autonomía y presentación | 0,5 |

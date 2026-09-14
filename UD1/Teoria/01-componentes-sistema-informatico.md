@@ -306,6 +306,103 @@ entrada/salida adicional.
 | BIOS tradicional | UEFI | Mejor arranque, seguridad y configuración |
 | Puente norte separado | Funciones integradas en CPU | Menor latencia |
 
+### 6.1 Factor de forma: mucho más que el tamaño
+
+El **factor de forma** fija dimensiones, posición de tornillos, panel trasero,
+ranuras y parte de la alimentación. La caja debe admitir el formato de la placa;
+una caja grande puede aceptar varios formatos, pero una caja Mini-ITX no admite
+una placa ATX.
+
+| Formato habitual | Dimensiones orientativas | Uso y compromiso |
+|---|---:|---|
+| ATX | 305 × 244 mm | Más ranuras, conectores y espacio para refrigeración |
+| microATX | 244 × 244 mm máx. | Equipos generales con menor expansión |
+| Mini-ITX | 170 × 170 mm | Equipos compactos; exige planificar espacio y temperatura |
+
+E-ATX no describe una única medida universal en todos los fabricantes. Antes de
+comprar se comparan las dimensiones reales de placa y caja, no solo la etiqueta.
+
+### 6.2 Encapsulado, zócalo y mecanismo de retención
+
+El **encapsulado** es la pieza física que contiene el chip y sus contactos. El
+**zócalo** o *socket* es la interfaz mecánica y eléctrica de la placa. Deben
+coincidir, pero compartir zócalo no garantiza que una CPU funcione: también
+intervienen chipset, firmware y límites eléctricos.
+
+```mermaid
+flowchart LR
+  DIE[Chip o die] --> PKG[Encapsulado de la CPU]
+  PKG --> S[Socket y retención]
+  S --> VRM[VRM: alimentación regulada]
+  S --> RAM[Canales de memoria]
+  S --> PCIE[Líneas PCIe directas]
+  S --> PCH[Enlace al chipset]
+```
+
+| Tecnología | Dónde están los contactos | Uso típico | Precaución |
+|---|---|---|---|
+| LGA | Contactos elásticos en el socket; superficies planas en la CPU | Sobremesa y servidor actuales de Intel; AM5 de AMD | Un contacto doblado en placa puede inutilizar un canal |
+| PGA | Pines en el encapsulado de la CPU | Plataformas AMD AM4 y sistemas históricos | Los pines de la CPU pueden doblarse |
+| BGA | Bolas soldadas a la placa | Portátiles, móviles y sistemas integrados | No está pensado para sustitución por el usuario |
+
+**ZIF** no es una familia de CPU: describe un mecanismo que permite insertar o
+retirar el componente sin aplicar fuerza sobre sus contactos.
+
+!!! info "Ejemplos actuales para situarnos (2026)"
+    AMD AM5 utiliza LGA y DDR5; Intel Core Ultra de sobremesa Serie 2 utiliza
+    LGA1851. LGA1851 y LGA1700 tienen dimensiones parecidas, pero no son
+    compatibles. Estos nombres sirven para aprender el método; la decisión real
+    se comprueba en la documentación del modelo exacto.
+
+### 6.3 VRM, chipset y caminos rápidos
+
+El **VRM** convierte los 12 V de la fuente en tensiones bajas y muy estables para
+CPU y otros circuitos. Sus fases, control, disipación y límites influyen en el
+funcionamiento sostenido de procesadores exigentes. No debe juzgarse solo por el
+número de piezas visibles o por una cubierta decorativa.
+
+En plataformas clásicas, el puente norte comunicaba CPU, RAM y gráficos, y el
+puente sur concentraba la entrada/salida. En una plataforma actual, el
+controlador de memoria y líneas PCIe rápidas suelen estar dentro de la CPU. El
+chipset o PCH aporta más USB, SATA, PCIe y funciones de plataforma mediante un
+enlace con ancho de banda compartido.
+
+```mermaid
+flowchart TB
+  CPU[CPU] <--> RAM[DDR4 / DDR5]
+  CPU <--> GPU[PCIe x16 para GPU]
+  CPU <--> M2A[NVMe directo]
+  CPU <--> LINK[Enlace de chipset]
+  LINK <--> PCH[Chipset / PCH]
+  PCH <--> USB[USB y red]
+  PCH <--> SATA[SATA]
+  PCH <--> M2B[Más PCIe / M.2]
+```
+
+### 6.4 Ranuras y conectores que suelen confundirse
+
+- **DIMM** aloja módulos de RAM; SO-DIMM es común en portátiles y equipos compactos.
+- **PCI Express** usa líneas punto a punto. Una ranura física x16 puede funcionar
+  eléctricamente como x8 o x4.
+- **M.2** es un formato y un conector; un módulo puede usar SATA, PCIe/NVMe u otra
+  interfaz. La llave y la longitud tampoco garantizan por sí solas compatibilidad.
+- **SATA** transporta datos hacia SSD/HDD SATA; la unidad necesita además alimentación.
+- **ATX de 24 pines** alimenta la placa; **EPS/ATX12V** alimenta el VRM de CPU. No
+  se sustituyen entre sí aunque algunos conectores parezcan semejantes.
+- Las **cabeceras internas** conectan panel frontal, USB, audio, ventiladores y
+  dispositivos RGB/ARGB. Confundir tensiones o pinout puede provocar daños.
+
+### 6.5 Leer una placa como un técnico
+
+Para identificarla sin memorizar posiciones:
+
+1. Localiza el zócalo y sigue la zona del VRM hacia el conector EPS.
+2. Identifica los bancos DIMM y sus cierres.
+3. Distingue ranuras PCIe por longitud física y consulta sus líneas eléctricas.
+4. Busca M.2 bajo disipadores y comprueba longitudes e interfaces admitidas.
+5. Localiza chipset, SATA, pila, cabeceras y chips de firmware.
+6. Lee serigrafía, revisión y manual antes de conectar nada.
+
 En una placa actual es frecuente encontrar UEFI, DDR5, varias ranuras M.2 NVMe,
 PCI Express y conectividad USB de distintas velocidades. No debe deducirse la
 versión por el aspecto del conector: siempre se consulta el manual del modelo y
