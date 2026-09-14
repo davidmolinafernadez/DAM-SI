@@ -4,6 +4,8 @@ hide:
   - toc
 ---
 
+<!-- markdownlint-disable MD041 -->
+
 <section class="home-hero">
   <div class="home-hero__copy">
     <span class="home-eyebrow">1.º DAM · Curso 2026-2027</span>
