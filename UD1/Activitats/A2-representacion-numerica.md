@@ -4,6 +4,11 @@
 <span>55 min de aula + finalización</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
 </div>
 
+[:material-download: **Descargar actividad editable para LibreOffice (.odt)**](descargas/Tarea_1_2_Representacion_Numerica_Apellidos_Nombre.odt){ .md-button .md-button--primary download }
+
+Descarga el documento, guárdalo en tu equipo, sustituye `Apellidos_Nombre` por
+tus datos y complétalo con LibreOffice Writer. La entrega se realiza en Aules.
+
 ## Situación
 
 Una aplicación de diagnóstico recibe direcciones, máscaras, tamaños y

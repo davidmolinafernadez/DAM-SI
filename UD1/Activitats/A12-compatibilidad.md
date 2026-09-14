@@ -4,6 +4,11 @@
 <span>110 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
 </div>
 
+[:material-download: **Descargar actividad editable para LibreOffice (.odt)**](descargas/Tarea_1_2_1_Compatibilidad_Apellidos_Nombre.odt){ .md-button .md-button--primary download }
+
+Descarga el documento, guárdalo en tu equipo, sustituye `Apellidos_Nombre` por
+tus datos y complétalo con LibreOffice Writer. La entrega se realiza en Aules.
+
 ## Encargo
 
 Una empresa necesita seis equipos para aplicaciones multiplataforma, bases de

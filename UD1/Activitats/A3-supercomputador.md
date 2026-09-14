@@ -4,6 +4,11 @@
 <span>55 min</span><span>Individual</span><span>Ampliación</span><span>Aules</span>
 </div>
 
+[:material-download: **Descargar actividad editable para LibreOffice (.odt)**](descargas/Tarea_1_3_Supercomputador_Apellidos_Nombre.odt){ .md-button .md-button--primary download }
+
+Descarga el documento, guárdalo en tu equipo, sustituye `Apellidos_Nombre` por
+tus datos y complétalo con LibreOffice Writer. La entrega se realiza en Aules.
+
 Investiga un sistema de TOP500 y compáralo con un equipo del aula. MareNostrum
 5 es la opción recomendada.
 
