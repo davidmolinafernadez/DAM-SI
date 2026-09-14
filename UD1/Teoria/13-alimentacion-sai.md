@@ -10,6 +10,13 @@ de la caja.
 </div>
 </div>
 
+!!! info "PDF de ampliación · Sistemas SAI"
+    [:material-file-pdf-box: **Abrir Guía técnica de sistemas SAI**](recursos-pdf/UD1-3-Sistemas-SAI.pdf){ .md-button .md-button--primary target="_blank" }
+
+    Documento complementario con perturbaciones eléctricas, topologías,
+    dimensionado, autonomía, instalación y buenas prácticas. Para elegir un
+    equipo real prevalecen la ficha y la curva de autonomía del fabricante.
+
 ## 1. Cadena de alimentación
 
 ```mermaid

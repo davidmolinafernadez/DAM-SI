@@ -10,6 +10,13 @@ medidas, no con intuiciones ni con una única coincidencia.
 </div>
 </div>
 
+!!! info "PDF de ampliación · Compatibilidad"
+    [:material-file-pdf-box: **Abrir Compatibilidad de CPU, placa y RAM**](recursos-pdf/UD1-2-Compatibilidad-CPU-Placa-RAM.pdf){ .md-button .md-button--primary target="_blank" }
+
+    Guía complementaria para seguir el proceso de verificación de socket,
+    chipset, UEFI, memoria, QVL, refrigeración y factor de forma. Contrasta los
+    modelos concretos con las fuentes oficiales enlazadas en esta página.
+
 ## 1. Las cuatro capas de compatibilidad
 
 <div class="component-grid" markdown>

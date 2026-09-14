@@ -10,6 +10,13 @@ sistema: qué elementos lo forman, cómo se relacionan y cómo representan datos
 </div>
 </div>
 
+!!! info "PDF de ampliación · UD1 completa"
+    [:material-file-pdf-box: **Abrir Componentes del sistema informático**](recursos-pdf/UD1-Componentes-del-sistema-informatico.pdf){ .md-button .md-button--primary target="_blank" }
+
+    Presentación extensa de apoyo con arquitectura, microprocesador, placa base,
+    memoria, almacenamiento, alimentación, arranque y representación de datos.
+    Utilízala para repasar las explicaciones de esta página y ampliar los ejemplos.
+
 ## 1. Del dato al sistema informático
 
 Un **sistema informático** recibe datos, los procesa de acuerdo con un programa,
