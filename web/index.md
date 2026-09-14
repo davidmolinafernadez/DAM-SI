@@ -4,6 +4,7 @@ Bienvenido al espacio de consulta de **Sistemas Informáticos**. Aquí encontrar
 
 <div class="hero-actions" markdown>
 [Empezar por la UD1](ud1/index.md){ .md-button .md-button--primary }
+[Consultar la guía didáctica](guia-didactica.md){ .md-button }
 [Consultar todas las unidades](#unidades-didacticas){ .md-button }
 </div>
 

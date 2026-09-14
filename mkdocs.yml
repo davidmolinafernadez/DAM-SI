@@ -63,6 +63,7 @@ extra_javascript:
 
 nav:
   - Inicio: index.md
+  - Guía didáctica: guia-didactica.md
   - Tema 1 · Componentes:
       - Presentación: ud1/index.md
       - 1 · Componentes del sistema:
