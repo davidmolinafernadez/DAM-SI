@@ -1,8 +1,8 @@
-# Plan docente del Tema 1
+# Plan docente de la UD1
 
 ## Estructura correcta
 
-- **Tema 1:** Componentes del sistema informático.
+- **UD1:** Componentes del sistema informático.
 - **Subunidad 1.1:** Instrucciones de la CPU.
 - **Subunidad 1.2:** Compatibilidad de CPU, placa base y RAM.
 - **Subunidad 1.3:** Alimentación y sistemas SAI.

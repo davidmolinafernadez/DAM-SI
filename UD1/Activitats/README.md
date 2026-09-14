@@ -1,4 +1,4 @@
-# Tareas del Tema 1
+# Tareas de la UD1
 
 Todas las tareas son **individuales**. Los enunciados se consultan en la web y
 la entrega se realiza en Aules con el número y nombre exactos indicados.
@@ -7,7 +7,7 @@ Cada página incluye una actividad editable en formato **ODT**, recomendada para
 LibreOffice en Linux. El alumnado debe descargarla, renombrarla, completarla en
 su equipo y entregarla en Aules en el formato solicitado.
 
-- **Tema 1 · Componentes del sistema informático**
+- **UD1 · Componentes del sistema informático**
   - [Tarea 1.1 · Anatomía de una placa base](A1-placa-base.md)
   - [Tarea 1.2 · Representación numérica](A2-representacion-numerica.md)
   - [Tarea 1.3 · Radiografía de un supercomputador](A3-supercomputador.md)

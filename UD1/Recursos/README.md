@@ -1,6 +1,6 @@
 # Recursos de la UD1
 
-El PDF **Componentes del sistema informático** establece el Tema 1 general. Los
+El PDF **Componentes del sistema informático** establece la UD1 general. Los
 materiales de ciclo de instrucción, compatibilidad y SAI se organizan después
 como subunidades 1.1, 1.2 y 1.3. La teoría nueva corrige simplificaciones, evita
 depender de modelos obsoletos y dirige a fuentes técnicas oficiales.

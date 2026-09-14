@@ -1,4 +1,4 @@
-# Tema 1 · Componentes del sistema informático
+# UD1 · Componentes del sistema informático
 
 <div class="lesson-banner" markdown>
 <div class="lesson-number">T1</div>

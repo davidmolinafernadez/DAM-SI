@@ -1,4 +1,4 @@
-# Tema 1 · Componentes del sistema informático
+# UD1 · Componentes del sistema informático
 
 La unidad parte del tema general **Componentes del sistema informático**. Dentro
 de él se desarrollan tres subunidades. Cada tarea aparece debajo de la teoría a
@@ -6,7 +6,7 @@ la que pertenece y se entrega individualmente en Aules.
 
 ## Índice jerárquico
 
-- **Tema 1 · Componentes del sistema informático**
+- **UD1 · Componentes del sistema informático**
   - [Teoría general](01-componentes-sistema-informatico.md)
   - **Tareas del tema general**
     - [Tarea 1.1 · Anatomía de una placa base](actividades/A1-placa-base.md)
@@ -26,7 +26,7 @@ la que pertenece y se entrega individualmente en Aules.
 
 | Bloque | Sesiones | Tiempo real |
 |---|---:|---:|
-| Tema 1 · Componentes y representación | 6 | 5 h 30 min |
+| UD1 · Componentes y representación | 6 | 5 h 30 min |
 | 1.1 · Instrucciones de la CPU | 3 | 2 h 45 min |
 | 1.2 · Compatibilidad | 3 | 2 h 45 min |
 | 1.3 · Alimentación y SAI | 3 | 2 h 45 min |
