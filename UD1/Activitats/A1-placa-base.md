@@ -14,6 +14,7 @@ Reconoce componentes, explica su función y compara dos generaciones de placas.
 </div>
 
 [:material-download: **Descargar actividad editable para LibreOffice (.odt)**](descargas/Tarea_1_1_Anatomia_Placa_Base_Apellidos_Nombre.odt){ .md-button .md-button--primary download }
+[:material-file-pdf-box: **Abrir o descargar en PDF**](descargas/Tarea_1_1_Anatomia_Placa_Base_Apellidos_Nombre.pdf){ .md-button }
 
 Descarga el documento, guárdalo en tu equipo, sustituye `Apellidos_Nombre` por
 tus datos y complétalo con LibreOffice Writer. La entrega se realiza en Aules.

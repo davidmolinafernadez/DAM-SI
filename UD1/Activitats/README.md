@@ -3,9 +3,10 @@
 Todas las tareas son **individuales**. Los enunciados se consultan en la web y
 la entrega se realiza en Aules con el número y nombre exactos indicados.
 
-Cada página incluye una actividad editable en formato **ODT**, recomendada para
-LibreOffice en Linux. El alumnado debe descargarla, renombrarla, completarla en
-su equipo y entregarla en Aules en el formato solicitado.
+Cada página ofrece dos versiones: **ODT editable**, recomendada para trabajar
+con LibreOffice en Linux, y **PDF**, que conserva imágenes y maquetación para
+consultar el enunciado. El alumnado debe descargar el ODT, renombrarlo,
+completarlo en su equipo y exportar la entrega al formato solicitado en Aules.
 
 - **UD1 · Componentes del sistema informático**
   - [Tarea 1.1 · Anatomía de una placa base](A1-placa-base.md)

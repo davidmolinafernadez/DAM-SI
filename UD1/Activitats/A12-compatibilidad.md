@@ -5,6 +5,7 @@
 </div>
 
 [:material-download: **Descargar actividad editable para LibreOffice (.odt)**](descargas/Tarea_1_2_1_Compatibilidad_Apellidos_Nombre.odt){ .md-button .md-button--primary download }
+[:material-file-pdf-box: **Abrir o descargar en PDF**](descargas/Tarea_1_2_1_Compatibilidad_Apellidos_Nombre.pdf){ .md-button }
 
 Descarga el documento, guárdalo en tu equipo, sustituye `Apellidos_Nombre` por
 tus datos y complétalo con LibreOffice Writer. La entrega se realiza en Aules.
