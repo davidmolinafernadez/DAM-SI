@@ -575,7 +575,7 @@ la misma arquitectura funcional se escala para resolver problemas científicos.
 !!! tip "Actividad de ampliación"
     [Tarea 1.3 · Radiografía de un supercomputador](actividades/A3-supercomputador.md)
     conecta todos los componentes estudiados y diferencia rendimiento máximo de
-rendimiento medido.
+    rendimiento medido, además de relacionar HPC y computación cuántica.
 
 <div class="video-card" markdown>
 
@@ -591,6 +591,61 @@ allowfullscreen></iframe>
 </div>
 
 [Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=rk-CKed4c7U)
+
+</div>
+
+### 9.1 Computación cuántica: otra forma de procesar información
+
+Un supercomputador como MareNostrum 5 realiza cálculo **clásico**: sus CPU y GPU
+procesan bits, con valores 0 o 1, y reparten el trabajo entre muchos recursos.
+La computación cuántica utiliza **cúbits (qubits)** y algoritmos diferentes.
+
+- **Superposición:** un cúbit puede prepararse en una combinación de los estados
+  0 y 1. Al medirlo se obtiene un único resultado, 0 o 1.
+- **Entrelazamiento:** varios cúbits pueden compartir un estado con correlaciones
+  que no se explican como bits independientes.
+- **Interferencia:** un algoritmo modifica las amplitudes de los estados para
+  favorecer ciertos resultados al medir. No permite leer todas las respuestas
+  posibles de una sola vez.
+
+Se investigan aplicaciones como la simulación de moléculas y materiales. La
+ventaja depende del problema, del algoritmo y del hardware: un ordenador cuántico
+**no es más rápido en cualquier tarea**. El ruido y la pérdida de coherencia
+dificultan los cálculos y hacen necesario controlar y corregir errores.
+
+La conexión con la supercomputación es el **trabajo híbrido**: el sistema clásico
+prepara datos y analiza resultados, mientras un procesador cuántico ejecuta una
+parte específica del cálculo. El proyecto
+[Quantum Spain](https://quantumspain-project.es/infraestructura/) ofrece recursos
+cuánticos a través de la Red Española de Supercomputación e incluye un ordenador
+cuántico ubicado en el BSC.
+
+!!! example "Para situarlo en DAM"
+    Una aplicación podría enviar un cálculo especializado a un servicio cuántico
+    y recoger sus resultados. Su interfaz, base de datos y lógica habitual
+    seguirían ejecutándose en ordenadores clásicos. Más cúbits no equivalen
+    directamente a más GHz o más FLOPS.
+
+<div class="video-card" markdown>
+
+### Vídeo · Quantum Spain: l’experiment més bonic
+
+Vídeo divulgativo en catalán de la Comisión Europea, presentado por Quantum
+Spain, con investigadoras del BSC. Relaciona la física cuántica, el ordenador
+cuántico y sus posibles aplicaciones. Durante el visionado, identifica una
+aplicación y relaciónala con la explicación anterior.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/rEtk0EovAJ4"
+title="Quantum Spain: l’experiment més bonic" loading="lazy"
+allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=rEtk0EovAJ4) ·
+[Contexto del vídeo en Quantum Spain](https://quantumspain-project.es/la-comision-europea-destaca-a-quantum-spain-en-nueva-campana/)
+
+Aplica lo aprendido en la pregunta 6 de la
+[Tarea 1.3](actividades/A3-supercomputador.md).
 
 </div>
 
@@ -629,6 +684,8 @@ mindmap
 
 ## Fuentes para ampliar y comprobar datos
 
+- [IBM · Qué es la computación cuántica](https://www.ibm.com/es-es/think/topics/quantum-computing):
+  cúbits, superposición, interferencia y relación con la computación clásica.
 - [IBM · Qué es un mainframe](https://www.ibm.com/mx-es/think/topics/mainframe):
   disponibilidad, transacciones, entrada/salida y diferencias frente a HPC.
 - [Intel · Manual de optimización de arquitecturas x86-64](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html):
