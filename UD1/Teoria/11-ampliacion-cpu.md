@@ -204,4 +204,3 @@ no implica siempre una lectura física del dispositivo.
 Pedir acceso a un recurso administrado por el sistema operativo, como un
 archivo, sí requiere sus servicios. En ambos casos, la CPU termina ejecutando
 instrucciones máquina; lo que cambia es el código y el nivel de privilegio.
-
