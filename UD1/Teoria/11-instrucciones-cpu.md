@@ -87,17 +87,24 @@ Una instrucción suele combinar:
 - **inmediato:** constante incluida en la instrucción;
 - **modo de direccionamiento:** cómo obtener una dirección de memoria.
 
-Consideremos una notación didáctica:
+Consideremos una notación didáctica que mantendremos en el ejemplo guiado:
 
 ```asm
-LOAD  R1, [500]     ; R1 recibe el contenido de memoria[500]
-ADD   R3, R1, R2    ; R3 recibe R1 + R2
-STORE [504], R3     ; memoria[504] recibe R3
-JZ    fin           ; salta si la bandera Z vale 1
+LOAD  R1, [800]     ; R1 recibe el contenido de memoria[800]
+ADD   R1, R2        ; R1 recibe R1 + R2
+STORE [804], R1     ; memoria[804] recibe R1
+JZ    400          ; salta a 400 si la bandera Z vale 1
 ```
 
-`ADD R3, R1, R2` no suma los nombres. El decodificador selecciona dos registros,
-ordena una suma a la ALU y habilita la escritura del resultado en `R3`.
+`ADD R1, R2` no suma los nombres. El decodificador selecciona los valores de
+ambos registros, ordena una suma a la ALU y guarda el resultado en R1.
+Aquí el primer operando es también el destino. En otros ejemplos puedes ver
+la forma de tres operandos `ADD R3, R1, R2`: significa `R3 ← R1 + R2`.
+
+**Dirección y contenido son cosas distintas.** Imagina la memoria como casillas
+numeradas: 800 es el número de una casilla; `[800]` es lo que hay dentro.
+Si esa casilla contiene 12, `LOAD R1, [800]` carga **12**, no 800.
+La flecha `←` significa «recibe el valor de».
 
 !!! example "Un mismo objetivo, instrucciones distintas"
     Una ISA puede ofrecer una instrucción compleja para una operación; otra
@@ -133,6 +140,15 @@ flowchart LR
 
 MAR y MDR ayudan a visualizar los accesos, aunque en una CPU moderna no siempre
 existan como dos registros físicos únicos con esos nombres.
+
+Por ejemplo, para leer el dato 12 situado en la dirección 800, MAR recibe 800
+y MDR recibe 12. Si estamos buscando una instrucción, MDR transporta su
+codificación y después IR la conserva para interpretarla. **El PC contiene
+una dirección; el IR contiene una instrucción.**
+
+La bandera **Z** es un bit: en el modelo que usaremos, vale 1 si la última
+suma produjo cero y 0 si produjo otro resultado. No es un registro donde se
+guarde la suma completa.
 
 ### 4.2 ALU, unidad de control y reloj
 
@@ -186,6 +202,32 @@ flowchart TB
   C2 --> L2[Hilos lógicos]
 ```
 
+#### Cómo reconocer estos datos en Linux
+
+Ejecuta `lscpu` en un terminal y relaciona la salida con los conceptos anteriores.
+Este ejemplo es ficticio y describe una topología uniforme:
+
+| Campo | Ejemplo | Cómo interpretarlo |
+|---|---|---|
+| Arquitectura | x86_64 | ISA que utiliza el entorno |
+| Nombre del modelo | Modelo indicado por el sistema | Identificación del procesador |
+| Sockets | 1 | Un paquete de CPU reconocido |
+| Núcleos por socket | 4 | Cuatro núcleos físicos en ese paquete |
+| Hilos por núcleo | 2 | Dos contextos lógicos por núcleo |
+| CPU lógicas | 8 | El SO puede planificar sobre ocho CPU lógicas |
+| Cachés | Valores de L1, L2 y L3 | Comprueba si los tamaños son agregados |
+| Virtualización | VT-x o AMD-V, si aparece | Extensión de virtualización expuesta |
+
+En este caso, `1 × 4 × 2 = 8` CPU lógicas. Cada pareja de hilos comparte
+recursos de un núcleo: ocho CPU lógicas no equivalen a ocho núcleos físicos.
+El socket físico es el conector de la placa; el campo de `lscpu` informa de
+los paquetes que el sistema reconoce.
+
+En una máquina virtual o WSL, la salida puede describir lo que el entorno
+expone al invitado. Indica siempre dónde ejecutaste el comando. Si un campo no
+aparece, escribe «no mostrado»; no inventes su valor. La fórmula anterior no
+debe aplicarse sin comprobarla en topologías híbridas o con CPU desactivadas.
+
 ### 4.5 Potencia, temperatura y frecuencia dinámica
 
 La frecuencia anunciada no permanece fija. El procesador ajusta tensión y
@@ -215,6 +257,19 @@ Por eso no existe una única cifra que describa todas las cargas.
 - Comprueba RAM, almacenamiento y refrigeración para no medir otro cuello de botella.
 - Distingue latencia —tiempo de una tarea— de throughput —trabajo por unidad de tiempo—.
 
+**Ejemplo numérico:** 3 GHz significa 3 000 millones de ciclos por segundo.
+Si un núcleo completa de media 0,5 instrucciones por ciclo (IPC), termina unos
+1 500 millones de instrucciones por segundo. Si completa 2 por ciclo, termina
+unos 6 000 millones. Son situaciones hipotéticas a la misma frecuencia:
+
+```text
+Instrucciones por segundo ≈ frecuencia en Hz × IPC medio
+```
+
+Las esperas de memoria y las dependencias pueden reducir el IPC; disponer de
+varias unidades de ejecución permite completar varias instrucciones por ciclo
+cuando el programa lo permite. Por eso los GHz, por sí solos, no bastan.
+
 ## 5. Ciclo de una instrucción, paso a paso
 
 El esquema escolar se resume como **fetch - decode - execute**. Para explicar
@@ -235,41 +290,170 @@ registros no necesita leer datos de RAM; un `STORE` escribe memoria y no suele
 escribir un registro destino; un salto puede sustituir el siguiente valor del
 PC.
 
-### 5.1 Ejemplo completo: `LOAD R1, [500]`
+### 5.1 Nuestro programa de ejemplo
 
-Supongamos `PC = 100`, que la instrucción ocupa 4 bytes y que
-`memoria[500] = 27`.
+Vamos a leer un número, sumarle otro, guardar el resultado y decidir si hay
+que saltar. Usaremos estos mismos datos en los apartados 5, 6 y 7:
 
-| Fase | Microoperaciones didácticas | Estado relevante |
+```text
+Dirección   Instrucción
+300         LOAD  R1, [800]
+304         ADD   R1, R2
+308         STORE [804], R1
+312         JZ    400
+```
+
+Estado inicial: **PC = 300, memoria[800] = 12, R2 = −5 y Z = 0**.
+No conocemos todavía R1 ni el contenido de 804.
+
+Estas son las reglas del ejemplo, una CPU didáctica y no una ISA comercial:
+
+- La memoria se direcciona por bytes y cada instrucción ocupa cuatro bytes.
+  Por eso la dirección secuencial siguiente se obtiene sumando 4.
+- `ADD R1, R2` guarda la suma en R1 y actualiza Z.
+- `LOAD`, `STORE` y `JZ` no modifican Z. No estudiaremos otras banderas.
+- Primero seguiremos una instrucción completa detrás de otra. El solapamiento
+  del pipeline se estudiará después, con el mismo resultado final.
+
+### 5.2 Primera instrucción: `LOAD R1, [800]`
+
+Significa: **«Lee el contenido de la dirección 800 y cópialo en R1»**.
+
+1. **Búsqueda:** PC vale 300. Se coloca esa dirección en MAR, se lee la
+   instrucción a través de MDR y se copia en IR. El PC secuencial pasa a 304.
+2. **Decodificación:** la unidad de control reconoce una carga de memoria,
+   con destino R1 y dirección de origen 800.
+3. **Ejecución:** se obtiene la dirección efectiva del dato, 800.
+4. **Memoria:** `MAR ← 800`; `MDR ← memoria[800]`. MDR recibe 12.
+5. **Escritura del resultado:** `R1 ← MDR`. R1 recibe 12.
+
+```text
+Al terminar LOAD: R1 = 12, PC = 304, Z = 0.
+Memoria[800] sigue valiendo 12: leer no borra el dato.
+```
+
+Hay **dos lecturas diferentes**: la instrucción está en 300 y el dato está en
+800. MAR y MDR se utilizan en ambos momentos. El PC no pasa a 800, porque esa
+es la dirección de un dato, no la de la siguiente instrucción.
+
+```mermaid
+flowchart TD
+  PC["PC = 300"] --> A["MAR = 300: buscar instrucción"]
+  A --> B["Memoria → MDR → IR: LOAD R1, [800]"]
+  B --> C["Unidad de control: interpretar LOAD"]
+  C --> D["MAR = 800: buscar dato"]
+  D --> E["Memoria[800] → MDR: 12"]
+  E --> F["MDR → R1: 12"]
+```
+
+Las apariciones de MAR y MDR son usos sucesivos de los mismos registros del
+modelo, no registros nuevos.
+
+### 5.3 Segunda instrucción: `ADD R1, R2`
+
+Significa: **«Suma los valores de R1 y R2 y guarda el resultado en R1»**.
+
+1. Se busca la instrucción en 304 y el PC secuencial pasa a 308.
+2. La unidad de control reconoce la suma y selecciona R1 y R2.
+3. La ALU calcula `12 + (−5) = 7`.
+4. No hace falta acceder a memoria de datos: los operandos están en registros.
+5. Se guarda 7 en R1. Como el resultado no es cero, Z queda en 0.
+
+```text
+Al terminar ADD: R1 = 7, R2 = −5, Z = 0, PC = 308.
+```
+
+R2 conserva su valor: el destino es R1. MAR y MDR se han usado para buscar
+la instrucción, pero no para obtener los operandos de esta suma.
+
+### 5.4 Tercera instrucción: `STORE [804], R1`
+
+Significa: **«Copia el contenido de R1 en la dirección de memoria 804»**.
+
+1. Se busca la instrucción en 308 y el PC secuencial pasa a 312.
+2. La unidad de control identifica R1 como origen del dato y 804 como destino.
+3. Se obtiene la dirección efectiva 804.
+4. `MAR ← 804`; `MDR ← R1`; `memoria[MAR] ← MDR`. Se escribe el valor 7.
+5. No hay resultado que escribir en un registro destino.
+
+```text
+Al terminar STORE: memoria[804] = 7, R1 = 7, Z = 0, PC = 312.
+```
+
+**804 es la dirección; 7 es el valor guardado.** Copiar R1 a memoria no borra
+R1 ni modifica Z. La escritura ocurre en la fase M; la fase W no escribe
+ningún registro para esta instrucción.
+
+```text
+LOAD:  memoria → registro
+STORE: registro → memoria
+```
+
+### 5.5 Instrucción, etapa, microoperación y ciclo
+
+| Concepto | Qué significa | Ejemplo |
 |---|---|---|
-| Fetch | `MAR ← PC`; `MDR ← M[MAR]`; `IR ← MDR` | IR contiene `LOAD` |
-| Actualizar PC | `PC ← PC + 4` | PC pasa a 104 |
-| Decode | Se reconoce `LOAD`, destino R1 y dirección 500 | Control prepara lectura |
-| Execute | Se calcula la dirección efectiva | Dirección = 500 |
-| Memory | `MAR ← 500`; `MDR ← M[500]` | MDR recibe 27 |
-| Write-back | `R1 ← MDR` | R1 pasa a 27 |
+| Instrucción | Orden completa del programa | `LOAD R1, [800]` |
+| Etapa | Parte del procesamiento de una instrucción | Buscarla o decodificarla |
+| Microoperación didáctica | Acción elemental con datos o registros | `MAR ← PC` |
+| Ciclo de reloj | Intervalo de sincronización del procesador | Un pulso de avance del modelo |
 
-MAR y MDR aparecen dos veces porque primero se lee **la instrucción** situada en
-100 y después se lee **el dato** situado en 500.
-
-### 5.2 Después: `ADD R3, R1, R2`
-
-Si `R1 = 27` y `R2 = 15`, el banco de registros entrega ambos operandos, la ALU
-calcula 42 y write-back guarda `R3 = 42`. Si el resultado fuese cero, la bandera
-`Z` podría activarse; si una suma sin signo generase un bit adicional aparecería
-acarreo; el desbordamiento con signo se interpreta de otra manera.
-
-### 5.3 Finalmente: `STORE [504], R3`
-
-La CPU calcula 504 como dirección efectiva y envía el valor 42 hacia la memoria.
-Aquí no se escribe R3: R3 es la fuente. Esta diferencia entre `LOAD` y `STORE`
-es esencial para trazar programas correctamente.
+Una instrucción atraviesa varias etapas. En el pipeline sencillo supondremos
+una etapa por ciclo; en una CPU real, los tiempos y la organización dependen
+del diseño. Las flechas de una traza explican transferencias: no debes contar
+cada flecha automáticamente como un ciclo.
 
 ## 6. Saltos: cuando PC no avanza en línea recta
 
 Un programa necesita decisiones y bucles. Una comparación actualiza condiciones
 y un salto condicional decide entre continuar secuencialmente o cargar otra
 dirección en PC.
+
+### 6.1 Cuarta instrucción del ejemplo: `JZ 400`
+
+Significa: **«Salta a 400 si la bandera Z vale 1»**.
+
+1. La CPU busca la instrucción en 312; la dirección secuencial siguiente es 316.
+2. La unidad de control identifica el salto condicional y su destino, 400.
+3. Se consulta Z, que vale 0 porque la suma produjo 7.
+4. No se toma el salto. La siguiente instrucción se buscará en **316**.
+
+`JZ` consulta la bandera; no vuelve a sumar ni lee R1 para comprobar su valor.
+Tampoco lee un dato de la dirección 400. Si toma el salto, esa dirección se
+utilizará en la próxima búsqueda de instrucciones.
+
+| Después de ejecutar | R1 | R2 | Memoria[800] | Memoria[804] | Z | PC |
+|---|---:|---:|---:|---|---:|---:|
+| Estado inicial | Sin especificar | −5 | 12 | Sin especificar | 0 | 300 |
+| LOAD | 12 | −5 | 12 | Sin especificar | 0 | 304 |
+| ADD | 7 | −5 | 12 | Sin especificar | 0 | 308 |
+| STORE | 7 | −5 | 12 | 7 | 0 | 312 |
+| JZ | 7 | −5 | 12 | 7 | 0 | 316 |
+
+Esta tabla muestra el estado tras completar cada instrucción en secuencia,
+no el PC de búsqueda adelantada de un pipeline. El programa mostrado no nos
+dice qué instrucción hay en 316.
+
+### 6.2 Variante: ¿qué cambiaría si R2 empezase en −12?
+
+Reiniciamos el programa desde 300 con los mismos datos, excepto **R2 = −12**:
+
+- `LOAD` vuelve a cargar 12 en R1.
+- `ADD` calcula `12 + (−12) = 0`, guarda 0 en R1 y pone Z en 1.
+- `STORE` escribe 0 en 804 y conserva Z en 1.
+- `JZ` encuentra Z = 1 y establece **PC = 400**.
+
+| Caso | Resultado de la suma | Z | ¿Salta? | PC tras JZ |
+|---|---:|---:|---|---:|
+| Principal: R2 = −5 | 7 | 0 | No | 316 |
+| Variante: R2 = −12 | 0 | 1 | Sí | 400 |
+
+El recorrido es el mismo hasta la decisión; lo que cambia es el resultado
+de la suma y, por tanto, la bandera que consulta el salto.
+
+### 6.3 Otro uso de los saltos: repetir un bucle
+
+El siguiente ejemplo es independiente y utiliza instrucciones de tres operandos:
 
 ```asm
 loop:
@@ -329,6 +513,61 @@ SUB R4, R1, R5     ; necesita el R1 producido por ADD
 El **forwarding** puede enviar el resultado directamente a la siguiente unidad
 sin esperar a que se escriba y vuelva a leerse del banco de registros. Si no
 llega a tiempo, la CPU introduce una espera o *stall*.
+
+### 7.2 El pipeline de nuestro programa, paso a paso
+
+Volvemos al programa de 300–312. Para poder dibujar sus tiempos fijamos estas
+reglas: cinco etapas de un ciclo, ejecución en orden, accesos independientes
+a instrucciones y datos, y memoria que responde sin esperas adicionales.
+La carga entrega su dato al final de M. Hay forwarding hacia la ALU y hacia
+el dato de escritura de STORE; Z está disponible cuando JZ llega a E.
+
+**El problema está entre LOAD y ADD:** ADD necesita el valor que LOAD todavía
+está buscando. Si LOAD empieza en el ciclo 1, llega a M en el ciclo 4 y obtiene
+12 al final de ese ciclo. ADD no puede usar ese 12 al comienzo del mismo ciclo.
+
+La solución de este modelo es esperar un ciclo y enviar el dato mediante
+forwarding a la ALU en el ciclo 5:
+
+| Instrucción / ciclo | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|---|---|---|---|---|---|---|---|---|---|
+| LOAD | F | D | E | M | W | | | | |
+| ADD | | F | D | Espera | E | M | W | | |
+| STORE | | | F | Espera | D | E | M | W | |
+| JZ | | | | | F | D | E | M | W |
+
+En el ciclo 4, ADD permanece retenida antes de E y STORE también espera;
+queda una **burbuja**, una posición sin instrucción útil en E. En el ciclo 5,
+ADD recibe 12 y calcula 7. El forwarding evita esperar a leer otra vez R1
+después de la escritura de LOAD, pero **no elimina esta espera de un ciclo**.
+
+También hay dependencias entre ADD y STORE, por R1, y entre ADD y JZ, por Z.
+Con las reglas indicadas, el resultado llega a STORE para su escritura en M
+del ciclo 7, y Z está disponible para JZ en E del ciclo 7. No hacen falta
+esperas adicionales. Otros diseños pueden necesitar una planificación distinta.
+
+Las casillas M y W de ADD, STORE y JZ no implican que todas esas instrucciones
+lean memoria o escriban registros. ADD no accede a datos en M; STORE no escribe
+registros en W; JZ resuelve el salto en E y no hace trabajo útil en M ni W.
+
+### 7.3 Predicción: ¿y si la CPU se adelanta por el camino incorrecto?
+
+Supongamos que JZ se resuelve al final de E y se predice «no tomado».
+La CPU empieza a buscar las instrucciones de 316 y 320 mientras decide.
+
+En el **caso principal**, Z vale 0: la predicción acierta y puede continuar.
+En la **variante con R2 = −12**, Z vale 1: el destino correcto es 400.
+En ese caso, al resolver el salto en el ciclo 7:
+
+1. Se anulan las instrucciones del camino equivocado que están en D y F
+   (las buscadas en 316 y 320 en este modelo).
+2. La búsqueda se redirige a 400 en el ciclo siguiente.
+3. Se conservan los resultados de LOAD, ADD y STORE, que son anteriores al salto.
+
+Estas instrucciones posteriores no estaban incluidas en la tabla porque no
+conocemos sus operaciones. Su trabajo se descarta antes de modificar el estado
+arquitectónico. El tiempo invertido explica la penalización de una predicción
+incorrecta.
 
 ## 8. Qué añade una CPU moderna
 
@@ -397,33 +636,64 @@ guarda el contexto necesario, cambia a una rutina del sistema operativo y luego
 reanuda el programa cuando procede. Esto permite que una aplicación DAM use
 archivos, red o pantalla sin controlar directamente cada dispositivo.
 
-## 11. Caso guiado para explicar en clase
+### De una operación Java a la CPU
 
-Supongamos:
+Considera dos acciones de una aplicación:
 
-```asm
-LOAD R1, [500]
-ADD  R1, R1, 1
-STORE [500], R1
+```java
+int saldo = entrada + ajuste;
+String texto = java.nio.file.Files.readString(ruta);
 ```
 
-Estado inicial: `PC = 100`, `R1 = 0`, `M[500] = 9`; cada instrucción ocupa
+En la primera, el programa calcula una suma. `javac` genera bytecode y la JVM
+puede interpretarlo o compilarlo mediante JIT. El código máquina resultante
+utiliza los registros y las unidades de la CPU. No hay una equivalencia fija
+entre una línea Java y una instrucción: el compilador puede transformar e
+incluso eliminar operaciones cuyo resultado ya conoce o no se utiliza.
+
+En la segunda, las bibliotecas y la JVM recurren a servicios del sistema
+operativo para abrir y leer el archivo. Las llamadas al sistema necesarias
+transfieren el control a código del núcleo y después lo devuelven al programa.
+El sistema puede satisfacer lecturas desde caché, por lo que leer un archivo
+no implica siempre una lectura física del dispositivo.
+
+**Sumar datos en registros no requiere por sí mismo una llamada al sistema.**
+Pedir acceso a un recurso administrado por el sistema operativo, como un
+archivo, sí requiere sus servicios. En ambos casos, la CPU termina ejecutando
+instrucciones máquina; lo que cambia es el código y el nivel de privilegio.
+
+## 11. Caso guiado para explicar en clase
+
+Este segundo programa es independiente: aumenta en uno un contador. Ahora
+usamos la forma de tres operandos de ADD; el último operando es el inmediato 1.
+
+```asm
+LOAD R3, [900]
+ADD  R3, R3, 1
+STORE [900], R3
+```
+
+Estado inicial: `PC = 600`, `R3 = 0`, `M[900] = 20`; cada instrucción ocupa
 4 bytes.
 
-| Tras la instrucción | PC | R1 | M[500] | Explicación |
+| Tras la instrucción | PC | R3 | M[900] | Explicación |
 |---|---:|---:|---:|---|
-| Inicial | 100 | 0 | 9 | Todavía no se ejecutó nada |
-| `LOAD` | 104 | 9 | 9 | Se leyó memoria |
-| `ADD` | 108 | 10 | 9 | Se operó en registros |
-| `STORE` | 112 | 10 | 10 | Se escribió memoria |
+| Inicial | 600 | 0 | 20 | Todavía no se ejecutó nada |
+| `LOAD` | 604 | 20 | 20 | Se copió el contador a R3 |
+| `ADD` | 608 | 21 | 20 | Se sumó 1 en la ALU; la memoria aún conserva 20 |
+| `STORE` | 612 | 21 | 21 | Se guardó el contador actualizado |
+
+Tras ADD, R3 ya contiene 21 pero la memoria todavía contiene 20. Solo STORE
+actualiza la casilla 900. Así se distingue **calcular un resultado** de
+**guardarlo en memoria**.
 
 Preguntas para conducir la explicación:
 
-1. ¿En qué instrucción se modifica realmente la memoria 500?
+1. ¿En qué instrucción se modifica realmente la memoria 900?
 2. ¿Por qué `ADD` no necesita acceder a RAM para sus operandos?
-3. ¿Qué valor tendría PC si la segunda instrucción fuese un salto a 200?
+3. ¿Qué valor tendría PC si la segunda instrucción fuese un salto incondicional a 700?
 4. ¿Qué dependencia aparecería entre `LOAD` y `ADD` en un pipeline?
-5. ¿Qué ocurriría si la página que contiene la dirección 500 no estuviera en RAM?
+5. ¿Qué ocurriría si la página que contiene la dirección 900 no estuviera en RAM?
 
 ## 12. Errores frecuentes
 
@@ -463,7 +733,7 @@ loading="lazy" allowfullscreen></iframe>
 1. Diferencia ISA y microarquitectura mediante un ejemplo.
 2. Explica por qué MAR y MDR aparecen dos veces en un `LOAD`.
 3. Distingue instrucción, etapa del pipeline y ciclo de reloj.
-4. Identifica la dependencia entre `LOAD R1, [500]` y `ADD R2, R1, R3`.
+4. Identifica la dependencia entre `LOAD R1, [800]` y `ADD R1, R2`.
 5. Explica qué ocurre cuando falla una predicción de salto.
 6. Relaciona una llamada Java para leer un archivo con una llamada al sistema.
 
