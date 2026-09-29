@@ -4,8 +4,9 @@
 <span>110 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
 </div>
 
-Vamos a seguir programas pequeños en una máquina de Von Neumann. Primero
-**predice en papel** qué ocurrirá; después **compruébalo en el simulador**.
+Vamos a seguir programas pequeños en una máquina de Von Neumann. En A y C,
+**predice en papel** y después **comprueba en el simulador**. El programa B
+se resuelve **solo a mano, sin simulador**, como preparación para el examen.
 El objetivo es explicar qué cambia en PC, IR, ACC y memoria después de cada
 instrucción, no copiar una captura del resultado.
 
@@ -19,22 +20,23 @@ Consulta el [tema 1.1](../11-instrucciones-cpu.md), especialmente los apartados
 
 [Abrir Von Neumann Machine Simulator](https://vnmsim.c2r0b.ovh/en-us){ .md-button .md-button--primary target="_blank" }
 
-Usaremos exclusivamente esta versión y estas reglas:
+Para A y C usaremos esta versión del simulador. Las instrucciones tienen el
+mismo significado en el ejercicio manual B. Ten en cuenta estas reglas:
 
 - **ACC** es el acumulador; **X, Y y Z** son variables de memoria.
 - `LOD X` carga X; `STO Z` guarda ACC en Z; `#n` representa un número literal.
 - `JMZ` salta si **ACC = 0**. Z no es una bandera.
 - Las direcciones empiezan en **0** y el PC avanza de uno en uno.
-- Copia el código sin números delante, comentarios ni líneas vacías adicionales.
+- En A y C, copia el código sin números delante ni líneas vacías adicionales.
 - Una fila de la tabla representa **una instrucción terminada**, no un ciclo de reloj.
-- Usa **Single iteration** para completar una instrucción y espera a que acabe
+- En A y C, usa **Single iteration** para completar una instrucción y espera a que acabe
   la animación antes de registrar los datos. **Single step** muestra pasos internos.
-- `HLT` detiene el programa y, en esta versión, devuelve PC a 0. Anota
-  «0; detenido», no «vuelve a ejecutar».
-- Para cada programa utiliza **New project**, pega el código y establece sus
+- `HLT` detiene el programa. En el simulador devuelve PC a 0: en A y C anota
+  «0; detenido». En B escribe simplemente «detenido»; no se pide un PC numérico tras HLT.
+- Para A y C utiliza **New project**, pega el código y establece sus
   datos iniciales. Comprueba PC = 0, incremento = 1 y ACC = 0.
 
-Distribución orientativa: vídeos y esquema, 15 min; programas A y B, 30 min;
+Distribución orientativa: vídeos y esquema, 15 min; programa A, 20 min; B, 10 min;
 programa C, 30 min; recorrido de una instrucción, 15 min; CPU real, 10 min;
 revisión y entrega, 10 min.
 
@@ -82,23 +84,41 @@ fila en el simulador y corrige las diferencias explicando el motivo.
 3. ¿Se modifican X o Y? Justifica la respuesta.
 4. Incluye una captura después de MUL y otra después de STO; explica la diferencia.
 
-## 4. Programa B · Un número literal no es una variable
+## 4. Programa B · Ejercicio de examen sin simulador
 
-Datos iniciales: **X = 10, Y = 0, Z = 0**.
+**Tiempo orientativo: 10 minutos. Resuélvelo en papel, sin ordenador ni
+simulador, tampoco para comprobar el resultado.** Después incorpora la hoja
+manuscrita escaneada o fotografiada de forma legible a tu entrega.
+
+Solo hay cuatro instrucciones, sin saltos. Datos iniciales:
+**PC = 0, ACC = 0, X = 6 y Z = 0**.
 
 ```asm
 LOD X
-SUB #2
-ADD #5
+ADD #3
 STO Z
 HLT
 ```
 
-1. Predice el resultado y completa una tabla como la del programa A, con cinco filas.
-2. Ejecútalo por instrucciones y compara con tu predicción.
-3. Explica qué significa `#2` y por qué no representa la dirección de una variable.
-4. Repite desde el estado inicial con X = 7. ¿Qué instrucciones cambian?
-   ¿Qué valores cambian? No necesitas otra captura de todas las filas.
+Completa la tabla **después de cada instrucción**, conservando los valores
+que no cambian. PC avanza una posición en las tres primeras instrucciones;
+en la última fila escribe «detenido».
+
+| Dirección ejecutada | Instrucción / IR | ACC al terminar | X | Z | PC al terminar |
+|---:|---|---|---|---|---|
+| 0 | LOD X | | | | |
+| 1 | ADD #3 | | | | |
+| 2 | STO Z | | | | |
+| 3 | HLT | | | | |
+
+Responde brevemente, sin limitarte al resultado final:
+
+1. ¿Qué significa `#3`? ¿Se suma una dirección o el número 3?
+2. Justo después de ADD, ¿qué contienen ACC y Z? ¿Por qué pueden ser distintos?
+3. ¿Qué instrucción cambia Z? ¿Cambia también X o se borra ACC al guardar?
+
+Se valorará que puedas seguir los cambios y explicar las instrucciones por
+ti mismo. **No se pide ejecutar este programa ni adjuntar capturas del simulador.**
 
 ## 5. Programa C · Seguir dos caminos
 
@@ -203,9 +223,10 @@ lo necesario para explicar tus resultados; no añadas una portada vacía ni
 capturas repetidas para ocupar páginas.
 
 Debe incluir: respuestas sobre los vídeos, esquema propio, predicción y
-comprobación de A y B, las dos trazas de C, explicación de STO y ficha de CPU.
-En cada traza distingue dirección ejecutada y PC al terminar. Si tu predicción
-no coincidió, conserva el error inicial y explica cómo lo corregiste.
+comprobación de A, **hoja manuscrita de B resuelta sin simulador**, las dos
+trazas de C, explicación de STO y ficha de CPU. En cada traza distingue
+dirección ejecutada y PC al terminar. En A y C, si tu predicción no coincidió,
+conserva el error inicial y explica cómo lo corregiste.
 
 Antes de entregar, comprueba que las tablas se leen, que las capturas muestran
 el momento indicado y que no has confundido Z con una bandera ni una
@@ -217,7 +238,7 @@ instrucción con un ciclo de reloj.
 |---|---:|
 | Vídeos y esquema de búsqueda | 1 |
 | Programa A: predicción, traza y almacenamiento | 2 |
-| Programa B: traza y operandos inmediatos | 1,5 |
+| Programa B sin simulador: traza manual (1) e interpretación (0,5) | 1,5 |
 | Programa C: dos recorridos y justificación de saltos | 2,5 |
 | Explicación de STO e instrucción frente a ciclo | 1,5 |
 | Ficha de CPU e interpretación | 1 |
