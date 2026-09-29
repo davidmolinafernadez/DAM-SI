@@ -168,13 +168,13 @@ No añadas líneas vacías ni números delante del código.
    justo después de cada JMP 0 y añade una fila final tras HLT. No copies
    una tabla de treinta filas.
 
-| Momento | ACC | Y | Z | PC | Explicación |
+   | Momento | ACC | Y | Z | PC | Explicación |
 |---|---|---|---|---|---|
-| Estado inicial | 0 | 3 | 0 | 0 | Todavía no se ha ejecutado nada |
-| Tras la primera vuelta | | | | | |
-| Tras la segunda vuelta | | | | | |
-| Tras la tercera vuelta | | | | | |
-| Tras HLT | | | | | |
+   | Estado inicial | 0 | 3 | 0 | 0 | Todavía no se ha ejecutado nada |
+   | Tras la primera vuelta | | | | | |
+   | Tras la segunda vuelta | | | | | |
+   | Tras la tercera vuelta | | | | | |
+   | Tras HLT | | | | | |
 
 4. En la prueba 2, registra todas las instrucciones que se ejecutan. ¿Por qué
    no se realiza ninguna suma? ¿Qué comprueba JMZ exactamente?
