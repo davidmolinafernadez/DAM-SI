@@ -80,7 +80,7 @@ simulador. Hay dos escrituras en memoria: distingue el resultado intermedio
 que se guarda en Z del valor que termina en Y.
 
 | Dirección ejecutada | Instrucción / IR | ACC al terminar | X | Y | Z | PC al terminar | ¿Qué cambia? |
-|---:|---|---|---|---|---|---|---|
+|---:   |---|---|---|---|---|---|---|
 | 0 | LOD X | | | | | | |
 | 1 | ADD #2 | | | | | | |
 | 2 | MUL Y | | | | | | |
@@ -169,7 +169,7 @@ No añadas líneas vacías ni números delante del código.
    una tabla de treinta filas.
 
    | Momento | ACC | Y | Z | PC | Explicación |
-|---|---|---|---|---|---|
+   |---|---|---|---|---|---|
    | Estado inicial | 0 | 3 | 0 | 0 | Todavía no se ha ejecutado nada |
    | Tras la primera vuelta | | | | | |
    | Tras la segunda vuelta | | | | | |
