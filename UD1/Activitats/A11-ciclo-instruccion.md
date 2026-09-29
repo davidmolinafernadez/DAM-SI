@@ -24,6 +24,9 @@ Para A y C usaremos esta versión del simulador. Las instrucciones tienen el
 mismo significado en el ejercicio manual B. Ten en cuenta estas reglas:
 
 - **ACC** es el acumulador; **X, Y y Z** son variables de memoria.
+- **W y T0** son otras variables disponibles. Déjalas en **0** en todas las
+  pruebas: estos programas no las utilizan. T0 se escribe con el número cero,
+  no con la letra O. No hay que añadirlas a las tablas.
 - `LOD X` carga X; `STO Z` guarda ACC en Z; `#n` representa un número literal.
 - `JMZ` salta si **ACC = 0**. Z no es una bandera.
 - Las direcciones empiezan en **0** y el PC avanza de uno en uno.
@@ -36,8 +39,8 @@ mismo significado en el ejercicio manual B. Ten en cuenta estas reglas:
 - Para A y C utiliza **New project**, pega el código y establece sus
   datos iniciales. Comprueba PC = 0, incremento = 1 y ACC = 0.
 
-Distribución orientativa: vídeos y esquema, 15 min; programa A, 20 min; B, 10 min;
-programa C, 30 min; recorrido de una instrucción, 15 min; CPU real, 10 min;
+Distribución orientativa: vídeos y esquema, 10 min; programa A, 25 min; B, 10 min;
+programa C, 35 min; recorrido de una instrucción, 10 min; CPU real, 10 min;
 revisión y entrega, 10 min.
 
 ## 2. Observa los vídeos y dibuja el recorrido
@@ -58,102 +61,132 @@ Los vídeos pueden usar otra notación. Para programar, utiliza la de esta
 actividad; MAR y MDR se explican en el esquema aunque el simulador no muestre
 campos independientes con esos nombres.
 
-## 3. Programa A · Cargar, multiplicar y guardar
+## 3. Programa A · Operar y reutilizar resultados
 
-Datos iniciales: **X = 4, Y = 3, Z = 0**.
+Datos iniciales: **X = 4, Y = 3, Z = 0, ACC = 0 y PC = 0**.
 
 ```asm
 LOD X
+ADD #2
 MUL Y
 STO Z
+SUB X
+STO Y
 HLT
 ```
 
-Antes de abrir la ejecución, completa tu predicción. Después comprueba cada
-fila en el simulador y corrige las diferencias explicando el motivo.
+Primero calcula a mano qué ocurrirá. Después comprueba cada instrucción en el
+simulador. Hay dos escrituras en memoria: distingue el resultado intermedio
+que se guarda en Z del valor que termina en Y.
 
 | Dirección ejecutada | Instrucción / IR | ACC al terminar | X | Y | Z | PC al terminar | ¿Qué cambia? |
 |---:|---|---|---|---|---|---|---|
 | 0 | LOD X | | | | | | |
-| 1 | MUL Y | | | | | | |
-| 2 | STO Z | | | | | | |
-| 3 | HLT | | | | | | |
+| 1 | ADD #2 | | | | | | |
+| 2 | MUL Y | | | | | | |
+| 3 | STO Z | | | | | | |
+| 4 | SUB X | | | | | | |
+| 5 | STO Y | | | | | | |
+| 6 | HLT | | | | | | |
 
-1. ¿En qué instrucción aparece el resultado en ACC?
-2. ¿En cuál se guarda en Z? ¿Qué vale Z justo antes?
-3. ¿Se modifican X o Y? Justifica la respuesta.
-4. Incluye una captura después de MUL y otra después de STO; explica la diferencia.
+1. Escribe la expresión aritmética que calcula Z, usando los valores iniciales
+   de X e Y. ¿Qué cálculo adicional produce el valor final de Y?
+2. Justo después de SUB X, ¿por qué ACC y Z pueden contener valores distintos?
+3. ¿Qué valor de Y utiliza MUL Y: el inicial o el que se guarda después?
+   Justifica la respuesta según el orden de ejecución.
+4. Incluye una captura después de STO Z y otra después de STO Y; explica
+   qué ha cambiado entre ambas.
+5. Sin volver a ejecutar, predice qué pasaría si la instrucción de la dirección
+   1 fuese ADD X en vez de ADD #2. Indica los nuevos valores finales de Z e Y.
 
 ## 4. Programa B · Ejercicio de examen sin simulador
 
 **Tiempo orientativo: 10 minutos. Resuélvelo en papel, sin ordenador ni
-simulador, tampoco para comprobar el resultado.** Después incorpora la hoja
-manuscrita escaneada o fotografiada de forma legible a tu entrega.
+simulador, tampoco para comprobar el resultado.** Incorpora la hoja manuscrita
+escaneada o fotografiada de forma legible a tu entrega.
 
-Solo hay cuatro instrucciones, sin saltos. Datos iniciales:
-**PC = 0, ACC = 0, X = 6 y Z = 0**.
-
-```asm
-LOD X
-ADD #3
-STO Z
-HLT
-```
-
-Completa la tabla **después de cada instrucción**, conservando los valores
-que no cambian. PC avanza una posición en las tres primeras instrucciones;
-en la última fila escribe «detenido».
-
-| Dirección ejecutada | Instrucción / IR | ACC al terminar | X | Z | PC al terminar |
-|---:|---|---|---|---|---|
-| 0 | LOD X | | | | |
-| 1 | ADD #3 | | | | |
-| 2 | STO Z | | | | |
-| 3 | HLT | | | | |
-
-Responde brevemente, sin limitarte al resultado final:
-
-1. ¿Qué significa `#3`? ¿Se suma una dirección o el número 3?
-2. Justo después de ADD, ¿qué contienen ACC y Z? ¿Por qué pueden ser distintos?
-3. ¿Qué instrucción cambia Z? ¿Cambia también X o se borra ACC al guardar?
-
-Se valorará que puedas seguir los cambios y explicar las instrucciones por
-ti mismo. **No se pide ejecutar este programa ni adjuntar capturas del simulador.**
-
-## 5. Programa C · Seguir dos caminos
-
-Este programa compara X e Y. Se ejecuta dos veces, restableciendo el estado
-antes de cada prueba:
-
-- **Prueba 1:** X = 9, Y = 9, Z = 0.
-- **Prueba 2:** X = 9, Y = 4, Z = 0.
+Son cinco instrucciones, sin saltos. Datos iniciales:
+**PC = 0, ACC = 0 y X = 6**.
 
 ```asm
 LOD X
-SUB Y
-JMZ 5
-LOD #1
-JMP 6
-LOD #0
-STO Z
+SUB #2
+STO X
+ADD X
 HLT
 ```
 
-Las direcciones van de 0 a 7: **5 corresponde a LOD #0** y **6 a STO Z**.
-No cambies el espaciado entre líneas ni añadas una línea vacía al principio.
+Completa la tabla **después de cada instrucción**. PC avanza una posición en
+las cuatro primeras; en la última fila escribe «detenido». Presta atención:
+una instrucción modifica X antes de que otra vuelva a utilizarla.
 
-1. Sin simular, escribe el orden de direcciones que crees que se ejecutará
-   en cada prueba. Una instrucción saltada no lleva fila de ejecución.
-2. Completa una traza de cada prueba con dirección ejecutada, IR, ACC, Z y PC
-   al terminar. Añade «salta» o «no salta» cuando ejecutes JMZ.
-3. Comprueba ambos recorridos con **Single iteration**. Captura el estado
-   justo después de JMZ en cada prueba y explica qué valor se ha consultado.
-4. ¿Qué significa el valor final de Z? ¿Qué función cumple JMP 6?
-5. Explica qué error aparecería al sustituir JMP 6 por una continuación normal
-   hacia la dirección 5.
+| Dirección ejecutada | Instrucción / IR | ACC al terminar | X | PC al terminar |
+|---:|---|---|---|---|
+| 0 | LOD X | | | |
+| 1 | SUB #2 | | | |
+| 2 | STO X | | | |
+| 3 | ADD X | | | |
+| 4 | HLT | | | |
 
-No basta con escribir el valor final: debe quedar claro por qué se ejecutan
-unas direcciones y se omiten otras.
+1. ¿Qué significa #2 y en qué se diferencia de X como operando?
+2. ¿Qué valor de X utiliza ADD X? Explica qué instrucción lo ha establecido.
+3. ¿STO X borra ACC? ¿Cuál sería el ACC final si ADD X se sustituyera por ADD #2?
+
+No basta con escribir el resultado: explica los cambios. **No se pide ejecutar
+este programa ni adjuntar capturas del simulador.**
+
+## 5. Programa C · Un bucle con contador
+
+Ahora hay un salto hacia atrás: algunas instrucciones se repiten. Usa Y como
+contador, siempre un entero mayor o igual que cero, y realiza estas pruebas
+restableciendo PC = 0, ACC = 0 y los datos antes de cada una:
+
+- **Prueba 1:** X = 4, Y = 3, Z = 0.
+- **Prueba 2:** X = 4, Y = 0, Z = 0.
+
+```asm
+LOD Y
+JMZ 9
+LOD Z
+ADD X
+STO Z
+LOD Y
+SUB #1
+STO Y
+JMP 0
+HLT
+```
+
+Las direcciones van de 0 a 9. **JMZ 9 llega a HLT** y **JMP 0 vuelve a LOD Y**.
+No añadas líneas vacías ni números delante del código.
+
+1. Antes de simular, explica qué resultado crees que se guardará en Z y cuántas
+   veces se ejecutará ADD X en cada prueba.
+2. En la prueba 1, haz una traza detallada de la **primera vuelta**, desde
+   LOD Y hasta JMP 0: dirección ejecutada, IR, ACC, Y, Z y PC al terminar.
+3. Para las siguientes vueltas, usa la tabla resumen de abajo. Anota el estado
+   justo después de cada JMP 0 y añade una fila final tras HLT. No copies
+   una tabla de treinta filas.
+
+| Momento | ACC | Y | Z | PC | Explicación |
+|---|---|---|---|---|---|
+| Estado inicial | 0 | 3 | 0 | 0 | Todavía no se ha ejecutado nada |
+| Tras la primera vuelta | | | | | |
+| Tras la segunda vuelta | | | | | |
+| Tras la tercera vuelta | | | | | |
+| Tras HLT | | | | | |
+
+4. En la prueba 2, registra todas las instrucciones que se ejecutan. ¿Por qué
+   no se realiza ninguna suma? ¿Qué comprueba JMZ exactamente?
+5. Comprueba ambas pruebas con el simulador. Incluye una captura al terminar
+   la primera vuelta y otra cuando JMZ toma el salto a HLT.
+6. Explica la función de Z y la de Y. ¿Por qué hace falta STO Y después de SUB #1?
+7. **Detecta el fallo sin ejecutarlo:** si sustituyes SUB #1 por SUB #0 en la
+   prueba 1, ¿terminaría el programa? Justifica qué ocurriría con el contador.
+
+Ayuda: un bucle necesita comprobar una condición, realizar el trabajo,
+actualizar el contador y volver a comprobar. Puedes repasar la explicación
+sobre bucles al final del apartado 6 de la teoría.
 
 ## 6. Explica una instrucción por dentro
 
@@ -223,8 +256,7 @@ lo necesario para explicar tus resultados; no añadas una portada vacía ni
 capturas repetidas para ocupar páginas.
 
 Debe incluir: respuestas sobre los vídeos, esquema propio, predicción y
-comprobación de A, **hoja manuscrita de B resuelta sin simulador**, las dos
-trazas de C, explicación de STO y ficha de CPU. En cada traza distingue
+comprobación de A, **hoja manuscrita de B resuelta sin simulador**, la traza y el resumen del bucle de C, su prueba con contador cero, explicación de STO y ficha de CPU. En cada traza distingue
 dirección ejecutada y PC al terminar. En A y C, si tu predicción no coincidió,
 conserva el error inicial y explica cómo lo corregiste.
 
@@ -237,9 +269,9 @@ instrucción con un ciclo de reloj.
 | Criterio | Puntos |
 |---|---:|
 | Vídeos y esquema de búsqueda | 1 |
-| Programa A: predicción, traza y almacenamiento | 2 |
+| Programa A: operaciones, escrituras y predicción de la variante | 2 |
 | Programa B sin simulador: traza manual (1) e interpretación (0,5) | 1,5 |
-| Programa C: dos recorridos y justificación de saltos | 2,5 |
+| Programa C: bucle, contador cero y detección del fallo | 2,5 |
 | Explicación de STO e instrucción frente a ciclo | 1,5 |
 | Ficha de CPU e interpretación | 1 |
 | Claridad y presentación de evidencias | 0,5 |

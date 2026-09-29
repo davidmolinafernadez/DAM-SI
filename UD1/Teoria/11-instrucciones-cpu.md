@@ -239,6 +239,23 @@ delante ni líneas vacías: el destino 5 es `LOD #0` y el destino 6 es `STO Z`.
 `JMP 6` evita que el camino «distintos» ejecute después `LOD #0` y sobrescriba
 su resultado. Recuerda: **JMZ mira ACC, no la variable Z.**
 
+### Repetir instrucciones: un bucle con contador
+
+Un salto hacia una dirección anterior permite repetir trabajo. Para que el
+programa termine, alguna operación debe cambiar la condición que controla
+la repetición. El esquema habitual es:
+
+1. Cargar el contador en ACC y comprobar si vale cero con JMZ.
+2. Si no vale cero, realizar el trabajo de una vuelta.
+3. Cargar de nuevo el contador, restarle 1 y guardar el nuevo valor en memoria.
+4. Volver mediante JMP a la comprobación inicial.
+
+Por ejemplo, un contador que empieza en 2 pasa por 2, 1 y 0: se realizan dos
+vueltas de trabajo. Si empieza en 0 y se comprueba antes de trabajar, no se
+realiza ninguna. Restar en ACC no modifica por sí solo la variable contador:
+hay que guardar el resultado con STO. Si el contador nunca cambia y sigue
+siendo distinto de cero, el programa puede repetir indefinidamente.
+
 ## 7. Los dos vídeos, en orden
 
 ### Primero: reconocer la fase de búsqueda
