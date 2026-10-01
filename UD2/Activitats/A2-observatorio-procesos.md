@@ -43,6 +43,11 @@ Abre tres aplicaciones de uso real en DAM: navegador con varias pestañas, IDE o
 editor, y una máquina virtual o emulador si tu equipo lo permite. Espera un
 minuto y vuelve a medir.
 
+Si tu equipo no permite usar una máquina virtual, sustitúyela por otra carga
+controlada y segura: varias pestañas con documentación, una base de datos local,
+un proyecto abierto en el IDE o una compresión de archivos. Indica qué has usado
+para que la comparación sea honesta.
+
 | Medida | Antes | Después | Interpretación |
 |---|---:|---:|---|
 | Procesos visibles |  |  |  |
@@ -64,6 +69,16 @@ Responde:
 
 Incluye dos capturas: estado inicial y estado con carga. Recorta lo necesario
 para que se lea el dato importante y oculta información personal si aparece.
+
+## Evidencias mínimas
+
+Tu entrega debe permitir comprobar:
+
+- qué sistema operativo y equipo has usado;
+- qué carga has abierto y durante cuánto tiempo;
+- qué proceso consume más CPU y cuál más memoria;
+- si el cuello de botella parece CPU, RAM, disco o ninguno claro;
+- qué dato mirarías durante más tiempo antes de afirmar un diagnóstico.
 
 ## Rúbrica
 

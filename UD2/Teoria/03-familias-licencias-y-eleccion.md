@@ -1,5 +1,15 @@
 # 3. Familias, licencias y criterios de elección
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">2.2</div>
+<div markdown>
+**Elegir no es opinar: es justificar con requisitos**
+
+Compararemos familias de sistemas, licencias, soporte y coste total para tomar
+decisiones técnicas defendibles en un aula, un equipo personal o un servidor.
+</div>
+</div>
+
 ## 3.1 Evolución y tipos
 
 La evolución pasó de operación manual a lotes, multiprogramación, tiempo compartido, ordenadores personales, redes, móviles, sistemas empotrados y nube. Cada etapa respondió a una limitación: aprovechar CPU, compartir recursos, mejorar interacción o escalar servicios.
@@ -104,7 +114,7 @@ una matriz ponderada.
 
 </div>
 
-## 3.6 Máquina virtual o contenedor
+## 3.6 Del sistema elegido al entorno de pruebas
 
 ```mermaid
 flowchart TB
@@ -124,6 +134,10 @@ Una VM ofrece kernel independiente y permite sistemas invitados distintos. Un co
 ## Caso de aula
 
 Una aplicación requiere un servicio Linux, pero el alumnado usa Windows. Para aprender instalación completa se emplea una VM Ubuntu. Para distribuir después la aplicación con dependencias reproducibles se crea un contenedor. Las dos tecnologías se complementan.
+
+La elección del sistema operativo no termina en una tabla: debe probarse. La
+subunidad siguiente desarrolla cómo documentar una máquina virtual reproducible,
+qué red conviene usar y por qué una instantánea no sustituye a una copia.
 
 ## Comprobación
 

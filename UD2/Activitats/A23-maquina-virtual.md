@@ -41,6 +41,9 @@ Define para qué usarás la VM:
 | Carpetas compartidas |  |  |
 | Instantáneas |  |  |
 
+Añade también si usarás firmware BIOS o UEFI y si activarás funciones como EFI,
+Secure Boot o TPM virtual cuando el sistema invitado lo requiera.
+
 ## Fase 3 · Seguridad y límites
 
 Responde:
@@ -54,6 +57,16 @@ Responde:
 
 Incluye capturas de configuración y del sistema invitado arrancado. Añade la URL
 oficial de descarga del sistema elegido y fecha de consulta.
+
+## Evidencias mínimas
+
+Tu ficha debe permitir que otra persona cree una VM equivalente. Incluye:
+
+- captura de la configuración general, sistema, almacenamiento y red;
+- captura del sistema invitado arrancado;
+- usuario inicial previsto, sin escribir contraseñas;
+- URL oficial de descarga y fecha de consulta;
+- explicación de qué instantánea crearías y cuándo.
 
 ## Rúbrica
 

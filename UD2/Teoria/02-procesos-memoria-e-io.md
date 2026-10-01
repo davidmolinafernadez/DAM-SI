@@ -1,5 +1,15 @@
 # 2. Procesos, memoria y entrada/salida
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">2.1</div>
+<div markdown>
+**Lo que ocurre cuando varios programas parecen funcionar a la vez**
+
+Estudiaremos procesos, hilos, memoria virtual y entrada/salida para interpretar
+un equipo real antes de proponer soluciones de rendimiento.
+</div>
+</div>
+
 ## 2.1 Programa, proceso e hilo
 
 Un programa es un archivo con instrucciones. Un proceso es su ejecución con espacio de memoria, recursos, credenciales y estado. Un hilo es una línea de ejecución dentro del proceso; los hilos comparten memoria y recursos del proceso.

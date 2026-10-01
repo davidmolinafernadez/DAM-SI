@@ -56,8 +56,12 @@ Asigna pesos de 1 a 5 y puntúa cada sistema de 1 a 5.
 | Administración |  |  |  |  |
 | Coste total |  |  |  |  |
 | Rendimiento |  |  |  |  |
+| **Total ponderado** |  |  |  |  |
 
-Calcula la puntuación ponderada y explica qué criterio ha decidido más.
+Calcula cada puntuación como `peso × valoración` y suma el total ponderado.
+Después explica qué criterio ha decidido más. Si la opción con más puntos no es
+la elegida, justifica por qué: puede haber un requisito obligatorio que pese más
+que la suma.
 
 ## Fase 3 · Licencia y ciclo de soporte
 
@@ -68,6 +72,15 @@ una fuente oficial del fabricante o comunidad para cada opción finalista.
 
 Redacta una recomendación de 12-18 líneas. Incluye riesgos, condiciones y una
 prueba piloto que harías antes de implantar.
+
+## Evidencias mínimas
+
+Incluye:
+
+- tres opciones comparadas con nombre y versión o edición aproximada;
+- al menos una fuente oficial por opción finalista;
+- una matriz con pesos y total calculado;
+- una decisión final con riesgos y prueba piloto.
 
 ## Rúbrica
 

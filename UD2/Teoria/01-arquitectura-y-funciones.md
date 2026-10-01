@@ -1,5 +1,16 @@
 # 1. Arquitectura y funciones del sistema operativo
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">2</div>
+<div markdown>
+**La capa que permite usar el hardware sin pelearse con él**
+
+Partimos de una pregunta sencilla: qué tendría que hacer cada aplicación si el
+sistema operativo no existiera. Desde ahí aparecen kernel, llamadas al sistema,
+controladores, permisos, servicios e interfaces.
+</div>
+</div>
+
 ## 1.1 El problema que resuelve
 
 Distintos programas quieren usar simultáneamente CPU, memoria, disco, pantalla y red. Si cada aplicación controlara directamente el hardware, habría conflictos, dependencia total de cada modelo y ausencia de protección. El sistema operativo crea abstracciones estables y arbitra el acceso.

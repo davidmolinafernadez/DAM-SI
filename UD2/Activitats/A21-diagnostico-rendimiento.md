@@ -63,6 +63,16 @@ Clasifica medidas inmediatas, de configuración y de ampliación:
 
 Justifica cuáles aplicarías primero y cuáles dejarías para el final.
 
+## Evidencias mínimas
+
+Tu informe debe dejar claro:
+
+- por qué la CPU no es la primera sospecha;
+- qué datos apuntan a memoria, paginación o almacenamiento;
+- qué seis comprobaciones harías y en qué orden;
+- qué medidas son reversibles y cuáles implican coste o riesgo;
+- qué información faltaría antes de comprar hardware o reinstalar.
+
 ## Rúbrica
 
 | Criterio | Puntos |

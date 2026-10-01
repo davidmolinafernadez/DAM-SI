@@ -1,5 +1,15 @@
 # 2.3. Virtualización, arranque y preparación de entornos
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">2.3</div>
+<div markdown>
+**Probar sin romper: entornos seguros y repetibles**
+
+Convertimos la decisión técnica en una práctica reproducible: VM, recursos,
+red, instantáneas, límites de aislamiento y diagnóstico básico del arranque.
+</div>
+</div>
+
 ## 2.3.1 Por qué virtualizamos
 
 Virtualizar consiste en ejecutar un entorno lógico sobre recursos físicos
