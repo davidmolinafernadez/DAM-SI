@@ -46,6 +46,21 @@ Al guardar un documento:
 
 El shell no es el kernel. Bash, PowerShell y una interfaz gráfica son formas distintas de solicitar servicios al mismo sistema subyacente.
 
+<div class="activity-card" markdown>
+
+## :material-layers-triple-outline: Tarea 2.1 · Mapa de capas del sistema operativo
+
+<div class="activity-meta" markdown>
+<span>55 min</span><span>Individual</span><span>Entrega en Aules</span>
+</div>
+
+Seguirás una operación cotidiana desde la aplicación hasta el hardware y
+explicarás qué aporta cada capa.
+
+[Abrir la actividad de capas del SO](actividades/A1-mapa-capas-so.md){ .md-button .md-button--primary }
+
+</div>
+
 ## 1.4 Diseños de kernel
 
 Un kernel monolítico integra muchos subsistemas en espacio privilegiado y puede cargar módulos. Un micronúcleo conserva un conjunto mínimo y mueve servicios a procesos separados. Los diseños híbridos combinan ideas.
@@ -80,6 +95,33 @@ En Linux, `systemd` suele actuar como sistema de inicio. En Windows intervienen 
 
 La GUI facilita descubrimiento y visualización. La CLI ofrece precisión, automatización, repetibilidad y administración remota. Un profesional usa ambas y documenta comandos cuando necesita que el procedimiento sea reproducible.
 
+## 1.7 Servicios, permisos y seguridad básica
+
+Un sistema operativo moderno no solo ejecuta programas: mantiene servicios de
+red, indexación, impresión, registro, actualización, antivirus, sincronización o
+telemetría. Algunos se ejecutan aunque no haya una ventana visible. Por eso un
+equipo puede consumir CPU, memoria o red sin que el usuario haya abierto una
+aplicación de forma consciente.
+
+La seguridad se apoya en cuatro ideas:
+
+- **identificación:** quién dice ser el usuario o proceso;
+- **autenticación:** cómo demuestra esa identidad;
+- **autorización:** qué permisos tiene sobre recursos concretos;
+- **auditoría:** qué acciones quedan registradas.
+
+En sistemas multiusuario, dos cuentas no deberían poder modificar libremente los
+archivos de la otra. En sistemas empresariales, además, se aplican políticas,
+cifrado, arranque seguro, gestión remota y actualizaciones centralizadas.
+
 ### Comprobación
 
 Explica por qué una aplicación no debe escribir directamente en un SSD y describe qué capas intervienen al guardar un archivo.
+
+## Fuentes para ampliar y comprobar datos
+
+- [Microsoft Learn · Requisitos de Windows 11](https://learn.microsoft.com/es-es/windows/whats-new/windows-11-requirements):
+  requisitos mínimos, firmware UEFI, Secure Boot, TPM y soporte en máquinas
+  virtuales.
+- [GNU · ¿Qué es el software libre?](https://www.gnu.org/philosophy/free-sw.es.html):
+  libertades de uso, estudio, redistribución y modificación.

@@ -64,7 +64,7 @@ extra_javascript:
 nav:
   - Inicio: index.md
   - Guía didáctica: guia-didactica.md
-  - UD1 Componentes:
+  - UD1 · Componentes:
       - Presentación: ud1/index.md
       - 1 · Componentes del sistema:
           - Teoría: ud1/01-componentes-sistema-informatico.md
@@ -83,8 +83,14 @@ nav:
   - UD2 · Sistemas operativos:
       - Presentación: ud2/index.md
       - Arquitectura y funciones: ud2/01-arquitectura-y-funciones.md
+      - Tarea 2.1 · Capas del SO: ud2/actividades/A1-mapa-capas-so.md
       - Procesos, memoria y E/S: ud2/02-procesos-memoria-e-io.md
+      - Tarea 2.2 · Observatorio: ud2/actividades/A2-observatorio-procesos.md
+      - Tarea 2.1.1 · Diagnóstico: ud2/actividades/A21-diagnostico-rendimiento.md
       - Familias y licencias: ud2/03-familias-licencias-y-eleccion.md
+      - Tarea 2.3 · Elección SO: ud2/actividades/A3-eleccion-so.md
+      - Virtualización y arranque: ud2/04-virtualizacion-y-arranque.md
+      - Tarea 2.3.1 · Máquina virtual: ud2/actividades/A23-maquina-virtual.md
       - Apuntes de referencia: ud2/apuntes.md
   - UD3 · Instalación y virtualización:
       - Presentación: ud3/index.md

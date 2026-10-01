@@ -81,6 +81,18 @@ La virtualización desacopla un entorno lógico del hardware físico. Un hipervi
 
 Una máquina virtual incluye un sistema operativo invitado completo. Un contenedor comparte el kernel del anfitrión y aísla procesos, por lo que suele iniciar más rápido y ocupar menos espacio. No son tecnologías equivalentes: se elige según el aislamiento, la compatibilidad y el despliegue requerido.
 
+En una máquina virtual hay tres conceptos que deben diferenciarse:
+
+- **anfitrión:** sistema físico que presta recursos;
+- **invitado:** sistema operativo que se ejecuta dentro de la VM;
+- **hipervisor:** capa que crea y controla las máquinas virtuales.
+
+La red de una VM puede configurarse en modo NAT, puente, interna o solo
+anfitrión. NAT suele ser suficiente para actualizar y navegar; puente hace que la
+VM aparezca como otro equipo de la red y debe elegirse con más cuidado. Las
+instantáneas ayudan a volver a un estado anterior, pero no sustituyen a una copia
+de seguridad externa.
+
 ## 9. Criterios para elegir un sistema
 
 1. Identificar aplicaciones y servicios necesarios.
@@ -95,8 +107,26 @@ Una máquina virtual incluye un sistema operativo invitado completo. Un contened
 
 El sistema operativo actúa como gestor de recursos y plataforma de servicios. Comprender procesos, memoria, archivos, seguridad y licencias permite seleccionar con criterio y preparar una instalación reproducible.
 
+## 11. Actividades de la unidad
+
+| Actividad | Evidencia principal |
+|---|---|
+| Tarea 2.1 · Mapa de capas del sistema operativo | Diagrama de capas y explicación de una operación real |
+| Tarea 2.2 · Observatorio de procesos y memoria | Mediciones antes/después y capturas |
+| Tarea 2.3 · Elección justificada de sistema operativo | Matriz ponderada y decisión documentada |
+| Tarea 2.1.1 · Diagnóstico de rendimiento | Hipótesis, plan de diagnóstico y medidas correctoras |
+| Tarea 2.3.1 · Ficha de una máquina virtual reproducible | Configuración justificada y evidencias de arranque |
+
 ## Fuentes internas utilizadas
 
 - `Jose_SO/UD2.pdf`.
 - `SI_Celia/Unit_2_Operating-Systems-Fundamentals-and-Virtualisation/UP_2_1_TEORIA_Sistemes_operatius.pdf`.
 - `Programacion_Didactica_SI_David_Moli.docx`.
+
+## Fuentes externas de comprobación
+
+- [Microsoft Learn · Requisitos de Windows 11](https://learn.microsoft.com/es-es/windows/whats-new/windows-11-requirements).
+- [Ubuntu · Ciclo de versiones](https://ubuntu.com/about/release-cycle).
+- [Open Source Initiative · Licencias aprobadas](https://opensource.org/licenses).
+- [GNU · ¿Qué es el software libre?](https://www.gnu.org/philosophy/free-sw.es.html).
+- [Apache Software Foundation · Licencias](https://www.apache.org/licenses/).

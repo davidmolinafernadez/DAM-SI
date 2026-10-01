@@ -12,9 +12,17 @@ Los sistemas actuales pueden ser multiusuario, multitarea, multiprocesador, dist
 
 Amplia compatibilidad comercial, integración empresarial, administración gráfica y PowerShell. NTFS aporta ACL, journaling y otras funciones. Deben considerarse edición, licencia, requisitos y ciclo de soporte.
 
+En equipos actuales hay que comprobar requisitos como CPU compatible, RAM,
+almacenamiento, UEFI, Secure Boot y TPM 2.0. No basta con que “arranque”: un
+equipo fuera de soporte puede quedar sin actualizaciones de seguridad.
+
 ### GNU/Linux
 
 El kernel Linux se combina con herramientas y paquetes de una distribución. Debian, Ubuntu, Fedora y otras difieren en ciclo, gestor de paquetes y políticas. Destaca en servidores, nube, desarrollo y sistemas empotrados.
+
+Una distribución no se elige solo por estética. Importan su ciclo de publicación,
+duración del soporte, repositorios, comunidad, documentación, compatibilidad de
+hardware y facilidad para automatizar instalaciones.
 
 ### macOS
 
@@ -41,6 +49,15 @@ flowchart TD
 Una licencia permisiva suele permitir redistribución con pocas condiciones, como conservar avisos. Copyleft exige que determinadas obras derivadas mantengan libertades y se distribuyan bajo condiciones compatibles.
 
 No debe decidirse compatibilidad jurídica solo por el nombre; se revisa texto, versión, forma de distribución y relación entre componentes.
+
+| Licencia | Tipo orientativo | Idea práctica |
+|---|---|---|
+| GPL | Copyleft fuerte | Al distribuir derivados, exige conservar libertades compatibles |
+| LGPL | Copyleft débil | Pensada para bibliotecas con condiciones menos expansivas |
+| MIT/BSD | Permisiva | Permite mucho uso si se conservan avisos |
+| Apache 2.0 | Permisiva | Añade condiciones explícitas sobre patentes |
+| Propietaria | Restrictiva | Uso, copia o modificación dependen del contrato |
+| Freeware | Gratuita de uso | Gratis no implica código ni permiso de modificación |
 
 ## 3.4 Coste total
 
@@ -72,6 +89,21 @@ Caso: servidor web para un equipo de desarrollo.
 
 Se multiplica puntuación por peso, pero la matriz no sustituye una prueba. Después se construye un prototipo, se mide y se documentan riesgos.
 
+<div class="activity-card" markdown>
+
+## :material-scale-balance: Tarea 2.3 · Elección justificada de sistema operativo
+
+<div class="activity-meta" markdown>
+<span>60 min</span><span>Individual</span><span>Entrega en Aules</span>
+</div>
+
+Compararás sistemas para un caso real usando requisitos, licencias, soporte y
+una matriz ponderada.
+
+[Abrir la actividad de elección](actividades/A3-eleccion-so.md){ .md-button .md-button--primary }
+
+</div>
+
 ## 3.6 Máquina virtual o contenedor
 
 ```mermaid
@@ -96,3 +128,16 @@ Una aplicación requiere un servicio Linux, pero el alumnado usa Windows. Para a
 ## Comprobación
 
 Justifica un sistema operativo para: un aula, un servidor web, un puesto de diseño y un dispositivo IoT. Incluye requisitos, aplicaciones, soporte, seguridad, licencia y recuperación.
+
+## Fuentes para ampliar y comprobar datos
+
+- [Microsoft Support · Requisitos del sistema de Windows 11](https://support.microsoft.com/es-es/windows/experience/compatibility/windows-11-system-requirements):
+  requisitos mínimos y condiciones de conectividad/cuenta.
+- [Ubuntu · Ciclo de versiones](https://ubuntu.com/about/release-cycle):
+  calendario, LTS, soporte estándar y mantenimiento extendido.
+- [Open Source Initiative · Licencias aprobadas](https://opensource.org/licenses):
+  listado de licencias revisadas por OSI.
+- [GNU · ¿Qué es el software libre?](https://www.gnu.org/philosophy/free-sw.es.html):
+  distinción entre libertad y precio.
+- [Apache Software Foundation · Licencias](https://www.apache.org/licenses/):
+  texto y contexto de las licencias Apache.

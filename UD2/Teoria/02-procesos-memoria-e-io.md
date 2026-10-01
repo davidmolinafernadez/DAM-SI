@@ -95,12 +95,49 @@ Get-CimInstance Win32_OperatingSystem |
 
 Los datos deben interpretarse durante un periodo y bajo una carga conocida. Un pico breve no implica un problema.
 
+<div class="activity-card" markdown>
+
+## :material-chart-line: Tarea 2.2 · Observatorio de procesos y memoria
+
+<div class="activity-meta" markdown>
+<span>60 min</span><span>Individual</span><span>Entrega en Aules</span>
+</div>
+
+Medirás el estado del equipo antes y después de abrir una carga real de clase,
+comparando CPU, memoria, disco y procesos.
+
+[Abrir la actividad de observación](actividades/A2-observatorio-procesos.md){ .md-button .md-button--primary }
+
+</div>
+
 ## Caso razonado
 
 Un equipo tiene CPU al 15 %, RAM al 95 % y disco al 100 % mientras cambia lentamente entre aplicaciones. La hipótesis principal es presión de memoria con paginación. Antes de ampliar RAM se identifica qué procesos crecen, si existe fuga, qué carga es normal y cuánto intercambio se produce.
+
+<div class="activity-card" markdown>
+
+## :material-stethoscope: Tarea 2.1.1 · Diagnóstico de rendimiento
+
+<div class="activity-meta" markdown>
+<span>50 min</span><span>Individual</span><span>Entrega en Aules</span>
+</div>
+
+Resolverás un caso de lentitud distinguiendo síntomas de CPU, memoria, disco y
+paginación.
+
+[Abrir la actividad de diagnóstico](actividades/A21-diagnostico-rendimiento.md){ .md-button .md-button--primary }
+
+</div>
 
 ## Comprobación
 
 1. Diferencia programa, proceso e hilo.
 2. Explica por qué la memoria virtual mejora aislamiento.
 3. ¿Qué indica un equipo con baja CPU pero disco saturado durante paginación?
+
+## Fuentes para ampliar y comprobar datos
+
+- [Microsoft Learn · Requisitos de Windows 11](https://learn.microsoft.com/es-es/windows/whats-new/windows-11-requirements):
+  mínimos de memoria, almacenamiento y requisitos en máquinas virtuales.
+- [Ubuntu · Documentación de actualizaciones de seguridad](https://documentation.ubuntu.com/security/security-updates/):
+  cómo se entregan actualizaciones de seguridad dentro de una ventana de soporte.
