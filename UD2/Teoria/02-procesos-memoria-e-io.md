@@ -18,6 +18,24 @@ stateDiagram-v2
 
 El planificador selecciona procesos preparados. Una conmutación de contexto guarda el estado de uno y restaura el de otro. Es necesaria para multitarea, pero tiene coste.
 
+<div class="video-card" markdown>
+
+### Vídeo · Procesos y administración de memoria
+
+Repaso en español de los conceptos de gestión de memoria en sistemas
+operativos. Úsalo como apoyo para distinguir memoria física, memoria virtual,
+asignación y paginación antes de interpretar mediciones reales.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/k9Pa3rTWk6s"
+title="Administración de memoria en sistemas operativos" loading="lazy"
+allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=k9Pa3rTWk6s)
+
+</div>
+
 ## 2.2 Concurrencia y paralelismo
 
 Concurrencia significa que varias tareas progresan durante el mismo intervalo. Paralelismo significa que se ejecutan literalmente al mismo tiempo en distintos núcleos.

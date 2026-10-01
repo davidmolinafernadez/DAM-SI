@@ -16,6 +16,24 @@ flowchart TB
 
 Una aplicación solicita “abrir un archivo”; no necesita conocer sectores físicos ni protocolo del SSD. El sistema valida permisos, localiza metadatos, usa el controlador y devuelve un descriptor.
 
+<div class="video-card" markdown>
+
+### Vídeo · Qué hace realmente un sistema operativo
+
+Crash Course presenta el sistema operativo como la capa privilegiada que reparte
+CPU, memoria, dispositivos y archivos entre programas. Está en inglés, pero el
+ritmo visual ayuda a situar kernel, aplicaciones, abstracciones y protección.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/26QPDBe-NB8"
+title="Operating Systems: Crash Course Computer Science" loading="lazy"
+allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=26QPDBe-NB8)
+
+</div>
+
 ## 1.2 Modo usuario y modo kernel
 
 La CPU ofrece niveles de privilegio. Las aplicaciones trabajan en modo usuario y no pueden ejecutar determinadas instrucciones ni acceder libremente a memoria o dispositivos. Para solicitar una operación protegida realizan una llamada al sistema, que transfiere control al kernel.

@@ -19,6 +19,39 @@ dependencias. No compiten por ser “mejores”: resuelven problemas distintos.
 | Uso típico | Instalar SO, pruebas completas | Desplegar servicios reproducibles |
 | Ejemplo DAM | Ubuntu en VirtualBox | API con Docker |
 
+<div class="video-card" markdown>
+
+### Vídeo · Virtualización explicada
+
+PowerCert resume con animaciones qué significa crear hardware y sistemas
+simulados sobre una máquina física. Es útil antes de configurar anfitrión,
+invitado, hipervisor, disco virtual y red.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/UBVVq-xz5i0"
+title="Virtualization Explained" loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=UBVVq-xz5i0)
+
+</div>
+
+<div class="video-card" markdown>
+
+### Vídeo · Máquinas virtuales frente a contenedores
+
+Comparación animada entre VM y contenedor. Durante el visionado, identifica qué
+elementos se duplican en una VM y qué parte comparten los contenedores.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/eyNBf1sqdBQ"
+title="Virtual Machines vs Containers" loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=eyNBf1sqdBQ)
+
+</div>
+
 ## 2.3.2 Hipervisores
 
 Un hipervisor de tipo 1 se ejecuta directamente sobre el hardware y es habitual
