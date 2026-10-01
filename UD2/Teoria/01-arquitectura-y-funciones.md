@@ -18,19 +18,18 @@ Una aplicación solicita “abrir un archivo”; no necesita conocer sectores f�
 
 <div class="video-card" markdown>
 
-### Vídeo · Qué hace realmente un sistema operativo
+### Vídeo · Introducción a los sistemas operativos
 
-Crash Course presenta el sistema operativo como la capa privilegiada que reparte
-CPU, memoria, dispositivos y archivos entre programas. Está en inglés, pero el
-ritmo visual ayuda a situar kernel, aplicaciones, abstracciones y protección.
+Vídeo en castellano para situar procesos, memoria, archivos, planificación,
+kernel y gestión de recursos antes de entrar en el detalle técnico de la unidad.
 
 <div class="video-frame">
-<iframe src="https://www.youtube-nocookie.com/embed/26QPDBe-NB8"
-title="Operating Systems: Crash Course Computer Science" loading="lazy"
+<iframe src="https://www.youtube-nocookie.com/embed/XKCZFX-5DqQ"
+title="Introducción a los sistemas operativos" loading="lazy"
 allowfullscreen></iframe>
 </div>
 
-[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=26QPDBe-NB8)
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=XKCZFX-5DqQ)
 
 </div>
 
