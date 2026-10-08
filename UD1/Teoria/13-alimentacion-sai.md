@@ -214,19 +214,19 @@ un objetivo y siguiendo el fabricante.
 
 <div class="video-card" markdown>
 
-### Vídeo · Comparación real de topologías SAI
+### Vídeo · Qué es un SAI y tipos de SAI
 
-Demostración práctica de cómo responden un SAI line-interactive y uno online a
-variaciones de tensión. Los principios eléctricos no han cambiado; contrasta
-siempre potencias y autonomías con la ficha actual del modelo que vayas a usar.
+Explicación en español de qué protege un SAI y de las diferencias entre modelos
+offline, interactivos y online. Contrasta siempre potencias y autonomías con la
+ficha actual del modelo que vayas a usar.
 
 <div class="video-frame">
-<iframe src="https://www.youtube-nocookie.com/embed/ijdB8szpmdA"
-title="UPS topologies - standby, line interactive and online"
+<iframe src="https://www.youtube-nocookie.com/embed/V2gMkQWly5o"
+title="Qué es un SAI y tipos de SAI"
 loading="lazy" allowfullscreen></iframe>
 </div>
 
-[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=ijdB8szpmdA)
+[Abrir el vídeo en YouTube](https://www.youtube.com/watch?v=V2gMkQWly5o)
 
 </div>
 

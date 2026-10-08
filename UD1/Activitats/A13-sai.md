@@ -27,16 +27,27 @@ guardar y apagar ordenadamente.
 7. Propón prueba trimestral, registro y cinco normas de seguridad.
 8. Explica por qué una impresora láser requiere comprobación específica.
 
-## Parte técnica Linux
+## Parte técnica Linux o Windows
 
-Diseña, sin aplicarlo sobre un servidor real, el esquema de monitorización con
-Network UPS Tools:
+Elige **una** de estas dos opciones y diséñala sin aplicarla sobre un servidor
+real.
+
+### Opción A · Linux con Network UPS Tools
 
 1. identifica driver, `upsd` y `upsmon`;
 2. decide qué equipo actuaría como primario y cuáles como secundarios;
 3. define los eventos «en batería», «batería baja» y «apagado forzado»;
 4. redacta la secuencia de parada de aplicación, base de datos, VM y sistema;
 5. explica cómo protegerías las credenciales de `upsmon.conf`;
+6. prepara una lista de comprobación para una prueba controlada y recuperación.
+
+### Opción B · Windows con software del fabricante o servicio compatible
+
+1. identifica el software o agente compatible con el SAI elegido;
+2. decide qué equipo recibirá la comunicación del SAI y cómo avisará al resto;
+3. define los eventos «en batería», «batería baja» y «apagado forzado»;
+4. redacta la secuencia de parada de aplicación, base de datos, VM y sistema;
+5. explica cómo protegerías credenciales, permisos y acceso remoto al agente;
 6. prepara una lista de comprobación para una prueba controlada y recuperación.
 
 ## Análisis de autonomía
@@ -59,6 +70,6 @@ y recomendación final.
 | Carga, margen y límites W/VA | 2 |
 | Curvas y análisis de autonomía | 2 |
 | Comparación y elección | 1,5 |
-| Diseño NUT y apagado coordinado | 2 |
+| Diseño técnico Linux/Windows y apagado coordinado | 2 |
 | Instalación, mantenimiento y prueba | 1,5 |
 | Seguridad y fuentes | 1 |
