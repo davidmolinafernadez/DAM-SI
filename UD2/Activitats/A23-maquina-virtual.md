@@ -13,6 +13,10 @@ Diseña una máquina virtual para pruebas de DAM y documenta cómo repetirla.
 <span>60 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
 </div>
 
+Los 60 minutos corresponden a configurar y documentar una VM con una imagen
+ya descargada y preparada por el profesorado. Si se instala desde cero, añade
+el tiempo de descarga, instalación y actualización indicado en clase.
+
 ## Producto final
 
 PDF llamado `Tarea_2_3_1_Apellidos_Nombre.pdf`, con ficha técnica, capturas y
@@ -34,6 +38,7 @@ Define para qué usarás la VM:
 |---|---|---|
 | Hipervisor |  |  |
 | Sistema invitado |  |  |
+| Versión y arquitectura de anfitrión e invitado |  |  |
 | CPU virtual |  |  |
 | RAM |  |  |
 | Disco virtual |  |  |
@@ -67,6 +72,11 @@ Tu ficha debe permitir que otra persona cree una VM equivalente. Incluye:
 - usuario inicial previsto, sin escribir contraseñas;
 - URL oficial de descarga y fecha de consulta;
 - explicación de qué instantánea crearías y cuándo.
+
+Anota también versión del hipervisor, RAM total del anfitrión y margen que le
+dejas, capacidad máxima del disco virtual y espacio disponible en el disco
+físico. Comprueba arranque y conectividad según el modo elegido; una red interna
+sin salida a Internet puede ser correcta si ese es el objetivo documentado.
 
 ## Rúbrica
 

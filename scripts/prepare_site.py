@@ -26,6 +26,7 @@ def main() -> None:
                 activities,
                 destination / "actividades",
                 dirs_exist_ok=True,
+                ignore=shutil.ignore_patterns("Correcciones", "_textos_extraidos", "__pycache__"),
             )
         readme = destination / "README.md"
         if readme.exists():

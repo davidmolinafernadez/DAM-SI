@@ -26,15 +26,24 @@ está mal porque todo va lento”. Durante la observación se detecta:
 |---|---:|
 | CPU media | 18 % |
 | RAM usada | 94 % |
-| Disco | 100 % durante varios minutos |
+| Tiempo activo del disco | 100 % durante varios minutos |
 | Red | 2 % |
 | Proceso con más memoria | Navegador |
 | Espacio libre en SSD | 11 GB |
+
+El 100 % se refiere al tiempo activo, no al espacio ocupado ni a una velocidad
+de transferencia concreta. No conocemos capacidad total, latencia, cola ni
+estado del SSD. La CPU media baja tampoco descarta que un único núcleo esté
+saturado. Diferencia los hechos del caso y las hipótesis que requieren medidas.
 
 ## Fase 1 · Hipótesis
 
 Explica por qué la CPU no parece el cuello de botella principal. Formula dos
 hipótesis: una relacionada con memoria/paginación y otra con almacenamiento.
+
+Indica qué observación confirmaría o debilitaría cada hipótesis. No deduzcas que
+hay paginación intensa solo porque la RAM usada es alta: comprueba memoria
+disponible, actividad de intercambio y procesos que generan E/S.
 
 ## Fase 2 · Plan de diagnóstico
 

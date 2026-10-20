@@ -50,13 +50,17 @@ Android usa kernel Linux y una plataforma propia. iOS integra estrechamente hard
 flowchart TD
     SW["Software"] --> PROP["Propietario"]
     SW --> OPEN["Código abierto"]
-    PROP --> COMM["Comercial"]
     PROP --> FREEWARE["Freeware"]
     OPEN --> COPYLEFT["Copyleft: GPL"]
     OPEN --> PERM["Permisiva: MIT, BSD, Apache"]
 ```
 
 Una licencia permisiva suele permitir redistribución con pocas condiciones, como conservar avisos. Copyleft exige que determinadas obras derivadas mantengan libertades y se distribuyan bajo condiciones compatibles.
+
+La finalidad comercial es independiente: tanto el software libre como el
+propietario pueden venderse o tener soporte de pago. Ver el código no basta
+para que una licencia sea libre o de código abierto: deben existir los permisos
+correspondientes. Freeware describe el precio, no una licencia única.
 
 No debe decidirse compatibilidad jurídica solo por el nombre; se revisa texto, versión, forma de distribución y relación entre componentes.
 
@@ -98,6 +102,30 @@ Caso: servidor web para un equipo de desarrollo.
 | Integración corporativa | 3 | 3 | 5 |
 
 Se multiplica puntuación por peso, pero la matriz no sustituye una prueba. Después se construye un prototipo, se mide y se documentan riesgos.
+
+GNU/Linux suma `25 + 16 + 20 + 15 + 9 = 85` y Windows Server
+`20 + 12 + 16 + 6 + 15 = 69`. La suma de pesos es 19 y el máximo
+`19 × 5 = 95`: normalizados, 89,47 % y 72,63 %. Son valoraciones del caso
+ficticio, no medidas universales de rendimiento o seguridad.
+
+Primero se comprueban los **requisitos obligatorios**. Una opción que no puede
+ejecutar una aplicación imprescindible se descarta o requiere una alternativa
+validada, aunque gane por otros criterios. Se puntúan después las opciones
+viables con la misma escala: 1 = cumplimiento muy bajo; 5 = muy alto.
+
+### Versión, edición y soporte
+
+Registra versión y edición concretas, arquitectura, fecha de consulta y fin
+del soporte aplicable. Una LTS ofrece mantenimiento prolongado según las
+condiciones del proyecto; no garantiza idéntica cobertura de todos los paquetes.
+Distingue soporte estándar y servicios adicionales.
+
+### Clasificaciones que se combinan
+
+Un servidor puede ser multiusuario, multitarea y multiprocesador a la vez.
+Un sistema empotrado puede tener o no requisitos de tiempo real. En tiempo real
+**duro**, incumplir un plazo compromete el requisito del sistema; en tiempo real
+**blando**, degrada la calidad. Rapidez media y garantía de plazo son diferentes.
 
 <div class="activity-card" markdown>
 
@@ -142,6 +170,15 @@ qué red conviene usar y por qué una instantánea no sustituye a una copia.
 ## Comprobación
 
 Justifica un sistema operativo para: un aula, un servidor web, un puesto de diseño y un dispositivo IoT. Incluye requisitos, aplicaciones, soporte, seguridad, licencia y recuperación.
+
+### Autoevaluación razonada
+
+- **¿Una opción gratuita tiene siempre menor coste total?** No: migración,
+  formación, soporte y mantenimiento también consumen recursos.
+- **¿Ganar la matriz garantiza cumplir el encargo?** No: antes debe superar los
+  requisitos obligatorios y después validarse mediante una prueba piloto.
+- **¿Dos distribuciones con Linux son la misma opción?** No: pueden cambiar
+  paquetes, soporte, herramientas y compatibilidad de la versión concreta.
 
 ## Fuentes para ampliar y comprobar datos
 

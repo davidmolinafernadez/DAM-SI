@@ -37,6 +37,19 @@ free -h
 vmstat 1 5
 ```
 
+`CPU` de `Get-Process` muestra segundos acumulados, no el porcentaje actual.
+Para la tabla utiliza el porcentaje del Administrador de tareas observado
+durante 30 segundos y anota si escribes una media o un rango. `WorkingSet64`
+mide memoria física residente en bytes; no equivale a toda la memoria virtual
+del proceso ni puede sumarse sin tener en cuenta memoria compartida.
+
+En Linux, `%cpu` de `ps` es una relación calculada sobre la vida del proceso,
+no una muestra instantánea equivalente a la del Administrador de tareas.
+Para observar el intervalo utiliza `top` o el monitor gráfico. La primera fila
+de datos de `vmstat` resume desde el arranque; las siguientes corresponden al
+intervalo. Registra herramienta, unidades y periodo, y usa el mismo método
+antes y después.
+
 ## Fase 2 · Carga controlada
 
 Abre tres aplicaciones de uso real en DAM: navegador con varias pestañas, IDE o
@@ -55,6 +68,11 @@ para que la comparación sea honesta.
 | RAM usada |  |  |  |
 | Disco o E/S |  |  |  |
 | Proceso más consumidor |  |  |  |
+
+Añade el PID y el criterio de cada proceso destacado: mayor CPU durante el
+intervalo o mayor memoria residente. Identifica el número de hilos de uno de
+ellos mediante el monitor del sistema o las propiedades del proceso. Para disco,
+distingue tiempo activo (%) de transferencia (MB/s) y de espacio ocupado.
 
 ## Fase 3 · Interpreta
 
@@ -81,6 +99,11 @@ Tu entrega debe permitir comprobar:
 - qué dato mirarías durante más tiempo antes de afirmar un diagnóstico.
 
 ## Rúbrica
+
+Referencias de interpretación:
+[Get-Process](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-process),
+[ps](https://man7.org/linux/man-pages/man1/ps.1.html) y
+[vmstat](https://man7.org/linux/man-pages/man8/vmstat.8.html).
 
 | Criterio | Puntos |
 |---|---:|

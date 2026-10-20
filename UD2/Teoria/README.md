@@ -32,6 +32,18 @@ cómo elegir una plataforma con criterios técnicos, legales y de soporte.
 | 2.3 · Virtualización y arranque | 3 | 2 h 45 min |
 | **Total** | **14** | **12 h 50 min** |
 
+## Qué debes poder explicar al terminar
+
+- Seguir una lectura o escritura desde la aplicación hasta el dispositivo.
+- Distinguir modo usuario, modo kernel y permisos de administración.
+- Explicar estados, planificación, hilos y sincronización mediante ejemplos.
+- Diferenciar memoria virtual, RAM, caché e intercambio al interpretar medidas.
+- Elegir una versión de SO con requisitos obligatorios y matriz ponderada.
+- Justificar recursos, red y recuperación de una VM reproducible.
+
+Las tareas conservan su numeración de Aules. El orden recomendado de trabajo es:
+**2.1 → 2.2 → 2.1.1 → 2.3 → 2.3.1**, siguiendo los capítulos de teoría.
+
 ## Pregunta conductora
 
 > ¿Qué tendría que hacer una aplicación si no existiera el sistema operativo?

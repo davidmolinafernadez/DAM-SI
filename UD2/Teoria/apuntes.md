@@ -25,7 +25,11 @@ Un programa es un conjunto de instrucciones; un proceso es una instancia en ejec
 
 ### Gestión de memoria
 
-El sistema asigna memoria, impide accesos indebidos y libera recursos. La memoria virtual permite usar almacenamiento secundario como apoyo, aunque es mucho más lento que la RAM.
+El sistema asigna memoria, impide accesos indebidos y libera recursos. La memoria
+virtual proporciona espacios de direcciones propios y traducción a memoria
+física; no es sinónimo de intercambio. Algunas páginas pueden respaldarse en
+almacenamiento, mucho más lento que la RAM. Un fallo de página no implica
+necesariamente una lectura de disco.
 
 ### Gestión de archivos
 
@@ -87,6 +91,9 @@ En una máquina virtual hay tres conceptos que deben diferenciarse:
 - **invitado:** sistema operativo que se ejecuta dentro de la VM;
 - **hipervisor:** capa que crea y controla las máquinas virtuales.
 
+En contenedores Linux ejecutados desde Windows o macOS, una capa virtualizada
+aporta el kernel Linux compartido por los contenedores.
+
 La red de una VM puede configurarse en modo NAT, puente, interna o solo
 anfitrión. NAT suele ser suficiente para actualizar y navegar; puente hace que la
 VM aparezca como otro equipo de la red y debe elegirse con más cuidado. Las
@@ -104,6 +111,25 @@ de seguridad externa.
 7. Documentar la decisión y sus evidencias.
 
 ## 10. Resumen
+
+### Conceptos que debes saber distinguir
+
+| Conceptos | Diferencia esencial |
+|---|---|
+| API / llamada al sistema | Interfaz para programar / entrada controlada al kernel |
+| Programa / proceso / hilo | Instrucciones / instancia con recursos / línea de ejecución |
+| Preparado / bloqueado | Espera CPU / espera un evento |
+| Concurrencia / paralelismo | Progreso en un intervalo / ejecución simultánea |
+| RAM / memoria virtual / intercambio | Recurso físico / direcciones y traducción / respaldo en almacenamiento |
+| Búfer / caché / spool | Adaptar ritmos / reutilizar copias / mantener una cola de trabajos |
+| Libre / gratuito / comercial | Derechos / precio / actividad económica |
+| Instantánea / copia | Retorno dependiente de la VM / recuperación independiente |
+
+Para estudiar los ejemplos desarrollados, vuelve a
+[arquitectura](01-arquitectura-y-funciones.md),
+[procesos y memoria](02-procesos-memoria-e-io.md),
+[elección del sistema](03-familias-licencias-y-eleccion.md) y
+[virtualización](04-virtualizacion-y-arranque.md).
 
 El sistema operativo actúa como gestor de recursos y plataforma de servicios. Comprender procesos, memoria, archivos, seguridad y licencias permite seleccionar con criterio y preparar una instalación reproducible.
 

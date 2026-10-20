@@ -29,6 +29,15 @@ dependencias. No compiten por ser “mejores”: resuelven problemas distintos.
 | Uso típico | Instalar SO, pruebas completas | Desplegar servicios reproducibles |
 | Ejemplo DAM | Ubuntu en VirtualBox | API con Docker |
 
+Los contenedores Linux sobre Windows o macOS necesitan una capa que aporte
+un kernel Linux: comparten ese kernel, no directamente el kernel Windows o
+macOS. [Docker Desktop: virtualización](https://docs.docker.com/desktop/features/vmm/).
+
+Virtualizar tampoco equivale a emular otra arquitectura de CPU. Un invitado
+x86-64 no funciona necesariamente sobre ARM64 con el mismo hipervisor:
+comprueba las arquitecturas admitidas. El aislamiento depende también de
+actualizaciones, carpetas compartidas, portapapeles y red.
+
 <div class="video-card" markdown>
 
 ### Vídeo · Máquinas virtuales y contenedores
@@ -83,6 +92,19 @@ de planificar una práctica.
 
 ## 2.3.4 Red en máquinas virtuales
 
+### Ejemplo de presupuesto de recursos
+
+Un anfitrión tiene 16 GiB de RAM. Si su sistema y aplicaciones necesitan 7 GiB
+y la VM recibe 4 GiB, quedan unos 5 GiB antes de descontar la sobrecarga del
+hipervisor. Dos VMs de 6 GiB cada una requerirían 19 GiB junto con esa carga
+del anfitrión: habría presión de memoria. Comprueba las necesidades reales.
+
+Un disco dinámico de 40 GiB puede ocupar menos al crearlo, pero crecer hasta
+su límite. Prevé también ISO e instantáneas. Borrar archivos en el invitado
+no garantiza reducir automáticamente el archivo del disco virtual.
+
+### Elegir conectividad
+
 | Modo | Qué consigue | Uso habitual |
 |---|---|---|
 | NAT | La VM sale a Internet usando el anfitrión | Navegar y actualizar sin exponer servicios |
@@ -132,7 +154,7 @@ sin diagnóstico puede borrar evidencias y no resolver la causa.
 ## :material-monitor-screenshot: Tarea 2.3.1 · Ficha de una máquina virtual reproducible
 
 <div class="activity-meta" markdown>
-<span>60 min</span><span>Individual</span><span>Entrega en Aules</span>
+<span>60 min con imagen preparada</span><span>Individual</span><span>Entrega en Aules</span>
 </div>
 
 Diseñarás una VM de laboratorio, justificarás sus recursos y documentarás cómo
@@ -157,3 +179,12 @@ repetirla de forma segura.
 2. Explica cuándo elegirías NAT y cuándo adaptador puente.
 3. Justifica por qué una instantánea no sustituye a una copia de seguridad.
 4. Relaciona UEFI, gestor de arranque, kernel y servicios.
+
+### Autoevaluación razonada
+
+- **¿NAT hace seguro cualquier experimento?** No: facilita la salida y limita
+  conexiones entrantes por defecto, pero la VM puede acceder a recursos de red.
+- **¿Una instantánea protege si se pierde el disco anfitrión?** No: necesitas
+  una copia independiente y una restauración comprobada.
+- **¿Una pantalla de inicio de sesión demuestra que todo funciona?** No: también
+  hay que comprobar recursos, dispositivos y conectividad según el objetivo.

@@ -28,6 +28,11 @@ usar draw.io, LibreOffice Draw, Mermaid o una herramienta similar.
 Incluye al menos dos flechas de ida y vuelta: una operación de lectura y una de
 escritura.
 
+El esquema representa responsabilidades, no exige que cada componente sea un
+programa independiente. Sitúa el sistema de archivos en la gestión que realiza
+el kernel y representa la ruta inversa del resultado o error. Una biblioteca
+puede realizar varias llamadas al sistema o resolver una operación sin ellas.
+
 ## Fase 2 · Sigue una operación real
 
 Elige una acción cotidiana:

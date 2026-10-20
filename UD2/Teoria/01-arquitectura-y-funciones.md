@@ -74,6 +74,27 @@ Al guardar un documento:
 
 El shell no es el kernel. Bash, PowerShell y una interfaz gráfica son formas distintas de solicitar servicios al mismo sistema subyacente.
 
+### API, llamada al sistema y servicio
+
+Una **API** es una interfaz de funciones utilizada por un programa. Algunas
+funciones calculan en memoria sin entrar en el kernel; otras necesitan una o
+varias llamadas al sistema. No hay necesariamente una correspondencia uno a uno.
+
+Una **llamada al sistema** permite solicitar una operación protegida al kernel,
+como abrir un archivo. Un **servicio** es un programa disponible para atender
+peticiones, como las de impresión; puede ejecutarse en modo usuario y utilizar
+llamadas al sistema. Una cuenta administradora tampoco implica ejecución en
+modo kernel: permisos de la cuenta y modo de la CPU son mecanismos distintos.
+
+### Escritura, caché y persistencia
+
+El recorrido de guardar un archivo es una simplificación. Bibliotecas, kernel
+y dispositivo pueden utilizar búferes y cachés: aceptar una escritura no
+siempre significa haberla persistido ya en el dispositivo. Las aplicaciones
+que necesitan más garantías utilizan operaciones de sincronización adecuadas.
+Por eso se debe expulsar correctamente una unidad extraíble antes de retirarla.
+Una lectura de datos presentes en caché tampoco necesita acceder al SSD.
+
 <div class="activity-card" markdown>
 
 ## :material-layers-triple-outline: Tarea 2.1 · Mapa de capas del sistema operativo
@@ -145,6 +166,15 @@ cifrado, arranque seguro, gestión remota y actualizaciones centralizadas.
 ### Comprobación
 
 Explica por qué una aplicación no debe escribir directamente en un SSD y describe qué capas intervienen al guardar un archivo.
+
+### Autoevaluación razonada
+
+- **¿Una suma necesita entrar en el kernel?** No necesariamente: puede
+  calcularse en modo usuario, aunque mostrar el resultado requiera otros servicios.
+- **¿Cerrar una ventana detiene todos los servicios?** No: los servicios pueden
+  seguir funcionando sin ventanas ni una sesión interactiva.
+- **¿Un fallo de una aplicación exige reiniciar?** Normalmente no; el aislamiento
+  permite terminar el proceso. Un fallo privilegiado puede tener mayor impacto.
 
 ## Fuentes para ampliar y comprobar datos
 

@@ -28,8 +28,10 @@ Elige uno:
 - puesto de diseño audiovisual;
 - dispositivo empotrado o IoT.
 
-Compara al menos tres opciones: Windows, una distribución GNU/Linux y otra
-alternativa razonable para el caso.
+Compara al menos tres opciones razonables para el caso. En un equipo de propósito
+general incluye Windows y una distribución GNU/Linux; para un dispositivo
+empotrado puedes comparar plataformas compatibles con ese hardware. Si una
+alternativa incumple un requisito obligatorio, identifícala como descartada.
 
 ## Fase 1 · Requisitos
 
@@ -47,6 +49,11 @@ Define necesidades mínimas:
 ## Fase 2 · Matriz ponderada
 
 Asigna pesos de 1 a 5 y puntúa cada sistema de 1 a 5.
+
+Primero comprueba los requisitos obligatorios. Puntúa las alternativas viables
+con 1 = cumplimiento muy bajo y 5 = muy alto; una puntuación alta en coste total
+significa menor coste o mejor adecuación económica. Justifica los pesos antes
+de sumar y usa la misma escala para todas las opciones.
 
 | Criterio | Peso | Opción A | Opción B | Opción C |
 |---|---:|---:|---:|---:|
@@ -77,7 +84,7 @@ prueba piloto que harías antes de implantar.
 
 Incluye:
 
-- tres opciones comparadas con nombre y versión o edición aproximada;
+- tres opciones comparadas con nombre, versión y edición cuando corresponda;
 - al menos una fuente oficial por opción finalista;
 - una matriz con pesos y total calculado;
 - una decisión final con riesgos y prueba piloto.
