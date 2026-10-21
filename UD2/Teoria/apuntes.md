@@ -138,7 +138,7 @@ El sistema operativo actúa como gestor de recursos y plataforma de servicios. C
 | Actividad | Evidencia principal |
 |---|---|
 | Tarea 2.1 · Mapa de capas del sistema operativo | Diagrama de capas y explicación de una operación real |
-| Tarea 2.2 · Observatorio de procesos y memoria | Mediciones antes/después y capturas |
+| Tarea 2.2 · Comparativa de gestión de procesos | Comparación de Windows, GNU/Linux y macOS con casos y fuentes |
 | Tarea 2.3 · Elección justificada de sistema operativo | Matriz ponderada y decisión documentada |
 | Tarea 2.1.1 · Diagnóstico de rendimiento | Hipótesis, plan de diagnóstico y medidas correctoras |
 | Tarea 2.3.1 · Ficha de una máquina virtual reproducible | Configuración justificada y evidencias de arranque |

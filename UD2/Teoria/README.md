@@ -10,7 +10,7 @@ cómo elegir una plataforma con criterios técnicos, legales y de soporte.
   - [Teoría general](01-arquitectura-y-funciones.md)
   - **Tareas del tema general**
     - [Tarea 2.1 · Mapa de capas del sistema operativo](actividades/A1-mapa-capas-so.md)
-    - [Tarea 2.2 · Observatorio de procesos y memoria](actividades/A2-observatorio-procesos.md)
+    - [Tarea 2.2 · Comparativa de gestión de procesos](actividades/A2-observatorio-procesos.md)
     - [Tarea 2.3 · Elección justificada de sistema operativo](actividades/A3-eleccion-so.md)
   - **Subunidad 2.1 · Procesos, memoria y entrada/salida**
     - [Teoría 2.1](02-procesos-memoria-e-io.md)
