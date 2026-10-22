@@ -101,19 +101,33 @@ larga. Después, reproduce en papel el ejemplo Round Robin de este tema.
 
 ## 2.2 Multitarea, concurrencia y sincronización
 
-Concurrencia significa que varias tareas progresan durante el mismo intervalo. Paralelismo significa que se ejecutan literalmente al mismo tiempo en distintos núcleos.
+Estas son **capacidades del sistema operativo y mecanismos de programación**;
+no son, en general, opciones que el usuario deba activar en un menú.
 
-Dos hilos que modifican un dato compartido pueden sufrir una condición de carrera. Los mecanismos de sincronización —mutex, semáforos y operaciones atómicas— coordinan el acceso, pero un mal diseño puede producir interbloqueo.
+- **Multitarea:** el SO reparte la CPU entre las tareas. En Windows, GNU/Linux
+  y macOS es normalmente **apropiativa o expulsiva**: el sistema puede retirar
+  la CPU a un hilo para ejecutar otro. El usuario no suele elegir entre
+  multitarea apropiativa y cooperativa. En la **cooperativa**, la tarea debe
+  ceder el control; si no lo hace, puede perjudicar a las demás. La multitarea
+  no exige varios núcleos: con uno se pueden alternar tareas.
+- **Concurrencia:** varias tareas avanzan durante el mismo periodo, aunque se
+  vayan turnando en la CPU. Por ejemplo, mientras el navegador espera una
+  respuesta de red, el editor puede usar CPU.
+- **Paralelismo:** varias tareas ejecutan instrucciones simultáneamente si hay
+  recursos de procesamiento disponibles y el trabajo puede aprovecharlos.
+  El SO distribuye el trabajo; por ejemplo, dos compilaciones pueden ejecutarse
+  a la vez en distintos núcleos. Tener diez aplicaciones abiertas no significa
+  que las diez ejecuten instrucciones en el mismo instante.
+- **Sincronización:** los programadores utilizan mecanismos como mutex,
+  semáforos y operaciones atómicas, disponibles mediante servicios del SO y
+  bibliotecas, para coordinar los hilos y proteger datos compartidos. Dos hilos
+  que modifican un mismo dato sin la coordinación necesaria pueden sufrir una
+  **condición de carrera**; un mal diseño de los bloqueos puede producir un
+  **interbloqueo**.
 
-La **multitarea apropiativa o expulsiva** permite al SO retirar la CPU a un
-hilo para atender otro. En la multitarea **cooperativa**, la tarea debe ceder
-el control; si no lo hace, puede perjudicar a las demás. Multitarea no exige
-varios núcleos: con uno se alternan tareas; con varios puede haber paralelismo.
-
-**Ejemplo:** mientras el navegador espera una respuesta de red, el editor puede
-usar CPU. Dos compilaciones pueden ejecutarse en paralelo si hay recursos de
-procesamiento disponibles. Tener diez aplicaciones abiertas no significa que
-las diez ejecuten instrucciones en el mismo instante.
+**Ejemplo cotidiano:** tú abres el navegador y un editor; el SO organiza sus
+turnos de CPU; y los desarrolladores de cada aplicación programan la
+coordinación entre sus hilos.
 
 ### Ejemplo de carrera
 
