@@ -54,3 +54,8 @@ $RECYCLE.BIN/
 # Web docente generada
 .site-src/
 site/
+
+# Material docente local de la unidad 3
+/UD3/Material_preparado/
+/UD3/Docente/
+/UD3/Unidad_3_Instalacion_y_virtualizacion.zip

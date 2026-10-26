@@ -6,6 +6,7 @@ on:
     paths:
       - "UD*/Teoria/**"
       - "UD*/Activitats/**"
+      - "UD*/Practiques/**"
       - "web/**"
       - "scripts/prepare_site.py"
       - "mkdocs.yml"

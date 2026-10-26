@@ -28,6 +28,14 @@ def main() -> None:
                 dirs_exist_ok=True,
                 ignore=shutil.ignore_patterns("Correcciones", "_textos_extraidos", "__pycache__"),
             )
+        practices = ROOT / f"UD{number}" / "Practiques"
+        if practices.exists():
+            shutil.copytree(
+                practices,
+                destination / "practicas",
+                dirs_exist_ok=True,
+                ignore=shutil.ignore_patterns("Correcciones", "Docente", "__pycache__"),
+            )
         readme = destination / "README.md"
         if readme.exists():
             readme.rename(destination / "index.md")

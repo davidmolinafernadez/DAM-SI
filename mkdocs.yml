@@ -93,12 +93,44 @@ nav:
       - Tarea 2.3.1 · Máquina virtual: ud2/actividades/A23-maquina-virtual.md
       - Apuntes de referencia: ud2/apuntes.md
   - UD3 · Instalación y virtualización:
-      - Presentación: ud3/index.md
-      - Planificación y particionado: ud3/01-planificacion-y-particionado.md
-      - Instalación y recuperación: ud3/02-instalacion-y-recuperacion.md
-      - VirtualBox: ud3/03-virtualbox.md
-      - Docker: ud3/04-docker.md
-      - Apuntes de referencia: ud3/apuntes.md
+      - Presentación y descargas: ud3/index.md
+      - Teoría:
+          - "1 · Planificar una instalación": ud3/b01-planificacion.md
+          - "2 · Comprender la virtualización": ud3/b02-virtualizacion.md
+          - "3 · Medios e integridad": ud3/b03-medios-e-integridad.md
+          - "4 · Firmware, arranque y particiones": ud3/b04-firmware-y-particiones.md
+          - "5 · Sistemas de archivos y montaje": ud3/b05-sistemas-de-archivos.md
+          - "6 · Hardware virtual y recursos": ud3/b06-hardware-virtual.md
+          - "7 · Instalar y comprobar Ubuntu": ud3/b07-instalar-ubuntu.md
+          - "8 · Instalar y comprobar Windows": ud3/b08-instalar-windows.md
+          - "9 · Redes virtuales y servicio web": ud3/b09-redes-virtuales.md
+          - "10 · Actualizaciones y aceptación": ud3/b10-actualizaciones.md
+          - "11 · Recuperación y transferencia": ud3/b11-recuperacion.md
+          - "12 · Contenedores para DAM": ud3/b12-contenedores.md
+      - Laboratorio:
+          - Normas y recorrido: ud3/practicas/index.md
+          - "P0 · Auditoría e ISO": ud3/practicas/p0-auditoria.md
+          - "P1 · Crear la máquina virtual": ud3/practicas/p1-crear-vm.md
+          - "P2 · Instalar Ubuntu": ud3/practicas/p2-ubuntu.md
+          - "P3 · Instalar Windows 11": ud3/practicas/p3-windows.md
+          - "P4 · Particionar y montar": ud3/practicas/p4-particionado.md
+          - "P5 · Redes y página web": ud3/practicas/p5-redes.md
+          - "P6 · Actualizar y verificar": ud3/practicas/p6-actualizaciones.md
+          - "P7 · Recuperar con instantáneas": ud3/practicas/p7-instantaneas.md
+          - "P8 · Clonar, exportar e importar": ud3/practicas/p8-transferencia.md
+          - "P9 · Proyecto integrador": ud3/practicas/p9-proyecto.md
+          - "X1 · Arranque dual": ud3/practicas/x1-arranque-dual.md
+          - "X2 · Web con Docker": ud3/practicas/x2-docker.md
+      - Vídeos y tareas: ud3/videos.md
+      - Consolidación: ud3/actividades/consolidacion.md
+      - Plantillas de entrega: ud3/actividades/plantillas.md
+      - Glosario y fuentes: ud3/glosario-y-fuentes.md
+      - Consulta anterior:
+          - Planificación y particionado: ud3/01-planificacion-y-particionado.md
+          - Instalación y recuperación: ud3/02-instalacion-y-recuperacion.md
+          - VirtualBox: ud3/03-virtualbox.md
+          - Docker y Compose: ud3/04-docker.md
+          - Síntesis: ud3/apuntes.md
   - UD4 · Sistemas de archivos:
       - Presentación: ud4/index.md
       - Sistemas de archivos: ud4/01-sistemas-de-archivos.md
