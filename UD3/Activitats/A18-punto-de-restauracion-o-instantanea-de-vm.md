@@ -1,0 +1,52 @@
+# Actividad 3.18 · Punto de restauración o instantánea de VM
+
+<div class="lesson-banner" markdown>
+<div class="lesson-number">3.18</div>
+<div markdown>
+**Actividad escrita · Punto de restauración o instantánea de VM**
+
+Razonar, interpretar y justificar antes de ejecutar.
+</div>
+</div>
+
+<div class="activity-meta" markdown>
+<span>25 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+</div>
+
+**Código: A18.** Actividad escrita con entrega propia.
+
+**Teoría relacionada:** [Teoría 3.7: Recuperación y transferencia](../b11-recuperacion.md)
+
+[Descargar actividad en PDF](descargas/Actividad_3_18_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
+[Original editable en texto](descargas/Actividad_3_18_Apellidos_Nombre.txt){ .md-button download }
+
+Tiempo orientativo: 25 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+
+## Antes de responder
+
+Consulta la teoría relacionada antes de responder. Identifica qué información aporta el caso y qué datos faltan. Las soluciones no se deducen por repetir un nombre de herramienta: hay que explicar qué comprobaría y con qué resultado.
+
+## Caso de trabajo
+
+Un usuario ha borrado un documento; otro instaló un programa que altera el sistema; un tercero perdió el SSD donde tenía VM e instantáneas. Todos quieren pulsar «Restaurar sistema» para resolverlo.
+
+## Cuestiones
+
+1. Identifica qué información falta en cada caso y qué mecanismo podría ayudar.
+2. Explica alcance de un punto de Windows, instantánea de VirtualBox y copia independiente de documentos.
+3. Justifica por qué hay que revisar protección activada, punto disponible y programas afectados antes de prometer una reversión.
+4. Compara Timeshift con una copia de la carpeta personal sin afirmar que incluyen siempre los mismos datos.
+5. Diseña una evidencia antes/después que no se pierda con el propio retorno.
+
+## Entrega de esta actividad
+
+Tabla de fallos, mecanismos y límites. No se ejecuta Restaurar sistema en el anfitrión. Guarda el archivo como `Actividad_3_18_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
+
+## Revisión y valoración
+
+| Criterio | Puntos |
+| --- | ---: |
+| Conceptos y datos interpretados correctamente | 4 |
+| Justificación y relación entre causa y resultado | 3 |
+| Tabla, esquema o propuesta solicitada | 2 |
+| Claridad, fuentes y entrega | 1 |

@@ -1,32 +1,57 @@
 # P0. Auditoría del puesto e ISO verificada
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">P0</div>
+<div markdown>
+**Práctica guiada de laboratorio**
+
+Sigue los menús, registra las decisiones y comprueba el resultado.
+</div>
+</div>
+
 **Teoría relacionada:** [Planificar una instalación](../b01-planificacion.md) · [Medios e integridad](../b03-medios-e-integridad.md)
 
-Duración: 90 minutos. Teoría: B1 y B3. Trabajo individual con contraste por parejas. Producto: ficha de viabilidad y registro de descarga.
+Duración orientativa: 90 minutos. Trabajo individual. Necesitas Windows en el anfitrión, acceso a sus datos de hardware y una carpeta para el laboratorio. No se modifica el firmware del ordenador del aula.
 
-## Qué vas a aprender
+## 1. Abre las herramientas del anfitrión
 
-Comprobar si un equipo puede alojar el laboratorio y demostrar que una imagen coincide con la huella oficial de su revisión. El resultado debe permitir que otra persona entienda por qué has elegido una configuración y de dónde procede el instalador.
+1. Pulsa **Ctrl + Mayús + Esc** para abrir el **Administrador de tareas**. Si aparece una vista reducida, pulsa **Más detalles**.
+2. Abre **Rendimiento → CPU**. Anota modelo, núcleos, procesadores lógicos y estado de **Virtualización**. Un estado habilitado indica lo que informa Windows; no demuestra por sí solo que cualquier combinación de hipervisores vaya a funcionar.
+3. Abre **Rendimiento → Memoria**. Distingue memoria total y disponible. La disponible cambia mientras abres programas: anota el momento de la medición.
+4. Pulsa **Windows + E → Este equipo**. Localiza la unidad donde se guardarán las VM. Pulsa su botón derecho → **Propiedades** y anota espacio libre. Esa cifra no es RAM.
+5. Pulsa **Windows + R**, escribe `msinfo32` y pulsa **Aceptar**. En **Resumen del sistema**, consulta tipo de sistema y modo de BIOS. El modo del anfitrión no obliga a utilizar el mismo firmware en todos sus invitados.
 
-## Preparación
+## 2. Decide si el laboratorio cabe
 
-Necesitas acceso de lectura a la información del anfitrión y una carpeta de trabajo. No cambies su firmware. Si la virtualización está deshabilitada o se requiere instalar software, comunica la incidencia al docente, que coordinará el puesto del centro. Una descarga puede prepararse antes de clase.
+Abre tu documento de entrega y crea una tabla con las filas: anfitrión, Ubuntu, Windows y margen. Separa RAM, CPU y almacenamiento. Explica si ejecutarás los invitados simultáneamente o de forma alterna. Utiliza las cifras propuestas por el docente como punto de partida, no como permiso para asignar toda la memoria disponible.
 
-## Procedimiento
+Para un anfitrión de 16 GiB puedes estudiar una reserva de 6 GiB para Windows y aplicaciones, 4 para Ubuntu, 4 para el invitado Windows y 2 de margen. Después tendrás que medir. Para un equipo de 8 GiB plantea un solo invitado activo y consulta dónde realizar la práctica de Windows si no cumple requisitos.
 
-1. Registra sistema anfitrión, arquitectura, CPU, núcleos/hilos, RAM total, RAM disponible aproximada y espacio libre en la unidad del laboratorio. En Windows puedes usar Administrador de tareas e Información del sistema. Distingue almacenamiento y memoria.
-2. Comprueba si el sistema informa de virtualización habilitada. Anota la herramienta y el dato observado. Si no puedes comprobarlo, marca «pendiente» y explica cómo lo resolverá el docente.
-3. Consulta requisitos oficiales de Windows 11 y del Ubuntu elegido. Separa requisitos oficiales de la configuración propuesta para clase.
-4. Diseña una tabla con reserva del anfitrión, VM Ubuntu, VM Windows y margen. Indica si se ejecutarán simultáneamente. En 8 GiB, plantea ejecución alterna y un puesto compatible para las tareas que lo necesiten.
-5. Accede a la descarga oficial de Ubuntu. Registra edición, versión completa, arquitectura, URL, fecha, tamaño y nombre del archivo. El docente puede proporcionar la ISO desde un repositorio del centro conservando la trazabilidad.
-6. Obtén la referencia SHA-256 correspondiente a ese archivo. No uses la huella de otra revisión. Guarda la URL del listado oficial.
-7. Calcula la huella con Get-FileHash o sha256sum, como se muestra en B3. Compara todos los caracteres. Adjunta huella calculada y esperada como texto seleccionable.
-8. Escribe una conclusión: «Coincide con la referencia ...» o «No coincide; no se autoriza su uso». Explica qué has comprobado y qué requeriría verificar autenticidad mediante firma.
+## 3. Descarga e identifica el medio
 
-## Comprobación e incidencia
+1. Abre el navegador y entra en la página oficial indicada en la teoría. Selecciona **Ubuntu Desktop**, la versión acordada y arquitectura **amd64** para el laboratorio x86-64. No confundas amd64 con un requisito de procesador de marca AMD.
+2. Guarda la ISO en una carpeta identificable, por ejemplo `ISO_UD3`. Desde el Explorador abre **Ver → Mostrar → Extensiones de nombre de archivo**, si está disponible, para comprobar la extensión real.
+3. Anota el nombre completo del archivo, tamaño, versión, arquitectura, fecha y URL. No renombres el archivo antes de cotejar su referencia.
+4. Abre el listado oficial de hashes de esa misma revisión. Localiza la fila del nombre exacto de tu ISO. Si el centro proporciona el archivo, también debe proporcionar su procedencia y referencia.
 
-El docente entrega dos cadenas de ejemplo, idénticas salvo un carácter central. Compara las cadenas sin limitarte al principio y al final. Si tu propia descarga no coincide, comprueba primero nombre y revisión; no la uses hasta resolverlo. No es necesario descargar una ISO corrupta para practicar la incidencia.
+## 4. Calcula la huella en PowerShell
 
-Aceptación: arquitectura adecuada, presupuesto razonado, ISO identificada sin ambigüedad y huella completa cotejada. Evidencias: tabla del equipo, tabla de presupuesto, salida del hash y referencia. Preguntas: ¿por qué una ISO de 6 GiB no cabe como archivo en FAT32?, ¿por qué un hash obtenido de un foro no demuestra por sí solo autenticidad?
+Entra en la carpeta `ISO_UD3`. Pulsa la barra de direcciones del Explorador, escribe `powershell` y pulsa **Intro**. Se abre una consola situada en esa carpeta. Ejecuta `Get-ChildItem` para comprobar qué archivos contiene.
 
-Ampliación: sigue la guía oficial de firma de Ubuntu, identifica la huella de la clave y explica qué significa una firma válida y qué significa una clave aún no confiable localmente.
+Escribe el comando siguiente sustituyendo el nombre por el de tu ISO. Puedes escribir el comienzo del nombre y pulsar **Tab** para completarlo:
+
+```powershell
+Get-FileHash -LiteralPath '.\NOMBRE_REAL_DE_LA_IMAGEN.iso' -Algorithm SHA256
+```
+
+El texto `NOMBRE_REAL_DE_LA_IMAGEN.iso` es un marcador, no un archivo que exista. Compara los 64 caracteres del resultado con la referencia. Que coincidan el principio y el final no basta. Copia ambas cadenas como texto en el informe y explica qué confianza aporta su procedencia.
+
+## 5. Comprueba y entrega
+
+Debes entregar ficha del puesto, presupuesto razonado, identificación de ISO y comparación completa. Si la huella no coincide, no uses la imagen: comprueba revisión, nombre y descarga. La ampliación de firma digital se realiza con la guía oficial, verificando la identidad de la clave.
+
+**Incidencia para analizar:** el archivo se llama igual que el de la referencia, pero tiene otra huella. Propón dos explicaciones y una prueba para distinguirlas. No respondas solamente «está mal».
+
+## Entrega independiente de la práctica
+
+Guarda `P0_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Las actividades escritas tienen su propio archivo; no sustituyen la demostración funcional de la práctica.

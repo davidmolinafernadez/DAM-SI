@@ -1,5 +1,14 @@
 # P9. Proyecto integrador: laboratorio de un equipo de desarrollo
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">P9</div>
+<div markdown>
+**Práctica guiada de laboratorio**
+
+Sigue los menús, registra las decisiones y comprueba el resultado.
+</div>
+</div>
+
 **Teoría relacionada:** [Repasar los doce bloques](../index.md#teoria-por-bloques)
 
 Duración: 240 minutos. Teoría: toda la unidad. Producto: laboratorio verificable, memoria breve y defensa individual.
@@ -28,3 +37,7 @@ Primera hora: valida el plan y completa requisitos pendientes de las VM. Segunda
 Memoria recomendada de 6-10 páginas más anexos necesarios. Incluye tabla de aceptación con criterio, prueba, resultado y evidencia. Añade diagrama de red con IP y puertos reales. El docente puede pedir: retirar la ISO; localizar la raíz; explicar una ruta; detener el servidor y diagnosticar el fallo; predecir qué se perderá al restaurar. Cada integrante debe poder hacerlo individualmente.
 
 La rúbrica valora planificación 15%, instalación y aceptación 25%, servicio y red 20%, recuperación/transferencia 25% y documentación/defensa 15%. La guía docente concreta niveles y recuperación. No hace falta diseñar una web visualmente compleja: aquí se evalúa la infraestructura que la ejecuta.
+
+## Entrega independiente de la práctica
+
+Guarda `P9_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Las actividades escritas tienen su propio archivo; no sustituyen la demostración funcional de la práctica.

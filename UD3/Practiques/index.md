@@ -1,4 +1,4 @@
-# Laboratorio de la unidad 3
+# Unidad 3. Cuaderno de prácticas guiadas
 
 Sistemas Informáticos · 1.º de DAM · Laboratorio del alumnado
 
@@ -11,6 +11,8 @@ Antes de empezar una práctica: lee la teoría indicada, dibuja el estado inicia
 Las capturas deben mostrar un dato legible, estar numeradas y llevar un pie explicativo. Para identificar la autoría, utiliza nombre de máquina y un código de alumno de aula; no es necesario exponer datos personales. Los vídeos del catálogo 03 se consultan en el momento indicado y se acompañan de preguntas. La documentación escrita prevalece si el vídeo utiliza una interfaz antigua o simplifica un concepto.
 
 Carpeta de entrega por práctica: Pxx_codigo. Incluye informe.pdf, evidencias y, cuando se pida, archivos de texto de configuración. No entregues ISO ni discos virtuales de decenas de gigabytes en la plataforma salvo indicación docente. La demostración práctica del equipo sirve para evaluar el funcionamiento.
+
+Las actividades escritas tienen su propio cuaderno y sus propias páginas. Aquí se recogen únicamente procedimientos de ejecución, comprobación y diagnóstico del laboratorio. Las rutas de menú se refieren a las versiones de referencia; el docente indicará las diferencias de la imagen del aula.
 
 ## Itinerario de prácticas
 
@@ -26,9 +28,15 @@ Carpeta de entrega por práctica: Pxx_codigo. Incluye informe.pdf, evidencias y,
 | [P7 · Recuperar con instantáneas](p7-instantaneas.md) | 120 min |
 | [P8 · Clonar, exportar e importar](p8-transferencia.md) | 150 min |
 | [P9 · Proyecto integrador](p9-proyecto.md) | 240 min |
+| [P10 · Aplicaciones Linux](p10-paquetes-linux.md) | 120 min |
+| [P11 · Restaurar sistema Windows](p11-restauracion-windows.md) | 90 min |
 | [X1 · Arranque dual](x1-arranque-dual.md) | 180 min |
 | [X2 · Web con Docker](x2-docker.md) | 120 min |
 
-Las diez prácticas principales suman 25,5 horas. X1 y X2 añaden 5 horas opcionales.
+Las doce prácticas principales suman 29 horas. X1 y X2 añaden 5 horas opcionales.
 
-[Plantillas de entrega](../actividades/plantillas.md) · [Consolidación y autoevaluación](../actividades/consolidacion.md)
+[Plantillas de entrega](../actividades/plantillas.md) · [Índice de actividades escritas](../actividades/index.md)
+
+## Actividad y práctica son entregas distintas
+
+Para diseñar, comparar o diagnosticar un caso, consulta [Actividades escritas](../actividades/index.md). Para crear y comprobar el laboratorio real, sigue una práctica de esta página. Los códigos A y P permiten identificar qué se está pidiendo.

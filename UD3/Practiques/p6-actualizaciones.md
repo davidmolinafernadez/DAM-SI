@@ -1,22 +1,52 @@
 # P6. Actualizaciones y control de cambios
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">P6</div>
+<div markdown>
+**Práctica guiada de laboratorio**
+
+Sigue los menús, registra las decisiones y comprueba el resultado.
+</div>
+</div>
+
 **Teoría relacionada:** [Actualizaciones y aceptación](../b10-actualizaciones.md)
 
-Duración: 120 minutos. Teoría: B10. Producto: registro antes/después y Ubuntu actualizado.
+Duración orientativa: 120 minutos. Trabaja en Ubuntu instalado y conserva un punto de retorno. Una actualización es una operación que se debe comprobar después, no solo una barra de progreso.
 
-## Procedimiento
+## 1. Guarda el estado inicial
 
-1. Comprueba espacio en anfitrión e invitado. Crea una instantánea apagada llamada P6-antes-actualizar y anota su alcance.
-2. Arranca Ubuntu. Registra distribución, kernel y hora. Ejecuta sudo apt update y lee si todos los repositorios se consultan correctamente.
-3. Consulta apt list --upgradable. Selecciona dos paquetes propuestos, si los hay, y anota versión anterior/candidata. Si no hay actualizaciones, registra ese resultado válido.
-4. Ejecuta sudo apt upgrade. Antes de confirmar, lee paquetes nuevos, actualizaciones, descarga y espacio adicional. No utilices -y en esta práctica. Anota si el gestor propone algún conflicto.
-5. Comprueba si se solicita reinicio y realízalo si corresponde. Vuelve a registrar uname -r; el kernel puede mantenerse si no se actualizó.
-6. Consulta apt show tree; instala con sudo apt install tree. Ejecuta tree --version y utilízalo sobre una carpeta de prueba de tres niveles que tú hayas creado.
-7. Consulta apt show antes de elegir otra aplicación. Explica qué información ayuda a decidir si es el paquete correcto.
-8. Compara estado inicial y final. No ejecutes full-upgrade, autoremove o purge por rutina: explica qué revisarías antes de usarlos.
+Abre **Archivos → Carpeta personal** y comprueba que puedes crear un archivo. En la terminal ejecuta `df -hT` y `uname -r`. Apaga Ubuntu. En el administrador de VirtualBox, selecciona la VM y cambia de **Detalles** a **Instantáneas** mediante su menú de herramientas o vista. Pulsa **Tomar**, escribe `P6-antes-actualizar` y añade fecha y estado observado. Arranca de nuevo.
 
-## Incidencia y aceptación
+## 2. Refresca información y lee la propuesta
 
-Incidencia controlada: desconecta el cable virtual, ejecuta apt update, registra el error de red y reconecta. Repite y compara. No interpretes «se usan índices anteriores» como una actualización de metadatos correcta.
+Pulsa **Ctrl + Alt + T**. Ejecuta `sudo apt update`. Cuando pida la contraseña, escríbela y pulsa **Intro**: normalmente no aparecen puntos ni asteriscos. Es un comportamiento previsto, no una falta de respuesta.
 
-Aceptación: metadatos consultados sin fallos de red sin resolver, actualización revisada, reinicio cuando proceda y aplicación comprobada. Entrega registro con comandos, resultados, decisiones y reversión disponible. Preguntas: ¿update instala nuevas versiones?, ¿upgrade puede añadir dependencias?, ¿por qué no se debe borrar un bloqueo de APT sin saber qué proceso lo mantiene?
+Lee el resultado. Si hay errores de descarga o se usan índices antiguos, no concluyas que la consulta fue correcta. Comprueba conexión, reloj y repositorios. Después ejecuta `apt list --upgradable`. Anota dos paquetes con versión disponible, o registra que no hay actualizaciones si ese es el caso.
+
+## 3. Actualiza y verifica tras reinicio
+
+Ejecuta `sudo apt upgrade`. Antes de aceptar, identifica cuánto se descargará, qué se instalará y si hay dependencias nuevas. No añadas `-y`: queremos leer la propuesta. Cuando termine, revisa si solicita reinicio y utiliza **menú de estado → Apagar/Cerrar sesión → Reiniciar** cuando corresponda.
+
+Vuelve a abrir la terminal y ejecuta `uname -r`. Puede mantenerse si no se actualizó el kernel. Compara una aplicación o paquete seleccionado antes y después; no inventes un cambio para que la tabla parezca completa.
+
+## 4. Instala una herramienta y comprueba su uso
+
+```bash
+apt show tree
+sudo apt install tree
+tree --version
+mkdir -p ~/ud3-arbol/proyecto/src
+tree ~/ud3-arbol
+```
+
+`apt show` permite inspeccionar el paquete antes de instalarlo. `tree --version` comprueba que el programa responde y `tree` sobre una ruta propia demuestra un uso real. No necesitas aplicar `full-upgrade`, `purge` o `autoremove` para terminar.
+
+## 5. Incidencia y entrega
+
+Con la VM de pruebas, desconecta únicamente su cable virtual: menú de la VM **Dispositivos → Red → Conectar adaptador** si existe, o control de red equivalente. Ejecuta `apt update`, conserva el mensaje, reconecta y repite. No borres los archivos de bloqueo de APT si otra actualización está trabajando.
+
+Entrega tabla antes/después, propuesta interpretada, reinicio cuando proceda y comprobación de tree. Añade una explicación de `update` frente a `upgrade` y por qué el número del kernel no cambia siempre.
+
+## Entrega independiente de la práctica
+
+Guarda `P6_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Las actividades escritas tienen su propio archivo; no sustituyen la demostración funcional de la práctica.

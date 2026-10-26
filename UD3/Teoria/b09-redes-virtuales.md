@@ -1,12 +1,19 @@
-# B9. Redes virtuales con una finalidad
+# 3.5 · Redes virtuales con una finalidad
 
-> **Del concepto al laboratorio:** [P5 · Redes y página web](practicas/p5-redes.md) · [P9 · Proyecto integrador](practicas/p9-proyecto.md)
+<div class="lesson-banner" markdown>
+<div class="lesson-number">3.5</div>
+<div markdown>
+**Redes del laboratorio**
 
-## 9.1. Las preguntas que decide una red
+Redes virtuales y servicio web: explicación, ejemplos y comprobaciones.
+</div>
+</div>
+
+## Las preguntas que decide una red
 
 Antes de elegir modo, determina quién debe iniciar la comunicación: invitado hacia Internet, anfitrión hacia invitado o un invitado hacia otro. NAT individual sirve para salida habitual; no crea por defecto una red compartida entre todas las VM. Red NAT permite agrupar invitados con salida. Solo anfitrión comunica el anfitrión y las VM de esa red, sin salida exterior por ese adaptador. Red interna comunica las VM conectadas al mismo nombre de red. Puente incorpora el invitado a la red física y requiere permiso del centro. Referencia F7.
 
-## 9.2. Diseño del laboratorio
+## Diseño del laboratorio
 
 | Modo | Salida a Internet | Inicio desde anfitrión | Comunicación entre invitados |
 | --- | --- | --- | --- |
@@ -22,13 +29,13 @@ Utilizaremos NAT para descargar y una red solo anfitrión para acceder a una web
 
 Ejemplo: anfitrión 192.168.56.1/24; Ubuntu 192.168.56.10/24; segundo invitado 192.168.56.11/24. Son direcciones de ejemplo: comprueba que no colisionan con la red real, una VPN u otra red virtual. Desactiva DHCP en esa red si se asignan manualmente esas direcciones, o acuerda un rango que no las solape.
 
-## 9.3. IP, puerta de enlace y DNS
+## IP, puerta de enlace y DNS
 
 La IP identifica una interfaz en una red. La máscara determina qué destinos se consideran locales. La puerta de enlace permite salir hacia otras redes. DNS traduce nombres a direcciones. Tener IP no demuestra que DNS funcione; que falle un ping a un nombre tampoco prueba que «Internet está caído».
 
 Diagnostica por capas: interfaz activa, dirección y máscara, ruta, resolución de nombre y servicio final. Un servidor puede rechazar ICMP y aceptar HTTPS. La aceptación se basa en la comunicación que necesita la tarea, no en un único ping.
 
-## 9.4. Publicar un servicio de prueba
+## Publicar un servicio de prueba
 
 En Ubuntu, dentro de una carpeta que contenga solamente archivos del ejercicio:
 
@@ -43,6 +50,32 @@ El proceso se queda activo en la terminal; se detiene con Ctrl+C. 0.0.0.0 indica
 
 Con NAT individual puedes definir reenvío TCP desde 127.0.0.1:8080 del anfitrión al puerto 8000 del invitado. Entonces el navegador del anfitrión abre <http://127.0.0.1:8080>. Esta dirección representa al anfitrión para ese navegador; la regla decide qué servicio del invitado recibe la conexión.
 
-## Actividad A9 · Elegir el modo
+## Diagnosticar con dos navegadores y una terminal
 
-Elige red para: actualizar una VM; comunicar dos invitados sin anfitrión ni Internet; acceder desde el anfitrión a una web sin incorporar la VM a la LAN; probar una web desde otros ordenadores del aula. Justifica y señala en qué caso hace falta autorización de red. Continúa con P5.
+La primera petición se hace desde el invitado a su bucle local: comprueba proceso y puerto sin atravesar la red virtual. La segunda llega desde el anfitrión a la IP del adaptador de laboratorio: añade tarjeta, dirección, ruta y firewall. La tercera utiliza el bucle local del anfitrión y una regla NAT: comprueba además la traducción de puerto.
+
+Comparar estos resultados permite acotar un fallo. Si no responde ni dentro del invitado, el primer sospechoso es el servicio, su carpeta o su puerto. Si funciona allí pero no por la ruta externa, no hay que reinstalar Ubuntu: se revisan las condiciones que esa segunda ruta incorpora.
+
+## Actividades de este apartado
+
+Las respuestas se entregan en el archivo de cada actividad; aquí no se ejecutan las instalaciones.
+
+- [Actividad 3.9 · Elegir una red virtual para cada encargo](actividades/A09-elegir-una-red-virtual-para-cada-encargo.md)
+
+## Prácticas relacionadas
+
+- [P5 · Redes y página web](practicas/p5-redes.md)
+
+<div class="video-card" markdown>
+
+## Vídeo explicativo · Red NAT y reenvío
+
+V5: el ejemplo utiliza SSH. Traduce su recorrido al HTTP de P5 con tus direcciones y puertos.
+
+<div class="video-frame">
+<iframe src="https://mediateca.educa.madrid.org/video/amomshvzq7iz1llo/fs" title="Red NAT y reenvío" loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/amomshvzq7iz1llo) · [Ficha y preguntas de visionado](videos.md)
+
+</div>

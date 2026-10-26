@@ -1,26 +1,62 @@
 # P8. Clonar, exportar e importar con comprobación
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">P8</div>
+<div markdown>
+**Práctica guiada de laboratorio**
+
+Sigue los menús, registra las decisiones y comprueba el resultado.
+</div>
+</div>
+
 **Teoría relacionada:** [Hardware virtual y recursos](../b06-hardware-virtual.md) · [Recuperación y transferencia](../b11-recuperacion.md)
 
-Duración: 150 minutos. Teoría: B6 y B11. Vídeo V6. Producto: clon completo e importación comprobada.
+Duración orientativa: 150 minutos. Antes de comenzar, mide espacio libre para copia, paquete e importación. No borres el único original antes de probar otra copia.
 
-## Preparación
+## 1. Crea un clon completo
 
-Calcula espacio antes de empezar. Apaga Ubuntu y retira ISO y discos secundarios innecesarios desde configuración, sin borrar archivos. El volumen de datos de P4 se conserva desconectado para evitar confundir la prueba. No exportes credenciales personales. Revisa la instantánea o estado actual que utilizarás.
+Apaga Ubuntu y comprueba su estado en VirtualBox. Si tiene conectado el disco de datos que no se necesita, retíralo desde **Configuración → Almacenamiento** sin borrar el archivo VDI. Selecciona el origen → botón derecho → **Clonar**. Si esa acción aparece en **Máquina** en tu versión, utiliza la misma función.
 
-## Procedimiento
+Escribe `UD3-Ubuntu-Clon-codigo` y selecciona **Clon completo**. En política de direcciones MAC elige generar nuevas direcciones para los adaptadores necesarios. Selecciona el estado que vas a clonar y registra qué se incluirá. Completa el asistente y espera a la creación del disco independiente.
 
-1. Crea un clon completo llamado UD3-Ubuntu-Clon-codigo. Selecciona la opción para generar nuevas MAC y clonar el estado elegido. Escribe qué diferencia habría con un clon enlazado.
-2. Antes de encender origen y clon a la vez, comprueba IP estáticas, MAC y nombre. Inicialmente arranca el clon con red desconectada si necesitas modificar su identidad sin conflicto.
-3. Cambia el nombre del clon desde la herramienta de sistema acordada. Si conserva una IP estática, asígnale otra del rango de laboratorio. Comprueba el nombre y conectividad al reiniciar.
-4. Crea solo en el clon ~/archivo-del-clon.txt. Apaga. Arranca el origen y comprueba que no aparece allí. Explica qué independencia demuestra y qué riesgo físico sigue compartiendo.
-5. Apaga el origen y expórtalo a OVA en la ubicación indicada por el docente. Registra tamaño, tiempo aproximado y configuración importante en una ficha externa. No asumas que el paquete conserva la historia de instantáneas ni todos los dispositivos específicos.
-6. Importa como UD3-Ubuntu-Importada-codigo, con nuevas MAC. Si el espacio escasea, el docente puede hacer la importación en otro equipo; no borres el único original para liberar espacio antes de probar el respaldo.
-7. Antes de arrancar, revisa RAM, firmware, controladores y red. Comprueba arranque, versión, archivo testigo y un servicio o aplicación utilizada en clase.
-8. Registra diferencias respecto al origen. Si la importación necesita ajustes, anótalos para que la transferencia sea reproducible.
+## 2. Evita identidades repetidas
 
-## Aceptación e incidencia
+Antes de iniciar origen y clon simultáneamente, revisa **Configuración → Red → Avanzadas → Dirección MAC** en cada uno. Si hay IP fija, debe ser diferente en el clon. Puedes arrancarlo con red desconectada para ajustar la identidad sin conflicto.
 
-Aceptación: clon independiente a nivel de archivos, identidad revisada e importación que arranca y conserva el archivo testigo. Una exportación completada sin probar no supera por sí sola la práctica.
+Dentro del clon, abre **Configuración → Sistema → Acerca de**, o la sección **Acerca de** que incluya **Nombre del dispositivo**, y cambia su nombre si la interfaz lo permite. La alternativa de terminal acordada es `sudo hostnamectl set-hostname ud3-clon-codigo`. Reinicia y comprueba con `hostnamectl`. En la conexión de laboratorio modifica la IPv4 mediante el engranaje de **Red**, igual que en P5.
 
-Incidencia de análisis: «El clon no obtiene red y tiene la misma IP fija que el origen». Formula diagnóstico y corrección. Pregunta: ¿un OVA guardado en el mismo SSD protege frente a la avería de ese SSD? Diseña destino alternativo y prueba de restauración.
+Crea `~/archivo-del-clon.txt` solamente en el clon. Apágalo, arranca el origen y comprueba que ese archivo no aparece allí. Esta prueba acredita independencia de escrituras, pero ambas VM pueden seguir dependiendo del mismo SSD físico.
+
+## 3. Exporta el estado elegido
+
+Apaga el origen. En el administrador abre **Archivo → Exportar servicio virtualizado** o **Exportar máquina/appliance**, según la traducción. Selecciona únicamente Ubuntu, pulsa **Siguiente** y elige archivo **OVA** en la ubicación indicada. Registra versión del hipervisor, firmware, RAM, CPU, discos, red y archivo testigo antes de exportar.
+
+Revisa los datos del paquete y confirma. No añadas credenciales personales. Un paquete de intercambio no garantiza conservar historia de instantáneas, secretos de TPM o todas las funciones de una plataforma.
+
+## 4. Importa y revisa antes de iniciar
+
+Abre **Archivo → Importar servicio virtualizado**. Selecciona el OVA, pulsa **Siguiente** y revisa la configuración propuesta. Cambia el nombre a `UD3-Ubuntu-Importada-codigo`, ajusta recursos al puesto y revisa la política de MAC. Comprueba la carpeta de destino para no confundirla con el origen.
+
+Pulsa **Importar** y espera. Con la máquina todavía apagada, comprueba firmware, controlador de disco y adaptador de red. Arranca y verifica usuario, versión, archivo testigo y una aplicación o servicio. Si no puedes guardar origen e importación a la vez, el docente puede proporcionar otro equipo para importar; no se sacrifica la única copia válida para hacer sitio.
+
+## 5. Entrega y diagnóstico
+
+Entrega comparación origen/clon/importación, nuevas identidades, estado elegido, tamaño del paquete y resultados de pruebas. **Incidencia:** dos invitados conservan la misma IP estática aunque sus MAC sean diferentes. Explica qué campo debes revisar y por qué generar MAC nuevas no cambió esa configuración del sistema.
+
+## Entrega independiente de la práctica
+
+Guarda `P8_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Las actividades escritas tienen su propio archivo; no sustituyen la demostración funcional de la práctica.
+
+<div class="video-card" markdown>
+
+## Vídeo explicativo · Instantáneas de VirtualBox
+
+V4: compara retorno de estado y copia independiente. En P7 tomamos la instantánea apagada.
+
+<div class="video-frame">
+<iframe src="https://mediateca.educa.madrid.org/video/zgauof85771q51t9/fs" title="Instantáneas de VirtualBox" loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/zgauof85771q51t9) · [Ficha y preguntas de visionado](../videos.md)
+
+</div>

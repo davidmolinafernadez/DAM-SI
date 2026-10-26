@@ -6,7 +6,7 @@ Sistemas Informáticos · 1.º de DAM · Catálogo vinculado a teoría y laborat
 
 Los enlaces siguientes apuntan a vídeos concretos, no a páginas de resultados. Se ha comprobado su presencia y se han consultado sus descripciones o transcripciones disponibles el 26 de octubre de 2026. No se afirma haber reproducido y revisado íntegramente cada vídeo. Antes de proyectarlos, el docente debe comprobar reproducción, sonido, publicidad y adecuación al grupo. Los vídeos antiguos sirven para conceptos; las interfaces y los requisitos se contrastan con la documentación escrita de la unidad.
 
-El alumnado puede utilizar transcripción y texto como alternativa al visionado. Las duraciones solo se indican cuando la fuente las muestra. No se descargan ni se redistribuyen vídeos ajenos; se enlaza al autor o a la mediateca. El catálogo contiene ocho recursos y ocho tareas asociadas.
+El alumnado puede utilizar transcripción y texto como alternativa al visionado. Las duraciones solo se indican cuando la fuente las muestra. No se descargan ni se redistribuyen vídeos ajenos; se enlaza al autor o a la mediateca. El catálogo contiene diez recursos y diez tareas asociadas.
 
 ## V1. Máquinas virtuales con Virtual Box
 
@@ -103,6 +103,30 @@ Relación: B11; P8. Se utiliza para observar exportación e importación. Comple
 Antes: indica tres datos que guardarías además del OVA. Durante: identifica origen, paquete y máquina importada. Después: propone cuatro pruebas para aceptar la importación.
 
 Tarea: redacta un protocolo de transferencia de una página y compruébalo con tu OVA. Criterio: incluye arranque y archivo testigo; no da por válido un respaldo solamente porque terminó la barra de progreso.
+
+## V9. Instalación de Windows 11 · fragmento de preparación
+
+Autor: Daniel González Trabada, EducaMadrid. Publicado el 25 de marzo de 2026. Castellano. Enlace: <https://mediateca.educa.madrid.org/video/uqaj115jamo3y6xb>
+
+<iframe src="https://mediateca.educa.madrid.org/video/uqaj115jamo3y6xb/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
+
+Relación: B8 y P3. Visionado recomendado: fragmento inicial de preparación del hardware y selección del destino, aproximadamente 0:00-5:15. Compara los requisitos y opciones visibles con la práctica escrita. Nuestro laboratorio usa NAT y la edición autorizada por el centro, aunque el ejemplo utilice puente y Education. Omitir clave no concede licencia; la cuenta y credenciales se preparan con el procedimiento de aula. El resto de la clase grabada no sustituye esa preparación.
+
+Antes: identifica qué hardware virtual necesita Windows. Durante: localiza RAM, CPU, disco, firmware y TPM. Después: enumera qué decisiones del ejemplo debes adaptar a tu puesto. No copies una contraseña ni una configuración de red por aparecer en el vídeo.
+
+Tarea de visionado: escribe una lista de requisitos y una diferencia entre el ejemplo y P3. No instala por sí sola el sistema; la ejecución y aceptación se entregan en P3.
+
+## V10. Particionar discos con GParted
+
+Autora: Susana López Luengo, IES Palomeras-Vallecas, EducaMadrid. Publicado el 4 de mayo de 2022. Castellano. Duración publicada: 9 min 52 s. Enlace: <https://mediateca.educa.madrid.org/video/417dd5j5i92wjmop>
+
+<iframe src="https://mediateca.educa.madrid.org/video/417dd5j5i92wjmop/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
+
+Relación: B4-B5 y P4. Permite observar selección de dispositivo, creación de tabla, partición y aplicación de cambios. El ejemplo desarrolla MBR y tamaños propios; nuestra práctica utiliza GPT sobre un VDI secundario de 8 GiB. No se reproduce su mapa sobre el disco del sistema ni se trasladan sus tamaños como requisitos de instalaciones actuales.
+
+Antes: señala qué disco estaría excluido del formato. Durante: distingue operación pendiente y aplicada. Después: explica qué cambia al trabajar con GPT en lugar de la estructura extendida/lógica del ejemplo.
+
+Tarea de visionado: dibuja la secuencia identificar → crear tabla → crear partición → revisar → aplicar → montar. La actividad escrita A4 justifica el diseño y P4 lo ejecuta en su disco de laboratorio.
 
 ## Ficha común para cualquier vídeo
 

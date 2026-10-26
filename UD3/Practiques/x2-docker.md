@@ -1,43 +1,88 @@
 # X2. Ampliación: una web en contenedor dentro de Ubuntu
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">X2</div>
+<div markdown>
+**Práctica guiada de laboratorio**
+
+Sigue los menús, registra las decisiones y comprueba el resultado.
+</div>
+</div>
+
 **Teoría relacionada:** [Contenedores para DAM](../b12-contenedores.md)
 
-Duración adicional: 120 minutos, con motor Docker preparado por el docente. Teoría: B12. Vídeo V7. Producto: contenedor recreado con volumen persistente.
+Duración adicional: 120 minutos, con Docker Engine preparado y probado por el docente. Se trabaja en un clon Ubuntu. No se instala Docker Desktop dentro de la VM para este ejercicio ni se mezclan paquetes de diferentes procedimientos.
 
-## Preparación docente necesaria
+## 1. Abre la terminal del sistema que ejecuta el motor
 
-En una VM clonada para esta ampliación se instala Docker Engine con un único procedimiento aprobado. Se registra origen y versión del paquete. Si se utiliza la distribución oficial de Docker, seguir F11 y no mezclarla con docker.io. Debe estar activo el servicio y funcionar sudo docker run --rm hello-world. Este paso requiere conexión y descargas; se prepara con antelación. No se instala Docker Desktop dentro de la VM para este ejercicio.
+Arranca Ubuntu y pulsa **Ctrl + Alt + T**. Comprueba `uname -r`, `sudo docker version` y `sudo docker info`. Si no responde el motor, registra el error y resuelve el servicio con el docente. No continúes suponiendo que cualquier error se arregla añadiendo usuarios al grupo docker.
 
-## Experimento del alumno
+## 2. Crea el volumen y el servidor
 
-1. Registra uname -r dentro de Ubuntu y predice si el contenedor tendrá otro kernel. Comprueba sudo docker version y sudo docker info.
-2. Crea el volumen con sudo docker volume create ud3_webdatos.
-3. Ejecuta la web:
+Ejecuta una orden cada vez. Las barras invertidas permiten continuar la misma orden en la línea siguiente; no añadas texto después de ellas.
 
     ```bash
+    sudo docker volume create ud3_webdatos
     sudo docker run -d --name ud3-web \
       -p 127.0.0.1:8081:80 \
       -v ud3_webdatos:/usr/share/nginx/html \
       nginx:stable-alpine
+    sudo docker ps
     ```
 
-4. En el navegador de Ubuntu abre <http://127.0.0.1:8081>. La primera ejecución descarga la imagen si no está presente. Guarda la salida de sudo docker image inspect nginx:stable-alpine --format '{{json .RepoDigests}}' para registrar el contenido utilizado; una etiqueta por sí sola puede cambiar.
-5. Modifica la página del volumen:
+`--name` identifica el contenedor, `-d` lo deja en segundo plano y `-p` publica el puerto. El volumen se monta en el directorio de páginas de nginx. La imagen se descarga si no estaba disponible; eso requiere conexión al registro.
+
+Abre **Firefox dentro de Ubuntu**, escribe `http://127.0.0.1:8081` en su barra y pulsa **Intro**. El bucle local pertenece aquí a la VM Ubuntu. Si usas el navegador del anfitrión físico, esa misma dirección designará otro sistema.
+
+## 3. Cambia la página y observa persistencia
 
     ```bash
     sudo docker exec ud3-web sh -c \
       'printf "<h1>Datos persistentes UD3</h1>\n" > /usr/share/nginx/html/index.html'
+    sudo docker exec ud3-web uname -r
+    sudo docker image inspect nginx:stable-alpine --format '{{json .RepoDigests}}'
     ```
 
-6. Recarga el navegador y registra el resultado. Consulta sudo docker exec ud3-web uname -r y compáralo con el kernel de Ubuntu. No confundas las herramientas del contenedor con un nuevo kernel arrancado.
-7. Detén y elimina únicamente ese contenedor:
+Vuelve a Firefox y pulsa **Ctrl + R**. Comprueba tu página. Compara el kernel con el del primer paso y registra el digest de imagen: una etiqueta como `stable-alpine` puede apuntar a otro contenido en el futuro.
+
+## 4. Recrea el contenedor sin borrar el volumen
 
     ```bash
     sudo docker stop ud3-web
     sudo docker rm ud3-web
     ```
 
-8. Ejecuta otra vez el comando del paso 3 con el mismo volumen. Comprueba que aparece tu página modificada. Explica por qué eliminar el contenedor no ha eliminado el volumen.
-9. Consulta sudo docker ps -a y sudo docker volume ls. Limpia solamente los recursos del ejercicio cuando el docente haya evaluado; no ejecutes limpiezas globales.
+Repite la orden `docker run` del apartado 2 con el mismo nombre de volumen. Recarga el navegador y comprueba que sigue tu página. Consulta `sudo docker volume ls` y `sudo docker ps -a` para distinguir los recursos. El volumen conserva datos entre instancias, pero no es automáticamente una copia independiente.
 
-Aceptación: respuesta HTTP dentro de Ubuntu, digest registrado, kernel comparado y datos presentes tras recreación. Preguntas: ¿por qué 127.0.0.1:8081 en el navegador del anfitrión físico no apunta al mismo sitio?, ¿un volumen persistente es automáticamente una copia independiente?, ¿qué necesitarías para recrear la práctica sin depender de una etiqueta mutable?
+Entrega salida del motor, kernel comparado, digest y página tras recreación. Cuando termine la evaluación, limpia únicamente los recursos de este ejercicio siguiendo la indicación del docente; no ejecutes una limpieza global del motor.
+
+## Entrega y comprobación común
+
+Cada práctica se entrega con su código, versiones, estado inicial, decisiones, resultados e incidencias. Las capturas llevan pie explicativo. No se mezclan en la misma entrega las respuestas de otra actividad salvo indicación docente.
+
+## Rúbrica común de prácticas
+
+| Criterio | Puntos |
+| --- | ---: |
+| Preparación y destino identificados | 2 |
+| Procedimiento y resultado funcional | 3 |
+| Comprobaciones y diagnóstico | 3 |
+| Evidencias explicadas y entrega | 2 |
+
+## Entrega independiente de la práctica
+
+Guarda `X2_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Las actividades escritas tienen su propio archivo; no sustituyen la demostración funcional de la práctica.
+
+<div class="video-card" markdown>
+
+## Vídeo explicativo · Docker: explicación inicial
+
+V7: observa la comparación de capas; la instalación del motor sigue el procedimiento de aula.
+
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/9eTVZwMZJsA" title="Docker: explicación inicial" loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en su página original](https://www.youtube.com/watch?v=9eTVZwMZJsA) · [Ficha y preguntas de visionado](../videos.md)
+
+</div>

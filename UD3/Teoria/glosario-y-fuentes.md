@@ -19,3 +19,9 @@ Consulta realizada el 26 de octubre de 2026. La referencia de interfaz es Virtua
 - F9. Oracle, primeros pasos, instantáneas y clones: <https://docs.oracle.com/en/virtualization/virtualbox/7.1/user/Introduction.html>
 - F10. Docker, conceptos iniciales: <https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/>
 - F11. Docker, instalación del motor en Ubuntu: <https://docs.docker.com/engine/install/ubuntu/>
+
+## Fuentes complementarias
+
+- APT y formato de orígenes: <https://manpages.ubuntu.com/manpages/noble/man5/sources.list.5.html>
+- Restaurar sistema, Microsoft: <https://support.microsoft.com/en-us/windows/experience/backup-recovery/system-restore>
+- Snap, documentación del proyecto: <https://snapcraft.io/docs>

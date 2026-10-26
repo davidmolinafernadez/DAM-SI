@@ -93,36 +93,80 @@ nav:
       - Tarea 2.3.1 · Máquina virtual: ud2/actividades/A23-maquina-virtual.md
       - Apuntes de referencia: ud2/apuntes.md
   - UD3 · Instalación y virtualización:
-      - Presentación y descargas: ud3/index.md
-      - Teoría:
-          - "1 · Planificar una instalación": ud3/b01-planificacion.md
-          - "2 · Comprender la virtualización": ud3/b02-virtualizacion.md
-          - "3 · Medios e integridad": ud3/b03-medios-e-integridad.md
-          - "4 · Firmware, arranque y particiones": ud3/b04-firmware-y-particiones.md
-          - "5 · Sistemas de archivos y montaje": ud3/b05-sistemas-de-archivos.md
-          - "6 · Hardware virtual y recursos": ud3/b06-hardware-virtual.md
-          - "7 · Instalar y comprobar Ubuntu": ud3/b07-instalar-ubuntu.md
-          - "8 · Instalar y comprobar Windows": ud3/b08-instalar-windows.md
-          - "9 · Redes virtuales y servicio web": ud3/b09-redes-virtuales.md
-          - "10 · Actualizaciones y aceptación": ud3/b10-actualizaciones.md
-          - "11 · Recuperación y transferencia": ud3/b11-recuperacion.md
-          - "12 · Contenedores para DAM": ud3/b12-contenedores.md
-      - Laboratorio:
-          - Normas y recorrido: ud3/practicas/index.md
-          - "P0 · Auditoría e ISO": ud3/practicas/p0-auditoria.md
-          - "P1 · Crear la máquina virtual": ud3/practicas/p1-crear-vm.md
-          - "P2 · Instalar Ubuntu": ud3/practicas/p2-ubuntu.md
-          - "P3 · Instalar Windows 11": ud3/practicas/p3-windows.md
-          - "P4 · Particionar y montar": ud3/practicas/p4-particionado.md
-          - "P5 · Redes y página web": ud3/practicas/p5-redes.md
-          - "P6 · Actualizar y verificar": ud3/practicas/p6-actualizaciones.md
-          - "P7 · Recuperar con instantáneas": ud3/practicas/p7-instantaneas.md
-          - "P8 · Clonar, exportar e importar": ud3/practicas/p8-transferencia.md
-          - "P9 · Proyecto integrador": ud3/practicas/p9-proyecto.md
-          - "X1 · Arranque dual": ud3/practicas/x1-arranque-dual.md
-          - "X2 · Web con Docker": ud3/practicas/x2-docker.md
-      - Vídeos y tareas: ud3/videos.md
-      - Consolidación: ud3/actividades/consolidacion.md
+      - Presentación: ud3/index.md
+      - Índice de actividades escritas: ud3/actividades/index.md
+      - Índice de prácticas guiadas: ud3/practicas/index.md
+      - "3.1 · Planificación, medios y arranque":
+          - "Teoría 3.1.1 · Planificar una instalación": ud3/b01-planificacion.md
+          - "Teoría 3.1.2 · Medios e integridad": ud3/b03-medios-e-integridad.md
+          - "Teoría 3.1.3 · Firmware, arranque y particiones": ud3/b04-firmware-y-particiones.md
+          - Actividades escritas:
+              - "Actividad 3.1 · Decidir antes de instalar": ud3/actividades/A01-decidir-antes-de-instalar.md
+              - "Actividad 3.3 · Integridad y autenticidad de una ISO": ud3/actividades/A03-integridad-y-autenticidad-de-una-iso.md
+              - "Actividad 3.4 · Diseñar el arranque y las particiones": ud3/actividades/A04-disenar-el-arranque-y-las-particiones.md
+              - "Actividad 3.13 · Presupuesto profesional de laboratorio": ud3/actividades/A13-presupuesto-profesional-de-laboratorio.md
+          - Prácticas guiadas:
+              - "P0 · Auditoría e ISO": ud3/practicas/p0-auditoria.md
+      - "3.2 · Virtualización y hardware virtual":
+          - "Teoría 3.2.1 · Comprender la virtualización": ud3/b02-virtualizacion.md
+          - "Teoría 3.2.2 · Hardware virtual y recursos": ud3/b06-hardware-virtual.md
+          - Actividades escritas:
+              - "Actividad 3.2 · El recorrido de un archivo en una VM": ud3/actividades/A02-el-recorrido-de-un-archivo-en-una-vm.md
+              - "Actividad 3.6 · Prever el crecimiento de discos virtuales": ud3/actividades/A06-prever-el-crecimiento-de-discos-virtuales.md
+          - Prácticas guiadas:
+              - "P1 · Crear la máquina virtual": ud3/practicas/p1-crear-vm.md
+      - "3.3 · Instalación de Ubuntu y Windows":
+          - "Teoría 3.3.1 · Instalar y comprobar Ubuntu": ud3/b07-instalar-ubuntu.md
+          - "Teoría 3.3.2 · Instalar y comprobar Windows": ud3/b08-instalar-windows.md
+          - Actividades escritas:
+              - "Actividad 3.7 · Detectar una falsa instalación": ud3/actividades/A07-detectar-una-falsa-instalacion.md
+              - "Actividad 3.8 · Aceptar una instalación de Windows": ud3/actividades/A08-aceptar-una-instalacion-de-windows.md
+              - "Actividad 3.19 · Leer un instalador MSI o EXE": ud3/actividades/A19-leer-un-instalador-msi-o-exe.md
+          - Prácticas guiadas:
+              - "P2 · Instalar Ubuntu": ud3/practicas/p2-ubuntu.md
+              - "P3 · Instalar Windows 11": ud3/practicas/p3-windows.md
+      - "3.4 · Particiones y sistemas de archivos":
+          - "Teoría 3.4 · Sistemas de archivos y montaje": ud3/b05-sistemas-de-archivos.md
+          - Actividades escritas:
+              - "Actividad 3.5 · Elegir un sistema de archivos": ud3/actividades/A05-elegir-un-sistema-de-archivos.md
+          - Prácticas guiadas:
+              - "P4 · Particionar y montar": ud3/practicas/p4-particionado.md
+      - "3.5 · Redes del laboratorio":
+          - "Teoría 3.5 · Redes virtuales y servicio web": ud3/b09-redes-virtuales.md
+          - Actividades escritas:
+              - "Actividad 3.9 · Elegir una red virtual para cada encargo": ud3/actividades/A09-elegir-una-red-virtual-para-cada-encargo.md
+          - Prácticas guiadas:
+              - "P5 · Redes y página web": ud3/practicas/p5-redes.md
+      - "3.6 · Aplicaciones y actualizaciones":
+          - "Teoría 3.6 · Actualizaciones y aceptación": ud3/b10-actualizaciones.md
+          - Actividades escritas:
+              - "Actividad 3.16 · Leer una actualización antes de aceptarla": ud3/actividades/A16-leer-una-actualizacion-antes-de-aceptarla.md
+              - "Actividad 3.17 · Identificar paquetes y repositorios": ud3/actividades/A17-identificar-paquetes-y-repositorios.md
+          - Prácticas guiadas:
+              - "P6 · Actualizar y verificar": ud3/practicas/p6-actualizaciones.md
+              - "P10 · Aplicaciones Linux": ud3/practicas/p10-paquetes-linux.md
+      - "3.7 · Recuperación y transferencia":
+          - "Teoría 3.7 · Recuperación y transferencia": ud3/b11-recuperacion.md
+          - Actividades escritas:
+              - "Actividad 3.10 · Escoger una estrategia de recuperación": ud3/actividades/A10-escoger-una-estrategia-de-recuperacion.md
+              - "Actividad 3.18 · Punto de restauración o instantánea de VM": ud3/actividades/A18-punto-de-restauracion-o-instantanea-de-vm.md
+          - Prácticas guiadas:
+              - "P7 · Recuperar con instantáneas": ud3/practicas/p7-instantaneas.md
+              - "P8 · Clonar, exportar e importar": ud3/practicas/p8-transferencia.md
+              - "P11 · Restaurar sistema Windows": ud3/practicas/p11-restauracion-windows.md
+      - "3.8 · Contenedores para DAM":
+          - "Teoría 3.8 · Contenedores para DAM": ud3/b12-contenedores.md
+          - Actividades escritas:
+              - "Actividad 3.11 · Máquina virtual o contenedor": ud3/actividades/A11-maquina-virtual-o-contenedor.md
+          - Prácticas guiadas:
+              - "X2 · Web con Docker": ud3/practicas/x2-docker.md
+      - Consolidación y proyecto:
+          - "Actividad 3.12 · Diagnóstico escrito de ocho incidencias": ud3/actividades/A12-diagnostico-escrito-de-ocho-incidencias.md
+          - "Actividad 3.14 · Explicar un mecanismo con evidencia": ud3/actividades/A14-explicar-un-mecanismo-con-evidencia.md
+          - "Actividad 3.15 · Autoevaluación razonada de salida": ud3/actividades/A15-autoevaluacion-razonada-de-salida.md
+          - P9 · Proyecto integrador: ud3/practicas/p9-proyecto.md
+          - X1 · Arranque dual: ud3/practicas/x1-arranque-dual.md
+      - Vídeos explicativos: ud3/videos.md
       - Plantillas de entrega: ud3/actividades/plantillas.md
       - Glosario y fuentes: ud3/glosario-y-fuentes.md
       - Consulta anterior:

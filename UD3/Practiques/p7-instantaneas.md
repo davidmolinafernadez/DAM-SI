@@ -1,20 +1,71 @@
 # P7. Instantáneas: recuperar y delimitar la pérdida
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">P7</div>
+<div markdown>
+**Práctica guiada de laboratorio**
+
+Sigue los menús, registra las decisiones y comprueba el resultado.
+</div>
+</div>
+
 **Teoría relacionada:** [Recuperación y transferencia](../b11-recuperacion.md)
 
-Duración: 120 minutos. Teoría: B11. Vídeo V4. Producto: experimento documentado de retorno a un estado anterior.
+Duración orientativa: 120 minutos. Usaremos archivos dentro del disco del invitado, no una carpeta compartida, para que la restauración tenga un alcance claro.
 
-## Procedimiento
+## 1. Prepara un estado que puedas reconocer
 
-1. Dentro de Ubuntu crea ~/ud3-recuperacion/estado.txt con «ESTADO A». Apaga ordenadamente. En VirtualBox toma instantánea P7-A y describe el estado esperado.
-2. Arranca, modifica el contenido a «ESTADO B» y crea posterior.txt. Comprueba ambos. Guarda fuera de la VM las capturas o notas que necesitas para demostrar este estado.
-3. Predice qué existirá al regresar a P7-A. Apaga. Selecciona la instantánea correcta y la acción restaurar; lee si se ofrece conservar el estado actual en otra instantánea y registra tu elección.
-4. Arranca. Comprueba que estado.txt vuelve al estado A y posterior.txt no forma parte del estado restaurado. Si el resultado difiere, revisa qué instantánea seleccionaste y dónde se guardaron realmente los archivos.
-5. Crea ESTADO C y explica cómo continúa el trabajo desde el estado restaurado. No elimines archivos de instantáneas desde el explorador del anfitrión.
-6. Anota el espacio que ocupa la carpeta de la VM. Explica por qué sucesivas instantáneas pueden aumentar el consumo y por qué no se deben conservar indefinidamente sin una política.
+En Ubuntu pulsa **Ctrl + Alt + T** y ejecuta:
 
-## Experimento opcional de alcance externo
+```bash
+mkdir -p ~/ud3-recuperacion
+printf 'ESTADO A\n' > ~/ud3-recuperacion/estado.txt
+cat ~/ud3-recuperacion/estado.txt
+```
 
-Con una carpeta compartida de prueba expresamente preparada por el docente, crea un archivo en el anfitrión después de la instantánea. Restaura y observa que el archivo externo no retrocede. No utilices Documentos personales ni carpetas compartidas con información real.
+Apaga desde Ubuntu. En VirtualBox comprueba **Apagada**. Selecciona esta VM, abre la vista **Instantáneas** y pulsa **Tomar**. Escribe `P7-A` y una descripción: «estado.txt contiene A; posterior.txt no existe». Confirma. Así defines un criterio que luego podrás verificar.
 
-Aceptación: predicción, estados A/B observables, restauración y explicación de pérdida posterior. Preguntas: ¿borrar una instantánea equivale a restaurarla?, ¿qué ocurre si falla el disco físico donde están base y diferenciales?, ¿por qué guardamos evidencias fuera antes de restaurar?
+## 2. Introduce un cambio controlado
+
+Arranca Ubuntu y ejecuta:
+
+```bash
+printf 'ESTADO B\n' > ~/ud3-recuperacion/estado.txt
+printf 'Creado después de P7-A\n' > ~/ud3-recuperacion/posterior.txt
+ls -l ~/ud3-recuperacion
+cat ~/ud3-recuperacion/estado.txt
+```
+
+Guarda las capturas y notas que necesites fuera del estado que vas a restaurar: por ejemplo, mediante la carpeta de evidencias aprobada. Escribe antes del retorno qué esperas encontrar y qué esperas perder.
+
+## 3. Restaura la instantánea correcta
+
+Apaga Ubuntu. En el administrador selecciona la VM → **Instantáneas**. Haz clic en `P7-A`, no en el estado actual, y pulsa **Restaurar** o utiliza botón derecho → **Restaurar instantánea**. Lee el diálogo: puede ofrecer crear una instantánea del estado actual antes del retorno. Anota si conservas ese estado adicional y por qué.
+
+No pulses **Eliminar** pensando que significa volver. Tampoco borres manualmente archivos de la carpeta `Snapshots`. Confirma la restauración elegida y arranca.
+
+## 4. Comprueba y explica
+
+Abre la terminal, lista la carpeta y lee estado.txt. Debe corresponder al estado A; posterior.txt no formaba parte de ese punto de retorno. Si el resultado difiere, comprueba nombre de la instantánea, ruta de archivos y si realmente trabajaste dentro del disco del invitado.
+
+Crea después un estado C y explica cómo continúa el trabajo. Desde el administrador abre la carpeta de la VM para observar su ocupación, sin editar sus componentes. Una cadena de instantáneas puede crecer aunque sus nombres sugieran «fotos» pequeñas.
+
+Entrega predicción, evidencias de A/B y resultado de restauración. Explica una avería que esta operación no cubre. El experimento opcional con una carpeta compartida se realiza solo en una carpeta vacía de prueba: los archivos externos no retroceden al restaurar el invitado.
+
+## Entrega independiente de la práctica
+
+Guarda `P7_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Las actividades escritas tienen su propio archivo; no sustituyen la demostración funcional de la práctica.
+
+<div class="video-card" markdown>
+
+## Vídeo explicativo · Instantáneas de VirtualBox
+
+V4: compara retorno de estado y copia independiente. En P7 tomamos la instantánea apagada.
+
+<div class="video-frame">
+<iframe src="https://mediateca.educa.madrid.org/video/zgauof85771q51t9/fs" title="Instantáneas de VirtualBox" loading="lazy" allowfullscreen></iframe>
+</div>
+
+[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/zgauof85771q51t9) · [Ficha y preguntas de visionado](../videos.md)
+
+</div>
