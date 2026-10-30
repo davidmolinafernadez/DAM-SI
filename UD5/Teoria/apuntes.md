@@ -1,140 +1,123 @@
-# UD5. Administración de sistemas operativos
+# UD5. Sistemas de archivos, particionado y copias
 
 ## 1. Resultados de aprendizaje
 
-El alumnado gestionará usuarios, grupos, permisos, procesos, servicios, software, tareas y monitorización mediante herramientas gráficas y línea de comandos, aplicando privilegio mínimo.
+Esta unidad aborda la organización de la información, los sistemas de archivos, particiones y volúmenes, localización de datos, copias de seguridad, automatización e integridad.
 
-## 2. Cuentas, grupos y privilegios
+## 2. Archivos, directorios y rutas
 
-Una cuenta identifica a una persona o servicio. Los grupos simplifican la asignación de permisos. Deben evitarse cuentas compartidas porque impiden atribuir acciones.
+Un archivo contiene datos y metadatos como nombre, tamaño, fechas, propietario y permisos. Los directorios organizan entradas de forma jerárquica.
 
-En Linux, `/etc/passwd` contiene información de cuentas y `/etc/shadow` protege los verificadores de contraseña. `sudo` permite ejecutar acciones concretas con privilegios. En Windows, las cuentas y grupos locales pueden administrarse mediante herramientas gráficas o PowerShell.
+Una ruta absoluta comienza en la raíz del sistema; una ruta relativa parte del directorio de trabajo. En Linux la raíz es `/`; en Windows cada volumen suele usar una letra, como `C:\`.
+
+Linux distingue mayúsculas y minúsculas y usa `/` como separador. Windows normalmente no distingue mayúsculas en NTFS y usa `\`, aunque muchas herramientas aceptan `/`.
+
+## 3. Estructura de directorios
+
+En Linux son importantes:
+
+- `/etc`: configuración del sistema;
+- `/home`: datos de usuarios;
+- `/var`: datos variables y registros;
+- `/usr`: aplicaciones y recursos compartidos;
+- `/tmp`: archivos temporales;
+- `/dev`: representación de dispositivos;
+- `/proc` y `/sys`: información del kernel y hardware.
+
+En Windows destacan `C:\Windows`, `C:\Program Files`, `C:\Users` y `C:\ProgramData`. Las variables de entorno ayudan a localizar rutas sin depender de nombres concretos.
+
+## 4. Sistemas de archivos
+
+Un sistema de archivos define cómo se nombran, almacenan y recuperan datos.
+
+| Sistema | Uso frecuente | Características |
+| --- | --- | --- |
+| NTFS | Windows | ACL, registro, compresión y archivos grandes |
+| FAT32 | Compatibilidad | Muy extendido, pero limita archivos a 4 GiB |
+| exFAT | Unidades extraíbles | Archivos grandes y buena interoperabilidad |
+| ext4 | GNU/Linux | Registro, estabilidad y amplio soporte |
+| XFS | Linux y servidores | Escalabilidad y buen rendimiento |
+
+El journaling registra operaciones pendientes para mejorar la recuperación tras una interrupción. No evita la necesidad de copias.
+
+## 5. Particiones y volúmenes
+
+Una partición divide lógicamente un dispositivo. MBR admite un esquema heredado con limitaciones; GPT incluye identificadores, redundancia y soporte para discos grandes.
+
+Un volumen es una unidad lógica formateada. LVM añade una capa flexible: los volúmenes físicos forman grupos y estos proporcionan volúmenes lógicos ampliables.
+
+Operaciones de consulta en Linux:
 
 ```bash
-sudo useradd -m alumne
-sudo passwd alumne
-sudo usermod -aG developers alumne
-id alumne
+lsblk -f
+df -h
+du -sh /ruta
+findmnt
 ```
+
+Antes de crear o modificar particiones debe verificarse el nombre del dispositivo y desmontar el sistema de archivos cuando la herramienta lo requiera.
+
+## 6. Operaciones y búsqueda
+
+```bash
+pwd
+ls -lah
+mkdir proyecto
+cp -a origen destino
+mv origen destino
+find /var/log -type f -name "*.log"
+grep -R "error" /var/log
+```
+
+`rm` elimina sin papelera en la mayoría de shells. Debe comprobarse la ruta y evitar privilegios elevados innecesarios. Las tuberías conectan la salida de una orden con la entrada de otra; las redirecciones guardan o alimentan datos.
+
+## 7. Integridad
+
+Una suma criptográfica detecta cambios accidentales o maliciosos:
+
+```bash
+sha256sum imagen.iso
+```
+
+En PowerShell puede usarse:
 
 ```powershell
-New-LocalUser -Name "alumne" -Password (Read-Host -AsSecureString)
-Add-LocalGroupMember -Group "Users" -Member "alumne"
-Get-LocalGroupMember -Group "Users"
+Get-FileHash .\imagen.iso -Algorithm SHA256
 ```
 
-Las contraseñas deben combinar longitud, bloqueo de credenciales filtradas y segundo factor cuando esté disponible. El cambio periódico sin evidencia de compromiso no sustituye una política adecuada.
+Una coincidencia confirma integridad respecto al valor de referencia, pero no demuestra por sí sola que la fuente sea legítima.
 
-## 3. Permisos y ACL
+## 8. Copias de seguridad
 
-Linux aplica permisos de lectura, escritura y ejecución a propietario, grupo y otros. Para un directorio, ejecución significa poder atravesarlo.
+- **Completa:** incluye todos los datos seleccionados.
+- **Incremental:** guarda cambios desde la última copia de cualquier tipo.
+- **Diferencial:** guarda cambios desde la última completa.
+- **Espejo:** replica el estado; puede propagar borrados y no equivale a un histórico.
 
-```bash
-chmod 750 proyecto
-chown -R alumne:developers proyecto
-getfacl proyecto
-setfacl -m u:revisor:r-x proyecto
-```
+La regla 3-2-1 recomienda tres copias, dos soportes distintos y una copia fuera de la ubicación principal. Una estrategia moderna debe añadir versiones inmutables o desconectadas frente a ransomware.
 
-Windows utiliza ACL con entradas de permitir o denegar y herencia desde carpetas superiores. Las denegaciones explícitas requieren especial cuidado. La práctica recomendada es asignar permisos a grupos y añadir usuarios a esos grupos.
+RPO expresa cuánto dato se puede perder; RTO, cuánto tiempo puede tardar la recuperación.
 
-## 4. Procesos
+## 9. Restauración y automatización
 
-Un proceso posee identificador, estado, prioridad, memoria y propietario. La terminación forzada es el último recurso porque puede dejar datos inconsistentes.
+Una copia solo es válida si puede restaurarse. Se debe comprobar registro, integridad, permisos, propietarios y funcionamiento de los datos recuperados.
 
-```bash
-ps aux
-top
-pgrep nginx
-nice -n 10 comando
-kill -TERM 1234
-```
+La automatización puede realizarse con el Programador de tareas o `cron`/temporizadores de `systemd`. Los scripts deben registrar fecha, origen, destino, resultado y código de salida.
 
-En PowerShell:
+Ejemplo con `robocopy`:
 
 ```powershell
-Get-Process
-Get-Process -Name code | Select-Object Id,CPU,WorkingSet
-Stop-Process -Id 1234
+robocopy C:\Datos D:\Copias\Datos /MIR /R:2 /W:5 /LOG:D:\Copias\copia.log
 ```
 
-Primero se solicita una finalización ordenada; solo después se usa una señal o acción forzada.
-
-## 5. Servicios
-
-Un servicio ejecuta funciones en segundo plano y puede iniciarse durante el arranque.
-
-```bash
-systemctl status ssh
-sudo systemctl enable --now ssh
-journalctl -u ssh --since today
-```
-
-```powershell
-Get-Service
-Get-Service -Name sshd
-Start-Service sshd
-Set-Service sshd -StartupType Automatic
-```
-
-Antes de habilitar un servicio se revisan su necesidad, puerto, cuenta de ejecución, configuración y exposición de red.
-
-## 6. Software y actualizaciones
-
-Los gestores de paquetes resuelven dependencias y registran instalaciones. En Debian/Ubuntu se usa APT; Windows dispone de Microsoft Store, instaladores y `winget`.
-
-```bash
-sudo apt update
-apt list --upgradable
-sudo apt install paquete
-```
-
-```powershell
-winget search Git
-winget install --id Git.Git --exact
-winget upgrade --all
-```
-
-En producción se prueban actualizaciones, se dispone de copia y se documenta una reversión.
-
-## 7. Registros y monitorización
-
-La monitorización observa CPU, memoria, disco, red, procesos y disponibilidad de servicios. Un valor aislado tiene poco contexto; interesa la tendencia y su relación con la carga.
-
-En Linux se consultan `journalctl`, `/var/log`, `free`, `vmstat`, `iostat`, `ss` y `df`. En Windows se usan Visor de eventos, Administrador de tareas, Monitor de recursos, Monitor de rendimiento y cmdlets de PowerShell.
-
-Una investigación básica:
-
-1. Definir el síntoma y periodo afectado.
-2. Revisar eventos y cambios recientes.
-3. Medir recursos y localizar cuellos de botella.
-4. Formular una hipótesis.
-5. Aplicar un cambio controlado.
-6. Verificar y documentar.
-
-## 8. Tareas programadas y scripts
-
-Las tareas repetitivas deben automatizarse de manera idempotente cuando sea posible. Un script debe validar entradas, manejar errores, devolver códigos de salida y escribir registros.
-
-`cron` y los temporizadores de `systemd` automatizan Linux; el Programador de tareas lo hace en Windows. La cuenta ejecutora solo debe tener los permisos imprescindibles.
-
-## 9. Mantenimiento y optimización
-
-- Revisar capacidad y salud del almacenamiento.
-- Aplicar actualizaciones planificadas.
-- Retirar cuentas, servicios y programas innecesarios.
-- Verificar copias y restauraciones.
-- Comprobar registros, alertas y sincronización horaria.
-- Mantener inventario y documentación de cambios.
-
-No deben emplearse limpiadores o ajustes sin comprender su efecto. Optimizar significa medir, identificar la limitación y comprobar la mejora.
+`/MIR` replica también eliminaciones; debe probarse primero con datos no críticos.
 
 ## 10. Resumen
 
-La administración combina control de acceso, operación diaria, observabilidad y documentación. El principio de privilegio mínimo y la trazabilidad reducen errores y facilitan el diagnóstico.
+Gestionar información exige comprender la jerarquía, el sistema de archivos y la capa de almacenamiento. Las copias deben estar planificadas, automatizadas, protegidas y, sobre todo, verificadas mediante restauraciones periódicas.
 
 ## Fuentes internas utilizadas
 
-- `SI_Celia/Unit_3_Administracio_de_SO_Linux/UP3-Configuracio-i-Gestio-de-Sistemes-Operatius.pdf`.
-- `SI_Celia/Unit_3_Administracio_de_SO_Linux/Scripts/manual_scripts_bash.pdf`.
+- `Jose_SO/UD5.pdf`.
+- `Jose_SO/UD4B.pdf`.
 - `Programacion_Didactica_SI_David_Moli.docx`.

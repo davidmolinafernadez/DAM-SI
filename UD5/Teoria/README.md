@@ -1,11 +1,15 @@
-# UD5 · Administración de sistemas operativos
+# UD5 · Sistemas de archivos, particionado y copias
 
-Material para enseñar administración diaria con Windows y GNU/Linux: identidades, permisos, procesos, servicios, registros, automatización y mantenimiento.
+Manual para comprender cómo se representa el almacenamiento, cómo se organiza y cómo se protege. Combina Windows y GNU/Linux, interfaz gráfica y terminal.
 
 ## Capítulos
 
-1. [Usuarios, grupos, permisos y ACL](01-identidades-y-permisos.md)
-2. [Procesos, servicios y arranque](02-procesos-y-servicios.md)
-3. [Monitorización, registros y diagnóstico](03-monitorizacion-y-diagnostico.md)
-4. [Automatización y mantenimiento](04-automatizacion-y-mantenimiento.md)
+1. [Archivos, directorios y sistemas de archivos](01-sistemas-de-archivos.md)
+2. [Particiones, volúmenes y montaje](02-particiones-y-volumenes.md)
+3. [Terminal, búsqueda y automatización](03-terminal-y-automatizacion.md)
+4. [Copias, integridad y recuperación](04-copias-y-recuperacion.md)
 5. [Síntesis](apuntes.md)
+
+## Continuidad del laboratorio
+
+La práctica [P4](../ud4/practicas/p4-particionado.md) del banco de instalación y virtualización se desarrolla en esta unidad, dentro de sus horas previstas. Se utilizan las máquinas preparadas en UD4.

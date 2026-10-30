@@ -36,15 +36,15 @@ hide:
 
 ## Tu recorrido de aprendizaje
 
-<p class="section-intro">Avanzaremos desde los componentes físicos hasta la administración, las redes y la seguridad. Cada unidad reúne teoría, ejemplos, recursos y propuestas de trabajo.</p>
+<p class="section-intro">Avanzaremos desde los componentes físicos hasta las redes, la virtualización, la administración y la seguridad. Cada unidad reúne teoría, ejemplos, recursos y propuestas de trabajo.</p>
 
 <div class="learning-path" markdown>
   <a class="path-card path-card--featured" href="ud1/"><span class="path-number">01</span><span class="path-icon">:material-desktop-tower-monitor:</span><strong>Componentes del sistema</strong><small>Hardware, CPU, compatibilidad, alimentación y SAI.</small><em>Empezar aquí →</em></a>
   <a class="path-card" href="ud2/"><span class="path-number">02</span><span class="path-icon">:material-cog-outline:</span><strong>Sistemas operativos</strong><small>Arquitectura, procesos, memoria, E/S y licencias.</small></a>
-  <a class="path-card" href="ud3/"><span class="path-number">03</span><span class="path-icon">:material-monitor-dashboard:</span><strong>Instalación y virtualización</strong><small>Arranque, particionado, VirtualBox, recuperación y Docker.</small></a>
-  <a class="path-card" href="ud4/"><span class="path-number">04</span><span class="path-icon">:material-folder-cog-outline:</span><strong>Sistemas de archivos</strong><small>Particiones, terminal, copias e integridad de los datos.</small></a>
-  <a class="path-card" href="ud5/"><span class="path-number">05</span><span class="path-icon">:material-account-cog-outline:</span><strong>Administración</strong><small>Identidades, permisos, procesos, servicios y mantenimiento.</small></a>
-  <a class="path-card" href="ud6/"><span class="path-number">06</span><span class="path-icon">:material-lan:</span><strong>Redes TCP/IP</strong><small>Protocolos, IPv4, subnetting, configuración y diagnóstico.</small></a>
+  <a class="path-card" href="ud3/"><span class="path-number">03</span><span class="path-icon">:material-lan:</span><strong>Redes TCP/IP</strong><small>Protocolos, IPv4, subnetting, configuración y diagnóstico.</small></a>
+  <a class="path-card" href="ud4/"><span class="path-number">04</span><span class="path-icon">:material-monitor-dashboard:</span><strong>Instalación y virtualización</strong><small>Arranque, particionado, VirtualBox, recuperación y Docker.</small></a>
+  <a class="path-card" href="ud5/"><span class="path-number">05</span><span class="path-icon">:material-folder-cog-outline:</span><strong>Sistemas de archivos</strong><small>Particiones, terminal, copias e integridad de los datos.</small></a>
+  <a class="path-card" href="ud6/"><span class="path-number">06</span><span class="path-icon">:material-account-cog-outline:</span><strong>Administración</strong><small>Identidades, permisos, procesos, servicios y mantenimiento.</small></a>
   <a class="path-card" href="ud7/"><span class="path-number">07</span><span class="path-icon">:material-shield-lock-outline:</span><strong>Servicios y seguridad</strong><small>Recursos, bastionado, firewall, incidentes y documentación.</small></a>
 </div>
 

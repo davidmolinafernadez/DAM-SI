@@ -8,4 +8,10 @@ Documentos de referencia para la planificación y el desarrollo de la asignatura
 
 La guía recoge la organización curricular, la temporalización de las unidades didácticas, la metodología, la evaluación y la relación de resultados de aprendizaje.
 
+## Revisión de materiales
+
+- [Reorganización de unidades y horas · 29/10/2026](Reorganizacion_2026_10_29.md).
+
+- [Revisión de contenidos y ampliaciones · 20/10/2026](Revision_contenidos_2026_10_20.md).
+
 > La teoría y los materiales destinados al alumnado se consultan en la [web docente](https://davidmolinafernadez.github.io/DAM-SI/).

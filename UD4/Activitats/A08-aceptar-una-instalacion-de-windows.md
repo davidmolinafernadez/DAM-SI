@@ -1,0 +1,52 @@
+# Actividad 4.8 · Aceptar una instalación de Windows
+
+<div class="lesson-banner" markdown>
+<div class="lesson-number">4.8</div>
+<div markdown>
+**Actividad escrita · Aceptar una instalación de Windows**
+
+Razonar, interpretar y justificar antes de ejecutar.
+</div>
+</div>
+
+<div class="activity-meta" markdown>
+<span>20 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+</div>
+
+**Código: A8.** Actividad escrita con entrega propia.
+
+**Teoría relacionada:** [Teoría 4.3.2: Instalar y comprobar Windows](../b08-instalar-windows.md)
+
+[Descargar actividad en PDF](descargas/Actividad_4_8_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
+[Original editable en texto](descargas/Actividad_4_8_Apellidos_Nombre.txt){ .md-button download }
+
+Tiempo orientativo: 20 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+
+## Antes de responder
+
+Consulta la teoría relacionada antes de responder. Identifica qué información aporta el caso y qué datos faltan. Las soluciones no se deducen por repetir un nombre de herramienta: hay que explicar qué comprobaría y con qué resultado.
+
+## Caso de trabajo
+
+Windows llega al escritorio. Administrador de dispositivos muestra un dispositivo desconocido, Windows Update pide reiniciar y Activación indica un estado pendiente. El informe solo contiene una captura del fondo de pantalla.
+
+## Cuestiones
+
+1. Identifica los tres asuntos pendientes y qué información falta para resolver cada uno.
+2. Asocia winver, msinfo32, tpm.msc, diskmgmt.msc y devmgmt.msc con el dato que permiten comprobar.
+3. Redacta una incidencia con estado, hipótesis, acción y criterio de cierre.
+4. Explica instalación, activación y derecho de uso sin dar por hecho que omitir clave crea una evaluación.
+5. Decide qué evidencia pedirías antes de entregar ese puesto como terminado.
+
+## Entrega de esta actividad
+
+Informe de aceptación y tabla de herramientas. No hace falta instalar Windows para resolver este caso escrito. Guarda el archivo como `Actividad_4_8_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
+
+## Revisión y valoración
+
+| Criterio | Puntos |
+| --- | ---: |
+| Conceptos y datos interpretados correctamente | 4 |
+| Justificación y relación entre causa y resultado | 3 |
+| Tabla, esquema o propuesta solicitada | 2 |
+| Claridad, fuentes y entrega | 1 |

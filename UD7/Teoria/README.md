@@ -9,3 +9,7 @@ Unidad integradora: publicar recursos, administrar acceso remoto, reducir superf
 3. [Firewall, acceso remoto y segmentación](03-firewall-y-acceso-remoto.md)
 4. [Incidentes, recuperación y documentación](04-incidentes-y-documentacion.md)
 5. [Síntesis](apuntes.md)
+
+## Continuidad del laboratorio
+
+La práctica [P9](../ud4/practicas/p9-proyecto.md) del banco de instalación y virtualización se desarrolla en esta unidad, dentro de sus horas previstas. Se utilizan las máquinas preparadas en UD4.

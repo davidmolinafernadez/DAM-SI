@@ -55,7 +55,11 @@ $RECYCLE.BIN/
 .site-src/
 site/
 
-# Material docente local de la unidad 3
-/UD3/Material_preparado/
-/UD3/Docente/
-/UD3/Unidad_3_Instalacion_y_virtualizacion.zip
+# Material docente local de la unidad 4
+/UD4/Material_preparado/
+/UD4/Docente/
+/UD4/Unidad_4_Instalacion_y_virtualizacion.zip
+
+# Cuaderno de evaluación y copias locales con datos del alumnado
+/Evaluacion/
+/tmp/

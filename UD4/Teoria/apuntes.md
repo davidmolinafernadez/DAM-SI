@@ -1,123 +1,113 @@
-# UD4. Sistemas de archivos, particionado y copias
+# UD4. Instalación de sistemas y virtualización
 
 ## 1. Resultados de aprendizaje
 
-Esta unidad aborda la organización de la información, los sistemas de archivos, particiones y volúmenes, localización de datos, copias de seguridad, automatización e integridad.
+El alumnado planificará, ejecutará y documentará instalaciones de sistemas operativos libres y propietarios, aplicará actualizaciones y recuperación, y utilizará virtualización para realizar pruebas seguras.
 
-## 2. Archivos, directorios y rutas
+## 2. Planificación de la instalación
 
-Un archivo contiene datos y metadatos como nombre, tamaño, fechas, propietario y permisos. Los directorios organizan entradas de forma jerárquica.
+Antes de modificar un equipo se recopilan requisitos y se protege la información. Una planificación mínima debe registrar:
 
-Una ruta absoluta comienza en la raíz del sistema; una ruta relativa parte del directorio de trabajo. En Linux la raíz es `/`; en Windows cada volumen suele usar una letra, como `C:\`.
+- finalidad del sistema y aplicaciones previstas;
+- compatibilidad y requisitos de CPU, RAM, disco y firmware;
+- arquitectura de 64 bits y opciones de virtualización;
+- medio de instalación y comprobación de su integridad;
+- esquema de particiones y sistema de archivos;
+- nombre del equipo, idioma, zona horaria, red y cuentas;
+- licencia, actualizaciones y controladores;
+- copia de seguridad y plan de reversión.
 
-Linux distingue mayúsculas y minúsculas y usa `/` como separador. Windows normalmente no distingue mayúsculas en NTFS y usa `\`, aunque muchas herramientas aceptan `/`.
+Los requisitos recomendados son una referencia más útil que los mínimos. Debe reservarse margen para actualizaciones, datos y crecimiento.
 
-## 3. Estructura de directorios
+## 4. Arranque y particionado
 
-En Linux son importantes:
+UEFI selecciona un cargador de arranque, normalmente desde una partición del sistema EFI. GPT es el esquema moderno y admite más particiones y discos grandes; MBR mantiene compatibilidad con sistemas antiguos.
 
-- `/etc`: configuración del sistema;
-- `/home`: datos de usuarios;
-- `/var`: datos variables y registros;
-- `/usr`: aplicaciones y recursos compartidos;
-- `/tmp`: archivos temporales;
-- `/dev`: representación de dispositivos;
-- `/proc` y `/sys`: información del kernel y hardware.
+En una instalación Linux son habituales una partición EFI, una raíz `/` y, opcionalmente, particiones separadas para datos o intercambio. En Windows, el instalador crea particiones de sistema y recuperación además del volumen principal.
 
-En Windows destacan `C:\Windows`, `C:\Program Files`, `C:\Users` y `C:\ProgramData`. Las variables de entorno ayudan a localizar rutas sin depender de nombres concretos.
+Nunca debe alterarse un disco con datos importantes sin confirmar el dispositivo, disponer de copia y comprender qué particiones se eliminarán.
 
-## 4. Sistemas de archivos
+## 4. Instalación y configuración inicial
 
-Un sistema de archivos define cómo se nombran, almacenan y recuperan datos.
+El proceso general es:
 
-| Sistema | Uso frecuente | Características |
-| --- | --- | --- |
-| NTFS | Windows | ACL, registro, compresión y archivos grandes |
-| FAT32 | Compatibilidad | Muy extendido, pero limita archivos a 4 GiB |
-| exFAT | Unidades extraíbles | Archivos grandes y buena interoperabilidad |
-| ext4 | GNU/Linux | Registro, estabilidad y amplio soporte |
-| XFS | Linux y servidores | Escalabilidad y buen rendimiento |
+1. Obtener la imagen desde una fuente oficial.
+2. Verificar su suma de comprobación.
+3. Crear el medio de arranque.
+4. Configurar UEFI y arrancar desde el medio.
+5. Elegir idioma, edición, licencia y destino.
+6. Crear cuentas y aplicar una política de contraseñas.
+7. Instalar actualizaciones y controladores.
+8. Configurar red, privacidad, zona horaria y energía.
+9. Instalar aplicaciones autorizadas.
+10. Verificar dispositivos, registros, reinicio y recuperación.
 
-El journaling registra operaciones pendientes para mejorar la recuperación tras una interrupción. No evita la necesidad de copias.
+La documentación debe incluir versiones, decisiones, capturas relevantes, incidencias y pruebas finales; nunca debe contener contraseñas ni claves privadas.
 
-## 5. Particiones y volúmenes
+## 5. VirtualBox y máquinas virtuales
 
-Una partición divide lógicamente un dispositivo. MBR admite un esquema heredado con limitaciones; GPT incluye identificadores, redundancia y soporte para discos grandes.
+Una máquina virtual dispone de CPU, RAM, disco, firmware y adaptadores virtuales. En un hipervisor de escritorio se deben asignar recursos sin comprometer el anfitrión.
 
-Un volumen es una unidad lógica formateada. LVM añade una capa flexible: los volúmenes físicos forman grupos y estos proporcionan volúmenes lógicos ampliables.
+Los modos de red más comunes son:
 
-Operaciones de consulta en Linux:
+- **NAT:** acceso exterior sencillo, con aislamiento respecto de la red física.
+- **Puente:** la máquina aparece como otro equipo de la red local.
+- **Solo anfitrión:** comunicación entre anfitrión e invitados sin salida directa.
+- **Red interna:** comunicación únicamente entre máquinas virtuales del mismo entorno.
 
-```bash
-lsblk -f
-df -h
-du -sh /ruta
-findmnt
-```
+Las Guest Additions mejoran vídeo, integración del puntero y carpetas compartidas. Una instantánea registra un estado para volver atrás; no sustituye una copia de seguridad porque depende de los archivos de la propia VM.
 
-Antes de crear o modificar particiones debe verificarse el nombre del dispositivo y desmontar el sistema de archivos cuando la herramienta lo requiera.
+Clonar crea otra máquina a partir de una existente. Exportar en OVF/OVA facilita su transporte, pero conviene retirar secretos y regenerar identificadores de red cuando proceda.
 
-## 6. Operaciones y búsqueda
+## 6. Contenedores y Docker
 
-```bash
-pwd
-ls -lah
-mkdir proyecto
-cp -a origen destino
-mv origen destino
-find /var/log -type f -name "*.log"
-grep -R "error" /var/log
-```
+Los contenedores aíslan procesos compartiendo el kernel del anfitrión. Una **imagen** es una plantilla inmutable; un **contenedor** es una instancia ejecutable; un **registro** almacena imágenes.
 
-`rm` elimina sin papelera en la mayoría de shells. Debe comprobarse la ruta y evitar privilegios elevados innecesarios. Las tuberías conectan la salida de una orden con la entrada de otra; las redirecciones guardan o alimentan datos.
-
-## 7. Integridad
-
-Una suma criptográfica detecta cambios accidentales o maliciosos:
+Comandos básicos:
 
 ```bash
-sha256sum imagen.iso
+docker pull ubuntu:24.04
+docker run --name laboratorio -it ubuntu:24.04 bash
+docker ps -a
+docker stop laboratorio
+docker rm laboratorio
+docker images
 ```
 
-En PowerShell puede usarse:
+Los volúmenes conservan datos fuera de la capa escribible del contenedor. Los puertos se publican explícitamente, por ejemplo `-p 8080:80`.
 
-```powershell
-Get-FileHash .\imagen.iso -Algorithm SHA256
+Un `Dockerfile` describe la construcción de una imagen:
+
+```dockerfile
+FROM nginx:alpine
+COPY ./web /usr/share/nginx/html
+EXPOSE 80
 ```
 
-Una coincidencia confirma integridad respecto al valor de referencia, pero no demuestra por sí sola que la fuente sea legítima.
+Docker Compose declara varios servicios, redes y volúmenes en YAML. Las imágenes deben fijar versiones razonables y evitar ejecutar procesos como `root` cuando no sea necesario.
 
-## 8. Copias de seguridad
+## 7. Actualización y recuperación
 
-- **Completa:** incluye todos los datos seleccionados.
-- **Incremental:** guarda cambios desde la última copia de cualquier tipo.
-- **Diferencial:** guarda cambios desde la última completa.
-- **Espejo:** replica el estado; puede propagar borrados y no equivale a un histórico.
+Actualizar reduce vulnerabilidades, pero debe hacerse de forma controlada: inventario, copia, prueba, ventana de mantenimiento y verificación. Las técnicas de recuperación incluyen modo seguro, entorno de recuperación, restauración de paquetes, puntos de restauración, imágenes del sistema y reinstalación.
 
-La regla 3-2-1 recomienda tres copias, dos soportes distintos y una copia fuera de la ubicación principal. Una estrategia moderna debe añadir versiones inmutables o desconectadas frente a ransomware.
+## 8. Lista de verificación
 
-RPO expresa cuánto dato se puede perder; RTO, cuánto tiempo puede tardar la recuperación.
+- La instalación arranca sin errores.
+- Todos los dispositivos tienen controlador.
+- El sistema está actualizado.
+- La red y la resolución DNS funcionan.
+- Existen cuentas separadas y privilegios mínimos.
+- La fecha, zona horaria y sincronización son correctas.
+- Se ha probado el mecanismo de recuperación.
+- La memoria técnica permite repetir el proceso.
 
-## 9. Restauración y automatización
+## 9. Resumen
 
-Una copia solo es válida si puede restaurarse. Se debe comprobar registro, integridad, permisos, propietarios y funcionamiento de los datos recuperados.
-
-La automatización puede realizarse con el Programador de tareas o `cron`/temporizadores de `systemd`. Los scripts deben registrar fecha, origen, destino, resultado y código de salida.
-
-Ejemplo con `robocopy`:
-
-```powershell
-robocopy C:\Datos D:\Copias\Datos /MIR /R:2 /W:5 /LOG:D:\Copias\copia.log
-```
-
-`/MIR` replica también eliminaciones; debe probarse primero con datos no críticos.
-
-## 10. Resumen
-
-Gestionar información exige comprender la jerarquía, el sistema de archivos y la capa de almacenamiento. Las copias deben estar planificadas, automatizadas, protegidas y, sobre todo, verificadas mediante restauraciones periódicas.
+Instalar no consiste solo en completar un asistente: implica planificar, proteger datos, validar el resultado y dejar evidencias. La virtualización permite repetir y recuperar prácticas, mientras que los contenedores facilitan entornos ligeros y reproducibles.
 
 ## Fuentes internas utilizadas
 
+- `Jose_SO/UD2VB.pdf`.
+- `Jose_SO/UD2Docker.pdf`.
 - `Jose_SO/UD4.pdf`.
-- `Jose_SO/UD4B.pdf`.
-- `Programacion_Didactica_SI_David_Moli.docx`.
+- `SI_Celia/Unit_2_Operating-Systems-Fundamentals-and-Virtualisation/`.

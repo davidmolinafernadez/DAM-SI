@@ -1,0 +1,32 @@
+# Actividad 4.13 · Presupuesto profesional de laboratorio
+
+Tiempo orientativo: 25 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+
+## Antes de responder
+
+Repasa los bloques B1, B6, B11. Identifica qué información aporta el caso y qué datos faltan. Las soluciones no se deducen por repetir un nombre de herramienta: hay que explicar qué comprobaría y con qué resultado.
+
+## Caso de trabajo
+
+Dispones de un anfitrión de 16 GiB y 220 GiB libres en su unidad de trabajo. Debes prever Ubuntu, Windows, un disco de datos, un clon y una exportación con importación de comprobación. La carga de aplicaciones todavía puede variar.
+
+## Cuestiones
+
+1. Diseña un presupuesto de RAM que incluya anfitrión y margen y declara si propones simultaneidad.
+2. Diseña otro de disco que distinga capacidad lógica, ocupación estimada y crecimiento.
+3. Señala qué medida real falta antes de aceptar que todo cabe.
+4. Propón qué trasladarías a otro destino si la importación no cabe, manteniendo una copia válida.
+5. Redacta una condición de aceptación que el cliente pueda comprobar sin saber VirtualBox.
+
+## Entrega de esta actividad
+
+Dos tablas, supuestos y decisión final. No se pide crear ni exportar máquinas en esta actividad. Guarda el archivo como `Actividad_4_13_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
+
+## Revisión y valoración
+
+| Criterio | Puntos |
+| --- | ---: |
+| Conceptos y datos interpretados correctamente | 4 |
+| Justificación y relación entre causa y resultado | 3 |
+| Tabla, esquema o propuesta solicitada | 2 |
+| Claridad, fuentes y entrega | 1 |

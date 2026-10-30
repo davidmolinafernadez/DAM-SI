@@ -17,15 +17,18 @@ Repositorio educativo de la asignatura **Sistemas Informáticos** del ciclo form
 
 ## Unidades didácticas
 
-| Unidad | Contenido |
-| --- | --- |
-| [UD1](UD1/) | Arquitectura HW/SW, PRL y diagnóstico |
-| [UD2](UD2/) | Fundamentos de sistemas operativos |
-| [UD3](UD3/) | Instalación de sistemas y virtualización |
-| [UD4](UD4/) | Sistemas de archivos, particionado y copias |
-| [UD5](UD5/) | Administración de sistemas operativos |
-| [UD6](UD6/) | Redes TCP/IP y diagnóstico |
-| [UD7](UD7/) | Recursos en red, seguridad y documentación |
+| Unidad | Contenido | Horas |
+| --- | --- | ---: |
+| [UD1](UD1/) | Arquitectura HW/SW, PRL y diagnóstico | 15 |
+| [UD2](UD2/) | Fundamentos de sistemas operativos | 15 |
+| [UD3](UD3/) | Redes TCP/IP y diagnóstico | 25 |
+| [UD4](UD4/) | Instalación de sistemas y virtualización | 30 |
+| [UD5](UD5/) | Sistemas de archivos, particionado y copias | 20 |
+| [UD6](UD6/) | Administración de sistemas operativos | 25 |
+| [UD7](UD7/) | Recursos en red, seguridad y documentación | 30 |
+| **Total** | | **160** |
+
+Reparto orientativo por evaluaciones: **55 + 50 + 55 horas**. Consulta la [revisión de la secuencia y la temporalización](Guias/Reorganizacion_2026_10_29.md) y el [itinerario esencial de virtualización](UD4/Teoria/itinerario.md).
 
 Cada unidad contiene cuatro apartados:
 

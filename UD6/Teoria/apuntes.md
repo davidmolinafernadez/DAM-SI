@@ -1,129 +1,140 @@
-# UD6. Redes TCP/IP y diagnóstico
+# UD6. Administración de sistemas operativos
 
 ## 1. Resultados de aprendizaje
 
-Esta unidad permite reconocer componentes de red, interpretar modelos y protocolos, configurar TCP/IP, realizar subnetting y diagnosticar conectividad con un método reproducible.
+El alumnado gestionará usuarios, grupos, permisos, procesos, servicios, software, tareas y monitorización mediante herramientas gráficas y línea de comandos, aplicando privilegio mínimo.
 
-## 2. Comunicación y clasificación
+## 2. Cuentas, grupos y privilegios
 
-Una comunicación necesita emisor, receptor, mensaje, código, canal y protocolos. Las redes pueden clasificarse por alcance, propiedad, medio, topología y relación funcional.
+Una cuenta identifica a una persona o servicio. Los grupos simplifican la asignación de permisos. Deben evitarse cuentas compartidas porque impiden atribuir acciones.
 
-- **LAN:** entorno local, normalmente Ethernet o Wi-Fi.
-- **WAN:** conecta ubicaciones distantes.
-- **Cliente-servidor:** servidores ofrecen recursos a clientes.
-- **Entre iguales:** los nodos pueden compartir funciones sin servidor dedicado.
-
-Los medios guiados incluyen par trenzado y fibra; los no guiados emplean ondas electromagnéticas. Ancho de banda es capacidad teórica; rendimiento útil, latencia, variación y pérdida describen la experiencia real.
-
-## 3. Dispositivos
-
-- **Tarjeta de red:** conecta el equipo y posee una dirección de enlace.
-- **Switch:** reenvía tramas según direcciones MAC.
-- **Router:** comunica redes IP distintas.
-- **Punto de acceso:** conecta clientes inalámbricos a una red.
-- **Firewall:** filtra tráfico según una política.
-- **Módem/ONT:** adapta la conexión del proveedor.
-
-Un switch no sustituye a un router: operan principalmente en capas distintas y resuelven problemas diferentes.
-
-## 4. Modelos OSI y TCP/IP
-
-OSI organiza la comunicación en siete capas: física, enlace, red, transporte, sesión, presentación y aplicación. TCP/IP agrupa funciones en acceso a red, Internet, transporte y aplicación.
-
-La encapsulación añade información de control en cada capa. En el receptor se desencapsula en orden inverso.
-
-| Capa funcional | Unidad | Ejemplos |
-| --- | --- | --- |
-| Aplicación | Datos | HTTP, DNS, SSH, DHCP |
-| Transporte | Segmento/datagrama | TCP, UDP |
-| Internet | Paquete | IPv4, IPv6, ICMP |
-| Enlace | Trama | Ethernet, Wi-Fi |
-
-TCP ofrece conexión, confirmaciones y control de orden. UDP reduce sobrecarga y deja esas garantías a la aplicación.
-
-## 5. Direccionamiento IPv4
-
-Una IPv4 tiene 32 bits. La máscara o prefijo separa red y host. En `192.168.10.34/24`, los primeros 24 bits identifican la red.
-
-Rangos privados:
-
-- `10.0.0.0/8`;
-- `172.16.0.0/12`;
-- `192.168.0.0/16`.
-
-Para una subred IPv4 tradicional, la primera dirección identifica la red y la última es broadcast. Las restantes se asignan a interfaces, salvo casos especiales.
-
-## 6. Subnetting
-
-Un prefijo `/n` deja `32-n` bits para hosts. El total de direcciones es `2^(32-n)`.
-
-Ejemplo: dividir `192.168.20.0/24` en cuatro subredes requiere tomar dos bits. El nuevo prefijo es `/26`, con bloques de 64 direcciones:
-
-- `192.168.20.0/26`;
-- `192.168.20.64/26`;
-- `192.168.20.128/26`;
-- `192.168.20.192/26`.
-
-La primera subred ofrece hosts de `.1` a `.62` y broadcast `.63`.
-
-## 7. Configuración TCP/IP
-
-Una configuración manual necesita dirección, prefijo, puerta de enlace y DNS. DHCP puede suministrar estos parámetros. DNS traduce nombres a direcciones; la puerta de enlace se usa para destinos fuera de la red local.
-
-Consultas habituales:
+En Linux, `/etc/passwd` contiene información de cuentas y `/etc/shadow` protege los verificadores de contraseña. `sudo` permite ejecutar acciones concretas con privilegios. En Windows, las cuentas y grupos locales pueden administrarse mediante herramientas gráficas o PowerShell.
 
 ```bash
-ip address
-ip route
-resolvectl status
-ss -tulpen
+sudo useradd -m alumne
+sudo passwd alumne
+sudo usermod -aG developers alumne
+id alumne
 ```
 
 ```powershell
-Get-NetIPConfiguration
-Get-NetIPAddress
-Get-NetRoute
-Get-DnsClientServerAddress
+New-LocalUser -Name "alumne" -Password (Read-Host -AsSecureString)
+Add-LocalGroupMember -Group "Users" -Member "alumne"
+Get-LocalGroupMember -Group "Users"
 ```
 
-## 8. Diagnóstico por capas
+Las contraseñas deben combinar longitud, bloqueo de credenciales filtradas y segundo factor cuando esté disponible. El cambio periódico sin evidencia de compromiso no sustituye una política adecuada.
 
-1. Comprobar alimentación, enlace, cable o asociación Wi-Fi.
-2. Revisar dirección, prefijo y duplicados.
-3. Probar la pila local y la propia dirección.
-4. Probar la puerta de enlace.
-5. Probar una IP remota.
-6. Comprobar DNS con un nombre.
-7. Revisar ruta, puertos, firewall y aplicación.
+## 3. Permisos y ACL
 
-Herramientas:
+Linux aplica permisos de lectura, escritura y ejecución a propietario, grupo y otros. Para un directorio, ejecución significa poder atravesarlo.
 
 ```bash
-ping -c 4 192.168.1.1
-traceroute example.com
-dig example.com
-curl -I https://example.com
+chmod 750 proyecto
+chown -R alumne:developers proyecto
+getfacl proyecto
+setfacl -m u:revisor:r-x proyecto
+```
+
+Windows utiliza ACL con entradas de permitir o denegar y herencia desde carpetas superiores. Las denegaciones explícitas requieren especial cuidado. La práctica recomendada es asignar permisos a grupos y añadir usuarios a esos grupos.
+
+## 4. Procesos
+
+Un proceso posee identificador, estado, prioridad, memoria y propietario. La terminación forzada es el último recurso porque puede dejar datos inconsistentes.
+
+```bash
+ps aux
+top
+pgrep nginx
+nice -n 10 comando
+kill -TERM 1234
+```
+
+En PowerShell:
+
+```powershell
+Get-Process
+Get-Process -Name code | Select-Object Id,CPU,WorkingSet
+Stop-Process -Id 1234
+```
+
+Primero se solicita una finalización ordenada; solo después se usa una señal o acción forzada.
+
+## 5. Servicios
+
+Un servicio ejecuta funciones en segundo plano y puede iniciarse durante el arranque.
+
+```bash
+systemctl status ssh
+sudo systemctl enable --now ssh
+journalctl -u ssh --since today
 ```
 
 ```powershell
-Test-Connection 192.168.1.1 -Count 4
-Test-NetConnection example.com -Port 443
-Resolve-DnsName example.com
-tracert example.com
+Get-Service
+Get-Service -Name sshd
+Start-Service sshd
+Set-Service sshd -StartupType Automatic
 ```
 
-`ping` puede estar filtrado; su fallo no demuestra por sí solo que el destino esté apagado.
+Antes de habilitar un servicio se revisan su necesidad, puerto, cuenta de ejecución, configuración y exposición de red.
 
-## 9. Wi-Fi y seguridad básica
+## 6. Software y actualizaciones
 
-Las redes inalámbricas comparten el medio y sufren interferencias. Deben usarse WPA2-AES o WPA3, claves robustas, firmware actualizado y redes separadas para invitados o dispositivos no confiables. WPS debe desactivarse cuando no sea necesario.
+Los gestores de paquetes resuelven dependencias y registran instalaciones. En Debian/Ubuntu se usa APT; Windows dispone de Microsoft Store, instaladores y `winget`.
+
+```bash
+sudo apt update
+apt list --upgradable
+sudo apt install paquete
+```
+
+```powershell
+winget search Git
+winget install --id Git.Git --exact
+winget upgrade --all
+```
+
+En producción se prueban actualizaciones, se dispone de copia y se documenta una reversión.
+
+## 7. Registros y monitorización
+
+La monitorización observa CPU, memoria, disco, red, procesos y disponibilidad de servicios. Un valor aislado tiene poco contexto; interesa la tendencia y su relación con la carga.
+
+En Linux se consultan `journalctl`, `/var/log`, `free`, `vmstat`, `iostat`, `ss` y `df`. En Windows se usan Visor de eventos, Administrador de tareas, Monitor de recursos, Monitor de rendimiento y cmdlets de PowerShell.
+
+Una investigación básica:
+
+1. Definir el síntoma y periodo afectado.
+2. Revisar eventos y cambios recientes.
+3. Medir recursos y localizar cuellos de botella.
+4. Formular una hipótesis.
+5. Aplicar un cambio controlado.
+6. Verificar y documentar.
+
+## 8. Tareas programadas y scripts
+
+Las tareas repetitivas deben automatizarse de manera idempotente cuando sea posible. Un script debe validar entradas, manejar errores, devolver códigos de salida y escribir registros.
+
+`cron` y los temporizadores de `systemd` automatizan Linux; el Programador de tareas lo hace en Windows. La cuenta ejecutora solo debe tener los permisos imprescindibles.
+
+## 9. Mantenimiento y optimización
+
+- Revisar capacidad y salud del almacenamiento.
+- Aplicar actualizaciones planificadas.
+- Retirar cuentas, servicios y programas innecesarios.
+- Verificar copias y restauraciones.
+- Comprobar registros, alertas y sincronización horaria.
+- Mantener inventario y documentación de cambios.
+
+No deben emplearse limpiadores o ajustes sin comprender su efecto. Optimizar significa medir, identificar la limitación y comprobar la mejora.
 
 ## 10. Resumen
 
-El diagnóstico eficaz sigue las capas y separa conectividad, encaminamiento, resolución de nombres y servicio. El subnetting permite dimensionar dominios de red y usar direcciones con criterio.
+La administración combina control de acceso, operación diaria, observabilidad y documentación. El principio de privilegio mínimo y la trazabilidad reducen errores y facilitan el diagnóstico.
 
 ## Fuentes internas utilizadas
 
-- `SI_Celia/Unit_4_Networks/UD2-Computer network.pdf`.
-- `SI_Celia/Unit_4_Networks/Tasques/Task_4_2_Subnetting exercicis-1.pdf`.
+- `SI_Celia/Unit_3_Administracio_de_SO_Linux/UP3-Configuracio-i-Gestio-de-Sistemes-Operatius.pdf`.
+- `SI_Celia/Unit_3_Administracio_de_SO_Linux/Scripts/manual_scripts_bash.pdf`.
 - `Programacion_Didactica_SI_David_Moli.docx`.

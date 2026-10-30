@@ -96,3 +96,41 @@ Una captura no sustituye texto seleccionable. Los comandos se copian en bloques 
 - Riesgos, mantenimiento y conclusiones.
 
 La prueba final consiste en que otra persona reproduzca una parte sin ayuda oral. Las dudas revelan qué documentación debe mejorarse.
+
+## 4.9 Caso guiado: un recurso compartido deja de admitir escritura
+
+El grupo de desarrollo puede abrir documentos, pero no guardarlos. A las 09:10
+se confirma el síntoma con una cuenta de prueba. El servicio está activo y el
+puerto responde. Esto descarta algunas hipótesis de conectividad, pero no
+demuestra que el almacenamiento ni los permisos estén correctos.
+
+| Comprobación | Evidencia que se busca | Decisión siguiente |
+|---|---|---|
+| ¿Afecta a todos o a un rol? | Prueba con lectura y edición | Separar fallo general de autorización |
+| ¿Hay espacio e inodos? | Capacidad del volumen y cuota | Investigar saturación antes de ampliar |
+| ¿El volumen admite escritura? | Estado de montaje y errores de E/S | Escalar fallo de almacenamiento |
+| ¿Qué permisos se aplican? | Grupos, ACL y permisos del recurso | Corregir la capa que deniega |
+| ¿Qué cambió? | Registro de cambios y hora del primer fallo | Contrastar una hipótesis concreta |
+
+En este caso, una cuota del grupo alcanzó su límite. Se conserva la evidencia,
+se acuerda liberar material prescindible o ampliar la cuota y se aplica un único
+cambio. Se valida crear, modificar y borrar un archivo de prueba con el rol de
+edición; después se confirma que el rol de lectura sigue sin poder escribir.
+No hace falta conceder permisos de administración ni reinstalar el servicio.
+
+### Registro mínimo de cierre
+
+```text
+Síntoma y alcance: desarrollo no puede guardar en el recurso del proyecto.
+Inicio observado: 09:10; zona horaria registrada.
+Causa comprobada: cuota del grupo agotada.
+Cambio: ajuste de cuota autorizado y documentado.
+Verificación: edición operativa; cuenta de lectura sigue sin escribir.
+Prevención: alerta antes del límite y revisión del crecimiento.
+Evidencias: salidas pertinentes, cuentas de prueba y horas de las pruebas.
+```
+
+El informe distingue hechos, hipótesis descartadas y acciones. Una incidencia
+operativa no demuestra por sí sola un ataque: si aparecen modificaciones sin
+autorizar, accesos extraños o borrados, se activa el procedimiento de seguridad
+y se preservan evidencias antes de alterar el sistema.

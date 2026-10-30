@@ -524,7 +524,32 @@ Dividimos sucesivamente por 2 y leemos los restos de abajo arriba:
 
 Resultado: `45₁₀ = 101101₂`.
 
-### 8.3 Unidades y errores frecuentes
+### 8.3 Operaciones binarias y tamaño del dato
+
+En una suma binaria, `1 + 1 = 10₂`: se escribe 0 y se lleva 1. Por ejemplo,
+`00001101₂ + 00000110₂ = 00010011₂`, es decir, `13 + 6 = 19`.
+En una resta, pedir prestado a la posición siguiente aporta dos unidades de la
+posición actual: `00001101₂ - 00000110₂ = 00000111₂`.
+
+Para multiplicar, cada bit 1 del multiplicador añade una copia desplazada del
+multiplicando: `101₂ × 11₂ = 101₂ + 1010₂ = 1111₂` (`5 × 3 = 15`).
+Dividir un entero sin signo entre dos equivale a desplazarlo una posición a la
+derecha y descartar el resto: `1101₂ >> 1 = 110₂` (`13 ÷ 2`, cociente 6).
+
+| Operación bit a bit | Regla | Ejemplo |
+|---|---|---|
+| AND | 1 si ambos bits son 1 | `1100 AND 1010 = 1000` |
+| OR | 1 si al menos uno es 1 | `1100 OR 1010 = 1110` |
+| XOR | 1 si son distintos | `1100 XOR 1010 = 0110` |
+
+El **ancho del dato** importa. En 8 bits sin signo solo caben valores de 0 a
+255. `11111111₂ + 1` necesita 9 bits; si solo se conservan 8, queda `00000000₂`
+y se pierde el acarreo. Desplazar a la izquierda multiplica por potencias de
+dos únicamente si el resultado cabe en el ancho disponible. Para estos
+ejercicios trabajamos con enteros sin signo; no se interpreta el primer bit
+como signo.
+
+### 8.4 Unidades y errores frecuentes
 
 - `1 byte = 8 bits`.
 - `1 kB = 1 000 bytes`; `1 KiB = 1 024 bytes`.
