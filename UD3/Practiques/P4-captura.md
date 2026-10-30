@@ -19,14 +19,14 @@ La captura termina tras el establecimiento TCP: no incluye TLS ni contenido HTTP
 1. Abre el archivo con Wireshark. Identifica número de paquete, instante relativo, origen, destino, protocolo y resumen. Guarda una copia de trabajo con código de aula.
 2. Aplica filtros de visualización, uno por vez:
 
-```text
-arp
-icmp
-dns
-tcp.flags.syn == 1
-```
+    ```text
+    arp
+    icmp
+    dns
+    tcp.flags.syn == 1
+    ```
 
-Son filtros para lo que ya se ha capturado; ocultar paquetes en pantalla no los elimina del archivo. La existencia de resultados depende del tráfico incluido.
+    Son filtros para lo que ya se ha capturado; ocultar paquetes en pantalla no los elimina del archivo. La existencia de resultados depende del tráfico incluido.
 
 3. Elige una trama ARP o ICMP de laboratorio y despliega Ethernet, IP y el protocolo superior disponible. Distingue MAC, IPv4 y datos de diagnóstico.
 4. En un intercambio TCP facilitado, localiza SYN, SYN-ACK y ACK y compara puertos. Explica que otros paquetes ACK pueden aparecer durante toda la conexión.

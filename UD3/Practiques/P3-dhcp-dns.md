@@ -12,12 +12,12 @@ Usa un segmento de aula con DHCP y DNS gestionados por el docente, o sus registr
 2. En los datos proporcionados por el docente identifica concesión y servidor DHCP. Explica qué ofrece DHCP y qué hace DNS. No supongas que el servidor DHCP y el router son siempre el mismo equipo.
 3. Consulta un nombre indicado por el docente:
 
-```powershell
-Resolve-DnsName example.com
-Test-NetConnection example.com -Port 443
-```
+    ```powershell
+    Resolve-DnsName example.com
+    Test-NetConnection example.com -Port 443
+    ```
 
-En Linux, usa `resolvectl query example.com` y, si está disponible, `curl -I https://example.com/`. Si el laboratorio no tiene salida, utiliza el nombre y servicio internos proporcionados.
+    En Linux, usa `resolvectl query example.com` y, si está disponible, `curl -I https://example.com/`. Si el laboratorio no tiene salida, utiliza el nombre y servicio internos proporcionados.
 
 4. Compara tres juegos de salidas: dirección de enlace local sin concesión útil; dirección válida con puerta de enlace incorrecta; resolución DNS fallida con un servicio local accesible por IP. Identifica qué funciona y qué falta por probar en cada uno.
 5. Dibuja Discover → Offer → Request → Acknowledge como intercambio inicial habitual de DHCPv4. Explica por qué una renovación no tiene que mostrar todas esas fases.

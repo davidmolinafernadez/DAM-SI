@@ -16,17 +16,17 @@ Topología: A `192.168.50.10/24` — switch aislado — B `192.168.50.20/24`. En
 4. En Ubuntu Desktop: Configuración → Red → rueda de la conexión de laboratorio → IPv4 → Manual. Introduce dirección y máscara; guarda y vuelve a activar solo esa conexión si la interfaz lo requiere. Los nombres de menú pueden variar.
 5. Consulta de nuevo la configuración mediante los comandos de P1. Comprueba enlace y prueba la dirección propia y después la del compañero:
 
-```powershell
-Test-Connection 192.168.50.20 -Count 4
-Get-NetNeighbor -AddressFamily IPv4
-```
+    ```powershell
+    Test-Connection 192.168.50.20 -Count 4
+    Get-NetNeighbor -AddressFamily IPv4
+    ```
 
-```bash
-ping -c 4 192.168.50.10
-ip neigh
-```
+    ```bash
+    ping -c 4 192.168.50.10
+    ip neigh
+    ```
 
-Adapta el destino al equipo desde el que pruebas. Si ICMP está filtrado, pide una prueba o regla limitada preparada por el docente; no desactives el firewall. La observación de vecinos ayuda a distinguir alcance local de respuesta ICMP.
+    Adapta el destino al equipo desde el que pruebas. Si ICMP está filtrado, pide una prueba o regla limitada preparada por el docente; no desactives el firewall. La observación de vecinos ayuda a distinguir alcance local de respuesta ICMP.
 
 6. Con autorización, cambia únicamente B a `192.168.60.20/24`. Predice y comprueba el resultado sin inventar un router entre ambas subredes. Devuelve B a su dirección inicial.
 7. Restaura al terminar el estado previo registrado, incluido el modo automático si existía, y confirma que recuperas la conexión esperada.
