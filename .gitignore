@@ -63,3 +63,6 @@ site/
 # Cuaderno de evaluación y copias locales con datos del alumnado
 /Evaluacion/
 /tmp/
+
+# Soluciones y revisión docente de redes
+/UD3/Docente/

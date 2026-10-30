@@ -1,6 +1,6 @@
-# 4. Configuración y diagnóstico
+# 3.5 · Configuración y diagnóstico
 
-## 4.1 Parámetros
+## 3.5.1 Parámetros
 
 Una interfaz necesita IP/prefijo. Para salir de la subred usa puerta de enlace. Para nombres usa DNS. DHCP puede proporcionar todo.
 
@@ -12,7 +12,7 @@ flowchart LR
 
 La puerta debe pertenecer a una red directamente conectada; de lo contrario el equipo no sabe cómo alcanzarla.
 
-## 4.2 Inspección
+## 3.5.2 Inspección
 
 Linux:
 
@@ -34,7 +34,7 @@ Get-NetNeighbor
 Get-NetTCPConnection -State Listen
 ```
 
-## 4.3 Diagnóstico por escalones
+## 3.5.3 Diagnóstico por escalones
 
 ```mermaid
 flowchart TD
@@ -49,7 +49,7 @@ flowchart TD
 
 No se empieza reinstalando. Se localiza la primera prueba que falla.
 
-## 4.4 Herramientas
+## 3.5.4 Herramientas
 
 ```bash
 ping -c 4 127.0.0.1
@@ -67,7 +67,7 @@ Resolve-DnsName example.com
 Test-NetConnection example.com -Port 443
 ```
 
-## 4.5 Interpretación
+## 3.5.5 Interpretación
 
 - Sin enlace: cable, puerto, adaptador, Wi-Fi o controlador.
 - `169.254.x.x`: dirección de enlace local; puede indicar autoconfiguración por falta de respuesta DHCP, aunque también puede haberse configurado expresamente.
@@ -81,7 +81,7 @@ correctamente; por tanto, un `ping` fallido no demuestra que esté apagado ni
 que la ruta esté rota. Si un nombre resuelve pero no responde al ping, comprueba
 el puerto y la aplicación antes de atribuir el fallo a DNS.
 
-## 4.6 Captura
+## 3.5.6 Captura
 
 Wireshark permite ver tramas. Se captura con autorización y filtro mínimo. Ejemplo de un acceso web:
 
@@ -104,3 +104,13 @@ Un PC accede por IP pero no por nombre. `Get-NetIPConfiguration` muestra DNS ant
 ## Documentación de incidencia
 
 Registrar síntoma, alcance, topología, hora, comandos y salidas relevantes, hipótesis, cambio, resultado y prevención. Una captura sin explicación no es una memoria técnica.
+
+## Del ajuste gráfico a la evidencia
+
+Antes de guardar cambios, identifica interfaz y perfil. Registra si el origen es DHCP o manual; cambiar a manual sin recordar puerta y DNS puede interrumpir la conexión. Usa una interfaz de laboratorio y conserva el plan de restauración. En Windows puedes consultar Configuración → Red e Internet → propiedades de la conexión; en Ubuntu Desktop, Configuración → Red → opciones de la conexión → IPv4.
+
+Una LAN aislada entre dos equipos del mismo prefijo puede funcionar sin puerta ni DNS. Para consultar un nombre hace falta un mecanismo de resolución; para llegar a otra red hace falta una ruta. Ninguno se crea por escribir un valor cualquiera en la interfaz gráfica.
+
+[P1 · Consulta](practicas/P1-inspeccion.md) · [P2 · Configuración manual](practicas/P2-lan-estatica.md) · [P3 · DHCP y DNS](practicas/P3-dhcp-dns.md) · [P5 · Incidencias](practicas/P5-incidencias.md)
+
+Fuente: [Microsoft · Get-NetIPConfiguration](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-netipconfiguration).
