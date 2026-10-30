@@ -54,7 +54,6 @@ Entrega tabla Windows/Linux, cálculo de red, diagrama y una diferencia entre lo
 
 **Entrega conjunta con la actividad 3.1:** incorpora esta práctica como anexo P1 del archivo `UD3_A1_Codigo.pdf`. Entrega actividad y práctica a la vez en la misma tarea de Aules. Incluye capturas legibles de los pasos y resultados solicitados, con una breve explicación, además de las tablas, cálculos y conclusiones exigidos. Si utilizas salidas facilitadas por el docente, identifícalas. No se requiere un PDF independiente de esta práctica. [Índice de prácticas](../practicas/index.md) · [Cuaderno descargable](../descargas/UD3_Practicas.pdf)
 
-
 ## Entrega y valoración
 
 **Entrega conjunta en Aules:** realiza también P1 e incorpora sus resultados como anexos al PDF de esta actividad. Entrega ambas partes a la vez en la misma tarea de Aules. Incluye capturas legibles de las acciones y comprobaciones solicitadas, comentadas brevemente, junto con las tablas y conclusiones de cada práctica.

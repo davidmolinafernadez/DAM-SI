@@ -17,13 +17,13 @@ Se propone para un laboratorio: equipo A `192.168.50.10/24`, equipo B `192.168.5
 
 **Tiempo orientativo:** 120 min · Laboratorio de aula · Entrega individual.
 
-### Preparación
+### P2 · Preparación
 
 El docente proporciona dos equipos o dos entornos ya preparados y una red de laboratorio aislada. No se crea todavía ninguna máquina virtual. Confirma la interfaz de laboratorio; no se modifica la conexión de gestión, la del centro ni una sesión remota.
 
 Topología: A `192.168.50.10/24` — switch aislado — B `192.168.50.20/24`. En este caso no hay router, DHCP ni salida a Internet: puerta de enlace y DNS se dejan vacíos. Las direcciones se emplean únicamente en el segmento de prueba autorizado.
 
-### Procedimiento
+### P2 · Procedimiento
 
 1. Antes de cambiar nada, registra modo de asignación, dirección, máscara, puerta, DNS e interfaz seleccionada. Prepara cómo restaurarlo.
 2. Predice si A y B están en la misma red y explica por qué DNS no interviene al usar direcciones IP.
@@ -46,22 +46,21 @@ Topología: A `192.168.50.10/24` — switch aislado — B `192.168.50.20/24`. En
 6. Con autorización, cambia únicamente B a `192.168.60.20/24`. Predice y comprueba el resultado sin inventar un router entre ambas subredes. Devuelve B a su dirección inicial.
 7. Restaura al terminar el estado previo registrado, incluido el modo automático si existía, y confirma que recuperas la conexión esperada.
 
-### Aceptación y entrega
+### P2 · Aceptación y entrega
 
 Entrega una tabla antes/durante/después, pruebas en ambos sentidos, una incidencia interpretada y confirmación de restauración. La ausencia de Internet es el resultado previsto en este laboratorio aislado.
 
 **Entrega conjunta con la actividad 3.6:** incorpora esta práctica como anexo P2 del archivo `UD3_A6_Codigo.pdf`. Entrega actividad y práctica a la vez en la misma tarea de Aules. Incluye capturas legibles de los pasos y resultados solicitados, con una breve explicación, además de las tablas, cálculos y conclusiones exigidos. Si utilizas salidas facilitadas por el docente, identifícalas. No se requiere un PDF independiente de esta práctica. [Índice de prácticas](../practicas/index.md) · [Cuaderno descargable](../descargas/UD3_Practicas.pdf)
 
-
 ## P3 · Distinguir DHCP, puerta y DNS
 
 **Tiempo orientativo:** 90 min · Laboratorio de aula · Entrega individual.
 
-### Preparación
+### P3 · Preparación
 
 Usa un segmento de aula con DHCP y DNS gestionados por el docente, o sus registros de ejemplo. No se instala ni activa un servidor DHCP del alumnado en la LAN del centro. Si el entorno no permite cambios, realiza el diagnóstico con salidas proporcionadas.
 
-### Procedimiento
+### P3 · Procedimiento
 
 1. Identifica la interfaz autorizada. Registra si obtiene dirección automáticamente, el prefijo, puerta y servidores DNS. En Windows consulta `ipconfig /all`; en Linux, los datos de la conexión activa y `ip route`.
 2. En los datos proporcionados por el docente identifica concesión y servidor DHCP. Explica qué ofrece DHCP y qué hace DNS. No supongas que el servidor DHCP y el router son siempre el mismo equipo.
@@ -78,22 +77,21 @@ Usa un segmento de aula con DHCP y DNS gestionados por el docente, o sus registr
 5. Dibuja Discover → Offer → Request → Acknowledge como intercambio inicial habitual de DHCPv4. Explica por qué una renovación no tiene que mostrar todas esas fases.
 6. Verifica que el estado final de la conexión coincide con el inicial. No ejecutes liberaciones de dirección sobre conexiones remotas o de gestión.
 
-### Aceptación y entrega
+### P3 · Aceptación y entrega
 
 Tabla separada de parámetros DHCP, encaminamiento y DNS; evidencia de resolución y de servicio; diagnóstico de los tres casos y sus límites. No interpretes un ping fallido como prueba suficiente de fallo DNS.
 
 **Entrega conjunta con la actividad 3.6:** incorpora esta práctica como anexo P3 del archivo `UD3_A6_Codigo.pdf`. Entrega actividad y práctica a la vez en la misma tarea de Aules. Incluye capturas legibles de los pasos y resultados solicitados, con una breve explicación, además de las tablas, cálculos y conclusiones exigidos. Si utilizas salidas facilitadas por el docente, identifícalas. No se requiere un PDF independiente de esta práctica. [Índice de prácticas](../practicas/index.md) · [Cuaderno descargable](../descargas/UD3_Practicas.pdf)
 
-
 ## P5 · Diagnosticar y preparar el salto a UD4
 
 **Tiempo orientativo:** 120 min · Laboratorio de aula · Entrega individual.
 
-### Preparación
+### P5 · Preparación
 
 Trabaja con los equipos de prueba de P2 o con las salidas preparadas por el docente. Las averías se introducen únicamente en esa interfaz y se restauran antes de pasar al siguiente caso. No se modifica el router ni el firewall del centro.
 
-### Método y casos
+### P5 · Método y casos
 
 Para cada caso escribe predicción, síntoma, dos hipótesis, prueba que las diferencia, resultado, corrección propuesta y verificación. Se observa de abajo arriba: enlace → dirección y prefijo → red local → ruta → DNS → puerto → aplicación.
 
@@ -111,12 +109,11 @@ Para cada caso escribe predicción, síntoma, dos hipótesis, prueba que las dif
 4. Diseña el plan que reutilizarás en UD4: interfaces, direcciones, prefijos, servicio previsto y prueba de aceptación. No confundas conectar un adaptador virtual con haber configurado correctamente TCP/IP.
 5. Restaura el laboratorio y repite la prueba que demostraba el funcionamiento inicial.
 
-### Aceptación y entrega
+### P5 · Aceptación y entrega
 
 Cinco fichas de incidencia, esquema comparado de modos y plan de laboratorio de UD4. Se valora la prueba que justifica el diagnóstico y el estado restaurado, además del resultado final.
 
 **Entrega conjunta con la actividad 3.6:** incorpora esta práctica como anexo P5 del archivo `UD3_A6_Codigo.pdf`. Entrega actividad y práctica a la vez en la misma tarea de Aules. Incluye capturas legibles de los pasos y resultados solicitados, con una breve explicación, además de las tablas, cálculos y conclusiones exigidos. Si utilizas salidas facilitadas por el docente, identifícalas. No se requiere un PDF independiente de esta práctica. [Índice de prácticas](../practicas/index.md) · [Cuaderno descargable](../descargas/UD3_Practicas.pdf)
-
 
 ## Entrega y valoración
 
