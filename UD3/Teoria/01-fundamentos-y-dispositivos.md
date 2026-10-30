@@ -77,7 +77,6 @@ Un hub repite señales hacia los demás puertos. Un switch aprende direcciones M
 
 [Actividad 3.1](actividades/A1-red-del-aula.md) · [Práctica P1](practicas/P1-inspeccion.md)
 
-
 ## Actividad y aplicación práctica
 
 - [Actividad 3.1 · Comprender una red](actividades/A1-red-del-aula.md)

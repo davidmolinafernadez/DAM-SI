@@ -91,7 +91,6 @@ Un protocolo define reglas, mensajes y comportamiento entre participantes. Un se
 
 Fuente: [Guía oficial de Wireshark](https://www.wireshark.org/docs/wsug_html_chunked/ChapterIntroduction.html).
 
-
 ## Actividad y aplicación práctica
 
 - [Actividad 3.2 · Seguir una petición](actividades/A2-capas-y-recorrido.md)

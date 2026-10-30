@@ -67,7 +67,6 @@ IPv6 utiliza 128 bits y se representa en hexadecimal. `::1` es loopback. IPv6 no
 - [RFC 3021 · Prefijos /31 en enlaces punto a punto](https://www.rfc-editor.org/rfc/rfc3021).
 - [RFC 4291 · Arquitectura de direcciones IPv6](https://www.rfc-editor.org/rfc/rfc4291).
 
-
 ## Actividad y aplicación práctica
 
 - [Actividad 3.3 · Leer direcciones IPv4](actividades/A3-ipv4-y-mascaras.md)

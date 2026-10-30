@@ -57,7 +57,6 @@ Crear subredes en papel no crea automáticamente VLAN, aislamiento ni encaminami
 
 Fuente: [RFC 4632 · CIDR](https://www.rfc-editor.org/rfc/rfc4632).
 
-
 ## Actividad y aplicación práctica
 
 - [Actividad 3.4 · Diseñar subredes iguales](actividades/A4-subredes-iguales.md)

@@ -15,7 +15,6 @@ Total: **6 horas**. [Cuaderno en PDF](../descargas/UD3_Actividades.pdf) · [Prá
 
 [Ampliación: especificación de un calculador de subredes](ampliacion-script.md).
 
-
 ## Entrega de actividades y prácticas en Aules
 
 Cada actividad se entrega junto con sus prácticas asociadas, en la misma tarea y con la misma fecha de entrega que indique el docente en Aules. Incorpora las prácticas como anexos al PDF de la actividad.
@@ -30,4 +29,3 @@ Cada actividad se entrega junto con sus prácticas asociadas, en la misma tarea 
 | 3.6 | P2, P3 y P5 |
 
 Incluye capturas legibles de las acciones y resultados, con una breve explicación de cada una, además de las tablas, cálculos y conclusiones solicitados. Identifica las salidas proporcionadas por el docente si trabajas con ellas. En P4, adjunta también la captura de red solicitada en la misma tarea de Aules.
-

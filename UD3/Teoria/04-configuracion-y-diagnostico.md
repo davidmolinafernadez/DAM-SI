@@ -115,7 +115,6 @@ Una LAN aislada entre dos equipos del mismo prefijo puede funcionar sin puerta n
 
 Fuente: [Microsoft · Get-NetIPConfiguration](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-netipconfiguration).
 
-
 ## Actividad y aplicación práctica
 
 - [Actividad 3.6 · Justificar una configuración](actividades/A6-diagnostico-y-red-virtual.md)

@@ -12,7 +12,6 @@ La unidad puede realizarse con equipos del aula, entornos proporcionados o salid
 
 Total: **8 horas**. [Cuaderno en PDF](../descargas/UD3_Practicas.pdf) · [Actividades escritas](../actividades/index.md).
 
-
 ## Entrega de actividades y prácticas en Aules
 
 Cada actividad se entrega junto con sus prácticas asociadas, en la misma tarea y con la misma fecha de entrega que indique el docente en Aules. Incorpora las prácticas como anexos al PDF de la actividad.

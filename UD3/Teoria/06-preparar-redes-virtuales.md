@@ -30,7 +30,6 @@ Anota equipo, adaptador, modo, nombre de segmento, dirección/prefijo, asignaci�
 
 Fuente: [Manual de VirtualBox · Redes virtuales](https://docs.oracle.com/en/virtualization/virtualbox/7.1/user/networkingdetails.html).
 
-
 ## Actividad y aplicación práctica
 
 - [Actividad 3.6 · Justificar una configuración](actividades/A6-diagnostico-y-red-virtual.md)

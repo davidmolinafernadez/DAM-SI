@@ -48,4 +48,3 @@ No se modifica ninguna calificación previa del cuaderno. La correspondencia exp
 - [Paquete del alumnado](descargas/UD3_Material_alumnado.zip).
 - [Síntesis de consulta](apuntes.md).
 - [Fuentes y glosario](fuentes-y-glosario.md).
-
