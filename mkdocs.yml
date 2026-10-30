@@ -100,7 +100,7 @@ nav:
       - 3.4 · Subnetting y VLSM: ud3/05-subnetting-y-vlsm.md
       - 3.5 · Configuración y diagnóstico: ud3/04-configuracion-y-diagnostico.md
       - 3.6 · Preparar redes virtuales: ud3/06-preparar-redes-virtuales.md
-      - Actividades escritas:
+      - Actividades y prácticas integradas:
           - Índice y descargas: ud3/actividades/index.md
           - "3.1 · Comprender una red": ud3/actividades/A1-red-del-aula.md
           - "3.2 · Seguir una petición": ud3/actividades/A2-capas-y-recorrido.md
@@ -109,13 +109,7 @@ nav:
           - "3.5 · Repartir direcciones con VLSM": ud3/actividades/A5-vlsm.md
           - "3.6 · Justificar una configuración": ud3/actividades/A6-diagnostico-y-red-virtual.md
           - Ampliación de scripting: ud3/actividades/ampliacion-script.md
-      - Prácticas guiadas:
-          - Índice y normas: ud3/practicas/index.md
-          - "P1 · Inventario de la conexión": ud3/practicas/P1-inspeccion.md
-          - "P2 · Conectar dos equipos de laboratorio": ud3/practicas/P2-lan-estatica.md
-          - "P3 · Distinguir DHCP, puerta y DNS": ud3/practicas/P3-dhcp-dns.md
-          - "P4 · Leer una captura de red": ud3/practicas/P4-captura.md
-          - "P5 · Diagnosticar y preparar el salto a UD4": ud3/practicas/P5-incidencias.md
+      - Acceso rápido a prácticas: ud3/practicas/index.md
       - Fuentes y glosario: ud3/fuentes-y-glosario.md
       - Síntesis: ud3/apuntes.md
   - UD4 · Instalación y virtualización:

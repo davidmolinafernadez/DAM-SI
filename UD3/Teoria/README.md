@@ -4,7 +4,7 @@
 
 Aprenderás a interpretar una red, calcular su direccionamiento, configurar una conexión de laboratorio y justificar un diagnóstico. El trabajo prepara la elección de NAT, puente y red interna en UD4.
 
-[Actividades escritas](actividades/index.md){ .md-button .md-button--primary }
+[Actividades y prácticas integradas](actividades/index.md){ .md-button .md-button--primary }
 [Prácticas guiadas](practicas/index.md){ .md-button }
 [Teoría en PDF](descargas/UD3_Teoria.pdf){ .md-button }
 
@@ -19,7 +19,7 @@ Aprenderás a interpretar una red, calcular su direccionamiento, configurar una 
 | 3.5 · Configuración | [Parámetros y diagnóstico por capas](04-configuracion-y-diagnostico.md) | P2, P3 y P5 |
 | 3.6 · Continuidad | [Preparar redes virtuales](06-preparar-redes-virtuales.md) | Actividad 3.6 y laboratorio de UD4 |
 
-P4 se realiza al leer capturas de referencia en el apartado 3.2 o se retoma después de practicar la configuración. Las actividades son de razonamiento y las prácticas, de ejecución y comprobación; cada entrega indicada conserva su código.
+P4 se realiza al leer capturas de referencia en el apartado 3.2 o se retoma después de practicar la configuración. Las actividades son de razonamiento y las prácticas, de ejecución y comprobación; las prácticas están integradas en la actividad asociada y se entregan juntas en el PDF de esa actividad, en una misma tarea de Aules.
 
 ## Reparto de las 25 horas
 
@@ -48,3 +48,4 @@ No se modifica ninguna calificación previa del cuaderno. La correspondencia exp
 - [Paquete del alumnado](descargas/UD3_Material_alumnado.zip).
 - [Síntesis de consulta](apuntes.md).
 - [Fuentes y glosario](fuentes-y-glosario.md).
+

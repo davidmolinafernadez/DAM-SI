@@ -76,3 +76,10 @@ Simplex, half dúplex y full dúplex describen sentidos y simultaneidad de trans
 Un hub repite señales hacia los demás puertos. Un switch aprende direcciones MAC y puede reenviar unicast por un solo puerto, pero también inunda broadcast y destinos desconocidos dentro del dominio correspondiente. No distribuye siempre todas las tramas a todos los equipos.
 
 [Actividad 3.1](actividades/A1-red-del-aula.md) · [Práctica P1](practicas/P1-inspeccion.md)
+
+
+## Actividad y aplicación práctica
+
+- [Actividad 3.1 · Comprender una red](actividades/A1-red-del-aula.md)
+
+Encontrarás los pasos prácticos asociados junto al enunciado de la actividad. Incorpora sus evidencias al mismo PDF y entrega todo junto en la tarea de Aules correspondiente.

@@ -1,4 +1,4 @@
-# UD3 · Actividades escritas
+# UD3 · Actividades y prácticas integradas
 
 Se calcula y razona antes de configurar. Adaptación en castellano del banco anterior, con prefijos explícitos y requisitos comprobables. Las clases históricas no sustituyen a CIDR.
 
@@ -14,3 +14,20 @@ Se calcula y razona antes de configurar. Adaptación en castellano del banco ant
 Total: **6 horas**. [Cuaderno en PDF](../descargas/UD3_Actividades.pdf) · [Prácticas guiadas](../practicas/index.md)
 
 [Ampliación: especificación de un calculador de subredes](ampliacion-script.md).
+
+
+## Entrega de actividades y prácticas en Aules
+
+Cada actividad se entrega junto con sus prácticas asociadas, en la misma tarea y con la misma fecha de entrega que indique el docente en Aules. Incorpora las prácticas como anexos al PDF de la actividad.
+
+| Actividad | Prácticas que se adjuntan |
+| --- | --- |
+| 3.1 | P1 |
+| 3.2 | P4 |
+| 3.3 | Sin práctica asociada |
+| 3.4 | Sin práctica asociada |
+| 3.5 | Sin práctica asociada |
+| 3.6 | P2, P3 y P5 |
+
+Incluye capturas legibles de las acciones y resultados, con una breve explicación de cada una, además de las tablas, cálculos y conclusiones solicitados. Identifica las salidas proporcionadas por el docente si trabajas con ellas. En P4, adjunta también la captura de red solicitada en la misma tarea de Aules.
+

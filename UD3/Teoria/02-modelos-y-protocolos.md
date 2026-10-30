@@ -90,3 +90,10 @@ Un protocolo define reglas, mensajes y comportamiento entre participantes. Un se
 [Actividad 3.2](actividades/A2-capas-y-recorrido.md) · [Práctica P4](practicas/P4-captura.md)
 
 Fuente: [Guía oficial de Wireshark](https://www.wireshark.org/docs/wsug_html_chunked/ChapterIntroduction.html).
+
+
+## Actividad y aplicación práctica
+
+- [Actividad 3.2 · Seguir una petición](actividades/A2-capas-y-recorrido.md)
+
+Encontrarás los pasos prácticos asociados junto al enunciado de la actividad. Incorpora sus evidencias al mismo PDF y entrega todo junto en la tarea de Aules correspondiente.

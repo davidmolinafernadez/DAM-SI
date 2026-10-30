@@ -29,3 +29,10 @@ Anota equipo, adaptador, modo, nombre de segmento, dirección/prefijo, asignaci�
 [Actividad 3.6](actividades/A6-diagnostico-y-red-virtual.md) · [Práctica P5](practicas/P5-incidencias.md) · [Continuidad en UD4](../ud4/itinerario.md)
 
 Fuente: [Manual de VirtualBox · Redes virtuales](https://docs.oracle.com/en/virtualization/virtualbox/7.1/user/networkingdetails.html).
+
+
+## Actividad y aplicación práctica
+
+- [Actividad 3.6 · Justificar una configuración](actividades/A6-diagnostico-y-red-virtual.md)
+
+Encontrarás los pasos prácticos asociados junto al enunciado de la actividad. Incorpora sus evidencias al mismo PDF y entrega todo junto en la tarea de Aules correspondiente.

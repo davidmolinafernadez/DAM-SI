@@ -56,3 +56,11 @@ Crear subredes en papel no crea automáticamente VLAN, aislamiento ni encaminami
 [Actividad 3.4](actividades/A4-subredes-iguales.md) · [Actividad 3.5](actividades/A5-vlsm.md) · [Ampliación de scripting](actividades/ampliacion-script.md)
 
 Fuente: [RFC 4632 · CIDR](https://www.rfc-editor.org/rfc/rfc4632).
+
+
+## Actividad y aplicación práctica
+
+- [Actividad 3.4 · Diseñar subredes iguales](actividades/A4-subredes-iguales.md)
+- [Actividad 3.5 · Repartir direcciones con VLSM](actividades/A5-vlsm.md)
+
+Encontrarás los pasos prácticos asociados junto al enunciado de la actividad. Incorpora sus evidencias al mismo PDF y entrega todo junto en la tarea de Aules correspondiente.

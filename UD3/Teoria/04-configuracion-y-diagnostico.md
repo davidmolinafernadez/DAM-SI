@@ -114,3 +114,10 @@ Una LAN aislada entre dos equipos del mismo prefijo puede funcionar sin puerta n
 [P1 · Consulta](practicas/P1-inspeccion.md) · [P2 · Configuración manual](practicas/P2-lan-estatica.md) · [P3 · DHCP y DNS](practicas/P3-dhcp-dns.md) · [P5 · Incidencias](practicas/P5-incidencias.md)
 
 Fuente: [Microsoft · Get-NetIPConfiguration](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-netipconfiguration).
+
+
+## Actividad y aplicación práctica
+
+- [Actividad 3.6 · Justificar una configuración](actividades/A6-diagnostico-y-red-virtual.md)
+
+Encontrarás los pasos prácticos asociados junto al enunciado de la actividad. Incorpora sus evidencias al mismo PDF y entrega todo junto en la tarea de Aules correspondiente.
