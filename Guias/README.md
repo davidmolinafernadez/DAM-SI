@@ -4,6 +4,8 @@ Documentos de referencia para la planificación y el desarrollo de la asignatura
 
 ## Curso 2026-2027
 
+- [Secuencia vigente · 05/11/2026: virtualización antes de redes](Secuencia_2026_11_05.md). Tiene prioridad sobre la secuencia de la guía PDF y de los documentos históricos.
+
 - [Guía didáctica de Sistemas Informáticos](Guia_didactica_Sistemas_Informaticos_1_DAM_2026_2027.pdf)
 
 La guía recoge la organización curricular, la temporalización de las unidades didácticas, la metodología, la evaluación y la relación de resultados de aprendizaje.

@@ -1,5 +1,7 @@
 # 4.5 · Redes virtuales con una finalidad
 
+> **Bloque trasladado a UD3 Redes.** Esta página y su vídeo se conservan como consulta y compatibilidad. El contenido desarrollado se incluye en el cuaderno de teoría de UD3. El [apartado vigente 3.6](../ud3/06-preparar-redes-virtuales.md), la actividad 3.7 y P6 se realizan después de instalación y virtualización; sus horas se cuentan en UD3.
+
 <div class="lesson-banner" markdown>
 <div class="lesson-number">4.5</div>
 <div markdown>

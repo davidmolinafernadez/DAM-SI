@@ -1,5 +1,7 @@
 # UD3 · Actividades y prácticas integradas
 
+> **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+
 Se calcula y razona antes de configurar. Adaptación en castellano del banco anterior, con prefijos explícitos y requisitos comprobables. Las clases históricas no sustituyen a CIDR.
 
 | Actividad | Tiempo |
@@ -9,9 +11,10 @@ Se calcula y razona antes de configurar. Adaptación en castellano del banco ant
 | [Actividad 3.3 · Leer direcciones IPv4](A3-ipv4-y-mascaras.md) | 60 min |
 | [Actividad 3.4 · Diseñar subredes iguales](A4-subredes-iguales.md) | 90 min |
 | [Actividad 3.5 · Repartir direcciones con VLSM](A5-vlsm.md) | 60 min |
-| [Actividad 3.6 · Justificar una configuración](A6-diagnostico-y-red-virtual.md) | 60 min |
+| [Actividad 3.6 · Justificar una configuración](A6-diagnostico-y-red-virtual.md) | Hasta 60 min; seleccionar apartados |
+| [Actividad 3.7 · Elegir una red virtual](A7-redes-virtuales.md) | 25 min, dentro de las 6 h |
 
-Total: **6 horas**. [Cuaderno en PDF](../descargas/UD3_Actividades.pdf) · [Prácticas guiadas](../practicas/index.md)
+Total seleccionado: **6 horas**, incorporando los 25 min de A7 mediante selección de apartados de A6 para evitar duplicaciones. [Cuaderno en PDF](../descargas/UD3_Actividades.pdf) · [Prácticas guiadas](../practicas/index.md)
 
 [Ampliación: especificación de un calculador de subredes](ampliacion-script.md).
 
@@ -27,5 +30,6 @@ Cada actividad se entrega junto con sus prácticas asociadas, en la misma tarea 
 | 3.4 | Sin práctica asociada |
 | 3.5 | Sin práctica asociada |
 | 3.6 | P2, P3 y P5 |
+| 3.7 | P6, procedente de UD4/P5 |
 
 Incluye capturas legibles de las acciones y resultados, con una breve explicación de cada una, además de las tablas, cálculos y conclusiones solicitados. Identifica las salidas proporcionadas por el docente si trabajas con ellas. En P4, adjunta también la captura de red solicitada en la misma tarea de Aules.

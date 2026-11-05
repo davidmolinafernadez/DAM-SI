@@ -92,26 +92,8 @@ nav:
       - Virtualización y arranque: ud2/04-virtualizacion-y-arranque.md
       - Tarea 2.3.1 · Máquina virtual: ud2/actividades/A23-maquina-virtual.md
       - Apuntes de referencia: ud2/apuntes.md
-  - UD3 · Redes TCP/IP:
-      - Presentación e itinerario: ud3/index.md
-      - 3.1 · Comunicación y dispositivos: ud3/01-fundamentos-y-dispositivos.md
-      - "Actividad 3.1 + P1 · Comprender e inspeccionar la red": ud3/actividades/A1-red-del-aula.md
-      - 3.2 · Modelos y protocolos: ud3/02-modelos-y-protocolos.md
-      - "Actividad 3.2 + P4 · Petición y captura": ud3/actividades/A2-capas-y-recorrido.md
-      - 3.3 · IPv4 y máscaras: ud3/03-ipv4-y-subnetting.md
-      - "Actividad 3.3 · Leer direcciones IPv4": ud3/actividades/A3-ipv4-y-mascaras.md
-      - 3.4 · Subnetting y VLSM: ud3/05-subnetting-y-vlsm.md
-      - "Actividad 3.4 · Diseñar subredes iguales": ud3/actividades/A4-subredes-iguales.md
-      - "Actividad 3.5 · Repartir direcciones con VLSM": ud3/actividades/A5-vlsm.md
-      - 3.5 · Configuración y diagnóstico: ud3/04-configuracion-y-diagnostico.md
-      - "Actividad 3.6 + P2, P3 y P5 · Configurar y diagnosticar": ud3/actividades/A6-diagnostico-y-red-virtual.md
-      - 3.6 · Preparar redes virtuales: ud3/06-preparar-redes-virtuales.md
-      - Índice de actividades y entregas: ud3/actividades/index.md
-      - Ampliación de scripting: ud3/actividades/ampliacion-script.md
-      - Fuentes y glosario: ud3/fuentes-y-glosario.md
-      - Síntesis: ud3/apuntes.md
   - UD4 · Instalación y virtualización:
-      - Itinerario de 30 horas: ud4/itinerario.md
+      - Itinerario de 27 horas: ud4/itinerario.md
       - Presentación: ud4/index.md
       - Índice de actividades escritas: ud4/actividades/index.md
       - Índice de prácticas guiadas: ud4/practicas/index.md
@@ -150,12 +132,6 @@ nav:
               - "Actividad 4.5 · Elegir un sistema de archivos": ud4/actividades/A05-elegir-un-sistema-de-archivos.md
           - Prácticas guiadas:
               - "P4 · Particionar y montar": ud4/practicas/p4-particionado.md
-      - "4.5 · Redes del laboratorio":
-          - "Teoría 4.5 · Redes virtuales y servicio web": ud4/b09-redes-virtuales.md
-          - Actividades escritas:
-              - "Actividad 4.9 · Elegir una red virtual para cada encargo": ud4/actividades/A09-elegir-una-red-virtual-para-cada-encargo.md
-          - Prácticas guiadas:
-              - "P5 · Redes y página web": ud4/practicas/p5-redes.md
       - "4.6 · Aplicaciones y actualizaciones":
           - "Teoría 4.6 · Actualizaciones y aceptación": ud4/b10-actualizaciones.md
           - Actividades escritas:
@@ -194,6 +170,27 @@ nav:
           - VirtualBox: ud4/03-virtualbox.md
           - Docker y Compose: ud4/04-docker.md
           - Síntesis: ud4/apuntes.md
+  - UD3 · Redes TCP/IP:
+      - Presentación e itinerario: ud3/index.md
+      - 3.1 · Comunicación y dispositivos: ud3/01-fundamentos-y-dispositivos.md
+      - "Actividad 3.1 + P1 · Comprender e inspeccionar la red": ud3/actividades/A1-red-del-aula.md
+      - 3.2 · Modelos y protocolos: ud3/02-modelos-y-protocolos.md
+      - "Actividad 3.2 + P4 · Petición y captura": ud3/actividades/A2-capas-y-recorrido.md
+      - 3.3 · IPv4 y máscaras: ud3/03-ipv4-y-subnetting.md
+      - "Actividad 3.3 · Leer direcciones IPv4": ud3/actividades/A3-ipv4-y-mascaras.md
+      - 3.5 · Configuración y diagnóstico: ud3/04-configuracion-y-diagnostico.md
+      - "Actividad 3.6 + P2, P3 y P5 · Configurar y diagnosticar": ud3/actividades/A6-diagnostico-y-red-virtual.md
+      - 3.4 · Subnetting y VLSM: ud3/05-subnetting-y-vlsm.md
+      - "Actividad 3.4 · Diseñar subredes iguales": ud3/actividades/A4-subredes-iguales.md
+      - "Actividad 3.5 · Repartir direcciones con VLSM": ud3/actividades/A5-vlsm.md
+      - 3.6 · Redes virtuales: ud3/06-preparar-redes-virtuales.md
+      - "Actividad 3.7 + P6 · Redes virtuales y servicio web": ud3/actividades/A7-redes-virtuales.md
+      - P6 · Laboratorio de redes virtuales: ud3/practicas/P6-redes-virtuales.md
+      - Índice de actividades y entregas: ud3/actividades/index.md
+      - Ampliación de scripting: ud3/actividades/ampliacion-script.md
+      - Vídeos de redes virtuales: ud3/videos.md
+      - Fuentes y glosario: ud3/fuentes-y-glosario.md
+      - Síntesis: ud3/apuntes.md
   - UD5 · Sistemas de archivos:
       - Presentación: ud5/index.md
       - Sistemas de archivos: ud5/01-sistemas-de-archivos.md

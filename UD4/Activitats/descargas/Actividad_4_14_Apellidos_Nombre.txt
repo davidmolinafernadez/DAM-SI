@@ -1,10 +1,30 @@
 # Actividad 4.14 · Explicar un mecanismo con evidencia
 
+<div class="lesson-banner" markdown>
+<div class="lesson-number">4.14</div>
+<div markdown>
+**Actividad escrita · Explicar un mecanismo con evidencia**
+
+Razonar, interpretar y justificar antes de ejecutar.
+</div>
+</div>
+
+<div class="activity-meta" markdown>
+<span>25 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+</div>
+
+**Código: A14.** Actividad escrita con entrega propia.
+
+**Teoría relacionada:** [Teoría 4.2.1: Comprender la virtualización](../b02-virtualizacion.md) · [Teoría 4.5: Redes virtuales y servicio web](../b09-redes-virtuales.md) · [Teoría 4.7: Recuperación y transferencia](../b11-recuperacion.md)
+
+[Descargar actividad en PDF](descargas/Actividad_4_14_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
+[Original editable en texto](descargas/Actividad_4_14_Apellidos_Nombre.txt){ .md-button download }
+
 Tiempo orientativo: 25 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
 
 ## Antes de responder
 
-Repasa los bloques B2, B9, B11. Identifica qué información aporta el caso y qué datos faltan. Las soluciones no se deducen por repetir un nombre de herramienta: hay que explicar qué comprobaría y con qué resultado.
+Consulta la teoría relacionada antes de responder. Identifica qué información aporta el caso y qué datos faltan. Las soluciones no se deducen por repetir un nombre de herramienta: hay que explicar qué comprobaría y con qué resultado.
 
 ## Caso de trabajo
 

@@ -1,5 +1,7 @@
 # 4. VirtualBox, redes e instantáneas
 
+> **Secuencia vigente: UD4 (27 h) antes de UD3 (28 h).** La configuración razonada de redes virtuales y el reenvío se estudian en UD3; en UD4 se proporciona NAT inicial para instalar y actualizar. Consultar el itinerario vigente de cada unidad. **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+
 ## 4.1 Anfitrión, hipervisor e invitado
 
 VirtualBox es un hipervisor de tipo 2. El anfitrión conserva el control del hardware y el invitado ve dispositivos virtuales.

@@ -1,5 +1,7 @@
 # Guía didáctica · Curso 2026-2027
 
+> **Secuencia vigente: 05/11/2026.** La guía PDF enlazada incorpora la actualización de secuencia al inicio; su documento base se conserva después como referencia. Los cuadernos de UD3 y UD4 están regenerados y conservan los vídeos. El reparto 55 + 50 + 55 permite continuar las 2 últimas horas de UD4 en la segunda evaluación, sujeto al calendario del centro.
+
 La guía didáctica recoge la planificación de **Sistemas Informáticos de 1.º DAM**: organización curricular, resultados de aprendizaje, temporalización, metodología, evaluación y recuperación.
 
 [:material-file-pdf-box: **Abrir o descargar la guía didáctica en PDF**](descargas/Guia_didactica_Sistemas_Informaticos_1_DAM_2026_2027.pdf){ .md-button .md-button--primary }
@@ -14,20 +16,20 @@ La guía didáctica recoge la planificación de **Sistemas Informáticos de 1.º
 
 ## Secuencia y temporalización
 
-Revisión de 29 de octubre de 2026: redes precede a instalación y virtualización. Las máquinas preparadas en UD4 se utilizan en las unidades posteriores.
+Revisión de 5 de noviembre de 2026: **instalación y virtualización básica se imparte antes de redes**. Orden: UD1 → UD2 → UD4 → UD3 → UD5 → UD6 → UD7. Se conservan los identificadores de materiales y evidencias. Las máquinas instaladas en UD4 se reutilizan en UD3 para configurar y diagnosticar redes virtuales.
 
 | Unidad | Contenido | Horas | Evaluación orientativa |
 | --- | --- | ---: | --- |
 | UD1 | Componentes del sistema informático | 15 | 1.ª |
 | UD2 | Fundamentos de sistemas operativos | 15 | 1.ª |
-| UD3 | Redes TCP/IP y diagnóstico | 25 | 1.ª |
-| UD4 | Instalación de sistemas y virtualización | 30 | 2.ª |
+| UD4 | Instalación y virtualización básica | 27 | 1.ª–2.ª |
+| UD3 | Redes TCP/IP, diagnóstico y redes virtuales | 28 | 2.ª |
 | UD5 | Sistemas de archivos, particiones y copias | 20 | 2.ª |
 | UD6 | Administración de sistemas operativos | 25 | 3.ª |
 | UD7 | Servicios de red, seguridad y documentación | 30 | 3.ª |
 | **Total** | | **160** | **55 + 50 + 55 h** |
 
-Las evaluaciones se ajustarán al calendario del centro. La UD4 dispone de un [itinerario esencial de 30 horas](ud4/itinerario.md): 19 h de prácticas, 6 h de explicación, 2 h de actividades seleccionadas, 1,5 h de prueba y 1,5 h de revisión. P4 continúa en UD5, P10 en UD6 y P9 en UD7, dentro de las horas de esas unidades. P11 es refuerzo y X1–X2 ampliación.
+Las evaluaciones se ajustarán al calendario del centro. La UD4 dispone de un [itinerario esencial de 27 horas](ud4/itinerario.md): 16 h de prácticas, 6 h de explicación, 2 h de actividades seleccionadas, 1,5 h de prueba y 1,5 h de revisión. Se usa NAT inicial proporcionado por el docente. Las 3 h de la antigua P5 se integran en UD3 como [P6 · Redes virtuales y web](ud3/practicas/P6-redes-virtuales.md), después de direccionamiento y diagnóstico. UD3 suma 28 h: 8 de explicación, 6 de actividades seleccionadas, 11 de prácticas, 1,5 de prueba y 1,5 de revisión. P4 continúa en UD5, P10 en UD6 y P9 en UD7, dentro de las horas de esas unidades. P11 es refuerzo y X1–X2 ampliación.
 
 Se conservan el 70 % de pruebas y el 30 % de tareas, los mínimos de los bloques y los pesos docentes de los resultados de aprendizaje. Las calificaciones ya introducidas mantienen su correspondencia con las evidencias originales.
 

@@ -1,5 +1,7 @@
 # UD4. Instalación de sistemas y virtualización
 
+> **Secuencia vigente: UD4 (27 h) antes de UD3 (28 h).** La configuración razonada de redes virtuales y el reenvío se estudian en UD3; en UD4 se proporciona NAT inicial para instalar y actualizar. Consultar el itinerario vigente de cada unidad. **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+
 ## 1. Resultados de aprendizaje
 
 El alumnado planificará, ejecutará y documentará instalaciones de sistemas operativos libres y propietarios, aplicará actualizaciones y recuperación, y utilizará virtualización para realizar pruebas seguras.

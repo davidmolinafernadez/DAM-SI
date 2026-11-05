@@ -1,6 +1,8 @@
 # UD3 · Prácticas guiadas
 
-La unidad puede realizarse con equipos del aula, entornos proporcionados o salidas y capturas preparadas. La creación de máquinas virtuales se trabaja después en UD4. Cada práctica incluye aceptación y restauración.
+> **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+
+La unidad puede realizarse con equipos del aula, entornos proporcionados o salidas y capturas preparadas. Se reutilizan las máquinas creadas previamente en UD4; aquí se estudia y configura su comunicación. Cada práctica incluye aceptación y restauración.
 
 | Práctica | Tiempo |
 | --- | ---: |
@@ -8,9 +10,10 @@ La unidad puede realizarse con equipos del aula, entornos proporcionados o salid
 | [P2 · Conectar dos equipos de laboratorio](P2-lan-estatica.md) | 120 min |
 | [P3 · Distinguir DHCP, puerta y DNS](P3-dhcp-dns.md) | 90 min |
 | [P4 · Leer una captura de red](P4-captura.md) | 90 min |
-| [P5 · Diagnosticar y preparar el salto a UD4](P5-incidencias.md) | 120 min |
+| [P5 · Diagnosticar y aplicar redes virtuales](P5-incidencias.md) | 120 min |
+| [P6 · Redes virtuales y web](P6-redes-virtuales.md) | 180 min |
 
-Total: **8 horas**. [Cuaderno en PDF](../descargas/UD3_Practicas.pdf) · [Actividades escritas](../actividades/index.md).
+Total: **11 horas** (8 h de P1–P5 y 3 h de P6 trasladadas desde UD4). [Cuaderno en PDF](../descargas/UD3_Practicas.pdf) · [Actividades escritas](../actividades/index.md).
 
 ## Entrega de actividades y prácticas en Aules
 
@@ -24,5 +27,6 @@ Cada actividad se entrega junto con sus prácticas asociadas, en la misma tarea 
 | 3.4 | Sin práctica asociada |
 | 3.5 | Sin práctica asociada |
 | 3.6 | P2, P3 y P5 |
+| 3.7 | P6, procedente de UD4/P5; entrega conjunta y sin doble calificación |
 
 Incluye capturas legibles de las acciones y resultados, con una breve explicación de cada una, además de las tablas, cálculos y conclusiones solicitados. Identifica las salidas proporcionadas por el docente si trabajas con ellas. En P4, adjunta también la captura de red solicitada en la misma tarea de Aules.

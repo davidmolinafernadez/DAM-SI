@@ -1,5 +1,7 @@
 # Unidad 4. Vídeos y tareas de visionado
 
+> **Secuencia vigente: UD4 (27 h) antes de UD3 (28 h).** La configuración razonada de redes virtuales y el reenvío se estudian en UD3; en UD4 se proporciona NAT inicial para instalar y actualizar. Consultar el itinerario vigente de cada unidad. **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+
 Sistemas Informáticos · 1.º de DAM · Catálogo vinculado a teoría y laboratorio
 
 ## Cómo utilizar el catálogo
@@ -62,11 +64,11 @@ Autor: Daniel González Trabada, IES Francisco de Quevedo, EducaMadrid. Publicad
 
 <iframe src="https://mediateca.educa.madrid.org/video/amomshvzq7iz1llo/fs" title="Vídeo explicativo de la unidad 4" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
 
-Relación: B9; P5. El recurso muestra ajustes y corrección de errores: úsalo también para analizar el diagnóstico. Emplea direcciones y un servicio SSH de su propio ejercicio. En nuestra práctica se utiliza HTTP y se anotan las IP reales.
+Relación: B9 y antigua UD4/P5, ahora UD3/P6. Esta ficha se trabaja después, dentro del apartado de redes virtuales de UD3. El recurso muestra ajustes y corrección de errores: úsalo también para analizar el diagnóstico. Emplea direcciones y un servicio SSH de su propio ejercicio. En nuestra práctica se utiliza HTTP y se anotan las IP reales.
 
 Antes: explica diferencia entre NAT y Red NAT. Durante: representa quién recibe el tráfico y localiza una corrección de dirección. Después: sustituye el ejemplo por anfitrión 127.0.0.1:8080 → invitado:8000.
 
-Tarea: completa tabla «origen / dirección utilizada / puerto / destino final» para la prueba HTTP. Criterio: entiende el reenvío y no copia una IP del vídeo que no existe en su red. No es necesario instalar SSH para completar P5.
+Tarea: completa tabla «origen / dirección utilizada / puerto / destino final» para la prueba HTTP. Criterio: entiende el reenvío y no copia una IP del vídeo que no existe en su red. No es necesario instalar SSH para completar UD3/P6.
 
 ## V6. Virtual box. Clonar máquinas virtuales
 

@@ -1,5 +1,7 @@
 # UD4 · Instalación de sistemas y virtualización
 
+> **Orden vigente:** después de UD2 y antes de UD3 Redes. [Itinerario de 27 horas](itinerario.md). El bloque 4.5, A9 y P5 se imparten en UD3 como apartado de redes virtuales, actividad 3.7 y P6. Aquí se usa NAT proporcionado por el docente para instalar y actualizar, sin exigir diseño de redes. **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+
 Sistemas Informáticos · 1.º DAM. Manual de teoría y trabajo de aula con tres apartados diferenciados: explicación, actividades escritas y prácticas de laboratorio.
 
 [Actividades escritas](actividades/index.md){ .md-button .md-button--primary }
@@ -8,7 +10,7 @@ Sistemas Informáticos · 1.º DAM. Manual de teoría y trabajo de aula con tres
 
 ## Cómo se trabaja
 
-La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Cada actividad y cada práctica seleccionada tiene su propia entrega; el banco completo es material disponible, sujeto al itinerario de 30 horas.
+La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Cada actividad y cada práctica seleccionada tiene su propia entrega; el banco completo es material disponible, sujeto al itinerario de 27 horas.
 
 ## Teoría por bloques
 
@@ -47,7 +49,7 @@ La **teoría** explica el concepto con ejemplos. Las **actividades** piden razon
 - [Actividad 4.5 · Elegir un sistema de archivos](actividades/A05-elegir-un-sistema-de-archivos.md)
 - [Práctica P4 · Particionar y montar](practicas/p4-particionado.md)
 
-### 4.5 · Redes del laboratorio
+### 4.5 · Redes del laboratorio: se imparte después, en UD3
 
 - [Teoría 4.5 · Redes virtuales y servicio web](b09-redes-virtuales.md)
 - [Actividad 4.9 · Elegir una red virtual para cada encargo](actividades/A09-elegir-una-red-virtual-para-cada-encargo.md)
@@ -95,6 +97,6 @@ Cada actividad tiene también su propio PDF y original editable dentro de su pá
 
 ## Orientación de aula
 
-Duración: **30 horas**, con 19 horas de prácticas esenciales. Consulta el [itinerario y la evaluación](itinerario.md) para distinguir entregas esenciales, refuerzo, ampliación y prácticas que continúan en otras unidades.
+Duración: **27 horas**, con 16 horas de prácticas esenciales. Las 3 h de redes virtuales se imparten después, dentro de UD3. Consulta el [itinerario y la evaluación](itinerario.md) para distinguir entregas esenciales, refuerzo, ampliación y prácticas que continúan en otras unidades.
 
 [Glosario y fuentes](glosario-y-fuentes.md) · [Vídeos y fichas de observación](videos.md) · [Plantillas de entrega](actividades/plantillas.md)

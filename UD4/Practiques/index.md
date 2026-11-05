@@ -1,5 +1,7 @@
 # Unidad 4. Cuaderno de prácticas guiadas
 
+> **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+
 Sistemas Informáticos · 1.º de DAM · Laboratorio del alumnado
 
 ## Antes de empezar
@@ -23,7 +25,7 @@ Las actividades escritas tienen su propio cuaderno y sus propias páginas. Aquí
 | [P2 · Instalar Ubuntu](p2-ubuntu.md) | 180 min |
 | [P3 · Instalar Windows 11](p3-windows.md) | 180 min |
 | [P4 · Particionar y montar](p4-particionado.md) | 150 min |
-| [P5 · Redes y página web](p5-redes.md) | 180 min |
+| [P5 · Redes y página web: trasladada a UD3/P6](p5-redes.md) | 180 min, dentro de UD3 |
 | [P6 · Actualizar y verificar](p6-actualizaciones.md) | 120 min |
 | [P7 · Recuperar con instantáneas](p7-instantaneas.md) | 120 min |
 | [P8 · Clonar, exportar e importar](p8-transferencia.md) | 150 min |
@@ -33,7 +35,7 @@ Las actividades escritas tienen su propio cuaderno y sus propias páginas. Aquí
 | [X1 · Arranque dual](x1-arranque-dual.md) | 180 min |
 | [X2 · Web con Docker](x2-docker.md) | 120 min |
 
-El banco completo suma 29 horas de prácticas y 5 de ampliación. La UD4 selecciona 19 horas de prácticas esenciales; P4 continúa en UD5, P10 en UD6 y P9 en UD7. P11 queda como refuerzo. Consulta el [itinerario de 30 horas](../itinerario.md).
+El banco completo suma 29 horas de prácticas y 5 de ampliación. La UD4 selecciona 16 horas de prácticas esenciales; las 3 h de P5 se imparten después en UD3 como P6; P4 continúa en UD5, P10 en UD6 y P9 en UD7. P11 queda como refuerzo. Consulta el [itinerario de 27 horas](../itinerario.md).
 
 [Plantillas de entrega](../actividades/plantillas.md) · [Índice de actividades escritas](../actividades/index.md)
 

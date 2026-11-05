@@ -1,5 +1,7 @@
 # Actividades escritas de la unidad 4
 
+> **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+
 Cada actividad tiene una página y un archivo de entrega propios. Aquí se razona, se diseñan esquemas y se interpretan casos. Los asistentes y comandos de instalación se ejecutan en las [prácticas guiadas](../practicas/index.md), con su propia entrega.
 
 [Descargar cuaderno de actividades](../descargas/UD4_Actividades.pdf){ .md-button .md-button--primary }
@@ -16,7 +18,7 @@ Cada actividad tiene una página y un archivo de entrega propios. Aquí se razon
 | [Actividad 4.6 · Prever el crecimiento de discos virtuales](A06-prever-el-crecimiento-de-discos-virtuales.md) | 20 min |
 | [Actividad 4.7 · Detectar una falsa instalación](A07-detectar-una-falsa-instalacion.md) | 20 min |
 | [Actividad 4.8 · Aceptar una instalación de Windows](A08-aceptar-una-instalacion-de-windows.md) | 20 min |
-| [Actividad 4.9 · Elegir una red virtual para cada encargo](A09-elegir-una-red-virtual-para-cada-encargo.md) | 25 min |
+| [Actividad 4.9 · Trasladada a UD3/A7](A09-elegir-una-red-virtual-para-cada-encargo.md) | 25 min dentro de UD3 |
 | [Actividad 4.10 · Escoger una estrategia de recuperación](A10-escoger-una-estrategia-de-recuperacion.md) | 20 min |
 | [Actividad 4.11 · Máquina virtual o contenedor](A11-maquina-virtual-o-contenedor.md) | 20 min |
 | [Actividad 4.12 · Diagnóstico escrito de ocho incidencias](A12-diagnostico-escrito-de-ocho-incidencias.md) | 30 min |
@@ -30,6 +32,6 @@ Cada actividad tiene una página y un archivo de entrega propios. Aquí se razon
 
 El docente selecciona el banco según el tiempo y necesidades del grupo. Los tiempos no implican hacer todas las actividades seguidas. Cada rúbrica sobre 10 ofrece criterios de revisión; la ponderación del módulo la establece la programación.
 
-## Selección para las 30 horas
+## Selección para las 27 horas
 
-Se trabajan apartados de A1, A3, A7, A9 y A10 y un cierre breve con A15, dentro de las dos horas previstas. Las demás propuestas son banco de refuerzo y ampliación. Consulta el [itinerario](../itinerario.md).
+Se trabajan apartados de A1, A3, A7 y A10 y un cierre breve con A15, dentro de las dos horas previstas. Las demás propuestas son banco de refuerzo y ampliación. Consulta el [itinerario](../itinerario.md).

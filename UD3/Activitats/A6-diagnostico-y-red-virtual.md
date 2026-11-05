@@ -19,7 +19,7 @@ Se propone para un laboratorio: equipo A `192.168.50.10/24`, equipo B `192.168.5
 
 ### P2 · Preparación
 
-El docente proporciona dos equipos o dos entornos ya preparados y una red de laboratorio aislada. No se crea todavía ninguna máquina virtual. Confirma la interfaz de laboratorio; no se modifica la conexión de gestión, la del centro ni una sesión remota.
+El docente proporciona dos equipos o dos entornos ya preparados y una red de laboratorio aislada. Se reutilizan las máquinas instaladas previamente en UD4; también pueden utilizarse equipos preparados por el docente. Confirma la interfaz de laboratorio; no se modifica la conexión de gestión, la del centro ni una sesión remota.
 
 Topología: A `192.168.50.10/24` — switch aislado — B `192.168.50.20/24`. En este caso no hay router, DHCP ni salida a Internet: puerta de enlace y DNS se dejan vacíos. Las direcciones se emplean únicamente en el segmento de prueba autorizado.
 
@@ -83,7 +83,7 @@ Tabla separada de parámetros DHCP, encaminamiento y DNS; evidencia de resoluci�
 
 **Entrega conjunta con la actividad 3.6:** incorpora esta práctica como anexo P3 del archivo `UD3_A6_Codigo.pdf`. Entrega actividad y práctica a la vez en la misma tarea de Aules. Incluye capturas legibles de los pasos y resultados solicitados, con una breve explicación, además de las tablas, cálculos y conclusiones exigidos. Si utilizas salidas facilitadas por el docente, identifícalas. No se requiere un PDF independiente de esta práctica. [Índice de prácticas](../practicas/index.md) · [Cuaderno descargable](../descargas/UD3_Practicas.pdf)
 
-## P5 · Diagnosticar y preparar el salto a UD4
+## P5 · Diagnosticar y aplicar redes virtuales
 
 **Tiempo orientativo:** 120 min · Laboratorio de aula · Entrega individual.
 
@@ -104,14 +104,14 @@ Para cada caso escribe predicción, síntoma, dos hipótesis, prueba que las dif
 | Servicio que no responde a ping pero sí al puerto previsto | Por qué ICMP no determina la disponibilidad de la aplicación |
 
 1. Utiliza solo comandos de consulta de P1 y pruebas puntuales al destino autorizado. No ejecutes barridos de direcciones.
-2. Solicita al docente una demostración preparada de NAT, puente y red interna o sus esquemas. No es necesario instalar VirtualBox en esta unidad.
+2. Solicita al docente una demostración preparada de NAT, puente y red interna o sus esquemas. Se reutiliza VirtualBox instalado en UD4.
 3. Para cada modo, indica quién puede hablar con quién, si hay salida y qué depende de DHCP, router o reenvío de puertos. Distingue NAT sencillo por invitado de una red NAT compartida.
-4. Diseña el plan que reutilizarás en UD4: interfaces, direcciones, prefijos, servicio previsto y prueba de aceptación. No confundas conectar un adaptador virtual con haber configurado correctamente TCP/IP.
+4. Diseña y verifica el plan de las máquinas que instalaste en UD4: interfaces, direcciones, prefijos, servicio previsto y prueba de aceptación. No confundas conectar un adaptador virtual con haber configurado correctamente TCP/IP.
 5. Restaura el laboratorio y repite la prueba que demostraba el funcionamiento inicial.
 
 ### P5 · Aceptación y entrega
 
-Cinco fichas de incidencia, esquema comparado de modos y plan de laboratorio de UD4. Se valora la prueba que justifica el diagnóstico y el estado restaurado, además del resultado final.
+Cinco fichas de incidencia, esquema comparado de modos y plan comprobado del laboratorio virtual. Se valora la prueba que justifica el diagnóstico y el estado restaurado, además del resultado final.
 
 **Entrega conjunta con la actividad 3.6:** incorpora esta práctica como anexo P5 del archivo `UD3_A6_Codigo.pdf`. Entrega actividad y práctica a la vez en la misma tarea de Aules. Incluye capturas legibles de los pasos y resultados solicitados, con una breve explicación, además de las tablas, cálculos y conclusiones exigidos. Si utilizas salidas facilitadas por el docente, identifícalas. No se requiere un PDF independiente de esta práctica. [Índice de prácticas](../practicas/index.md) · [Cuaderno descargable](../descargas/UD3_Practicas.pdf)
 
@@ -119,6 +119,6 @@ Cinco fichas de incidencia, esquema comparado de modos y plan de laboratorio de 
 
 **Entrega conjunta en Aules:** realiza también P2, P3 y P5 e incorpora sus resultados como anexos al PDF de esta actividad. Entrega ambas partes a la vez en la misma tarea de Aules. Incluye capturas legibles de las acciones y comprobaciones solicitadas, comentadas brevemente, junto con las tablas y conclusiones de cada práctica.
 
-Informe con decisiones y pruebas. Diagnóstico: 4 puntos; elección de redes virtuales: 3; comprobación y restauración: 2; claridad: 1. Se completa con P2, P3 y P5; no requiere crear máquinas virtuales antes de UD4.
+Informe con decisiones y pruebas. Diagnóstico: 4 puntos; elección de redes virtuales: 3; comprobación y restauración: 2; claridad: 1. Se completa con P2, P3 y P5; reutiliza las máquinas creadas previamente en UD4. La elección detallada de modos y el reenvío se consolidan en A7/P6; el docente selecciona apartados escritos de A6 para evitar repetición.
 
 **Archivo:** `UD3_A6_Codigo.pdf`. [Índice de actividades](index.md) · [Cuaderno descargable](../descargas/UD3_Actividades.pdf)

@@ -1,4 +1,4 @@
-# P5 · Diagnosticar y preparar el salto a UD4
+# P5 · Diagnosticar y aplicar redes virtuales
 
 Esta práctica se realiza y se entrega junto con la **actividad 3.6**. Sus instrucciones completas están junto al enunciado de la actividad para poder trabajar y preparar la entrega en un mismo lugar.
 
