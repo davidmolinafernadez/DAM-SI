@@ -1,32 +1,44 @@
-# UD3 · Prácticas guiadas
+# Unidad 3. Cuaderno de prácticas guiadas
 
-> **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+> **Descargables actualizados el 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
 
-La unidad puede realizarse con equipos del aula, entornos proporcionados o salidas y capturas preparadas. Se reutilizan las máquinas creadas previamente en UD4; aquí se estudia y configura su comunicación. Cada práctica incluye aceptación y restauración.
+Sistemas Informáticos · 1.º de DAM · Laboratorio del alumnado
 
-| Práctica | Tiempo |
-| --- | ---: |
-| [P1 · Inventario de la conexión](P1-inspeccion.md) | 60 min |
-| [P2 · Conectar dos equipos de laboratorio](P2-lan-estatica.md) | 120 min |
-| [P3 · Distinguir DHCP, puerta y DNS](P3-dhcp-dns.md) | 90 min |
-| [P4 · Leer una captura de red](P4-captura.md) | 90 min |
-| [P5 · Diagnosticar y aplicar redes virtuales](P5-incidencias.md) | 120 min |
-| [P6 · Redes virtuales y web](P6-redes-virtuales.md) | 180 min |
+## Antes de empezar
 
-Total: **11 horas** (8 h de P1–P5 y 3 h de P6 trasladadas desde UD4). [Cuaderno en PDF](../descargas/UD3_Practicas.pdf) · [Actividades escritas](../actividades/index.md).
+Trabaja únicamente con las máquinas virtuales y los discos de prueba identificados en cada ficha. No conectes discos físicos directamente al invitado. Los cambios de particiones se limitan a discos virtuales vacíos o clones de laboratorio. Las contraseñas y claves de activación no se incorporan a capturas ni entregas.
 
-## Entrega de actividades y prácticas en Aules
+Antes de empezar una práctica: lee la teoría indicada, dibuja el estado inicial y escribe una predicción. Durante el trabajo: registra decisiones y errores, sin ocultar intentos fallidos. Al terminar: ejecuta las pruebas de aceptación y explica si los resultados confirman la predicción.
 
-Cada actividad se entrega junto con sus prácticas asociadas, en la misma tarea y con la misma fecha de entrega que indique el docente en Aules. Incorpora las prácticas como anexos al PDF de la actividad.
+Las capturas deben mostrar un dato legible, estar numeradas y llevar un pie explicativo. Para identificar la autoría, utiliza nombre de máquina y un código de alumno de aula; no es necesario exponer datos personales. Los vídeos del catálogo 03 se consultan en el momento indicado y se acompañan de preguntas. La documentación escrita prevalece si el vídeo utiliza una interfaz antigua o simplifica un concepto.
 
-| Actividad | Prácticas que se adjuntan |
+Carpeta de entrega por práctica: Pxx_codigo. Incluye informe.pdf, evidencias y, cuando se pida, archivos de texto de configuración. No entregues ISO ni discos virtuales de decenas de gigabytes en la plataforma salvo indicación docente. La demostración práctica del equipo sirve para evaluar el funcionamiento.
+
+Las actividades escritas tienen su propio cuaderno y sus propias páginas. Aquí se recogen únicamente procedimientos de ejecución, comprobación y diagnóstico del laboratorio. Las rutas de menú se refieren a las versiones de referencia; el docente indicará las diferencias de la imagen del aula.
+
+## Banco completo de prácticas
+
+| Práctica | Tiempo previsto |
 | --- | --- |
-| 3.1 | P1 |
-| 3.2 | P4 |
-| 3.3 | Sin práctica asociada |
-| 3.4 | Sin práctica asociada |
-| 3.5 | Sin práctica asociada |
-| 3.6 | P2, P3 y P5 |
-| 3.7 | P6, procedente de UD4/P5; entrega conjunta y sin doble calificación |
+| [P0 · Auditoría e ISO](p0-auditoria.md) | 90 min |
+| [P1 · Crear la máquina virtual](p1-crear-vm.md) | 120 min |
+| [P2 · Instalar Ubuntu](p2-ubuntu.md) | 180 min |
+| [P3 · Instalar Windows 11](p3-windows.md) | 180 min |
+| [P4 · Particionar y montar](p4-particionado.md) | 150 min |
+| [P5 · Redes y página web: trasladada a UD4/P6](p5-redes.md) | 180 min, dentro de UD4 |
+| [P6 · Actualizar y verificar](p6-actualizaciones.md) | 120 min |
+| [P7 · Recuperar con instantáneas](p7-instantaneas.md) | 120 min |
+| [P8 · Clonar, exportar e importar](p8-transferencia.md) | 150 min |
+| [P9 · Proyecto integrador](p9-proyecto.md) | 240 min |
+| [P10 · Aplicaciones Linux](p10-paquetes-linux.md) | 120 min |
+| [P11 · Restaurar sistema Windows](p11-restauracion-windows.md) | 90 min |
+| [X1 · Arranque dual](x1-arranque-dual.md) | 180 min |
+| [X2 · Web con Docker](x2-docker.md) | 120 min |
 
-Incluye capturas legibles de las acciones y resultados, con una breve explicación de cada una, además de las tablas, cálculos y conclusiones solicitados. Identifica las salidas proporcionadas por el docente si trabajas con ellas. En P4, adjunta también la captura de red solicitada en la misma tarea de Aules.
+El banco completo suma 29 horas de prácticas y 5 de ampliación. La UD3 selecciona 16 horas de prácticas esenciales; las 3 h de P5 se imparten después en UD4 como P6; P4 continúa en UD5, P10 en UD6 y P9 en UD7. P11 queda como refuerzo. Consulta el [itinerario de 27 horas](../itinerario.md).
+
+[Plantillas de entrega](../actividades/plantillas.md) · [Índice de actividades escritas](../actividades/index.md)
+
+## Actividad y práctica son entregas distintas
+
+Para diseñar, comparar o diagnosticar un caso, consulta [Actividades escritas](../actividades/index.md). Para crear y comprobar el laboratorio real, sigue una práctica de esta página. Los códigos A y P permiten identificar qué se está pidiendo.

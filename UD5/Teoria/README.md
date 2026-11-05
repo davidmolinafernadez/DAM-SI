@@ -12,4 +12,4 @@ Manual para comprender cómo se representa el almacenamiento, cómo se organiza 
 
 ## Continuidad del laboratorio
 
-La práctica [P4](../ud4/practicas/p4-particionado.md) del banco de instalación y virtualización se desarrolla en esta unidad, dentro de sus horas previstas. Se utilizan las máquinas preparadas en UD4.
+La práctica [P4](../ud3/practicas/p4-particionado.md) del banco de instalación y virtualización se desarrolla en esta unidad, dentro de sus horas previstas. Se utilizan las máquinas preparadas en UD3.

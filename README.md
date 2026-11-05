@@ -22,16 +22,16 @@ Repositorio educativo de la asignatura **Sistemas Informáticos** del ciclo form
 | --- | --- | ---: |
 | [UD1](UD1/) | Arquitectura HW/SW, PRL y diagnóstico | 15 |
 | [UD2](UD2/) | Fundamentos de sistemas operativos | 15 |
-| [UD4](UD4/) | Instalación de sistemas y virtualización básica | 27 |
-| [UD3](UD3/) | Redes TCP/IP, diagnóstico y redes virtuales | 28 |
+| [UD3](UD3/) | Instalación de sistemas y virtualización básica | 27 |
+| [UD4](UD4/) | Redes TCP/IP, diagnóstico y redes virtuales | 28 |
 | [UD5](UD5/) | Sistemas de archivos, particionado y copias | 20 |
 | [UD6](UD6/) | Administración de sistemas operativos | 25 |
 | [UD7](UD7/) | Recursos en red, seguridad y documentación | 30 |
 | **Total** | | **160** |
 
-Orden de impartición: **UD1 → UD2 → UD4 → UD3 → UD5 → UD6 → UD7**. Se conservan los identificadores de carpetas y evidencias para mantener la trazabilidad de las entregas anteriores.
+Orden de impartición: **UD1 → UD2 → UD3 → UD4 → UD5 → UD6 → UD7**. Numeración vigente: UD3 Instalación y virtualización; UD4 Redes.
 
-Reparto orientativo por evaluaciones: **55 + 50 + 55 horas**, permitiendo continuar UD4 en la segunda evaluación. Consulta la [secuencia vigente](Guias/Secuencia_2026_11_05.md) y el [itinerario de 27 horas de virtualización](UD4/Teoria/itinerario.md).
+Reparto orientativo por evaluaciones: **55 + 50 + 55 horas**, permitiendo continuar UD3 en la segunda evaluación. Consulta la [secuencia vigente](Guias/Secuencia_2026_11_05.md) y el [itinerario de 27 horas de virtualización](UD3/Teoria/itinerario.md).
 
 Cada unidad contiene cuatro apartados:
 

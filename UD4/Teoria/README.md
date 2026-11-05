@@ -1,102 +1,54 @@
-# UD4 · Instalación de sistemas y virtualización
+# UD4 · Redes TCP/IP y diagnóstico
 
-> **Orden vigente:** después de UD2 y antes de UD3 Redes. [Itinerario de 27 horas](itinerario.md). El bloque 4.5, A9 y P5 se imparten en UD3 como apartado de redes virtuales, actividad 3.7 y P6. Aquí se usa NAT proporcionado por el docente para instalar y actualizar, sin exigir diseño de redes. **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+> **Orden vigente:** después de UD3 Instalación y virtualización. Las entregas se identifican con la nueva numeración de la unidad. **Descargables actualizados el 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
 
-Sistemas Informáticos · 1.º DAM. Manual de teoría y trabajo de aula con tres apartados diferenciados: explicación, actividades escritas y prácticas de laboratorio.
+**28 horas · Sistemas Informáticos · 1.º DAM · RA1, RA5 y documentación RA7.**
 
-[Actividades escritas](actividades/index.md){ .md-button .md-button--primary }
-[Prácticas guiadas](practicas/index.md){ .md-button }
-[Vídeos explicativos](videos.md){ .md-button }
+Cada bloque presenta la explicación desarrollada, un ejemplo razonado y un vídeo de apoyo en castellano. A continuación encontrarás la actividad con sus pasos prácticos y la entrega conjunta. Aprenderás a interpretar una red, calcular su direccionamiento, configurar una conexión de laboratorio y justificar un diagnóstico. El trabajo reutiliza las máquinas instaladas previamente en UD3 y culmina en redes virtuales, acceso desde el anfitrión y reenvío NAT.
 
-## Cómo se trabaja
+[Actividades y prácticas integradas](actividades/index.md){ .md-button .md-button--primary }
+[Teoría en PDF](descargas/UD4_Teoria.pdf){ .md-button }
 
-La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Cada actividad y cada práctica seleccionada tiene su propia entrega; el banco completo es material disponible, sujeto al itinerario de 27 horas.
+## Secuencia de trabajo
 
-## Teoría por bloques
+| Apartado | Teoría | Aplicación |
+| --- | --- | --- |
+| 4.1 · Comunicación y equipos | [Medios, topologías y dispositivos](01-fundamentos-y-dispositivos.md) | [Actividad 4.1 + P1](actividades/A1-red-del-aula.md) |
+| 4.2 · Capas y protocolos | [OSI/TCP-IP, MAC, ARP, TCP, UDP, DNS y DHCP](02-modelos-y-protocolos.md) | [Actividad 4.2 + P4](actividades/A2-capas-y-recorrido.md) |
+| 4.3 · Direccionamiento | [IPv4, prefijo, máscara y rangos](03-ipv4-y-subnetting.md) | [Actividad 4.3](actividades/A3-ipv4-y-mascaras.md) |
+| 4.5 · Configuración | [Parámetros y diagnóstico por capas](04-configuracion-y-diagnostico.md) | [Actividad 4.6: empezar P2 y P3](actividades/A6-diagnostico-y-red-virtual.md) |
+| 4.4 · Diseño | [Subnetting y VLSM](05-subnetting-y-vlsm.md) | [Actividad 4.4](actividades/A4-subredes-iguales.md) y [4.5](actividades/A5-vlsm.md) |
+| 4.6 · Redes virtuales | [Conectar el laboratorio](06-preparar-redes-virtuales.md) | Completar A6/P5 y realizar [A7 + P6](actividades/A7-redes-virtuales.md): modos de red y servicio web |
 
-### 4.1 · Planificación, medios y arranque
+P4 se realiza al leer capturas de referencia en el apartado 4.2 o se retoma después de practicar la configuración. Las actividades son de razonamiento y las prácticas, de ejecución y comprobación; las prácticas están integradas en la actividad asociada y se entregan juntas en el PDF de esa actividad, en una misma tarea de Aules.
 
-- [Teoría 4.1.1 · Planificar una instalación](b01-planificacion.md)
-- [Teoría 4.1.2 · Medios e integridad](b03-medios-e-integridad.md)
-- [Teoría 4.1.3 · Firmware, arranque y particiones](b04-firmware-y-particiones.md)
-- [Actividad 4.1 · Decidir antes de instalar](actividades/A01-decidir-antes-de-instalar.md)
-- [Actividad 4.3 · Integridad y autenticidad de una ISO](actividades/A03-integridad-y-autenticidad-de-una-iso.md)
-- [Actividad 4.4 · Diseñar el arranque y las particiones](actividades/A04-disenar-el-arranque-y-las-particiones.md)
-- [Actividad 4.13 · Presupuesto profesional de laboratorio](actividades/A13-presupuesto-profesional-de-laboratorio.md)
-- [Práctica P0 · Auditoría e ISO](practicas/p0-auditoria.md)
+Los vídeos son apoyos seleccionables dentro del tiempo de explicación o de repaso; no añaden tareas ni entregas obligatorias. En el menú, cada explicación va seguida de su actividad. La actividad 4.6 se inicia con configuración y se completa al estudiar redes virtuales.
 
-### 4.2 · Virtualización y hardware virtual
+## Reparto de las 28 horas
 
-- [Teoría 4.2.1 · Comprender la virtualización](b02-virtualizacion.md)
-- [Teoría 4.2.2 · Hardware virtual y recursos](b06-hardware-virtual.md)
-- [Actividad 4.2 · El recorrido de un archivo en una VM](actividades/A02-el-recorrido-de-un-archivo-en-una-vm.md)
-- [Actividad 4.6 · Prever el crecimiento de discos virtuales](actividades/A06-prever-el-crecimiento-de-discos-virtuales.md)
-- [Práctica P1 · Crear la máquina virtual](practicas/p1-crear-vm.md)
+| Trabajo | Horas |
+| --- | ---: |
+| Explicaciones, ejemplos y demostraciones | 8 |
+| Actividades escritas seleccionadas A1–A7 | 6 |
+| P1–P5 y P6 (3 h trasladadas desde UD3) | 11 |
+| Prueba individual | 1,5 |
+| Corrección, recuperación e incidencias | 1,5 |
+| **Total** | **28** |
 
-### 4.3 · Instalación de Ubuntu y Windows
+Las explicaciones se intercalan con el trabajo de aula. El banco de ampliación no se añade como obligación a estas horas. La instalación se ha realizado previamente en UD3. Aquí se reutilizan esas máquinas; los entornos preparados y las capturas docentes son alternativas de apoyo.
 
-- [Teoría 4.3.1 · Instalar y comprobar Ubuntu](b07-instalar-ubuntu.md)
-- [Teoría 4.3.2 · Instalar y comprobar Windows](b08-instalar-windows.md)
-- [Actividad 4.7 · Detectar una falsa instalación](actividades/A07-detectar-una-falsa-instalacion.md)
-- [Actividad 4.8 · Aceptar una instalación de Windows](actividades/A08-aceptar-una-instalacion-de-windows.md)
-- [Actividad 4.19 · Leer un instalador MSI o EXE](actividades/A19-leer-un-instalador-msi-o-exe.md)
-- [Práctica P2 · Instalar Ubuntu](practicas/p2-ubuntu.md)
-- [Práctica P3 · Instalar Windows 11](practicas/p3-windows.md)
+## Evidencias y evaluación
 
-### 4.4 · Particiones y sistemas de archivos
+Se mantienen el 70 % de pruebas y el 30 % de tareas, los mínimos de la programación y los pesos docentes de RA. Se registran siete entregas, A4.1–A4.7, con igual peso dentro del bloque de tareas. Cada actividad se entrega con sus prácticas asociadas: A4.1/P1, A4.2/P4, A4.6/P2–P3–P5 y A4.7/P6. A4.3, A4.4 y A4.5 mantienen sus entregas escritas.
 
-- [Teoría 4.4 · Sistemas de archivos y montaje](b05-sistemas-de-archivos.md)
-- [Actividad 4.5 · Elegir un sistema de archivos](actividades/A05-elegir-un-sistema-de-archivos.md)
-- [Práctica P4 · Particionar y montar](practicas/p4-particionado.md)
+La actividad 4.7 y P6 proceden del bloque de redes virtuales de la antigua unidad de virtualización. Se califican como una sola entrega y no se duplican evidencias ya evaluadas. El cuaderno activo se adapta en local, conservando los datos y las observaciones existentes.
 
-### 4.5 · Redes del laboratorio: se imparte después, en UD3
+## Descargas y consulta
 
-- [Teoría 4.5 · Redes virtuales y servicio web](b09-redes-virtuales.md)
-- [Actividad 4.9 · Elegir una red virtual para cada encargo](actividades/A09-elegir-una-red-virtual-para-cada-encargo.md)
-- [Práctica P5 · Redes y página web](practicas/p5-redes.md)
-
-### 4.6 · Aplicaciones y actualizaciones
-
-- [Teoría 4.6 · Actualizaciones y aceptación](b10-actualizaciones.md)
-- [Actividad 4.16 · Leer una actualización antes de aceptarla](actividades/A16-leer-una-actualizacion-antes-de-aceptarla.md)
-- [Actividad 4.17 · Identificar paquetes y repositorios](actividades/A17-identificar-paquetes-y-repositorios.md)
-- [Práctica P6 · Actualizar y verificar](practicas/p6-actualizaciones.md)
-- [Práctica P10 · Aplicaciones Linux](practicas/p10-paquetes-linux.md)
-
-### 4.7 · Recuperación y transferencia
-
-- [Teoría 4.7 · Recuperación y transferencia](b11-recuperacion.md)
-- [Actividad 4.10 · Escoger una estrategia de recuperación](actividades/A10-escoger-una-estrategia-de-recuperacion.md)
-- [Actividad 4.18 · Punto de restauración o instantánea de VM](actividades/A18-punto-de-restauracion-o-instantanea-de-vm.md)
-- [Práctica P7 · Recuperar con instantáneas](practicas/p7-instantaneas.md)
-- [Práctica P8 · Clonar, exportar e importar](practicas/p8-transferencia.md)
-- [Práctica P11 · Restaurar sistema Windows](practicas/p11-restauracion-windows.md)
-
-### 4.8 · Contenedores para DAM
-
-- [Teoría 4.8 · Contenedores para DAM](b12-contenedores.md)
-- [Actividad 4.11 · Máquina virtual o contenedor](actividades/A11-maquina-virtual-o-contenedor.md)
-- [Práctica X2 · Web con Docker](practicas/x2-docker.md)
-
-## Consolidación y proyecto
-
-- [Actividad 4.12 · Diagnóstico escrito de ocho incidencias](actividades/A12-diagnostico-escrito-de-ocho-incidencias.md)
-- [Actividad 4.14 · Explicar un mecanismo con evidencia](actividades/A14-explicar-un-mecanismo-con-evidencia.md)
-- [Actividad 4.15 · Autoevaluación razonada de salida](actividades/A15-autoevaluacion-razonada-de-salida.md)
-- [P9 · Proyecto integrador](practicas/p9-proyecto.md)
-- [X1 · Arranque dual virtual](practicas/x1-arranque-dual.md)
-
-## Descargas separadas
-
-- [Teoría y vídeos en PDF](descargas/UD4_Teoria_y_videos.pdf)
-- [Cuaderno de actividades escritas en PDF](descargas/UD4_Actividades.pdf)
-- [Cuaderno de prácticas guiadas en PDF](descargas/UD4_Practicas_y_actividades.pdf)
-- [Paquete del alumnado y originales editables](descargas/UD4_Material_alumnado.zip)
-
-Cada actividad tiene también su propio PDF y original editable dentro de su página.
-
-## Orientación de aula
-
-Duración: **27 horas**, con 16 horas de prácticas esenciales. Las 3 h de redes virtuales se imparten después, dentro de UD3. Consulta el [itinerario y la evaluación](itinerario.md) para distinguir entregas esenciales, refuerzo, ampliación y prácticas que continúan en otras unidades.
-
-[Glosario y fuentes](glosario-y-fuentes.md) · [Vídeos y fichas de observación](videos.md) · [Plantillas de entrega](actividades/plantillas.md)
+- [Cuaderno de teoría](descargas/UD4_Teoria.pdf).
+- [Cuaderno de actividades](descargas/UD4_Actividades.pdf).
+- [Cuaderno de prácticas](descargas/UD4_Practicas.pdf).
+- [Paquete del alumnado](descargas/UD4_Material_alumnado.zip).
+- [Síntesis de consulta](apuntes.md).
+- [Vídeos de redes virtuales conservados](videos.md).
+- [Fuentes y glosario](fuentes-y-glosario.md).

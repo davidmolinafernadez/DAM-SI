@@ -1,6 +1,6 @@
 # Reorganización de unidades y horas · 29 de octubre de 2026
 
-> **Documento histórico.** La secuencia de este documento ha sido sustituida por la [revisión de 05/11/2026](Secuencia_2026_11_05.md): UD4 antes de UD3, con 27 y 28 horas respectivamente.
+> **Documento histórico.** Prevalece la [secuencia y numeración de 05/11/2026](Secuencia_2026_11_05.md): UD3 Virtualización (27 h), antes de UD4 Redes (28 h).
 
 Redes pasa a UD3 y prepara los conocimientos de direccionamiento, conectividad y diagnóstico que se aplican en instalación y virtualización, ahora UD4. Las máquinas del laboratorio se reutilizan en las unidades posteriores.
 

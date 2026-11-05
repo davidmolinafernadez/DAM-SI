@@ -12,4 +12,4 @@ Material para enseñar administración diaria con Windows y GNU/Linux: identidad
 
 ## Continuidad del laboratorio
 
-La práctica [P10](../ud4/practicas/p10-paquetes-linux.md) del banco de instalación y virtualización se desarrolla en esta unidad, dentro de sus horas previstas. Se utilizan las máquinas preparadas en UD4.
+La práctica [P10](../ud3/practicas/p10-paquetes-linux.md) del banco de instalación y virtualización se desarrolla en esta unidad, dentro de sus horas previstas. Se utilizan las máquinas preparadas en UD3.

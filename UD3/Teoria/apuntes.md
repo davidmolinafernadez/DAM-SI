@@ -1,131 +1,115 @@
-# UD3. Redes TCP/IP y diagnóstico
+# UD3. Instalación de sistemas y virtualización
 
-> **Secuencia vigente: UD4 (27 h) antes de UD3 (28 h).** La configuración razonada de redes virtuales y el reenvío se estudian en UD3; en UD4 se proporciona NAT inicial para instalar y actualizar. Consultar el itinerario vigente de cada unidad. **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+> **Secuencia vigente: UD3 (27 h) antes de UD4 (28 h).** La configuración razonada de redes virtuales y el reenvío se estudian en UD4; en UD3 se proporciona NAT inicial para instalar y actualizar. Consultar el itinerario vigente de cada unidad. **Descargables actualizados el 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
 
 ## 1. Resultados de aprendizaje
 
-Esta unidad permite reconocer componentes de red, interpretar modelos y protocolos, configurar TCP/IP, realizar subnetting y diagnosticar conectividad con un método reproducible.
+El alumnado planificará, ejecutará y documentará instalaciones de sistemas operativos libres y propietarios, aplicará actualizaciones y recuperación, y utilizará virtualización para realizar pruebas seguras.
 
-## 2. Comunicación y clasificación
+## 2. Planificación de la instalación
 
-Una comunicación necesita emisor, receptor, mensaje, código, canal y protocolos. Las redes pueden clasificarse por alcance, propiedad, medio, topología y relación funcional.
+Antes de modificar un equipo se recopilan requisitos y se protege la información. Una planificación mínima debe registrar:
 
-- **LAN:** entorno local, normalmente Ethernet o Wi-Fi.
-- **WAN:** conecta ubicaciones distantes.
-- **Cliente-servidor:** servidores ofrecen recursos a clientes.
-- **Entre iguales:** los nodos pueden compartir funciones sin servidor dedicado.
+- finalidad del sistema y aplicaciones previstas;
+- compatibilidad y requisitos de CPU, RAM, disco y firmware;
+- arquitectura de 64 bits y opciones de virtualización;
+- medio de instalación y comprobación de su integridad;
+- esquema de particiones y sistema de archivos;
+- nombre del equipo, idioma, zona horaria, red y cuentas;
+- licencia, actualizaciones y controladores;
+- copia de seguridad y plan de reversión.
 
-Los medios guiados incluyen par trenzado y fibra; los no guiados emplean ondas electromagnéticas. Ancho de banda es capacidad teórica; rendimiento útil, latencia, variación y pérdida describen la experiencia real.
+Los requisitos recomendados son una referencia más útil que los mínimos. Debe reservarse margen para actualizaciones, datos y crecimiento.
 
-## 3. Dispositivos
+## 4. Arranque y particionado
 
-- **Tarjeta de red:** conecta el equipo y posee una dirección de enlace.
-- **Switch:** reenvía tramas según direcciones MAC.
-- **Router:** comunica redes IP distintas.
-- **Punto de acceso:** conecta clientes inalámbricos a una red.
-- **Firewall:** filtra tráfico según una política.
-- **Módem/ONT:** adapta la conexión del proveedor.
+UEFI selecciona un cargador de arranque, normalmente desde una partición del sistema EFI. GPT es el esquema moderno y admite más particiones y discos grandes; MBR mantiene compatibilidad con sistemas antiguos.
 
-Un switch no sustituye a un router: operan principalmente en capas distintas y resuelven problemas diferentes.
+En una instalación Linux son habituales una partición EFI, una raíz `/` y, opcionalmente, particiones separadas para datos o intercambio. En Windows, el instalador crea particiones de sistema y recuperación además del volumen principal.
 
-## 4. Modelos OSI y TCP/IP
+Nunca debe alterarse un disco con datos importantes sin confirmar el dispositivo, disponer de copia y comprender qué particiones se eliminarán.
 
-OSI organiza la comunicación en siete capas: física, enlace, red, transporte, sesión, presentación y aplicación. TCP/IP agrupa funciones en acceso a red, Internet, transporte y aplicación.
+## 4. Instalación y configuración inicial
 
-La encapsulación añade información de control en cada capa. En el receptor se desencapsula en orden inverso.
+El proceso general es:
 
-| Capa funcional | Unidad | Ejemplos |
-| --- | --- | --- |
-| Aplicación | Datos | HTTP, DNS, SSH, DHCP |
-| Transporte | Segmento/datagrama | TCP, UDP |
-| Internet | Paquete | IPv4, IPv6, ICMP |
-| Enlace | Trama | Ethernet, Wi-Fi |
+1. Obtener la imagen desde una fuente oficial.
+2. Verificar su suma de comprobación.
+3. Crear el medio de arranque.
+4. Configurar UEFI y arrancar desde el medio.
+5. Elegir idioma, edición, licencia y destino.
+6. Crear cuentas y aplicar una política de contraseñas.
+7. Instalar actualizaciones y controladores.
+8. Configurar red, privacidad, zona horaria y energía.
+9. Instalar aplicaciones autorizadas.
+10. Verificar dispositivos, registros, reinicio y recuperación.
 
-TCP ofrece conexión, confirmaciones y control de orden. UDP reduce sobrecarga y deja esas garantías a la aplicación.
+La documentación debe incluir versiones, decisiones, capturas relevantes, incidencias y pruebas finales; nunca debe contener contraseñas ni claves privadas.
 
-## 5. Direccionamiento IPv4
+## 5. VirtualBox y máquinas virtuales
 
-Una IPv4 tiene 32 bits. La máscara o prefijo separa red y host. En `192.168.10.34/24`, los primeros 24 bits identifican la red.
+Una máquina virtual dispone de CPU, RAM, disco, firmware y adaptadores virtuales. En un hipervisor de escritorio se deben asignar recursos sin comprometer el anfitrión.
 
-Rangos privados:
+Los modos de red más comunes son:
 
-- `10.0.0.0/8`;
-- `172.16.0.0/12`;
-- `192.168.0.0/16`.
+- **NAT:** acceso exterior sencillo, con aislamiento respecto de la red física.
+- **Puente:** la máquina aparece como otro equipo de la red local.
+- **Solo anfitrión:** comunicación entre anfitrión e invitados sin salida directa.
+- **Red interna:** comunicación únicamente entre máquinas virtuales del mismo entorno.
 
-Para una subred IPv4 tradicional, la primera dirección identifica la red y la última es broadcast. Las restantes se asignan a interfaces, salvo casos especiales.
+Las Guest Additions mejoran vídeo, integración del puntero y carpetas compartidas. Una instantánea registra un estado para volver atrás; no sustituye una copia de seguridad porque depende de los archivos de la propia VM.
 
-## 6. Subnetting
+Clonar crea otra máquina a partir de una existente. Exportar en OVF/OVA facilita su transporte, pero conviene retirar secretos y regenerar identificadores de red cuando proceda.
 
-Un prefijo `/n` deja `32-n` bits para hosts. El total de direcciones es `2^(32-n)`.
+## 6. Contenedores y Docker
 
-Ejemplo: dividir `192.168.20.0/24` en cuatro subredes requiere tomar dos bits. El nuevo prefijo es `/26`, con bloques de 64 direcciones:
+Los contenedores aíslan procesos compartiendo el kernel del anfitrión. Una **imagen** es una plantilla inmutable; un **contenedor** es una instancia ejecutable; un **registro** almacena imágenes.
 
-- `192.168.20.0/26`;
-- `192.168.20.64/26`;
-- `192.168.20.128/26`;
-- `192.168.20.192/26`.
-
-La primera subred ofrece hosts de `.1` a `.62` y broadcast `.63`.
-
-## 7. Configuración TCP/IP
-
-Una configuración manual necesita dirección, prefijo, puerta de enlace y DNS. DHCP puede suministrar estos parámetros. DNS traduce nombres a direcciones; la puerta de enlace se usa para destinos fuera de la red local.
-
-Consultas habituales:
+Comandos básicos:
 
 ```bash
-ip address
-ip route
-resolvectl status
-ss -tulpen
+docker pull ubuntu:24.04
+docker run --name laboratorio -it ubuntu:24.04 bash
+docker ps -a
+docker stop laboratorio
+docker rm laboratorio
+docker images
 ```
 
-```powershell
-Get-NetIPConfiguration
-Get-NetIPAddress
-Get-NetRoute
-Get-DnsClientServerAddress
+Los volúmenes conservan datos fuera de la capa escribible del contenedor. Los puertos se publican explícitamente, por ejemplo `-p 8080:80`.
+
+Un `Dockerfile` describe la construcción de una imagen:
+
+```dockerfile
+FROM nginx:alpine
+COPY ./web /usr/share/nginx/html
+EXPOSE 80
 ```
 
-## 8. Diagnóstico por capas
+Docker Compose declara varios servicios, redes y volúmenes en YAML. Las imágenes deben fijar versiones razonables y evitar ejecutar procesos como `root` cuando no sea necesario.
 
-1. Comprobar alimentación, enlace, cable o asociación Wi-Fi.
-2. Revisar dirección, prefijo y duplicados.
-3. Probar la pila local y la propia dirección.
-4. Probar la puerta de enlace.
-5. Probar una IP remota.
-6. Comprobar DNS con un nombre.
-7. Revisar ruta, puertos, firewall y aplicación.
+## 7. Actualización y recuperación
 
-Herramientas:
+Actualizar reduce vulnerabilidades, pero debe hacerse de forma controlada: inventario, copia, prueba, ventana de mantenimiento y verificación. Las técnicas de recuperación incluyen modo seguro, entorno de recuperación, restauración de paquetes, puntos de restauración, imágenes del sistema y reinstalación.
 
-```bash
-ping -c 4 192.168.1.1
-traceroute example.com
-dig example.com
-curl -I https://example.com
-```
+## 8. Lista de verificación
 
-```powershell
-Test-Connection 192.168.1.1 -Count 4
-Test-NetConnection example.com -Port 443
-Resolve-DnsName example.com
-tracert example.com
-```
+- La instalación arranca sin errores.
+- Todos los dispositivos tienen controlador.
+- El sistema está actualizado.
+- La red y la resolución DNS funcionan.
+- Existen cuentas separadas y privilegios mínimos.
+- La fecha, zona horaria y sincronización son correctas.
+- Se ha probado el mecanismo de recuperación.
+- La memoria técnica permite repetir el proceso.
 
-`ping` puede estar filtrado; su fallo no demuestra por sí solo que el destino esté apagado.
+## 9. Resumen
 
-## 9. Wi-Fi y seguridad básica
-
-Las redes inalámbricas comparten el medio y sufren interferencias. Deben usarse WPA2-AES o WPA3, claves robustas, firmware actualizado y redes separadas para invitados o dispositivos no confiables. WPS debe desactivarse cuando no sea necesario.
-
-## 10. Resumen
-
-El diagnóstico eficaz sigue las capas y separa conectividad, encaminamiento, resolución de nombres y servicio. El subnetting permite dimensionar dominios de red y usar direcciones con criterio.
+Instalar no consiste solo en completar un asistente: implica planificar, proteger datos, validar el resultado y dejar evidencias. La virtualización permite repetir y recuperar prácticas, mientras que los contenedores facilitan entornos ligeros y reproducibles.
 
 ## Fuentes internas utilizadas
 
-- `SI_Celia/Unit_4_Networks/UD2-Computer network.pdf`.
-- `SI_Celia/Unit_4_Networks/Tasques/Task_4_2_Subnetting exercicis-1.pdf`.
-- `Programacion_Didactica_SI_David_Moli.docx`.
+- `Jose_SO/UD2VB.pdf`.
+- `Jose_SO/UD2Docker.pdf`.
+- `Jose_SO/UD3.pdf`.
+- `SI_Celia/Unit_2_Operating-Systems-Fundamentals-and-Virtualisation/`.

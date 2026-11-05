@@ -12,4 +12,4 @@ Unidad integradora: publicar recursos, administrar acceso remoto, reducir superf
 
 ## Continuidad del laboratorio
 
-La práctica [P9](../ud4/practicas/p9-proyecto.md) del banco de instalación y virtualización se desarrolla en esta unidad, dentro de sus horas previstas. Se utilizan las máquinas preparadas en UD4.
+La práctica [P9](../ud3/practicas/p9-proyecto.md) del banco de instalación y virtualización se desarrolla en esta unidad, dentro de sus horas previstas. Se utilizan las máquinas preparadas en UD3.

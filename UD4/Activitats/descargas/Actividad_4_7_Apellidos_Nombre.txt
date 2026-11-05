@@ -1,26 +1,27 @@
-# Actividad 4.7 · Detectar una falsa instalación
+# Actividad 4.7 · Elegir una red virtual para cada encargo
 
 <div class="lesson-banner" markdown>
 <div class="lesson-number">4.7</div>
 <div markdown>
-**Actividad escrita · Detectar una falsa instalación**
+**Actividad escrita · Elegir una red virtual para cada encargo**
 
 Razonar, interpretar y justificar antes de ejecutar.
 </div>
 </div>
 
 <div class="activity-meta" markdown>
-<span>20 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+<span>25 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
 </div>
 
-**Código: A7.** Actividad escrita con entrega propia.
+**Código: A7.** Actividad escrita con entrega conjunta con P6; procede de la antigua UD3/A9.
 
-**Teoría relacionada:** [Teoría 4.3.1: Instalar y comprobar Ubuntu](../b07-instalar-ubuntu.md)
+**Teoría relacionada:** [Teoría 4.6: Redes virtuales y servicio web](../06-preparar-redes-virtuales.md)
 
-[Descargar actividad en PDF](descargas/Actividad_4_7_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
-[Original editable en texto](descargas/Actividad_4_7_Apellidos_Nombre.txt){ .md-button download }
+Tiempo orientativo: 25 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
 
-Tiempo orientativo: 20 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+[Descargar actividad 4.7 en PDF](descargas/Actividad_4_7_Apellidos_Nombre.pdf){ .md-button }
+
+[Original editable](descargas/Actividad_4_7_Apellidos_Nombre.txt){ .md-button download }
 
 ## Antes de responder
 
@@ -28,19 +29,19 @@ Consulta la teoría relacionada antes de responder. Identifica qué información
 
 ## Caso de trabajo
 
-Un compañero ve el escritorio Ubuntu, crea un documento y concluye que ya está instalado. Al apagar y retirar la ISO aparece un mensaje de medio no arrancable. Conservas una ficha que dice «VDI nuevo y vacío».
+Debes atender cuatro encargos: actualizar una VM; comunicar dos invitados sin anfitrión ni exterior; acceder desde el anfitrión a una web del invitado; y probar una web desde otros puestos de la LAN del aula.
 
 ## Cuestiones
 
-1. Propón dos hipótesis coherentes y una comprobación para cada una.
-2. Explica qué diferencia hay entre el escritorio Live y el sistema del disco.
-3. Diseña una secuencia de tres pruebas que acrediten arranque independiente y persistencia.
-4. Indica por qué una captura del escritorio no permite resolver por sí sola el caso.
-5. Escribe una respuesta técnica al compañero que evite reinstalar antes de diagnosticar.
+1. Elige un modo de red para cada caso y razona el alcance de la comunicación.
+2. Distingue NAT individual de Red NAT. Indica qué conclusión errónea surgiría al tratarlos como iguales.
+3. Dibuja anfitrión:8080 → regla → invitado:8000 y explica quién inicia la conexión.
+4. Explica por qué 127.0.0.1 puede designar sistemas distintos al escribirlo en navegadores diferentes.
+5. Identifica el caso que necesita autorización de red del centro y qué comprobarías del firewall.
 
 ## Entrega de esta actividad
 
-Ficha de diagnóstico y lista de aceptación. Las pruebas reales del invitado se ejecutan en P2. Guarda el archivo como `Actividad_4_7_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
+Tabla de escenarios y diagrama de petición. No se activa puente ni se cambian adaptadores en esta actividad. Guarda el archivo como `UD4_A7_Codigo.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
 
 ## Revisión y valoración
 
@@ -50,3 +51,7 @@ Ficha de diagnóstico y lista de aceptación. Las pruebas reales del invitado se
 | Justificación y relación entre causa y resultado | 3 |
 | Tabla, esquema o propuesta solicitada | 2 |
 | Claridad, fuentes y entrega | 1 |
+
+## Aplicación y entrega conjunta
+
+Tras razonar los casos, realiza [P6 · Redes virtuales y web](../practicas/P6-redes-virtuales.md). Adjunta sus evidencias como anexo al mismo `UD4_A7_Codigo.pdf`. Los 25 minutos escritos se integran en las 6 h de actividades seleccionando apartados de A6, sin añadir tiempo ni duplicar entregas. A4.7 y P6 forman una única entrega, con el mismo peso que las otras seis dentro del bloque de tareas del 30 %. No se duplica una evidencia previamente calificada.

@@ -1,35 +1,37 @@
-# UD3 · Actividades y prácticas integradas
+# Actividades escritas de la unidad 3
 
-> **Descargables actualizados el 05/11/2026.** Virtualización (UD4, 27 h) se imparte antes de Redes (UD3, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+> **Descargables actualizados el 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
 
-Se calcula y razona antes de configurar. Adaptación en castellano del banco anterior, con prefijos explícitos y requisitos comprobables. Las clases históricas no sustituyen a CIDR.
+Cada actividad tiene una página y un archivo de entrega propios. Aquí se razona, se diseñan esquemas y se interpretan casos. Los asistentes y comandos de instalación se ejecutan en las [prácticas guiadas](../practicas/index.md), con su propia entrega.
 
-| Actividad | Tiempo |
-| --- | ---: |
-| [Actividad 3.1 · Comprender una red](A1-red-del-aula.md) | 45 min |
-| [Actividad 3.2 · Seguir una petición](A2-capas-y-recorrido.md) | 45 min |
-| [Actividad 3.3 · Leer direcciones IPv4](A3-ipv4-y-mascaras.md) | 60 min |
-| [Actividad 3.4 · Diseñar subredes iguales](A4-subredes-iguales.md) | 90 min |
-| [Actividad 3.5 · Repartir direcciones con VLSM](A5-vlsm.md) | 60 min |
-| [Actividad 3.6 · Justificar una configuración](A6-diagnostico-y-red-virtual.md) | Hasta 60 min; seleccionar apartados |
-| [Actividad 3.7 · Elegir una red virtual](A7-redes-virtuales.md) | 25 min, dentro de las 6 h |
+[Descargar cuaderno de actividades](../descargas/UD3_Actividades.pdf){ .md-button .md-button--primary }
 
-Total seleccionado: **6 horas**, incorporando los 25 min de A7 mediante selección de apartados de A6 para evitar duplicaciones. [Cuaderno en PDF](../descargas/UD3_Actividades.pdf) · [Prácticas guiadas](../practicas/index.md)
+## Elige la actividad indicada en clase
 
-[Ampliación: especificación de un calculador de subredes](ampliacion-script.md).
-
-## Entrega de actividades y prácticas en Aules
-
-Cada actividad se entrega junto con sus prácticas asociadas, en la misma tarea y con la misma fecha de entrega que indique el docente en Aules. Incorpora las prácticas como anexos al PDF de la actividad.
-
-| Actividad | Prácticas que se adjuntan |
+| Actividad | Tiempo orientativo |
 | --- | --- |
-| 3.1 | P1 |
-| 3.2 | P4 |
-| 3.3 | Sin práctica asociada |
-| 3.4 | Sin práctica asociada |
-| 3.5 | Sin práctica asociada |
-| 3.6 | P2, P3 y P5 |
-| 3.7 | P6, procedente de UD4/P5 |
+| [Actividad 3.1 · Decidir antes de instalar](A01-decidir-antes-de-instalar.md) | 20 min |
+| [Actividad 3.2 · El recorrido de un archivo en una VM](A02-el-recorrido-de-un-archivo-en-una-vm.md) | 20 min |
+| [Actividad 3.3 · Integridad y autenticidad de una ISO](A03-integridad-y-autenticidad-de-una-iso.md) | 20 min |
+| [Actividad 3.4 · Diseñar el arranque y las particiones](A04-disenar-el-arranque-y-las-particiones.md) | 25 min |
+| [Actividad 3.5 · Elegir un sistema de archivos](A05-elegir-un-sistema-de-archivos.md) | 20 min |
+| [Actividad 3.6 · Prever el crecimiento de discos virtuales](A06-prever-el-crecimiento-de-discos-virtuales.md) | 20 min |
+| [Actividad 3.7 · Detectar una falsa instalación](A07-detectar-una-falsa-instalacion.md) | 20 min |
+| [Actividad 3.8 · Aceptar una instalación de Windows](A08-aceptar-una-instalacion-de-windows.md) | 20 min |
+| [Actividad 3.9 · Trasladada a UD4/A7](A09-elegir-una-red-virtual-para-cada-encargo.md) | 25 min dentro de UD4 |
+| [Actividad 3.10 · Escoger una estrategia de recuperación](A10-escoger-una-estrategia-de-recuperacion.md) | 20 min |
+| [Actividad 3.11 · Máquina virtual o contenedor](A11-maquina-virtual-o-contenedor.md) | 20 min |
+| [Actividad 3.12 · Diagnóstico escrito de ocho incidencias](A12-diagnostico-escrito-de-ocho-incidencias.md) | 30 min |
+| [Actividad 3.13 · Presupuesto profesional de laboratorio](A13-presupuesto-profesional-de-laboratorio.md) | 25 min |
+| [Actividad 3.14 · Explicar un mecanismo con evidencia](A14-explicar-un-mecanismo-con-evidencia.md) | 25 min |
+| [Actividad 3.15 · Autoevaluación razonada de salida](A15-autoevaluacion-razonada-de-salida.md) | 20 min |
+| [Actividad 3.16 · Leer una actualización antes de aceptarla](A16-leer-una-actualizacion-antes-de-aceptarla.md) | 20 min |
+| [Actividad 3.17 · Identificar paquetes y repositorios](A17-identificar-paquetes-y-repositorios.md) | 25 min |
+| [Actividad 3.18 · Punto de restauración o instantánea de VM](A18-punto-de-restauracion-o-instantanea-de-vm.md) | 25 min |
+| [Actividad 3.19 · Leer un instalador MSI o EXE](A19-leer-un-instalador-msi-o-exe.md) | 20 min |
 
-Incluye capturas legibles de las acciones y resultados, con una breve explicación de cada una, además de las tablas, cálculos y conclusiones solicitados. Identifica las salidas proporcionadas por el docente si trabajas con ellas. En P4, adjunta también la captura de red solicitada en la misma tarea de Aules.
+El docente selecciona el banco según el tiempo y necesidades del grupo. Los tiempos no implican hacer todas las actividades seguidas. Cada rúbrica sobre 10 ofrece criterios de revisión; la ponderación del módulo la establece la programación.
+
+## Selección para las 27 horas
+
+Se trabajan apartados de A1, A3, A7 y A10 y un cierre breve con A15, dentro de las dos horas previstas. Las demás propuestas son banco de refuerzo y ampliación. Consulta el [itinerario](../itinerario.md).
