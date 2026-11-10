@@ -21,7 +21,6 @@
 
 Las instrucciones de los PDF y paquetes antiguos que pidan más entregas quedan sustituidas por esta lista. Para los detalles de cada entrega, consulta su ficha web.
 
-
 ## Itinerario esencial de 27 horas
 
 Se imparte después de UD2 y antes de UD4 Redes. Se actualiza la numeración de carpetas, actividades y descargables. El alumnado construye el laboratorio que utilizará después en redes, archivos y administración.

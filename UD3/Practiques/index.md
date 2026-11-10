@@ -21,7 +21,6 @@
 
 Las instrucciones de los PDF y paquetes antiguos que pidan más entregas quedan sustituidas por esta lista. Para los detalles de cada entrega, consulta su ficha web.
 
-
 > **Entregas actualizadas el 10/11/2026:** ocho en total. Los PDF y paquetes anteriores se conservan como consulta; sus instrucciones de entrega quedan sustituidas por esta web. **Descargables del 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
 
 Sistemas Informáticos · 1.º de DAM · Laboratorio del alumnado
