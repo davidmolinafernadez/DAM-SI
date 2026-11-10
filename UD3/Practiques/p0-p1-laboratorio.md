@@ -106,4 +106,4 @@ V2: la interfaz es anterior y su ejemplo usa Windows 10. Identifica la función 
 
 Guarda un solo archivo llamado `P0_P1_Apellidos_Nombre.pdf`. Incluye inventario del puesto, presupuesto de recursos, fuente y verificación de la ISO, configuración de la VM y prueba de arranque. Explica el resultado sin confundir crear la máquina con instalar el sistema. Añade las incidencias y sus comprobaciones al mismo informe. No subas ISO ni discos virtuales.
 
-[Resultados esperados para explicar en clase](../soluciones-clase.md){ target="_blank" }
+[Ejercicios de aula resueltos · Sin entrega](../soluciones-clase.md){ target="_blank" }

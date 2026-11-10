@@ -87,4 +87,4 @@ Duración: **27 horas**, con 16 horas de prácticas esenciales. Las 3 h de redes
 
 [Glosario y fuentes](glosario-y-fuentes.md) · [Vídeos y fichas de observación](videos.md) · [Plantillas de entrega](actividades/plantillas.md)
 
-[Soluciones y explicación para clase](soluciones-clase.md){ target="_blank" }
+[Ejercicios de aula resueltos · Sin entrega](soluciones-clase.md){ target="_blank" }

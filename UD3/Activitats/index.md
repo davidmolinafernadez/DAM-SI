@@ -7,4 +7,4 @@ Solo hay **dos actividades escritas**, realizadas en clase y entregadas en Aules
 
 Las prácticas tienen sus seis entregas: ocho entregas en total. No hay un banco adicional de ejercicios obligatorio.
 
-[Prácticas guiadas](../practicas/index.md) · [Soluciones para explicar en clase](../soluciones-clase.md){ target="_blank" }
+[Prácticas guiadas](../practicas/index.md) · [Ejercicios de aula resueltos · Sin entrega](../soluciones-clase.md){ target="_blank" }

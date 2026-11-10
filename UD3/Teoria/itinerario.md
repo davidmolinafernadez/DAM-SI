@@ -48,4 +48,4 @@ Solo A1 y A10 se entregan por separado y se valoran con sus rúbricas. Junto con
 
 Utiliza las fichas web enlazadas desde los índices. Los antiguos cuadernos completos no forman parte de las tareas de esta unidad.
 
-[Soluciones y explicación para clase](soluciones-clase.md){ target="_blank" }
+[Ejercicios de aula resueltos · Sin entrega](soluciones-clase.md){ target="_blank" }

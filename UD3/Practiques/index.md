@@ -15,4 +15,4 @@ El docente demuestra los pasos clave y acompaña el trabajo. El alumnado sigue l
 
 Cada entrega contiene un informe con decisiones, resultados y evidencias legibles. No subir ISO ni discos virtuales. No incluir contraseñas ni claves. Trabajar solo sobre las VM y discos virtuales de prueba indicados.
 
-[Las dos actividades escritas](../actividades/index.md) · [Plantillas](../actividades/plantillas.md) · [Resultados esperados y explicación para clase](../soluciones-clase.md){ target="_blank" }
+[Las dos actividades escritas](../actividades/index.md) · [Plantillas](../actividades/plantillas.md) · [Ejercicios de aula resueltos · Sin entrega](../soluciones-clase.md){ target="_blank" }
