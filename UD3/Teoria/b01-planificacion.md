@@ -55,7 +55,7 @@ En el aula se elige una VM con disco vacío para estudiar el proceso con un dest
 
 ## Actividades de este apartado
 
-Las respuestas se entregan en el archivo de cada actividad; aquí no se ejecutan las instalaciones.
+Sí son entregables: A1 y A13 tienen entrega propia en Aules, según las instrucciones y el nombre de archivo indicados en cada actividad. En este apartado se preparan las respuestas; no se ejecutan las instalaciones.
 
 - [Actividad 3.1 · Decidir antes de instalar](actividades/A01-decidir-antes-de-instalar.md)
 - [Actividad 3.13 · Presupuesto profesional de laboratorio](actividades/A13-presupuesto-profesional-de-laboratorio.md)
@@ -70,9 +70,7 @@ Las respuestas se entregan en el archivo de cada actividad; aquí no se ejecutan
 
 V1: observa la relación entre necesidad y recursos; el plan se razona en A1 y se verifica en P0.
 
-<div class="video-frame">
-<iframe src="https://mediateca.educa.madrid.org/video/bh97chmwc7d66tfd/fs" title="Máquinas virtuales con VirtualBox" loading="lazy" allowfullscreen></iframe>
-</div>
+El reproductor incrustado puede fallar. Abre el vídeo en la página de EducaMadrid mediante el enlace siguiente. Si tampoco se reproduce allí, consulta la pestaña «Transcripción» de esa página y utiliza la teoría de este apartado para responder.
 
 [Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/bh97chmwc7d66tfd) · [Ficha y preguntas de visionado](videos.md)
 
