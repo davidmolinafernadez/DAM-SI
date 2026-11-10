@@ -9,6 +9,9 @@ Comprender la virtualización: explicación, ejemplos y comprobaciones.
 </div>
 </div>
 
+![Infografía: Las capas de una máquina virtual](imagenes/b02-virtualizacion.svg)
+
+
 ## Anfitrión, invitado e hipervisor
 
 El anfitrión es el equipo que aporta los recursos. El invitado es el sistema que se ejecuta dentro de la máquina virtual. El hipervisor organiza la ejecución y presenta dispositivos virtuales. Una VM tiene configuración de CPU, memoria, firmware, almacenamiento y red; un disco virtual es solamente una parte de ella.

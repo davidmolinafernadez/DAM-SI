@@ -9,6 +9,9 @@ Hardware virtual y recursos: explicación, ejemplos y comprobaciones.
 </div>
 </div>
 
+![Infografía: Asignar recursos exige dejar margen](imagenes/b06-hardware-virtual.svg)
+
+
 ## Archivos y ubicación
 
 La carpeta de una VM puede incluir configuración .vbox, discos, registros y datos de instantáneas. Copiar solamente el primer VDI puede dejar fuera cambios recientes almacenados en discos diferenciales. Utiliza las operaciones del hipervisor para clonar, mover o exportar.

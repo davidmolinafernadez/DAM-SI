@@ -9,6 +9,9 @@ Instalar y comprobar Windows: explicación, ejemplos y comprobaciones.
 </div>
 </div>
 
+![Infografía: Windows: preparar, instalar, revisar](imagenes/b08-instalar-windows.svg)
+
+
 ## Preparar el invitado
 
 La máquina de Windows tendrá su propio disco. La propuesta de laboratorio es 2 vCPU, entre 4 y 6 GiB de RAM según el anfitrión y un VDI dinámico de 80 GiB. Verifica los requisitos vigentes de la edición descargada y la compatibilidad del hipervisor. No se utilizarán modificaciones del registro para omitirlos.

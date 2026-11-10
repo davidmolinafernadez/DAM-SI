@@ -9,6 +9,9 @@ Instalar y comprobar Ubuntu: explicación, ejemplos y comprobaciones.
 </div>
 </div>
 
+![Infografía: Ver el escritorio es solo el comienzo](imagenes/b07-instalar-ubuntu.svg)
+
+
 ## Probar no es instalar
 
 El modo Live permite ejecutar un entorno desde la ISO. Es útil para comprobar dispositivos o inspeccionar un disco que no arranca. Los cambios de una sesión Live ordinaria pueden perderse al reiniciar. Abrir el escritorio Live no demuestra que Ubuntu esté instalado en el disco virtual.

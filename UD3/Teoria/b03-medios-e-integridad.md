@@ -9,6 +9,9 @@ Medios e integridad: explicación, ejemplos y comprobaciones.
 </div>
 </div>
 
+![Infografía: Tres archivos con funciones distintas](imagenes/b03-medios-e-integridad.svg)
+
+
 ## ISO, disco virtual e imagen de despliegue
 
 Una ISO representa el contenido de un medio óptico y suele incluir el instalador arrancable. Se conecta a la unidad óptica virtual. Un VDI almacena los sectores de un disco virtual donde se instalará el sistema. Un OVA es un paquete de intercambio que agrupa una descripción de máquina y sus discos. Cambiar la extensión de una ISO a VDI no transforma un instalador en un disco instalado.
