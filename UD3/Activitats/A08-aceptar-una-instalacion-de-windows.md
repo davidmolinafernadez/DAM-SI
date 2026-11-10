@@ -17,7 +17,6 @@ Razonar, interpretar y justificar antes de ejecutar.
 
 **Teoría relacionada:** [Teoría 3.3.2: Instalar y comprobar Windows](../b08-instalar-windows.md)
 
-
 Tiempo orientativo: 20 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder

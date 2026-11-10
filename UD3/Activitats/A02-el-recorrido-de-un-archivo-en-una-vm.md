@@ -17,7 +17,6 @@ Razonar, interpretar y justificar antes de ejecutar.
 
 **Teoría relacionada:** [Teoría 3.2.1: Comprender la virtualización](../b02-virtualizacion.md)
 
-
 Tiempo orientativo: 20 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder

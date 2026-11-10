@@ -17,7 +17,6 @@ Razonar, interpretar y justificar antes de ejecutar.
 
 **Teoría relacionada:** [Teoría 3.1.1: Planificar una instalación](../b01-planificacion.md) · [Teoría 3.2.2: Hardware virtual y recursos](../b06-hardware-virtual.md) · [Teoría 3.7: Recuperación y transferencia](../b11-recuperacion.md)
 
-
 Tiempo orientativo: 25 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder

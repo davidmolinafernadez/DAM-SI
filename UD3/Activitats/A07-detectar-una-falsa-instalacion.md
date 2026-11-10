@@ -17,7 +17,6 @@ Razonar, interpretar y justificar antes de ejecutar.
 
 **Teoría relacionada:** [Teoría 3.3.1: Instalar y comprobar Ubuntu](../b07-instalar-ubuntu.md)
 
-
 Tiempo orientativo: 20 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder

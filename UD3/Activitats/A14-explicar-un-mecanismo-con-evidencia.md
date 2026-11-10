@@ -17,7 +17,6 @@ Razonar, interpretar y justificar antes de ejecutar.
 
 **Teoría relacionada:** [Teoría 3.2.1: Comprender la virtualización](../b02-virtualizacion.md) · [Teoría 3.5: Redes virtuales y servicio web](../b09-redes-virtuales.md) · [Teoría 3.7: Recuperación y transferencia](../b11-recuperacion.md)
 
-
 Tiempo orientativo: 25 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder
