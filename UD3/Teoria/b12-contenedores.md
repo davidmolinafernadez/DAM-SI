@@ -11,7 +11,6 @@ Contenedores para DAM: explicación, ejemplos y comprobaciones.
 
 ![Infografía: Imagen, contenedor y datos](imagenes/b12-contenedores.svg)
 
-
 ## Imagen, contenedor y volumen
 
 Una imagen es una plantilla para crear contenedores. Un contenedor es una instancia con procesos y una capa de escritura. Un volumen permite conservar datos con un ciclo de vida separado del contenedor. Una etiqueta ayuda a elegir imagen, pero puede cambiar de contenido; para máxima reproducibilidad se registra también su digest.

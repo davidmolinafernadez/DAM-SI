@@ -11,7 +11,6 @@ Firmware, arranque y particiones: explicación, ejemplos y comprobaciones.
 
 ![Infografía: Del encendido a la sesión](imagenes/b04-firmware-y-particiones.svg)
 
-
 ## Del botón al escritorio
 
 En un arranque normal, el firmware inicializa dispositivos y selecciona un medio. Después se ejecuta un cargador, se carga el kernel y se inicia el sistema de servicios y la sesión. Un error temprano puede impedir que aparezca siquiera el logotipo del sistema. Un error posterior puede permitir arrancar, pero impedir la sesión gráfica.

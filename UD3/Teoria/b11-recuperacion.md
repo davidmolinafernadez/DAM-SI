@@ -11,7 +11,6 @@ Recuperación y transferencia: explicación, ejemplos y comprobaciones.
 
 ![Infografía: Cada copia cubre un problema distinto](imagenes/b11-recuperacion.svg)
 
-
 ## Cuatro operaciones diferentes
 
 Una instantánea conserva un punto de retorno dentro de la estructura de la VM. Un clon completo crea otra máquina con discos independientes de los del origen. Un clon enlazado necesita su base. Una exportación produce un paquete transportable con limitaciones de compatibilidad y de elementos conservados. Un respaldo independiente protege frente a la pérdida de la ubicación de trabajo si se almacena y se prueba adecuadamente.

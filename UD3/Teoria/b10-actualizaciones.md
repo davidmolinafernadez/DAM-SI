@@ -11,7 +11,6 @@ Actualizaciones y aceptación: explicación, ejemplos y comprobaciones.
 
 ![Infografía: Actualizar: tres momentos diferentes](imagenes/b10-actualizaciones.svg)
 
-
 ## Repositorios y dependencias
 
 Un repositorio ofrece paquetes y metadatos. El gestor consulta esa información y resuelve dependencias. Una aplicación puede necesitar bibliotecas y servicios adicionales: instalar un único archivo no siempre basta. Añadir un repositorio amplía las fuentes de software en las que confías; no es una solución automática a cualquier error.

@@ -11,7 +11,6 @@ Sistemas de archivos y montaje: explicación, ejemplos y comprobaciones.
 
 ![Infografía: Dispositivo, formato y montaje](imagenes/b05-sistemas-de-archivos.svg)
 
-
 ## Qué organiza un sistema de archivos
 
 Además de los datos de los archivos, hay metadatos: nombres, tamaños, permisos, propietarios, fechas y referencias a bloques. Una carpeta ayuda a localizar entradas; no es una caja física de sectores contiguos. Borrar un nombre no equivale siempre a sobrescribir inmediatamente todos los datos asociados.

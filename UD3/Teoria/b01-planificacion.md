@@ -11,7 +11,6 @@ Planificar una instalación: explicación, ejemplos y comprobaciones.
 
 ![Infografía: Antes de abrir el instalador](imagenes/b01-planificacion.svg)
 
-
 ## Un encargo real
 
 Un estudio de desarrollo web necesita un equipo Windows para una herramienta de diseño y un entorno Linux para probar aplicaciones. Las personas desarrolladoras deben poder ensayar cambios sin perder su entorno de trabajo. Antes de descargar nada, hay que decidir si conviene utilizar dos equipos, arranque dual, máquinas virtuales o contenedores.
