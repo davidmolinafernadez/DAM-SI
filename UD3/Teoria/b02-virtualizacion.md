@@ -59,14 +59,14 @@ Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula 
 
 <div class="video-card" markdown>
 
-## Vídeo explicativo · Máquinas virtuales con VirtualBox
+## Vídeo explicativo · Crear una máquina virtual con VirtualBox
 
 V1: identifica anfitrión, hipervisor e invitado. Contrasta las simplificaciones con la explicación escrita.
 
 <div class="video-frame">
-<iframe src="https://mediateca.educa.madrid.org/video/bh97chmwc7d66tfd/fs" title="Máquinas virtuales con VirtualBox" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://mediateca.educa.madrid.org/video/zx533nop3jd9ybjs/fs" title="Crear una máquina virtual con VirtualBox" loading="lazy" allowfullscreen></iframe>
 </div>
 
-[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/bh97chmwc7d66tfd) · [Ficha y preguntas de visionado](videos.md)
+[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/zx533nop3jd9ybjs) · [Ficha y preguntas de visionado](videos.md)
 
 </div>

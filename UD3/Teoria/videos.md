@@ -14,11 +14,11 @@ Los enlaces siguientes apuntan a vídeos concretos, no a páginas de resultados.
 
 El alumnado puede utilizar transcripción y texto como alternativa al visionado. Las duraciones solo se indican cuando la fuente las muestra. No se descargan ni se redistribuyen vídeos ajenos; se enlaza al autor o a la mediateca. El catálogo contiene diez recursos y diez tareas asociadas.
 
-## V1. Máquinas virtuales con Virtual Box
+## V1. Crear máquina virtual: decisiones de recursos
 
-Autor: Óscar García, publicado en EducaMadrid el 23 de junio de 2026. Idioma: castellano. Enlace: <https://mediateca.educa.madrid.org/video/bh97chmwc7d66tfd>
+Autora: Susana López Luengo, IES Palomeras-Vallecas, EducaMadrid, 4 de mayo de 2022. Idioma: castellano. V1 utiliza los primeros cinco minutos del mismo recurso de V2: no hay que verlo dos veces. Sustituye al vídeo anterior, protegido con contraseña. Enlace: <https://mediateca.educa.madrid.org/video/zx533nop3jd9ybjs>
 
-<iframe src="https://mediateca.educa.madrid.org/video/bh97chmwc7d66tfd/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
+<iframe src="https://mediateca.educa.madrid.org/video/zx533nop3jd9ybjs/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
 
 Relación: B2 y B6; preparación de P1. Aporta una presentación del laboratorio y su gestión. No copies literalmente todas las simplificaciones del relato: usa las definiciones del cuaderno para explicar recursos y aislamiento.
 
