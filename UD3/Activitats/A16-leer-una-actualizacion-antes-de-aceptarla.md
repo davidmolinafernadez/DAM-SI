@@ -10,17 +10,15 @@ Razonar, interpretar y justificar antes de ejecutar.
 </div>
 
 <div class="activity-meta" markdown>
-<span>20 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+<span>20 min</span><span>Individual</span><span>Sin entrega</span>
 </div>
 
-**Código: A16.** Actividad escrita con entrega propia.
+**Código: A16.** Ejercicio de aula o refuerzo, sin entrega independiente.
 
 **Teoría relacionada:** [Teoría 3.6: Actualizaciones y aceptación](../b10-actualizaciones.md)
 
-[Descargar actividad en PDF](descargas/Actividad_3_16_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
-[Original editable en texto](descargas/Actividad_3_16_Apellidos_Nombre.txt){ .md-button download }
 
-Tiempo orientativo: 20 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+Tiempo orientativo: 20 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder
 
@@ -38,15 +36,6 @@ Una propuesta de actualización anuncia 18 paquetes actualizados, 2 nuevos y 0 e
 4. Indica qué mensaje buscarías para detectar que se han usado índices antiguos.
 5. Diseña una tabla antes/después con versión, propuesta, reinicio y prueba de funcionamiento.
 
-## Entrega de esta actividad
+## Trabajo en clase
 
-Análisis de las dos afirmaciones y plantilla de control de cambios. No se realizan actualizaciones reales: se harán en P6. Guarda el archivo como `Actividad_3_16_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
-
-## Revisión y valoración
-
-| Criterio | Puntos |
-| --- | ---: |
-| Conceptos y datos interpretados correctamente | 4 |
-| Justificación y relación entre causa y resultado | 3 |
-| Tabla, esquema o propuesta solicitada | 2 |
-| Claridad, fuentes y entrega | 1 |
+Resuelve las cuestiones que seleccione el docente y contrasta las respuestas en clase. No entregues un PDF ni un archivo separado. Esta ficha queda como banco de refuerzo; no es obligatorio completar todas las actividades.

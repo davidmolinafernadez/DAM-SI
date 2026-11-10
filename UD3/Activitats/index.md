@@ -1,12 +1,12 @@
 # Actividades escritas de la unidad 3
 
-> **Descargables actualizados el 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+> **Entregas actualizadas el 10/11/2026:** ocho en total. Los PDF y paquetes anteriores se conservan como consulta; sus instrucciones de entrega quedan sustituidas por esta web. **Descargables del 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
 
-Cada actividad tiene una página y un archivo de entrega propios. Aquí se razona, se diseñan esquemas y se interpretan casos. Los asistentes y comandos de instalación se ejecutan en las [prácticas guiadas](../practicas/index.md), con su propia entrega.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
 [Descargar cuaderno de actividades](../descargas/UD3_Actividades.pdf){ .md-button .md-button--primary }
 
-## Elige la actividad indicada en clase
+## Banco de aula y refuerzo (solo A1 y A10 se entregan)
 
 | Actividad | Tiempo orientativo |
 | --- | --- |
@@ -34,4 +34,4 @@ El docente selecciona el banco según el tiempo y necesidades del grupo. Los tie
 
 ## Selección para las 27 horas
 
-Se trabajan apartados de A1, A3, A7 y A10 y un cierre breve con A15, dentro de las dos horas previstas. Las demás propuestas son banco de refuerzo y ampliación. Consulta el [itinerario](../itinerario.md).
+Se entregan A1 y A10. A3 se trabaja durante P0, A7 durante P2 y A15 sirve para el cierre oral, sin archivos adicionales. Las demás son refuerzo opcional. Consulta el [itinerario](../itinerario.md).

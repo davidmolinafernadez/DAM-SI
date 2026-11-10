@@ -10,7 +10,7 @@ Sistemas Informáticos · 1.º DAM. Manual de teoría y trabajo de aula con tres
 
 ## Cómo se trabaja
 
-La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Cada actividad y cada práctica seleccionada tiene su propia entrega; el banco completo es material disponible, sujeto al itinerario de 27 horas.
+La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
 ## Teoría por bloques
 
@@ -93,7 +93,7 @@ La **teoría** explica el concepto con ejemplos. Las **actividades** piden razon
 - [Cuaderno de prácticas guiadas en PDF](descargas/UD3_Practicas_y_actividades.pdf)
 - [Paquete del alumnado y originales editables](descargas/UD3_Material_alumnado.zip)
 
-Cada actividad tiene también su propio PDF y original editable dentro de su página.
+Solo A1 y A10 conservan descarga para entrega. Los cuadernos y paquetes anteriores son material de consulta: sus instrucciones de entrega quedan sustituidas por el itinerario web vigente.
 
 ## Orientación de aula
 

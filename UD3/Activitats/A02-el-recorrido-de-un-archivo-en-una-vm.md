@@ -10,17 +10,15 @@ Razonar, interpretar y justificar antes de ejecutar.
 </div>
 
 <div class="activity-meta" markdown>
-<span>20 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+<span>20 min</span><span>Individual</span><span>Sin entrega</span>
 </div>
 
-**Código: A2.** Actividad escrita con entrega propia.
+**Código: A2.** Ejercicio de aula o refuerzo, sin entrega independiente.
 
 **Teoría relacionada:** [Teoría 3.2.1: Comprender la virtualización](../b02-virtualizacion.md)
 
-[Descargar actividad en PDF](descargas/Actividad_3_2_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
-[Original editable en texto](descargas/Actividad_3_2_Apellidos_Nombre.txt){ .md-button download }
 
-Tiempo orientativo: 20 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+Tiempo orientativo: 20 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder
 
@@ -37,15 +35,6 @@ Una persona guarda index.html dentro de Ubuntu virtualizado. El disco de Ubuntu 
 3. Indica qué comprobarías primero si una escritura falla aunque Ubuntu muestre espacio.
 4. Relaciona anfitrión, invitado e hipervisor con los recursos que aparecen en el dibujo.
 
-## Entrega de esta actividad
+## Trabajo en clase
 
-Esquema comentado y respuesta al caso. No se debe llenar realmente el disco para comprobarlo. Guarda el archivo como `Actividad_3_2_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
-
-## Revisión y valoración
-
-| Criterio | Puntos |
-| --- | ---: |
-| Conceptos y datos interpretados correctamente | 4 |
-| Justificación y relación entre causa y resultado | 3 |
-| Tabla, esquema o propuesta solicitada | 2 |
-| Claridad, fuentes y entrega | 1 |
+Resuelve las cuestiones que seleccione el docente y contrasta las respuestas en clase. No entregues un PDF ni un archivo separado. Esta ficha queda como banco de refuerzo; no es obligatorio completar todas las actividades.

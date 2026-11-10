@@ -54,4 +54,4 @@ Debes entregar ficha del puesto, presupuesto razonado, identificación de ISO y 
 
 ## Entrega independiente de la práctica
 
-Guarda `P0_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Las actividades escritas tienen su propio archivo; no sustituyen la demostración funcional de la práctica.
+Guarda un único `P0_P1_Apellidos_Nombre.pdf` con la auditoría, la ISO y la creación de la VM. P0 y P1 forman una sola entrega. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Solo A1 y A10 tienen archivo propio. El resto de preguntas se trabaja en clase o dentro de la práctica, sin otra entrega.

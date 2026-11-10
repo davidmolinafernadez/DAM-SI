@@ -10,17 +10,15 @@ Razonar, interpretar y justificar antes de ejecutar.
 </div>
 
 <div class="activity-meta" markdown>
-<span>20 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+<span>20 min</span><span>Individual</span><span>Sin entrega</span>
 </div>
 
-**Código: A6.** Actividad escrita con entrega propia.
+**Código: A6.** Ejercicio de aula o refuerzo, sin entrega independiente.
 
 **Teoría relacionada:** [Teoría 3.2.2: Hardware virtual y recursos](../b06-hardware-virtual.md)
 
-[Descargar actividad en PDF](descargas/Actividad_3_6_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
-[Original editable en texto](descargas/Actividad_3_6_Apellidos_Nombre.txt){ .md-button download }
 
-Tiempo orientativo: 20 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+Tiempo orientativo: 20 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder
 
@@ -38,15 +36,6 @@ Un ordenador tiene 100 GiB libres. Dos VDI dinámicos tienen capacidad lógica d
 4. Propón una política de revisión y un umbral de aviso razonado, sin presentarlo como regla universal.
 5. Explica por qué no se deben borrar manualmente los discos diferenciales para liberar espacio.
 
-## Entrega de esta actividad
+## Trabajo en clase
 
-Presupuesto de almacenamiento y política de vigilancia. No se crean archivos grandes para agotar el SSD. Guarda el archivo como `Actividad_3_6_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
-
-## Revisión y valoración
-
-| Criterio | Puntos |
-| --- | ---: |
-| Conceptos y datos interpretados correctamente | 4 |
-| Justificación y relación entre causa y resultado | 3 |
-| Tabla, esquema o propuesta solicitada | 2 |
-| Claridad, fuentes y entrega | 1 |
+Resuelve las cuestiones que seleccione el docente y contrasta las respuestas en clase. No entregues un PDF ni un archivo separado. Esta ficha queda como banco de refuerzo; no es obligatorio completar todas las actividades.

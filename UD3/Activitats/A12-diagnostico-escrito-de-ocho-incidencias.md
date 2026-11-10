@@ -10,17 +10,15 @@ Razonar, interpretar y justificar antes de ejecutar.
 </div>
 
 <div class="activity-meta" markdown>
-<span>30 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+<span>30 min</span><span>Individual</span><span>Sin entrega</span>
 </div>
 
-**Código: A12.** Actividad escrita con entrega propia.
+**Código: A12.** Ejercicio de aula o refuerzo, sin entrega independiente.
 
 **Teoría relacionada:** [Índice de teoría](../index.md#teoria-por-bloques)
 
-[Descargar actividad en PDF](descargas/Actividad_3_12_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
-[Original editable en texto](descargas/Actividad_3_12_Apellidos_Nombre.txt){ .md-button download }
 
-Tiempo orientativo: 30 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+Tiempo orientativo: 30 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder
 
@@ -37,15 +35,6 @@ Resuelve ocho fichas: VM sin medio de arranque; escritorio que no adapta resoluc
 3. Explica qué resultado apoyaría cada hipótesis.
 4. Propón una corrección limitada al problema y una prueba de cierre. No utilices formatear como respuesta inicial.
 
-## Entrega de esta actividad
+## Trabajo en clase
 
-Ocho filas de diagnóstico con síntoma, hipótesis, prueba y cierre. No hay que provocar todas las averías en una máquina real. Guarda el archivo como `Actividad_3_12_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
-
-## Revisión y valoración
-
-| Criterio | Puntos |
-| --- | ---: |
-| Conceptos y datos interpretados correctamente | 4 |
-| Justificación y relación entre causa y resultado | 3 |
-| Tabla, esquema o propuesta solicitada | 2 |
-| Claridad, fuentes y entrega | 1 |
+Resuelve las cuestiones que seleccione el docente y contrasta las respuestas en clase. No entregues un PDF ni un archivo separado. Esta ficha queda como banco de refuerzo; no es obligatorio completar todas las actividades.

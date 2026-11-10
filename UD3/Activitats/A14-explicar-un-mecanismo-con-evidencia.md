@@ -10,17 +10,15 @@ Razonar, interpretar y justificar antes de ejecutar.
 </div>
 
 <div class="activity-meta" markdown>
-<span>25 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+<span>25 min</span><span>Individual</span><span>Sin entrega</span>
 </div>
 
-**Código: A14.** Actividad escrita con entrega propia.
+**Código: A14.** Ejercicio de aula o refuerzo, sin entrega independiente.
 
 **Teoría relacionada:** [Teoría 3.2.1: Comprender la virtualización](../b02-virtualizacion.md) · [Teoría 3.5: Redes virtuales y servicio web](../b09-redes-virtuales.md) · [Teoría 3.7: Recuperación y transferencia](../b11-recuperacion.md)
 
-[Descargar actividad en PDF](descargas/Actividad_3_14_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
-[Original editable en texto](descargas/Actividad_3_14_Apellidos_Nombre.txt){ .md-button download }
 
-Tiempo orientativo: 25 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+Tiempo orientativo: 25 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder
 
@@ -38,15 +36,6 @@ Debes explicar a otra persona uno de estos mecanismos: recorrido de una petició
 4. Termina con una limitación o caso que tu evidencia no acredita.
 5. Revisa que no aparezcan credenciales, terceros sin permiso ni datos personales innecesarios.
 
-## Entrega de esta actividad
+## Trabajo en clase
 
-Guion, esquema y exposición presencial o grabación autorizada. No se exige publicar el vídeo ni mostrar el rostro. Guarda el archivo como `Actividad_3_14_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
-
-## Revisión y valoración
-
-| Criterio | Puntos |
-| --- | ---: |
-| Conceptos y datos interpretados correctamente | 4 |
-| Justificación y relación entre causa y resultado | 3 |
-| Tabla, esquema o propuesta solicitada | 2 |
-| Claridad, fuentes y entrega | 1 |
+Resuelve las cuestiones que seleccione el docente y contrasta las respuestas en clase. No entregues un PDF ni un archivo separado. Esta ficha queda como banco de refuerzo; no es obligatorio completar todas las actividades.

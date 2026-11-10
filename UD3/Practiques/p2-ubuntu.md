@@ -74,7 +74,7 @@ Aceptación: arranque sin ISO, usuario correcto, archivo persistente, raíz en e
 
 ## Entrega independiente de la práctica
 
-Guarda `P2_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Las actividades escritas tienen su propio archivo; no sustituyen la demostración funcional de la práctica.
+Guarda `P2_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Solo A1 y A10 tienen archivo propio. El resto de preguntas se trabaja en clase o dentro de la práctica, sin otra entrega.
 
 <div class="video-card" markdown>
 

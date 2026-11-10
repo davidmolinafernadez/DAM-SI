@@ -10,17 +10,15 @@ Razonar, interpretar y justificar antes de ejecutar.
 </div>
 
 <div class="activity-meta" markdown>
-<span>20 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+<span>20 min</span><span>Individual</span><span>Sin entrega</span>
 </div>
 
-**Código: A11.** Actividad escrita con entrega propia.
+**Código: A11.** Ejercicio de aula o refuerzo, sin entrega independiente.
 
 **Teoría relacionada:** [Teoría 3.8: Contenedores para DAM](../b12-contenedores.md)
 
-[Descargar actividad en PDF](descargas/Actividad_3_11_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
-[Original editable en texto](descargas/Actividad_3_11_Apellidos_Nombre.txt){ .md-button download }
 
-Tiempo orientativo: 20 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+Tiempo orientativo: 20 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder
 
@@ -38,15 +36,6 @@ Un desarrollador afirma: «He descargado una imagen Ubuntu en Docker, así que h
 4. Predice qué ocurre al detener, volver a iniciar y eliminar un contenedor.
 5. Justifica cuándo elegirías VM completa y cuándo contenedor para un trabajo de DAM.
 
-## Entrega de esta actividad
+## Trabajo en clase
 
-Diagrama de capas y tabla de ciclo de vida. Los comandos Docker y la recreación real pertenecen a X2. Guarda el archivo como `Actividad_3_11_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
-
-## Revisión y valoración
-
-| Criterio | Puntos |
-| --- | ---: |
-| Conceptos y datos interpretados correctamente | 4 |
-| Justificación y relación entre causa y resultado | 3 |
-| Tabla, esquema o propuesta solicitada | 2 |
-| Claridad, fuentes y entrega | 1 |
+Resuelve las cuestiones que seleccione el docente y contrasta las respuestas en clase. No entregues un PDF ni un archivo separado. Esta ficha queda como banco de refuerzo; no es obligatorio completar todas las actividades.

@@ -4,6 +4,10 @@
 
 Sistemas Informáticos · 1.º de DAM · Catálogo vinculado a teoría y laboratorio
 
+## Entregas de visionado
+
+Las preguntas de los vídeos se comentan en clase o dentro de la práctica correspondiente. No generan entregas ni calificaciones adicionales, aunque las fichas utilicen la palabra «entrega».
+
 ## Cómo utilizar el catálogo
 
 Los enlaces siguientes apuntan a vídeos concretos, no a páginas de resultados. Se ha comprobado su presencia y se han consultado sus descripciones o transcripciones disponibles el 26 de octubre de 2026. No se afirma haber reproducido y revisado íntegramente cada vídeo. Antes de proyectarlos, el docente debe comprobar reproducción, sonido, publicidad y adecuación al grupo. Los vídeos antiguos sirven para conceptos; las interfaces y los requisitos se contrastan con la documentación escrita de la unidad.

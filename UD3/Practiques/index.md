@@ -1,6 +1,6 @@
 # Unidad 3. Cuaderno de prácticas guiadas
 
-> **Descargables actualizados el 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+> **Entregas actualizadas el 10/11/2026:** ocho en total. Los PDF y paquetes anteriores se conservan como consulta; sus instrucciones de entrega quedan sustituidas por esta web. **Descargables del 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
 
 Sistemas Informáticos · 1.º de DAM · Laboratorio del alumnado
 
@@ -12,9 +12,9 @@ Antes de empezar una práctica: lee la teoría indicada, dibuja el estado inicia
 
 Las capturas deben mostrar un dato legible, estar numeradas y llevar un pie explicativo. Para identificar la autoría, utiliza nombre de máquina y un código de alumno de aula; no es necesario exponer datos personales. Los vídeos del catálogo 03 se consultan en el momento indicado y se acompañan de preguntas. La documentación escrita prevalece si el vídeo utiliza una interfaz antigua o simplifica un concepto.
 
-Carpeta de entrega por práctica: Pxx_codigo. Incluye informe.pdf, evidencias y, cuando se pida, archivos de texto de configuración. No entregues ISO ni discos virtuales de decenas de gigabytes en la plataforma salvo indicación docente. La demostración práctica del equipo sirve para evaluar el funcionamiento.
+Seis entregas de prácticas: P0–P1 juntas, P2, P3, P6, P7 y P8. Carpeta por entrega: Pxx_codigo. Incluye informe.pdf, evidencias y, cuando se pida, archivos de texto de configuración. No entregues ISO ni discos virtuales de decenas de gigabytes en la plataforma salvo indicación docente. La demostración práctica del equipo sirve para evaluar el funcionamiento.
 
-Las actividades escritas tienen su propio cuaderno y sus propias páginas. Aquí se recogen únicamente procedimientos de ejecución, comprobación y diagnóstico del laboratorio. Las rutas de menú se refieren a las versiones de referencia; el docente indicará las diferencias de la imagen del aula.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
 ## Banco completo de prácticas
 
@@ -39,6 +39,6 @@ El banco completo suma 29 horas de prácticas y 5 de ampliación. La UD3 selecci
 
 [Plantillas de entrega](../actividades/plantillas.md) · [Índice de actividades escritas](../actividades/index.md)
 
-## Actividad y práctica son entregas distintas
+## Ocho entregas en total
 
-Para diseñar, comparar o diagnosticar un caso, consulta [Actividades escritas](../actividades/index.md). Para crear y comprobar el laboratorio real, sigue una práctica de esta página. Los códigos A y P permiten identificar qué se está pidiendo.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.

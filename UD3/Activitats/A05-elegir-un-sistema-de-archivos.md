@@ -10,17 +10,15 @@ Razonar, interpretar y justificar antes de ejecutar.
 </div>
 
 <div class="activity-meta" markdown>
-<span>20 min</span><span>Individual</span><span>10 puntos</span><span>Aules</span>
+<span>20 min</span><span>Individual</span><span>Sin entrega</span>
 </div>
 
-**Código: A5.** Actividad escrita con entrega propia.
+**Código: A5.** Ejercicio de aula o refuerzo, sin entrega independiente.
 
 **Teoría relacionada:** [Teoría 3.4: Sistemas de archivos y montaje](../b05-sistemas-de-archivos.md)
 
-[Descargar actividad en PDF](descargas/Actividad_3_5_Apellidos_Nombre.pdf){ .md-button .md-button--primary }
-[Original editable en texto](descargas/Actividad_3_5_Apellidos_Nombre.txt){ .md-button download }
 
-Tiempo orientativo: 20 minutos. Modalidad: individual. Valoración formativa: 10 puntos.
+Tiempo orientativo: 20 minutos. Modalidad: individual. Revisión formativa en clase, sin calificación independiente.
 
 ## Antes de responder
 
@@ -37,15 +35,6 @@ Hay cuatro destinos: raíz de Ubuntu, sistema de Windows, partición EFI y memor
 3. Explica diferencia entre volumen, sistema de archivos y punto de montaje.
 4. Un disco aparece en lsblk y no en df. Propón dos situaciones que lo expliquen sin concluir que la herramienta falla.
 
-## Entrega de esta actividad
+## Trabajo en clase
 
-Tabla de decisiones y explicación de los dos listados. No hace falta instalar una herramienta de particionado. Guarda el archivo como `Actividad_3_5_Apellidos_Nombre.pdf`. Incluye las preguntas numeradas, razonamiento propio y fuentes concretas cuando consultes información adicional. No se pide añadir una portada vacía ni capturas de asistentes que no ejecutas.
-
-## Revisión y valoración
-
-| Criterio | Puntos |
-| --- | ---: |
-| Conceptos y datos interpretados correctamente | 4 |
-| Justificación y relación entre causa y resultado | 3 |
-| Tabla, esquema o propuesta solicitada | 2 |
-| Claridad, fuentes y entrega | 1 |
+Resuelve las cuestiones que seleccione el docente y contrasta las respuestas en clase. No entregues un PDF ni un archivo separado. Esta ficha queda como banco de refuerzo; no es obligatorio completar todas las actividades.
