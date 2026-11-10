@@ -55,12 +55,6 @@ El sistema puede mantener escrituras pendientes. Desmontar de forma ordenada per
 
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
-- [Actividad 3.5 · Elegir un sistema de archivos](actividades/A05-elegir-un-sistema-de-archivos.md)
-
-## Prácticas relacionadas
-
-- [P4 · Particionar y montar](practicas/p4-particionado.md)
-
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Particionar con GParted

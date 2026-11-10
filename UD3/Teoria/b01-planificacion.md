@@ -58,7 +58,6 @@ En el aula se elige una VM con disco vacío para estudiar el proceso con un dest
 A1 es entregable en Aules. A13 queda como refuerzo opcional sin entrega. En este apartado no se ejecutan instalaciones. Solo A1 y A10 tienen entrega escrita propia en toda la unidad.
 
 - [Actividad 3.1 · Decidir antes de instalar](actividades/A01-decidir-antes-de-instalar.md)
-- [Actividad 3.13 · Presupuesto profesional de laboratorio](actividades/A13-presupuesto-profesional-de-laboratorio.md)
 
 ## Prácticas relacionadas
 

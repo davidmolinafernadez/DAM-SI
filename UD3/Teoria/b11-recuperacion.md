@@ -52,15 +52,11 @@ Si el centro lo utiliza, antes de crear una instantánea se identifican modo, de
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
 - [Actividad 3.10 · Escoger una estrategia de recuperación](actividades/A10-escoger-una-estrategia-de-recuperacion.md)
-- [Actividad 3.13 · Presupuesto profesional de laboratorio](actividades/A13-presupuesto-profesional-de-laboratorio.md)
-- [Actividad 3.18 · Punto de restauración o instantánea de VM](actividades/A18-punto-de-restauracion-o-instantanea-de-vm.md)
 
 ## Prácticas relacionadas
 
 - [P7 · Recuperar con instantáneas](practicas/p7-instantaneas.md)
 - [P8 · Clonar, exportar e importar](practicas/p8-transferencia.md)
-- [P11 · Restaurar sistema Windows](practicas/p11-restauracion-windows.md)
-- [X1 · Arranque dual](practicas/x1-arranque-dual.md)
 
 <div class="video-card" markdown>
 

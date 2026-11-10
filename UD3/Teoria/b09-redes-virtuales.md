@@ -62,12 +62,6 @@ Comparar estos resultados permite acotar un fallo. Si no responde ni dentro del 
 
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
-- [Actividad 3.9 · Elegir una red virtual para cada encargo](actividades/A09-elegir-una-red-virtual-para-cada-encargo.md)
-
-## Prácticas relacionadas
-
-- [P5 · Redes y página web](practicas/p5-redes.md)
-
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Red NAT y reenvío

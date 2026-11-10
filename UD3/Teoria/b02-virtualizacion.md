@@ -51,8 +51,6 @@ Asignar más RAM puede ayudar si faltaba memoria al invitado, pero perjudicar si
 
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
-- [Actividad 3.2 · El recorrido de un archivo en una VM](actividades/A02-el-recorrido-de-un-archivo-en-una-vm.md)
-
 ## Prácticas relacionadas
 
 - [P1 · Crear la máquina virtual](practicas/p1-crear-vm.md)

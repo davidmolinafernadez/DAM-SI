@@ -60,8 +60,6 @@ La prueba de persistencia debe recorrer un reinicio real desde disco. Suspender 
 
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
-- [Actividad 3.7 · Detectar una falsa instalación](actividades/A07-detectar-una-falsa-instalacion.md)
-
 ## Prácticas relacionadas
 
 - [P2 · Instalar Ubuntu](practicas/p2-ubuntu.md)

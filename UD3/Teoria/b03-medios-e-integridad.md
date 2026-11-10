@@ -53,8 +53,6 @@ Una firma comprueba la relación entre un documento y una clave; la identidad de
 
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
-- [Actividad 3.3 · Integridad y autenticidad de una ISO](actividades/A03-integridad-y-autenticidad-de-una-iso.md)
-
 ## Prácticas relacionadas
 
 - [P0 · Auditoría e ISO](practicas/p0-auditoria.md)

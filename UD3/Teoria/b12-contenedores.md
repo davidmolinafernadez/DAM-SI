@@ -35,12 +35,6 @@ Esto permite razonar la diferencia entre que un proceso esté en ejecución y qu
 
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
-- [Actividad 3.11 · Máquina virtual o contenedor](actividades/A11-maquina-virtual-o-contenedor.md)
-
-## Prácticas relacionadas
-
-- [X2 · Web con Docker](practicas/x2-docker.md)
-
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Docker: explicación inicial

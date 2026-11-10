@@ -1,65 +1,18 @@
-# Unidad 3. Cuaderno de prácticas guiadas
+# UD3 · Prácticas guiadas para realizar en clase
 
-## Qué se entrega en UD3
+El docente demuestra los pasos clave y acompaña el trabajo. El alumnado sigue la ficha, realiza las comprobaciones en su VM y prepara las evidencias durante las sesiones. Las entregas documentan este trabajo de clase.
 
-**Ocho entregas en Aules:** dos actividades escritas y seis entregas de prácticas.
+| Entrega | Fichas guiadas | Tiempo de clase |
+| --- | --- | --- |
+| 1 · Preparar el laboratorio | [P0 · Auditoría e ISO](p0-auditoria.md) + [P1 · Crear la VM](p1-crear-vm.md) | 3,5 h |
+| 2 · Instalar Ubuntu | [P2 · Ubuntu](p2-ubuntu.md) | 3 h |
+| 3 · Instalar Windows | [P3 · Windows 11](p3-windows.md) | 3 h |
+| 4 · Actualizar | [P6 · Actualizar y verificar](p6-actualizaciones.md) | 2 h |
+| 5 · Recuperar | [P7 · Instantáneas](p7-instantaneas.md) | 2 h |
+| 6 · Transferir | [P8 · Clonar, exportar e importar](p8-transferencia.md) | 2,5 h |
 
-| Entrega | Qué debes presentar |
-| --- | --- |
-| A1 · Decidir antes de instalar | Tabla de alternativas y recomendación razonada |
-| A10 · Estrategia de recuperación | Matriz de necesidades y protocolo de comprobación |
-| P0–P1 · Preparar el laboratorio | Un único informe con auditoría, ISO y creación de la VM |
-| P2 · Ubuntu | Informe y evidencias de instalación y comprobación |
-| P3 · Windows 11 | Informe y evidencias de instalación y comprobación |
-| P6 · Actualizaciones | Informe con estado anterior, actualización y verificación |
-| P7 · Instantáneas | Informe con prueba de recuperación y archivo testigo |
-| P8 · Transferencia | Informe con clonación, exportación e importación comprobada |
+**Son seis entregas prácticas, con siete fichas porque P0 y P1 se entregan juntas.** Conservamos los códigos utilizados en las guías para identificar las fichas. No hay que realizar prácticas adicionales en esta unidad.
 
-**Sin entrega:** A2–A8 y A11–A19. Son ejercicios de clase o refuerzo; no hay que subir archivos ni completar todo el banco. A9 y P5 se trabajan en UD4 y no cuentan como entregas de UD3.
+Cada entrega contiene un informe con decisiones, resultados y evidencias legibles. No subir ISO ni discos virtuales. No incluir contraseñas ni claves. Trabajar solo sobre las VM y discos virtuales de prueba indicados.
 
-**Los vídeos no generan ninguna entrega.** Sus preguntas se comentan en clase. P4 continúa en UD5, P10 en UD6 y P9 en UD7; P11, X1 y X2 quedan como refuerzo o ampliación, sin entrega obligatoria en UD3.
-
-Las instrucciones de los PDF y paquetes antiguos que pidan más entregas quedan sustituidas por esta lista. Para los detalles de cada entrega, consulta su ficha web.
-
-> **Entregas actualizadas el 10/11/2026:** ocho en total. Los PDF y paquetes anteriores se conservan como consulta; sus instrucciones de entrega quedan sustituidas por esta web. **Descargables del 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
-
-Sistemas Informáticos · 1.º de DAM · Laboratorio del alumnado
-
-## Antes de empezar
-
-Trabaja únicamente con las máquinas virtuales y los discos de prueba identificados en cada ficha. No conectes discos físicos directamente al invitado. Los cambios de particiones se limitan a discos virtuales vacíos o clones de laboratorio. Las contraseñas y claves de activación no se incorporan a capturas ni entregas.
-
-Antes de empezar una práctica: lee la teoría indicada, dibuja el estado inicial y escribe una predicción. Durante el trabajo: registra decisiones y errores, sin ocultar intentos fallidos. Al terminar: ejecuta las pruebas de aceptación y explica si los resultados confirman la predicción.
-
-Las capturas deben mostrar un dato legible, estar numeradas y llevar un pie explicativo. Para identificar la autoría, utiliza nombre de máquina y un código de alumno de aula; no es necesario exponer datos personales. Los vídeos del catálogo 03 se consultan en el momento indicado y se acompañan de preguntas. La documentación escrita prevalece si el vídeo utiliza una interfaz antigua o simplifica un concepto.
-
-Seis entregas de prácticas: P0–P1 juntas, P2, P3, P6, P7 y P8. Carpeta por entrega: Pxx_codigo. Incluye informe.pdf, evidencias y, cuando se pida, archivos de texto de configuración. No entregues ISO ni discos virtuales de decenas de gigabytes en la plataforma salvo indicación docente. La demostración práctica del equipo sirve para evaluar el funcionamiento.
-
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
-
-## Banco completo de prácticas
-
-| Práctica | Tiempo previsto |
-| --- | --- |
-| [P0 · Auditoría e ISO](p0-auditoria.md) | 90 min |
-| [P1 · Crear la máquina virtual](p1-crear-vm.md) | 120 min |
-| [P2 · Instalar Ubuntu](p2-ubuntu.md) | 180 min |
-| [P3 · Instalar Windows 11](p3-windows.md) | 180 min |
-| [P4 · Particionar y montar](p4-particionado.md) | 150 min |
-| [P5 · Redes y página web: trasladada a UD4/P6](p5-redes.md) | 180 min, dentro de UD4 |
-| [P6 · Actualizar y verificar](p6-actualizaciones.md) | 120 min |
-| [P7 · Recuperar con instantáneas](p7-instantaneas.md) | 120 min |
-| [P8 · Clonar, exportar e importar](p8-transferencia.md) | 150 min |
-| [P9 · Proyecto integrador](p9-proyecto.md) | 240 min |
-| [P10 · Aplicaciones Linux](p10-paquetes-linux.md) | 120 min |
-| [P11 · Restaurar sistema Windows](p11-restauracion-windows.md) | 90 min |
-| [X1 · Arranque dual](x1-arranque-dual.md) | 180 min |
-| [X2 · Web con Docker](x2-docker.md) | 120 min |
-
-El banco completo suma 29 horas de prácticas y 5 de ampliación. La UD3 selecciona 16 horas de prácticas esenciales; las 3 h de P5 se imparten después en UD4 como P6; P4 continúa en UD5, P10 en UD6 y P9 en UD7. P11 queda como refuerzo. Consulta el [itinerario de 27 horas](../itinerario.md).
-
-[Plantillas de entrega](../actividades/plantillas.md) · [Índice de actividades escritas](../actividades/index.md)
-
-## Ocho entregas en total
-
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
+[Las dos actividades escritas](../actividades/index.md) · [Plantillas](../actividades/plantillas.md) · [Resultados esperados y explicación para clase](../soluciones-clase.md){ target="_blank" }

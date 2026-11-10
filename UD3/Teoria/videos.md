@@ -139,5 +139,3 @@ Tarea de visionado: dibuja la secuencia identificar → crear tabla → crear pa
 Identificación del recurso y fecha. Concepto previo que quiero aclarar. Predicción antes del visionado. Dos ideas explicadas con palabras propias. Una diferencia entre el ejemplo y mi laboratorio. Acción práctica relacionada. Prueba de que la acción funciona. Duda que aún necesito resolver. No se evalúa copiar frases del autor.
 
 ## Del vídeo a la práctica
-
-[V1-V2 → crear VM](practicas/p1-crear-vm.md) · [V3 → Ubuntu](practicas/p2-ubuntu.md) · [V4 → recuperación](practicas/p7-instantaneas.md) · [V5 → redes](practicas/p5-redes.md) · [V6 y V8 → transferencia](practicas/p8-transferencia.md) · [V7 → Docker](practicas/x2-docker.md)

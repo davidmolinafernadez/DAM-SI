@@ -43,9 +43,6 @@ La unidad óptica también tiene dos vistas. Desde el administrador conectas un 
 
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
-- [Actividad 3.6 · Prever el crecimiento de discos virtuales](actividades/A06-prever-el-crecimiento-de-discos-virtuales.md)
-- [Actividad 3.13 · Presupuesto profesional de laboratorio](actividades/A13-presupuesto-profesional-de-laboratorio.md)
-
 ## Prácticas relacionadas
 
 - [P1 · Crear la máquina virtual](practicas/p1-crear-vm.md)
