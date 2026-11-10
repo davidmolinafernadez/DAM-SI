@@ -65,17 +65,3 @@ Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula 
 ## Prácticas relacionadas
 
 - [P2 · Instalar Ubuntu](practicas/p2-ubuntu.md)
-
-<div class="video-card" markdown>
-
-## Vídeo explicativo · Particionar con GParted
-
-V10: observa tabla y partición. Su ejemplo usa MBR; nuestra práctica usa GPT en otro disco.
-
-<div class="video-frame">
-<iframe src="https://mediateca.educa.madrid.org/video/417dd5j5i92wjmop/fs" title="Particionar con GParted" loading="lazy" allowfullscreen></iframe>
-</div>
-
-[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/417dd5j5i92wjmop) · [Ficha y preguntas de visionado](videos.md)
-
-</div>

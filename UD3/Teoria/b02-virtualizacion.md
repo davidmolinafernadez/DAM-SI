@@ -52,17 +52,3 @@ Asignar más RAM puede ayudar si faltaba memoria al invitado, pero perjudicar si
 Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
 ## Prácticas relacionadas
-
-<div class="video-card" markdown>
-
-## Vídeo explicativo · Crear una máquina virtual con VirtualBox
-
-V1: identifica anfitrión, hipervisor e invitado. Contrasta las simplificaciones con la explicación escrita.
-
-<div class="video-frame">
-<iframe src="https://mediateca.educa.madrid.org/video/zx533nop3jd9ybjs/fs" title="Crear una máquina virtual con VirtualBox" loading="lazy" allowfullscreen></iframe>
-</div>
-
-[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/zx533nop3jd9ybjs) · [Ficha y preguntas de visionado](videos.md)
-
-</div>

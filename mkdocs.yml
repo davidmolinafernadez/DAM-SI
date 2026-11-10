@@ -98,17 +98,20 @@ nav:
       - Dos actividades entregables: ud3/actividades/index.md
       - Seis entregas de prácticas guiadas: ud3/practicas/index.md
       - Teoría:
-          - Planificar la instalación: ud3/b01-planificacion.md
-          - Virtualización: ud3/b02-virtualizacion.md
-          - Medios e integridad: ud3/b03-medios-e-integridad.md
-          - Firmware y particiones: ud3/b04-firmware-y-particiones.md
-          - Sistemas de archivos: ud3/b05-sistemas-de-archivos.md
-          - Hardware virtual: ud3/b06-hardware-virtual.md
-          - Ubuntu: ud3/b07-instalar-ubuntu.md
-          - Windows: ud3/b08-instalar-windows.md
-          - Actualizaciones: ud3/b10-actualizaciones.md
-          - Recuperación: ud3/b11-recuperacion.md
-          - Contenedores: ud3/b12-contenedores.md
+          - "3.1 · Planificación, medios y arranque":
+              - "3.1.1 · Planificar la instalación": ud3/b01-planificacion.md
+              - "3.1.2 · Medios e integridad": ud3/b03-medios-e-integridad.md
+              - "3.1.3 · Firmware y particiones": ud3/b04-firmware-y-particiones.md
+          - "3.2 · Virtualización y hardware virtual":
+              - "3.2.1 · Comprender la virtualización": ud3/b02-virtualizacion.md
+              - "3.2.2 · Hardware virtual y recursos": ud3/b06-hardware-virtual.md
+          - "3.3 · Instalación de sistemas":
+              - "3.3.1 · Instalar Ubuntu": ud3/b07-instalar-ubuntu.md
+              - "3.3.2 · Instalar Windows 11": ud3/b08-instalar-windows.md
+          - "3.4 · Sistemas de archivos y montaje": ud3/b05-sistemas-de-archivos.md
+          - "3.6 · Aplicaciones y actualizaciones": ud3/b10-actualizaciones.md
+          - "3.7 · Recuperación y transferencia": ud3/b11-recuperacion.md
+          - "3.8 · Contenedores": ud3/b12-contenedores.md
       - A1 · Decidir antes de instalar: ud3/actividades/A01-decidir-antes-de-instalar.md
       - A10 · Recuperación: ud3/actividades/A10-escoger-una-estrategia-de-recuperacion.md
       - Ejercicios de aula resueltos · Sin entrega: ud3/soluciones-clase.md

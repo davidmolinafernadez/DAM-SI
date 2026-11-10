@@ -56,17 +56,3 @@ Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula 
 ## Prácticas relacionadas
 
 - [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
-
-<div class="video-card" markdown>
-
-## Vídeo explicativo · Instalación Ubuntu 24.04
-
-V3: observa la selección de la imagen. El vídeo no sustituye la verificación SHA-256 de P0.
-
-<div class="video-frame">
-<iframe src="https://mediateca.educa.madrid.org/video/4dpxwfhdfpr4p799/fs" title="Instalación Ubuntu 24.04" loading="lazy" allowfullscreen></iframe>
-</div>
-
-[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/4dpxwfhdfpr4p799) · [Ficha y preguntas de visionado](videos.md)
-
-</div>

@@ -62,15 +62,3 @@ A1 es entregable en Aules. A13 queda como refuerzo opcional sin entrega. En este
 ## Prácticas relacionadas
 
 - [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
-
-<div class="video-card" markdown>
-
-## Vídeo explicativo · Crear una máquina virtual con VirtualBox
-
-V1: observa la relación entre necesidad y recursos; el plan se razona en A1 y se verifica en P0.
-
-Vídeo de acceso público de Susana López Luengo (IES Palomeras-Vallecas). Observa los primeros cinco minutos: ubicación de la VM, memoria y disco virtual. El ejemplo utiliza Windows 10 y una interfaz antigua; aplica los recursos y versiones de la práctica actual. No es necesario volver a verlo en V2. También puedes consultar la pestaña «Transcripción» de la página original.
-
-[Abrir el vídeo en su página original](https://mediateca.educa.madrid.org/video/zx533nop3jd9ybjs) · [Ficha y preguntas de visionado](videos.md)
-
-</div>
