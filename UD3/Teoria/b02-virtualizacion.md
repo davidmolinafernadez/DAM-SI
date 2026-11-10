@@ -53,8 +53,6 @@ Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula 
 
 ## Prácticas relacionadas
 
-- [P1 · Crear la máquina virtual](practicas/p1-crear-vm.md)
-
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Crear una máquina virtual con VirtualBox

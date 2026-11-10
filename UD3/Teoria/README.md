@@ -39,13 +39,12 @@ La **teoría** explica el concepto con ejemplos. Las **actividades** piden razon
 - [Teoría 3.1.2 · Medios e integridad](b03-medios-e-integridad.md)
 - [Teoría 3.1.3 · Firmware, arranque y particiones](b04-firmware-y-particiones.md)
 - [Actividad 3.1 · Decidir antes de instalar](actividades/A01-decidir-antes-de-instalar.md)
-- [Práctica P0 · Auditoría e ISO](practicas/p0-auditoria.md)
+- [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
 
 ### 3.2 · Virtualización y hardware virtual
 
 - [Teoría 3.2.1 · Comprender la virtualización](b02-virtualizacion.md)
 - [Teoría 3.2.2 · Hardware virtual y recursos](b06-hardware-virtual.md)
-- [Práctica P1 · Crear la máquina virtual](practicas/p1-crear-vm.md)
 
 ### 3.3 · Instalación de Ubuntu y Windows
 

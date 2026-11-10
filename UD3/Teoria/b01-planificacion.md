@@ -61,7 +61,7 @@ A1 es entregable en Aules. A13 queda como refuerzo opcional sin entrega. En este
 
 ## Prácticas relacionadas
 
-- [P0 · Auditoría e ISO](practicas/p0-auditoria.md)
+- [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
 
 <div class="video-card" markdown>
 

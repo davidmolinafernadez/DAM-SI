@@ -51,8 +51,23 @@ def simplify_ud3():
     unit = DESTINATION / "ud3"
     allowed = {
         "actividades": {"index.md", "plantillas.md", "A01-decidir-antes-de-instalar.md", "A10-escoger-una-estrategia-de-recuperacion.md"},
-        "practicas": {"index.md", "p0-auditoria.md", "p1-crear-vm.md", "p2-ubuntu.md", "p3-windows.md", "p6-actualizaciones.md", "p7-instantaneas.md", "p8-transferencia.md"},
+        "practicas": {"index.md", "p0-p1-laboratorio.md", "p2-ubuntu.md", "p3-windows.md", "p6-actualizaciones.md", "p7-instantaneas.md", "p8-transferencia.md"},
     }
+    # Las prácticas de continuidad se publican en su unidad correspondiente.
+    import re
+    for filename, number in (("p4-particionado.md", 5), ("p10-paquetes-linux.md", 6), ("p9-proyecto.md", 7)):
+        original = unit / "practicas" / filename
+        target = DESTINATION / f"ud{number}" / "practicas" / filename
+        target.parent.mkdir(parents=True, exist_ok=True)
+        content = original.read_text(encoding="utf-8-sig")
+        content = re.sub(r"\]\(\.\./", "](../../ud3/", content)
+        target.write_text(content, encoding="utf-8")
+        index = DESTINATION / f"ud{number}" / "index.md"
+        if index.exists():
+            content = index.read_text(encoding="utf-8-sig")
+            content = content.replace(f"../ud3/practicas/{filename}", f"practicas/{filename}")
+            index.write_text(content, encoding="utf-8")
+
     removed = set()
     for folder, keep in allowed.items():
         for page in (unit / folder).glob("*.md"):

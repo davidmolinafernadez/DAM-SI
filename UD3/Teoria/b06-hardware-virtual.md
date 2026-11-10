@@ -45,7 +45,6 @@ Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula 
 
 ## Prácticas relacionadas
 
-- [P1 · Crear la máquina virtual](practicas/p1-crear-vm.md)
 - [P8 · Clonar, exportar e importar](practicas/p8-transferencia.md)
 
 <div class="video-card" markdown>

@@ -55,7 +55,7 @@ Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula 
 
 ## Prácticas relacionadas
 
-- [P0 · Auditoría e ISO](practicas/p0-auditoria.md)
+- [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
 
 <div class="video-card" markdown>
 
