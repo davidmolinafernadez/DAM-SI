@@ -31,26 +31,26 @@ Sistemas Informáticos · 1.º DAM. Manual de teoría y trabajo de aula con tres
 
 La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
 
-## Teoría por bloques
+## Recorrido: teoría y trabajo por apartado { #teoria-por-bloques }
 
 ### 3.1 · Planificación, medios y arranque
 
 - [Teoría 3.1.1 · Planificar una instalación](b01-planificacion.md)
+- [Actividad 3.1 · Decidir antes de instalar](actividades/A01-decidir-antes-de-instalar.md)
 - [Teoría 3.1.2 · Medios e integridad](b03-medios-e-integridad.md)
 - [Teoría 3.1.3 · Firmware, arranque y particiones](b04-firmware-y-particiones.md)
-- [Actividad 3.1 · Decidir antes de instalar](actividades/A01-decidir-antes-de-instalar.md)
-- [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
 
 ### 3.2 · Virtualización y hardware virtual
 
 - [Teoría 3.2.1 · Comprender la virtualización](b02-virtualizacion.md)
 - [Teoría 3.2.2 · Hardware virtual y recursos](b06-hardware-virtual.md)
+- [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
 
 ### 3.3 · Instalación de Ubuntu y Windows
 
 - [Teoría 3.3.1 · Instalar y comprobar Ubuntu](b07-instalar-ubuntu.md)
-- [Teoría 3.3.2 · Instalar y comprobar Windows](b08-instalar-windows.md)
 - [Práctica P2 · Instalar Ubuntu](practicas/p2-ubuntu.md)
+- [Teoría 3.3.2 · Instalar y comprobar Windows](b08-instalar-windows.md)
 - [Práctica P3 · Instalar Windows 11](practicas/p3-windows.md)
 
 ### 3.4 · Particiones y sistemas de archivos
