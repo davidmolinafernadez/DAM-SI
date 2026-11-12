@@ -44,7 +44,7 @@ df -h .
 
 Anota la ruta y el espacio disponible (**Avail** o **Disp.**) del sistema de archivos que contiene esa carpeta. El punto significa «carpeta actual»: el espacio de otra unidad podría no servir para guardar tus VM.
 
-5. Consulta el modo de arranque del anfitrión:
+**Modo de arranque del anfitrión:** consulta el resultado con este comando:
 
 ```bash
 if [ -d /sys/firmware/efi ]; then
