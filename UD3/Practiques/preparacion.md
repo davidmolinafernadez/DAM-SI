@@ -1,6 +1,6 @@
 # Antes de empezar: materiales y preparación de UD3
 
-Esta guía acompaña las seis prácticas. Léela antes de P1. No genera otra entrega. Conserva tus máquinas para las unidades posteriores.
+Esta guía acompaña las siete prácticas. Léela antes de P1. No genera otra entrega. Conserva tus máquinas para las unidades posteriores.
 
 Para preparar la entrega, utiliza la [plantilla del informe P1](p1-laboratorio.md#plantilla-del-informe-copia-y-completa), con un [ejemplo de redacción](p1-laboratorio.md#ejemplo-breve-de-redaccion-datos-ficticios) y la [lista de capturas de pantalla del proceso](p1-laboratorio.md#capturas-de-pantalla-del-proceso). Inserta las capturas en el informe y explica qué demuestra cada una.
 
@@ -90,12 +90,15 @@ Con la VM apagada abre **Configuración → Red → Adaptador 1**: habilitado, c
 | P4 | Sistemas instalados y conexión NAT comprobada | Registras propuesta, resultado y reinicio si procede; un error no cuenta como éxito |
 | P5 | VM funcional y archivo testigo; evidencias fuera del invitado | Restauras el estado previsto y explicas qué cambios desaparecen |
 | P6 | Ubuntu apagado y espacio para copias e importación | Clon e importación arrancan y conservan el archivo testigo |
+| P7 | Clon Ubuntu con Docker Engine operativo e imagen disponible | Web personalizada recuperada en otro contenedor con el mismo volumen |
 
 Sigue después los pasos completos de cada ficha. Antes de restaurar una instantánea, saca fuera del invitado los documentos que necesites conservar. Al terminar una sesión apaga desde el sistema invitado y espera al estado **Apagada** antes de cerrar VirtualBox o copiar material. La instantánea depende de la VM y sus discos; no sustituye una copia independiente.
 
 ## 7. Contenedores: qué haces tú
 
-En UD3 se realiza una introducción y demostración. No necesitas instalar Docker en tu ordenador físico ni preparar servidores para las seis prácticas esenciales. Si el docente propone realizar la demostración, utilizarás un clon Ubuntu con Docker Engine ya preparado. El procedimiento está en [Contenedores](../b12-contenedores.md). No añade una entrega a las ocho de la unidad.
+En [P7 · Contenedores](p7-contenedores.md) realizarás una práctica guiada de dos horas y entregarás `P7_Apellidos_Nombre.pdf` con capturas explicadas. Trabajarás en un clon Ubuntu con Docker Engine ya instalado y probado por el docente. El motor se prepara mediante el [procedimiento oficial de Docker para Ubuntu](https://docs.docker.com/engine/install/ubuntu/). No necesitas instalar Docker en el ordenador físico ni Docker Desktop dentro de la VM.
+
+El docente debe comprobar acceso al registro o proporcionar la imagen `nginx:stable-alpine` ya descargada, y verificar que no estén ocupados los nombres y el puerto de la práctica. Guardarás las evidencias fuera del clon. P7 se realiza después de la teoría 3.8 y forma parte de las nueve entregas de UD3: dos actividades y siete prácticas.
 
 ## 8. Evidencias y problemas
 

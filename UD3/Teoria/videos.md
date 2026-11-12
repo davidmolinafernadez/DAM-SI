@@ -92,9 +92,9 @@ Autor: Ringa Tech. Publicado el 7 de julio de 2022. Castellano. Enlace: <https:/
 
 <iframe src="https://www.youtube-nocookie.com/embed/9eTVZwMZJsA" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
 
-Relación: B12; X2. Como introducción puede seleccionarse el tramo inicial de comparación y funcionamiento, aproximadamente hasta el minuto 6. La descripción del autor incluye capítulos; las instrucciones de instalación y las condiciones comerciales se comprueban en documentación actual.
+Relación: B12; P7. Como introducción puede seleccionarse el tramo inicial de comparación y funcionamiento, aproximadamente hasta el minuto 6. La descripción del autor incluye capítulos; las instrucciones de instalación y las condiciones comerciales se comprueban en documentación actual.
 
-Antes: dibuja una VM Linux con su kernel. Durante: añade la capa de contenedores al esquema. Después: explica dónde está el kernel que utiliza el contenedor de X2.
+Antes: dibuja una VM Linux con su kernel. Durante: añade la capa de contenedores al esquema. Después: explica dónde está el kernel que utiliza el contenedor de P7.
 
 Tarea: crea una tabla con VM y contenedor: qué arrancan, qué comparten, qué datos desaparecen al eliminar la instancia y qué conviene respaldar. Criterio: distingue imagen, instancia y volumen, y evita presentar un contenedor como un sistema completo con kernel independiente.
 

@@ -12,12 +12,13 @@ El docente demuestra los pasos clave y acompaña el trabajo. El alumnado sigue l
 | 4 · Actualizar | [P4 · Actualizar y verificar](p4-actualizaciones.md) | 2 h |
 | 5 · Recuperar | [P5 · Instantáneas](p5-instantaneas.md) | 2 h |
 | 6 · Transferir | [P6 · Clonar, exportar e importar](p6-transferencia.md) | 2,5 h |
+| 7 · Contenedores | [P7 · Una web y sus datos persistentes](p7-contenedores.md) | 2 h |
 
-**Son seis prácticas guiadas, numeradas de P1 a P6, y seis entregas.** P1 reúne auditoría, verificación de la ISO y creación de la VM. No hay que realizar prácticas adicionales en esta unidad.
+**Son siete prácticas guiadas, numeradas de P1 a P7, y siete entregas.** P1 reúne auditoría, verificación de la ISO y creación de la VM. No hay que realizar prácticas adicionales en esta unidad.
 
 ## Equivalencias con la numeración anterior
 
-Desde el 12/11/2026, las seis prácticas de UD3 se numeran de P1 a P6.
+Desde el 12/11/2026, las prácticas de UD3 se numeran de P1 a P7. Contenedores pasa de ampliación X2 a práctica P7 con entrega.
 
 | Numeración anterior | Numeración vigente |
 | --- | --- |
@@ -27,10 +28,11 @@ Desde el 12/11/2026, las seis prácticas de UD3 se numeran de P1 a P6.
 | P6 · Actualizaciones | P4 · Actualizar y verificar |
 | P7 · Instantáneas | P5 · Instantáneas y recuperación |
 | P8 · Transferencia | P6 · Clonar, exportar e importar |
+| X2 · Ampliación de Docker | P7 · Contenedores |
 | Antigua UD3/P4 · Particionado | UD5/P1 · Particionar y montar un disco de datos |
 | Antigua UD3/P5 · Redes | UD4/P6 · Redes virtuales y web |
 
-**Si ya has entregado una práctica con el código anterior, no debes repetirla ni renombrar el archivo entregado.** La evidencia y su calificación se conservan. Para las nuevas entregas utiliza el nombre de PDF indicado en la ficha vigente. Los PDF y paquetes antiguos pueden conservar la numeración anterior; sigue las fichas web actuales. No se añaden prácticas ni cambian las horas o los pesos de evaluación.
+**Si ya has entregado una práctica con el código anterior, no debes repetirla ni renombrar el archivo entregado.** La evidencia y su calificación se conservan. Para las nuevas entregas utiliza el nombre de PDF indicado en la ficha vigente. Los PDF y paquetes antiguos pueden conservar la numeración anterior; sigue las fichas web actuales. La antigua ampliación X2 se incorpora como P7 con entrega propia. La renumeración conserva las evidencias anteriores; P7 se integra en el bloque de tareas con el mismo peso que las demás prácticas. Se mantienen las 27 horas de UD3 redistribuyendo dos horas de demostración a práctica guiada.
 
 ## Qué se entrega en cada práctica
 

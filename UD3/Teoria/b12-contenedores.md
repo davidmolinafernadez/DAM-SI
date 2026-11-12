@@ -19,7 +19,7 @@ Un contenedor detenido puede conservar su capa de escritura hasta que se elimina
 
 ## Aplicación de aula
 
-En la ampliación X2 se ejecuta un servidor web dentro de la VM Ubuntu. La instalación del motor sigue la documentación oficial elegida por el docente; no se mezclan paquetes incompatibles ni se pega un script remoto sin revisarlo. Se utilizan comandos con sudo, sin añadir a toda la clase al grupo docker como si fuera un permiso ordinario.
+En [P7 · Contenedores](practicas/p7-contenedores.md) se ejecuta un servidor web dentro de la VM Ubuntu. La instalación del motor sigue la documentación oficial elegida por el docente; no se mezclan paquetes incompatibles ni se pega un script remoto sin revisarlo. Se utilizan comandos con sudo, sin añadir a toda la clase al grupo docker como si fuera un permiso ordinario.
 
 Publicar 127.0.0.1:8081:80 hace accesible el puerto 80 del contenedor a través de 8081 en el bucle local de la VM. Desde el anfitrión físico, 127.0.0.1 identifica otro sistema; por eso la prueba inicial se hace con el navegador de Ubuntu. Esta distinción enlaza con las redes de UD4/P6.
 
@@ -29,13 +29,13 @@ Compara kernel, tiempo de preparación, espacio y persistencia. No concluyas que
 
 ## Interpretar la publicación de puertos
 
-En `127.0.0.1:8081:80`, la primera parte es la dirección de escucha del sistema que ejecuta el motor, la segunda es su puerto publicado y la tercera el puerto del contenedor. En X2 el motor está dentro de Ubuntu virtualizado. El navegador de esa Ubuntu puede usar 127.0.0.1:8081; el del ordenador físico utiliza su propio bucle local y necesitaría otra ruta para llegar.
+En `127.0.0.1:8081:80`, la primera parte es la dirección de escucha del sistema que ejecuta el motor, la segunda es su puerto publicado y la tercera el puerto del contenedor. En P7 el motor está dentro de Ubuntu virtualizado. El navegador de esa Ubuntu puede usar 127.0.0.1:8081; el del ordenador físico utiliza su propio bucle local y necesitaría otra ruta para llegar.
 
 Esto permite razonar la diferencia entre que un proceso esté en ejecución y que un cliente pueda alcanzarlo. También explica por qué los datos del volumen pueden seguir presentes aunque se elimine el contenedor: servicio, red y almacenamiento tienen ciclos de vida relacionados, pero separados.
 
 ## Actividades de este apartado
 
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5, P6 y P7. Total: nueve entregas en UD3.
 
 <div class="video-card" markdown>
 
@@ -50,3 +50,9 @@ V7: observa la comparación de capas; la instalación del motor sigue el procedi
 [Abrir el vídeo en su página original](https://www.youtube.com/watch?v=9eTVZwMZJsA) · [Ficha y preguntas de visionado](videos.md)
 
 </div>
+
+## Práctica de este apartado · P7
+
+Realiza [P7 · Contenedores: una web y sus datos persistentes](practicas/p7-contenedores.md). Es una práctica guiada de **dos horas, con entrega propia**, sobre un clon Ubuntu con Docker Engine preparado por el docente.
+
+Publicarás nginx, modificarás su página, compararás el kernel y comprobarás la persistencia al eliminar y recrear el contenedor con el mismo volumen. Entrega `P7_Apellidos_Nombre.pdf` con capturas ordenadas del proceso, una explicación breve de cada paso, los identificadores de ambos contenedores, el digest y las comprobaciones indicadas en la ficha.

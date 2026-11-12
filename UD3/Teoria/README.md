@@ -2,7 +2,7 @@
 
 ## Qué se entrega en UD3
 
-**Ocho entregas en Aules:** dos actividades escritas y seis entregas de prácticas.
+**Nueve entregas en Aules:** dos actividades escritas y siete entregas de prácticas.
 
 | Entrega | Qué debes presentar |
 | --- | --- |
@@ -14,6 +14,7 @@
 | P4 · Actualizaciones | Informe con estado anterior, actualización y verificación |
 | P5 · Instantáneas | Informe con prueba de recuperación y archivo testigo |
 | P6 · Transferencia | Informe con clonación, exportación e importación comprobada |
+| P7 · Contenedores | Informe con web, comparación de kernel y persistencia tras recrear el contenedor |
 
 **Los vídeos no generan ninguna entrega.** Sus preguntas se comentan en clase.
 
@@ -29,7 +30,7 @@ Sistemas Informáticos · 1.º DAM. Manual de teoría y trabajo de aula con tres
 
 ## Cómo se trabaja
 
-La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
+La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5, P6 y P7. Total: nueve entregas en UD3.
 
 ## Recorrido: teoría y trabajo por apartado { #teoria-por-bloques }
 
@@ -76,6 +77,7 @@ La **teoría** explica el concepto con ejemplos. Las **actividades** piden razon
 ### 3.8 · Contenedores para DAM
 
 - [Teoría 3.8 · Contenedores para DAM](b12-contenedores.md)
+- [Práctica P7 · Contenedores: una web y sus datos](practicas/p7-contenedores.md)
 
 ## Material vigente
 
@@ -83,7 +85,7 @@ Solo A1 y A10 conservan descarga para entrega. Los cuadernos y paquetes anterior
 
 ## Orientación de aula
 
-Duración: **27 horas**, con 16 horas de prácticas esenciales. Las 3 h de redes virtuales se imparten después, dentro de UD4. Consulta el [itinerario y la evaluación](itinerario.md) para ver las ocho entregas previstas.
+Duración: **27 horas**, con 18 horas de prácticas esenciales. Las 3 h de redes virtuales se imparten después, dentro de UD4. Consulta el [itinerario y la evaluación](itinerario.md) para ver las nueve entregas previstas.
 
 [Glosario y fuentes](glosario-y-fuentes.md) · [Vídeos y fichas de observación](videos.md) · [Plantillas de entrega](actividades/plantillas.md)
 

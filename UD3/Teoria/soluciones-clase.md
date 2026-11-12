@@ -2,7 +2,7 @@
 
 **Sin entrega y sin calificación independiente.** El docente selecciona los casos que necesita, plantea las preguntas y despliega la solución para comentarla. No hay que completar todo este banco ni subir archivos a Aules. Los casos de redes se retoman en UD4.
 
-A1 y A10 son entregables y no incluyen soluciones en esta página. Las seis prácticas conservan sus guías, sin respuestas modelo del informe.
+A1 y A10 son entregables y no incluyen soluciones en esta página. Las siete prácticas conservan sus guías, sin respuestas modelo del informe.
 
 ## Caso A2 · El recorrido de un archivo en una VM
 
@@ -166,7 +166,7 @@ Un desarrollador afirma: «He descargado una imagen Ubuntu en Docker, así que h
 ### A11 · Preguntas para comentar
 
 1. Identifica las dos confusiones en la primera afirmación y corrígela.
-2. Dibuja hardware, anfitrión, VM Ubuntu y contenedores del laboratorio X2. Señala dónde está el kernel.
+2. Dibuja hardware, anfitrión, VM Ubuntu y contenedores del laboratorio P7. Señala dónde está el kernel.
 3. Distingue imagen, contenedor y volumen con un ejemplo de servicio web.
 4. Predice qué ocurre al detener, volver a iniciar y eliminar un contenedor.
 5. Justifica cuándo elegirías VM completa y cuándo contenedor para un trabajo de DAM.

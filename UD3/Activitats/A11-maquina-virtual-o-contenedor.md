@@ -30,7 +30,7 @@ Un desarrollador afirma: «He descargado una imagen Ubuntu en Docker, así que h
 ## Cuestiones
 
 1. Identifica las dos confusiones en la primera afirmación y corrígela.
-2. Dibuja hardware, anfitrión, VM Ubuntu y contenedores del laboratorio X2. Señala dónde está el kernel.
+2. Dibuja hardware, anfitrión, VM Ubuntu y contenedores del laboratorio P7. Señala dónde está el kernel.
 3. Distingue imagen, contenedor y volumen con un ejemplo de servicio web.
 4. Predice qué ocurre al detener, volver a iniciar y eliminar un contenedor.
 5. Justifica cuándo elegirías VM completa y cuándo contenedor para un trabajo de DAM.

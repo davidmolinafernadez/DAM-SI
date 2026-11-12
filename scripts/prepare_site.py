@@ -47,11 +47,11 @@ def main() -> None:
 
 
 def simplify_ud3():
-    """Publica únicamente las fichas que forman las ocho entregas de UD3."""
+    """Publica únicamente las fichas que forman las nueve entregas de UD3."""
     unit = DESTINATION / "ud3"
     allowed = {
         "actividades": {"index.md", "plantillas.md", "A01-decidir-antes-de-instalar.md", "A10-escoger-una-estrategia-de-recuperacion.md"},
-        "practicas": {"preparacion.md", "index.md", "p1-laboratorio.md", "p2-ubuntu.md", "p3-windows.md", "p4-actualizaciones.md", "p5-instantaneas.md", "p6-transferencia.md"},
+        "practicas": {"preparacion.md", "index.md", "p1-laboratorio.md", "p2-ubuntu.md", "p3-windows.md", "p4-actualizaciones.md", "p5-instantaneas.md", "p6-transferencia.md", "p7-contenedores.md"},
     }
     # Las prácticas de continuidad se publican en su unidad correspondiente.
     import re
@@ -80,7 +80,7 @@ def simplify_ud3():
         lines = [line for line in lines if not any(name in line for name in removed)]
         page.write_text("\n".join(lines) + "\n", encoding="utf-8")
     # Conserva los enlaces de prácticas compartidos antes de la renumeración.
-    for old, new in {'p0-p1-laboratorio.md': 'p1-laboratorio.md', 'p6-actualizaciones.md': 'p4-actualizaciones.md', 'p7-instantaneas.md': 'p5-instantaneas.md', 'p8-transferencia.md': 'p6-transferencia.md'}.items():
+    for old, new in {'p0-p1-laboratorio.md': 'p1-laboratorio.md', 'p6-actualizaciones.md': 'p4-actualizaciones.md', 'p7-instantaneas.md': 'p5-instantaneas.md', 'p8-transferencia.md': 'p6-transferencia.md', 'x2-docker.md': 'p7-contenedores.md'}.items():
         (unit / "practicas" / old).write_text(
             f"# Práctica renumerada\n\nEsta ficha ha cambiado de código. [Abrir la práctica vigente]({new}).\n",
             encoding="utf-8",
