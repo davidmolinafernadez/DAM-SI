@@ -1,5 +1,7 @@
 # P2. Ubuntu Desktop: de la ISO al sistema instalado
 
+[Antes de empezar: materiales, descargas y comprobaciones](preparacion.md).
+
 <div class="lesson-banner" markdown>
 <div class="lesson-number">P2</div>
 <div markdown>
@@ -72,10 +74,48 @@ La instalación de Guest Additions se realiza solo mediante la ruta aprobada del
 
 Aceptación: arranque sin ISO, usuario correcto, archivo persistente, raíz en el disco, recursos y reloj coherentes. Entrega resumen de destino, tabla de comprobaciones y evidencia tras reinicio. **Incidencia:** explica cómo distinguir sesión Live, ISO aún conectada y disco no instalado utilizando una prueba para cada hipótesis.
 
-## Entrega independiente de la práctica
+## Qué debes entregar
 
-Guarda `P2_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Solo A1 y A10 tienen archivo propio. El resto de preguntas se trabaja en clase o dentro de la práctica, sin otra entrega.
+Entrega **un único informe PDF**, llamado `P2_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
 
+### Estructura del informe
+
+1. **Portada:** práctica, nombre y apellidos, grupo, fecha, VM utilizada y sistema anfitrión.
+2. **Preparación:** estado inicial, materiales y configuración necesarios.
+3. **Proceso paso a paso:** sigue el orden de los apartados de esta guía. En cada paso escribe qué has hecho, añade la captura o capturas y explica el resultado observado en 2–4 líneas. Si una decisión no genera una pantalla propia, escríbela igualmente.
+4. **Comprobaciones finales:** presenta las pruebas solicitadas y sus resultados; una barra de progreso o un escritorio por sí solos no acreditan todas las comprobaciones.
+5. **Incidencias y conclusión:** responde al caso planteado y registra los problemas reales, las pruebas y su resultado. Si no hubo problemas reales, indícalo. Explica qué has conseguido y qué queda pendiente.
+
+**Modelo para repetir en cada paso:**
+
+- **Paso y título:** [número y acción].
+- **Acción realizada:** [qué has hecho y qué opción o comando has utilizado].
+- **Captura:** [inserta aquí la imagen propia con su código].
+- **Explicación:** [qué se ve, por qué has elegido esa opción y qué demuestra el resultado].
+
+### Capturas y explicaciones que debe contener
+
+| Captura | Momento del proceso | Explicación que debes escribir |
+| --- | --- | --- |
+| P2-01 | Arranque desde la ISO y sesión Live | Qué medio ha arrancado y por qué aún no acredita una instalación. |
+| P2-02 | Idioma, teclado, red y modalidad interactiva | Qué opciones has elegido y cómo has probado el teclado. Añade las imágenes necesarias. |
+| P2-03 | Selección de aplicaciones y opciones adicionales | Qué instalarás y qué has decidido posponer. |
+| P2-04 | Disco de destino y resumen antes de instalar | Nombre y capacidad del disco virtual, cambios previstos y por qué es el destino correcto. |
+| P2-05 | Identidad, zona horaria y progreso o finalización | Usuario y nombre de máquina, zona elegida y resultado de la instalación, sin mostrar contraseñas. |
+| P2-06 | Unidad óptica sin ISO y arranque posterior | Cómo has retirado el medio y qué sistema arranca desde el disco. |
+| P2-07 | Consultas de sistema, memoria, discos y red | Resultado de cada comando del apartado 6 y qué permite comprobar. Usa varias capturas legibles. |
+| P2-08 | Archivo testigo antes y después de reiniciar | Ruta, contenido y por qué su conservación prueba persistencia. |
+| P2-09 | Integración y comprobación final | Qué has comprobado de Guest Additions si se realizó, y qué criterios de aceptación se cumplen o quedan pendientes. |
+
+**Incluye además:** tabla de comprobaciones (criterio, prueba, resultado y captura), resumen del disco elegido y respuesta razonada a la incidencia sobre sesión Live, ISO conectada y disco no instalado.
+
+**Ejemplo de pie:** «P2-08. Tras reiniciar sin ISO, leo de nuevo `~/comprobacion-ud3.txt` y conserva el contenido. Junto al arranque sin medio y la raíz en el disco, esta prueba acredita que trabajo sobre la instalación». Utiliza esta conclusión solo si tus pruebas la confirman.
+
+### Antes de entregar
+
+Guarda las capturas en la carpeta de evidencias autorizada, fuera de la VM que puedas restaurar. Numéralas como en la tabla; si necesitas varias para un punto, utiliza `a`, `b`, etc. Deben verse los valores y mensajes necesarios, sin contraseñas ni claves. Si una pantalla cambia según la versión, documenta la equivalente y explícalo; si un paso no puede completarse, registra el error y la comprobación pendiente.
+
+Revisa que el PDF incluya todos los pasos, que sus imágenes se lean y que cada una tenga explicación. **Sube el informe PDF a la tarea de la práctica en Aules; las capturas deben ir dentro del informe.** No subas capturas sueltas, ISO, VDI ni OVA. Las respuestas y tablas de esta práctica van en el mismo PDF y no generan otra entrega.
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Instalación Ubuntu 24.04

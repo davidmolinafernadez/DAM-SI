@@ -43,10 +43,47 @@ Pulsa **Importar** y espera. Con la máquina todavía apagada, comprueba firmwar
 
 Entrega comparación origen/clon/importación, nuevas identidades, estado elegido, tamaño del paquete y resultados de pruebas. **Incidencia:** dos invitados conservan la misma IP estática aunque sus MAC sean diferentes. Explica qué campo debes revisar y por qué generar MAC nuevas no cambió esa configuración del sistema.
 
-## Entrega independiente de la práctica
+## Qué debes entregar
 
-Guarda `P8_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Solo A1 y A10 tienen archivo propio. El resto de preguntas se trabaja en clase o dentro de la práctica, sin otra entrega.
+Entrega **un único informe PDF**, llamado `P8_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
 
+### Estructura del informe
+
+1. **Portada:** práctica, nombre y apellidos, grupo, fecha, VM utilizada y sistema anfitrión.
+2. **Preparación:** estado inicial, materiales y configuración necesarios.
+3. **Proceso paso a paso:** sigue el orden de los apartados de esta guía. En cada paso escribe qué has hecho, añade la captura o capturas y explica el resultado observado en 2–4 líneas. Si una decisión no genera una pantalla propia, escríbela igualmente.
+4. **Comprobaciones finales:** presenta las pruebas solicitadas y sus resultados; una barra de progreso o un escritorio por sí solos no acreditan todas las comprobaciones.
+5. **Incidencias y conclusión:** responde al caso planteado y registra los problemas reales, las pruebas y su resultado. Si no hubo problemas reales, indícalo. Explica qué has conseguido y qué queda pendiente.
+
+**Modelo para repetir en cada paso:**
+
+- **Paso y título:** [número y acción].
+- **Acción realizada:** [qué has hecho y qué opción o comando has utilizado].
+- **Captura:** [inserta aquí la imagen propia con su código].
+- **Explicación:** [qué se ve, por qué has elegido esa opción y qué demuestra el resultado].
+
+### Capturas y explicaciones que debe contener
+
+| Captura | Momento del proceso | Explicación que debes escribir |
+| --- | --- | --- |
+| P8-01 | Espacio disponible y origen apagado | Si cabe el clon, el OVA y la importación, y cómo has identificado el origen. |
+| P8-02 | Asistente de clonación | Nombre y destino, clon completo, política de MAC y estado elegido. |
+| P8-03 | MAC y nombre del equipo en origen y clon; IP si procede | Qué identidades has cambiado y qué configuración de red has comprobado. |
+| P8-04 | Archivo creado solo en el clon y comprobación en el origen | Ruta y contenido en el clon y prueba de ausencia en el origen; usa dos capturas. |
+| P8-05 | Estado y configuración del origen antes de exportar | Firmware, recursos, discos, red y archivo testigo que esperas recuperar. |
+| P8-06 | Asistente de exportación y OVA generado | VM seleccionada, destino, nombre del paquete y tamaño final. |
+| P8-07 | Asistente de importación y revisión con la VM apagada | Nombre, carpeta, recursos, política de MAC, firmware, controlador y red. |
+| P8-08 | Arranque de la importada | Usuario, versión, archivo testigo y funcionamiento de una aplicación o servicio. Usa las imágenes necesarias. |
+
+**Incluye además:** tabla comparativa de origen, clon e importación con nombre de VM, nombre del equipo, MAC, IP/modo de red, recursos, carpeta, archivo testigo y resultado de arranque. Indica qué estado exportaste y el tamaño del OVA. Responde a la incidencia de IP estática repetida aunque las MAC sean distintas.
+
+**Ejemplo de pie:** «P8-04. El archivo [ruta] existe en el clon y no aparece al comprobar la misma ruta en el origen. La prueba muestra independencia de escrituras; ambas VM todavía pueden estar en el mismo disco físico». Incluye las dos comprobaciones reales.
+
+### Antes de entregar
+
+Guarda las capturas en la carpeta de evidencias autorizada, fuera de la VM que puedas restaurar. Numéralas como en la tabla; si necesitas varias para un punto, utiliza `a`, `b`, etc. Deben verse los valores y mensajes necesarios, sin contraseñas ni claves. Si una pantalla cambia según la versión, documenta la equivalente y explícalo; si un paso no puede completarse, registra el error y la comprobación pendiente.
+
+Revisa que el PDF incluya todos los pasos, que sus imágenes se lean y que cada una tenga explicación. **Sube el informe PDF a la tarea de la práctica en Aules; las capturas deben ir dentro del informe.** No subas capturas sueltas, ISO, VDI ni OVA. Las respuestas y tablas de esta práctica van en el mismo PDF y no generan otra entrega.
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Instantáneas de VirtualBox

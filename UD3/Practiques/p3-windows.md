@@ -1,5 +1,7 @@
 # P3. Windows 11 con instalación y licencia diferenciadas
 
+[Antes de empezar: materiales, descargas y comprobaciones](preparacion.md).
+
 <div class="lesson-banner" markdown>
 <div class="lesson-number">P3</div>
 <div markdown>
@@ -54,10 +56,49 @@ Si se requieren Guest Additions, en el menú de la VM abre **Dispositivos → In
 
 Aceptación: arranque independiente, archivo persistente, requisitos acreditados, particiones explicadas y actualizaciones comprobadas. Una activación pendiente se declara y se resuelve por el centro; no se presenta como evaluación oficial. Entrega una tabla de herramienta, dato real y conclusión. Analiza aparte una ficha ficticia con 2 GiB de RAM, sin TPM virtual y firmware heredado.
 
-## Entrega independiente de la práctica
+## Qué debes entregar
 
-Guarda `P3_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Solo A1 y A10 tienen archivo propio. El resto de preguntas se trabaja en clase o dentro de la práctica, sin otra entrega.
+Entrega **un único informe PDF**, llamado `P3_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
 
+### Estructura del informe
+
+1. **Portada:** práctica, nombre y apellidos, grupo, fecha, VM utilizada y sistema anfitrión.
+2. **Preparación:** estado inicial, materiales y configuración necesarios.
+3. **Proceso paso a paso:** sigue el orden de los apartados de esta guía. En cada paso escribe qué has hecho, añade la captura o capturas y explica el resultado observado en 2–4 líneas. Si una decisión no genera una pantalla propia, escríbela igualmente.
+4. **Comprobaciones finales:** presenta las pruebas solicitadas y sus resultados; una barra de progreso o un escritorio por sí solos no acreditan todas las comprobaciones.
+5. **Incidencias y conclusión:** responde al caso planteado y registra los problemas reales, las pruebas y su resultado. Si no hubo problemas reales, indícalo. Explica qué has conseguido y qué queda pendiente.
+
+**Modelo para repetir en cada paso:**
+
+- **Paso y título:** [número y acción].
+- **Acción realizada:** [qué has hecho y qué opción o comando has utilizado].
+- **Captura:** [inserta aquí la imagen propia con su código].
+- **Explicación:** [qué se ve, por qué has elegido esa opción y qué demuestra el resultado].
+
+### Capturas y explicaciones que debe contener
+
+| Captura | Momento del proceso | Explicación que debes escribir |
+| --- | --- | --- |
+| P3-01 | Configuración de RAM, CPU, disco, firmware, TPM y arranque seguro | Valores reales y adecuación a los requisitos; utiliza varias imágenes. |
+| P3-02 | Inicio del instalador, idioma, teclado y edición | Opciones seleccionadas e identificación de la edición autorizada, sin claves. |
+| P3-03 | Selección del disco antes de confirmar | Capacidad, espacio sin asignar y por qué corresponde al disco virtual vacío. |
+| P3-04 | Copia de archivos y primer inicio | Resultado, región, teclado y procedimiento de cuenta utilizado, sin credenciales. |
+| P3-05 | ISO retirada y arranque desde el disco | Cómo has confirmado que el sistema arranca sin el instalador. |
+| P3-06 | Archivo de Documentos antes y después del reinicio | Nombre, contenido y comprobación de que se conserva. |
+| P3-07 | `winver`, `msinfo32` y `tpm.msc` | Edición, versión, firmware, estado de arranque seguro y TPM observado; una o varias capturas por herramienta. |
+| P3-08 | Administración de discos y Administrador de dispositivos | Función de las particiones y presencia o ausencia de advertencias. |
+| P3-09 | Windows Update antes y después, con reinicio si procede | Qué se instaló, qué solicitó reiniciar y estado posterior. |
+| P3-10 | Estado de activación e integración | Qué estado aparece, qué queda pendiente y resultado de Guest Additions si se realizó. Oculta claves e identificadores innecesarios. |
+
+**Incluye además:** tabla de herramienta, dato real, conclusión y captura; criterios de aceptación; análisis de la ficha ficticia con 2 GiB de RAM, sin TPM y firmware heredado. Distingue instalación completada y estado de licencia/activación.
+
+**Ejemplo de pie:** «P3-08. Administración de discos muestra las particiones creadas por el instalador en el disco virtual. Identifico [particiones observadas] y explico su función. No he inicializado ni modificado otros discos». Sustituye los corchetes por tus resultados.
+
+### Antes de entregar
+
+Guarda las capturas en la carpeta de evidencias autorizada, fuera de la VM que puedas restaurar. Numéralas como en la tabla; si necesitas varias para un punto, utiliza `a`, `b`, etc. Deben verse los valores y mensajes necesarios, sin contraseñas ni claves. Si una pantalla cambia según la versión, documenta la equivalente y explícalo; si un paso no puede completarse, registra el error y la comprobación pendiente.
+
+Revisa que el PDF incluya todos los pasos, que sus imágenes se lean y que cada una tenga explicación. **Sube el informe PDF a la tarea de la práctica en Aules; las capturas deben ir dentro del informe.** No subas capturas sueltas, ISO, VDI ni OVA. Las respuestas y tablas de esta práctica van en el mismo PDF y no generan otra entrega.
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Preparación e instalación de Windows 11
