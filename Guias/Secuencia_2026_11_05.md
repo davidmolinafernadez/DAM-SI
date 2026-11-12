@@ -1,6 +1,6 @@
 # Secuencia y numeración vigentes · 5 de noviembre de 2026
 
-> **Nota de actualización (12/11/2026):** este documento conserva la numeración de su fecha. Las prácticas vigentes de UD3 son P1–P6. Consulta las [equivalencias y las entregas actuales](../UD3/Practiques/index.md#equivalencias-con-la-numeracion-anterior). Las entregas ya realizadas no se repiten ni se renombran.
+**Nota de actualización (12/11/2026):** este documento conserva la numeración de su fecha. Las prácticas vigentes de UD3 son P1–P6. Consulta las [equivalencias y las entregas actuales](../UD3/Practiques/index.md#equivalencias-con-la-numeracion-anterior). Las entregas ya realizadas no se repiten ni se renombran.
 
 ## Unidades y horas
 
