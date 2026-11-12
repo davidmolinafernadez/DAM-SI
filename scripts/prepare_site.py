@@ -51,7 +51,7 @@ def simplify_ud3():
     unit = DESTINATION / "ud3"
     allowed = {
         "actividades": {"index.md", "plantillas.md", "A01-decidir-antes-de-instalar.md", "A10-escoger-una-estrategia-de-recuperacion.md"},
-        "practicas": {"index.md", "p0-p1-laboratorio.md", "p2-ubuntu.md", "p3-windows.md", "p6-actualizaciones.md", "p7-instantaneas.md", "p8-transferencia.md"},
+        "practicas": {"preparacion.md", "index.md", "p0-p1-laboratorio.md", "p2-ubuntu.md", "p3-windows.md", "p6-actualizaciones.md", "p7-instantaneas.md", "p8-transferencia.md"},
     }
     # Las prácticas de continuidad se publican en su unidad correspondiente.
     import re
