@@ -35,6 +35,8 @@ Se imparte después de UD2 y antes de UD4 Redes. Se actualiza la numeración de 
 
 P1 (3,5 h) → P2 (3 h) → P3 (3 h) → P4 (2 h) → P5 (2 h) → P6 (2,5 h) → P7 (2 h). Total práctico: 18 horas.
 
+Las ampliaciones de Dockerfile y Compose son opcionales: requieren unos 60 minutos adicionales o sustituyen trabajo equivalente indicado por el docente; no se suman como obligación a las 27 horas ni generan otra entrega.
+
 P7 sustituye dos horas del bloque de explicación y demostración por trabajo guiado del alumnado. Se mantienen las 27 horas de UD3; el docente proporciona Docker preparado, de modo que su instalación no consume estas dos horas.
 
 ## Conectividad inicial proporcionada

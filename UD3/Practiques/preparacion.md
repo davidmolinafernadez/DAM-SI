@@ -98,7 +98,7 @@ Sigue después los pasos completos de cada ficha. Antes de restaurar una instant
 
 En [P7 · Contenedores](p7-contenedores.md) realizarás una práctica guiada de dos horas y entregarás `P7_Apellidos_Nombre.pdf` con capturas explicadas. Trabajarás en un clon Ubuntu con Docker Engine ya instalado y probado por el docente. El motor se prepara mediante el [procedimiento oficial de Docker para Ubuntu](https://docs.docker.com/engine/install/ubuntu/). No necesitas instalar Docker en el ordenador físico ni Docker Desktop dentro de la VM.
 
-El docente debe comprobar acceso al registro o proporcionar la imagen `nginx:stable-alpine` ya descargada, y verificar que no estén ocupados los nombres y el puerto de la práctica. Guardarás las evidencias fuera del clon. P7 se realiza después de la teoría 3.8 y forma parte de las nueve entregas de UD3: dos actividades y siete prácticas.
+El docente debe comprobar acceso al registro o proporcionar las imágenes `hello-world` y `nginx:stable-alpine` ya descargadas, y verificar que no estén ocupados los nombres y el puerto de la práctica. Guardarás las evidencias fuera del clon. La parte obligatoria incluye hello-world, ciclo de vida, web y persistencia. Para la ampliación opcional de Compose, prepara también el plugin mediante la [guía oficial](https://docs.docker.com/compose/install/linux/). Dockerfile y Compose se documentan como anexos del mismo PDF, con tiempo adicional y sin otra entrega. P7 se realiza después de la teoría 3.8 y forma parte de las nueve entregas de UD3: dos actividades y siete prácticas.
 
 ## 8. Evidencias y problemas
 
