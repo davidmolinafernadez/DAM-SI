@@ -1,7 +1,7 @@
-# P6. Actualizaciones y control de cambios
+# P4. Actualizaciones y control de cambios
 
 <div class="lesson-banner" markdown>
-<div class="lesson-number">P6</div>
+<div class="lesson-number">P4</div>
 <div markdown>
 **Práctica guiada de laboratorio**
 
@@ -15,7 +15,7 @@ Duración orientativa: 120 minutos. Trabaja en Ubuntu instalado y conserva un pu
 
 ## 1. Guarda el estado inicial
 
-Abre **Archivos → Carpeta personal** y comprueba que puedes crear un archivo. En la terminal ejecuta `df -hT` y `uname -r`. Apaga Ubuntu. En el administrador de VirtualBox, selecciona la VM y cambia de **Detalles** a **Instantáneas** mediante su menú de herramientas o vista. Pulsa **Tomar**, escribe `P6-antes-actualizar` y añade fecha y estado observado. Arranca de nuevo.
+Abre **Archivos → Carpeta personal** y comprueba que puedes crear un archivo. En la terminal ejecuta `df -hT` y `uname -r`. Apaga Ubuntu. En el administrador de VirtualBox, selecciona la VM y cambia de **Detalles** a **Instantáneas** mediante su menú de herramientas o vista. Pulsa **Tomar**, escribe `P4-antes-actualizar` y añade fecha y estado observado. Arranca de nuevo.
 
 ## 2. Refresca información y lee la propuesta
 
@@ -49,7 +49,7 @@ Entrega tabla antes/después, propuesta interpretada, reinicio cuando proceda y 
 
 ## Qué debes entregar
 
-Entrega **un único informe PDF**, llamado `P6_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
+Entrega **un único informe PDF**, llamado `P4_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
 
 ### Estructura del informe
 
@@ -70,19 +70,19 @@ Entrega **un único informe PDF**, llamado `P6_Apellidos_Nombre.pdf`, que docume
 
 | Captura | Momento del proceso | Explicación que debes escribir |
 | --- | --- | --- |
-| P6-01 | Estado inicial: archivo de prueba, espacio libre y kernel | Valores previos y por qué interesa registrarlos antes de actualizar. |
-| P6-02 | Instantánea `P6-antes-actualizar` | Nombre, fecha, VM y estado que permite recuperar. |
-| P6-03 | Resultado de `sudo apt update` | Si se han podido refrescar los índices y si hay avisos o errores. |
-| P6-04 | `apt list --upgradable` y propuesta de `sudo apt upgrade` antes de aceptar | Dos paquetes y sus versiones si aparecen, volumen de descarga y cambios propuestos. Si no hay actualizaciones, documenta ese resultado real. |
-| P6-05 | Final de la actualización y reinicio cuando proceda | Resultado de la operación y si se solicitó reiniciar. |
-| P6-06 | Kernel y paquete elegido después de actualizar | Comparación con los valores previos, aunque no cambien. |
-| P6-07 | Consulta, instalación y versión de `tree` | Qué paquete has inspeccionado, resultado de instalación y versión que responde. |
-| P6-08 | Uso de `tree` sobre la carpeta de prueba | Qué estructura aparece y por qué demuestra un uso real. |
-| P6-09 | Fallo de consulta con cable virtual desconectado y repetición tras reconectar | Mensaje observado, causa comprobada y resultado posterior. Usa dos capturas. |
+| P4-01 | Estado inicial: archivo de prueba, espacio libre y kernel | Valores previos y por qué interesa registrarlos antes de actualizar. |
+| P4-02 | Instantánea `P4-antes-actualizar` | Nombre, fecha, VM y estado que permite recuperar. |
+| P4-03 | Resultado de `sudo apt update` | Si se han podido refrescar los índices y si hay avisos o errores. |
+| P4-04 | `apt list --upgradable` y propuesta de `sudo apt upgrade` antes de aceptar | Dos paquetes y sus versiones si aparecen, volumen de descarga y cambios propuestos. Si no hay actualizaciones, documenta ese resultado real. |
+| P4-05 | Final de la actualización y reinicio cuando proceda | Resultado de la operación y si se solicitó reiniciar. |
+| P4-06 | Kernel y paquete elegido después de actualizar | Comparación con los valores previos, aunque no cambien. |
+| P4-07 | Consulta, instalación y versión de `tree` | Qué paquete has inspeccionado, resultado de instalación y versión que responde. |
+| P4-08 | Uso de `tree` sobre la carpeta de prueba | Qué estructura aparece y por qué demuestra un uso real. |
+| P4-09 | Fallo de consulta con cable virtual desconectado y repetición tras reconectar | Mensaje observado, causa comprobada y resultado posterior. Usa dos capturas. |
 
 **Incluye además:** tabla antes/después con kernel y paquete seleccionado (versiones reales y capturas), interpretación de la propuesta, diferencia entre `update` y `upgrade` y explicación de por qué el kernel puede mantenerse. Documenta también la incidencia de red y su resolución.
 
-**Ejemplo de pie:** «P6-06. Después de actualizar, `uname -r` devuelve [valor]. Al compararlo con [valor anterior], observo [cambio o ausencia de cambio]. Compruebo también la versión del paquete seleccionado». No inventes actualizaciones ni reinicios.
+**Ejemplo de pie:** «P4-06. Después de actualizar, `uname -r` devuelve [valor]. Al compararlo con [valor anterior], observo [cambio o ausencia de cambio]. Compruebo también la versión del paquete seleccionado». No inventes actualizaciones ni reinicios.
 
 ### Antes de entregar
 

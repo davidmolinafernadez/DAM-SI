@@ -21,7 +21,7 @@ Un contenedor detenido puede conservar su capa de escritura hasta que se elimina
 
 En la ampliación X2 se ejecuta un servidor web dentro de la VM Ubuntu. La instalación del motor sigue la documentación oficial elegida por el docente; no se mezclan paquetes incompatibles ni se pega un script remoto sin revisarlo. Se utilizan comandos con sudo, sin añadir a toda la clase al grupo docker como si fuera un permiso ordinario.
 
-Publicar 127.0.0.1:8081:80 hace accesible el puerto 80 del contenedor a través de 8081 en el bucle local de la VM. Desde el anfitrión físico, 127.0.0.1 identifica otro sistema; por eso la prueba inicial se hace con el navegador de Ubuntu. Esta distinción enlaza con las redes de P5.
+Publicar 127.0.0.1:8081:80 hace accesible el puerto 80 del contenedor a través de 8081 en el bucle local de la VM. Desde el anfitrión físico, 127.0.0.1 identifica otro sistema; por eso la prueba inicial se hace con el navegador de Ubuntu. Esta distinción enlaza con las redes de UD4/P6.
 
 ## Qué comparar
 
@@ -35,7 +35,7 @@ Esto permite razonar la diferencia entre que un proceso esté en ejecución y qu
 
 ## Actividades de este apartado
 
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
 
 <div class="video-card" markdown>
 

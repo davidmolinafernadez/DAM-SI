@@ -63,4 +63,4 @@ A1 es entregable en Aules. A13 queda como refuerzo opcional sin entrega. En este
 
 ## Prácticas relacionadas
 
-- [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
+- [P1 · Preparar el laboratorio](practicas/p1-laboratorio.md)

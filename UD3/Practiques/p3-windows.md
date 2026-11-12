@@ -17,7 +17,7 @@ Duración orientativa: 180 minutos. Necesitas una ISO oficial, una edición y de
 
 ## 1. Prepara el hardware de la VM
 
-En VirtualBox pulsa **Nueva**. Escribe `UD3-Windows-codigo`, selecciona la ISO y la plantilla Windows 11 de 64 bits. Marca **Omitir instalación desatendida** si aparece. Asigna **2 vCPU**, **4-6 GiB de RAM** según P0 y crea un **VDI dinámico de 80 GiB**. Antes de encender, comprueba que Ubuntu no esté consumiendo recursos que el presupuesto necesite.
+En VirtualBox pulsa **Nueva**. Escribe `UD3-Windows-codigo`, selecciona la ISO y la plantilla Windows 11 de 64 bits. Marca **Omitir instalación desatendida** si aparece. Asigna **2 vCPU**, **4-6 GiB de RAM** según P1 y crea un **VDI dinámico de 80 GiB**. Antes de encender, comprueba que Ubuntu no esté consumiendo recursos que el presupuesto necesite.
 
 Selecciona la VM → **Configuración → Sistema**. Revisa **EFI/UEFI**, **TPM virtual 2.0** y opciones de **Secure Boot/Arranque seguro** disponibles para tu versión. No basta elegir el nombre «Windows 11» si la configuración real no cumple. Si no encuentras esas opciones, anota versión y configuración y consulta la compatibilidad con el docente.
 

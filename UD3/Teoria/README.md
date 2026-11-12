@@ -8,18 +8,18 @@
 | --- | --- |
 | A1 · Decidir antes de instalar | Tabla de alternativas y recomendación razonada |
 | A10 · Estrategia de recuperación | Matriz de necesidades y protocolo de comprobación |
-| P0–P1 · Preparar el laboratorio | Un único informe con auditoría, ISO y creación de la VM |
+| P1 · Preparar el laboratorio | Un único informe con auditoría, ISO y creación de la VM |
 | P2 · Ubuntu | Informe y evidencias de instalación y comprobación |
 | P3 · Windows 11 | Informe y evidencias de instalación y comprobación |
-| P6 · Actualizaciones | Informe con estado anterior, actualización y verificación |
-| P7 · Instantáneas | Informe con prueba de recuperación y archivo testigo |
-| P8 · Transferencia | Informe con clonación, exportación e importación comprobada |
+| P4 · Actualizaciones | Informe con estado anterior, actualización y verificación |
+| P5 · Instantáneas | Informe con prueba de recuperación y archivo testigo |
+| P6 · Transferencia | Informe con clonación, exportación e importación comprobada |
 
 **Los vídeos no generan ninguna entrega.** Sus preguntas se comentan en clase.
 
 Las instrucciones de los PDF y paquetes antiguos que pidan más entregas quedan sustituidas por esta lista. Para los detalles de cada entrega, consulta su ficha web.
 
-> **Orden vigente:** después de UD2 y antes de UD4 Redes. [Itinerario de 27 horas](itinerario.md). El bloque 3.5, A9 y P5 se imparten en UD4 como apartado de redes virtuales, actividad 4.7 y P6. Aquí se usa NAT proporcionado por el docente para instalar y actualizar, sin exigir diseño de redes. **Descargables actualizados el 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
+> **Orden vigente:** después de UD2 y antes de UD4 Redes. [Itinerario de 27 horas](itinerario.md). El bloque de redes virtuales y la antigua A9 se imparten en UD4 como apartado 4.6, actividad 4.7 y práctica UD4/P6. Aquí se usa NAT proporcionado por el docente para instalar y actualizar, sin exigir diseño de redes. **Descargables actualizados el 05/11/2026.** Virtualización (UD3, 27 h) se imparte antes de Redes (UD4, 28 h). Se mantienen los vídeos, las referencias de las entregas anteriores y las 160 horas del módulo.
 
 Sistemas Informáticos · 1.º DAM. Manual de teoría y trabajo de aula con tres apartados diferenciados: explicación, actividades escritas y prácticas de laboratorio.
 
@@ -29,7 +29,7 @@ Sistemas Informáticos · 1.º DAM. Manual de teoría y trabajo de aula con tres
 
 ## Cómo se trabaja
 
-La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
+La **teoría** explica el concepto con ejemplos. Las **actividades** piden razonar, diseñar y diagnosticar por escrito. Las **prácticas** enseñan a ejecutar: qué menú abrir, qué campo cambiar, qué resultado esperar y qué hacer si no aparece. Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
 
 ## Recorrido: teoría y trabajo por apartado { #teoria-por-bloques }
 
@@ -44,7 +44,7 @@ La **teoría** explica el concepto con ejemplos. Las **actividades** piden razon
 
 - [Teoría 3.2.1 · Comprender la virtualización](b02-virtualizacion.md)
 - [Teoría 3.2.2 · Hardware virtual y recursos](b06-hardware-virtual.md)
-- [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
+- [P1 · Preparar el laboratorio](practicas/p1-laboratorio.md)
 
 ### 3.3 · Instalación de Ubuntu y Windows
 
@@ -64,14 +64,14 @@ La **teoría** explica el concepto con ejemplos. Las **actividades** piden razon
 ### 3.6 · Aplicaciones y actualizaciones
 
 - [Teoría 3.6 · Actualizaciones y aceptación](b10-actualizaciones.md)
-- [Práctica P6 · Actualizar y verificar](practicas/p6-actualizaciones.md)
+- [Práctica P4 · Actualizar y verificar](practicas/p4-actualizaciones.md)
 
 ### 3.7 · Recuperación y transferencia
 
 - [Teoría 3.7 · Recuperación y transferencia](b11-recuperacion.md)
 - [Actividad 3.10 · Escoger una estrategia de recuperación](actividades/A10-escoger-una-estrategia-de-recuperacion.md)
-- [Práctica P7 · Recuperar con instantáneas](practicas/p7-instantaneas.md)
-- [Práctica P8 · Clonar, exportar e importar](practicas/p8-transferencia.md)
+- [Práctica P5 · Recuperar con instantáneas](practicas/p5-instantaneas.md)
+- [Práctica P6 · Clonar, exportar e importar](practicas/p6-transferencia.md)
 
 ### 3.8 · Contenedores para DAM
 

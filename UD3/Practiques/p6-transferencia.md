@@ -1,7 +1,7 @@
-# P8. Clonar, exportar e importar con comprobación
+# P6. Clonar, exportar e importar con comprobación
 
 <div class="lesson-banner" markdown>
-<div class="lesson-number">P8</div>
+<div class="lesson-number">P6</div>
 <div markdown>
 **Práctica guiada de laboratorio**
 
@@ -23,7 +23,7 @@ Escribe `UD3-Ubuntu-Clon-codigo` y selecciona **Clon completo**. En política de
 
 Antes de iniciar origen y clon simultáneamente, revisa **Configuración → Red → Avanzadas → Dirección MAC** en cada uno. Si hay IP fija, debe ser diferente en el clon. Puedes arrancarlo con red desconectada para ajustar la identidad sin conflicto.
 
-Dentro del clon, abre **Configuración → Sistema → Acerca de**, o la sección **Acerca de** que incluya **Nombre del dispositivo**, y cambia su nombre si la interfaz lo permite. La alternativa de terminal acordada es `sudo hostnamectl set-hostname ud3-clon-codigo`. Reinicia y comprueba con `hostnamectl`. En la conexión de laboratorio modifica la IPv4 mediante el engranaje de **Red**, igual que en P5.
+Dentro del clon, abre **Configuración → Sistema → Acerca de**, o la sección **Acerca de** que incluya **Nombre del dispositivo**, y cambia su nombre si la interfaz lo permite. La alternativa de terminal acordada es `sudo hostnamectl set-hostname ud3-clon-codigo`. Reinicia y comprueba con `hostnamectl`. En la conexión de laboratorio modifica la IPv4 mediante el engranaje de **Red**, igual que en UD4/P6.
 
 Crea `~/archivo-del-clon.txt` solamente en el clon. Apágalo, arranca el origen y comprueba que ese archivo no aparece allí. Esta prueba acredita independencia de escrituras, pero ambas VM pueden seguir dependiendo del mismo SSD físico.
 
@@ -45,7 +45,7 @@ Entrega comparación origen/clon/importación, nuevas identidades, estado elegid
 
 ## Qué debes entregar
 
-Entrega **un único informe PDF**, llamado `P8_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
+Entrega **un único informe PDF**, llamado `P6_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
 
 ### Estructura del informe
 
@@ -66,18 +66,18 @@ Entrega **un único informe PDF**, llamado `P8_Apellidos_Nombre.pdf`, que docume
 
 | Captura | Momento del proceso | Explicación que debes escribir |
 | --- | --- | --- |
-| P8-01 | Espacio disponible y origen apagado | Si cabe el clon, el OVA y la importación, y cómo has identificado el origen. |
-| P8-02 | Asistente de clonación | Nombre y destino, clon completo, política de MAC y estado elegido. |
-| P8-03 | MAC y nombre del equipo en origen y clon; IP si procede | Qué identidades has cambiado y qué configuración de red has comprobado. |
-| P8-04 | Archivo creado solo en el clon y comprobación en el origen | Ruta y contenido en el clon y prueba de ausencia en el origen; usa dos capturas. |
-| P8-05 | Estado y configuración del origen antes de exportar | Firmware, recursos, discos, red y archivo testigo que esperas recuperar. |
-| P8-06 | Asistente de exportación y OVA generado | VM seleccionada, destino, nombre del paquete y tamaño final. |
-| P8-07 | Asistente de importación y revisión con la VM apagada | Nombre, carpeta, recursos, política de MAC, firmware, controlador y red. |
-| P8-08 | Arranque de la importada | Usuario, versión, archivo testigo y funcionamiento de una aplicación o servicio. Usa las imágenes necesarias. |
+| P6-01 | Espacio disponible y origen apagado | Si cabe el clon, el OVA y la importación, y cómo has identificado el origen. |
+| P6-02 | Asistente de clonación | Nombre y destino, clon completo, política de MAC y estado elegido. |
+| P6-03 | MAC y nombre del equipo en origen y clon; IP si procede | Qué identidades has cambiado y qué configuración de red has comprobado. |
+| P6-04 | Archivo creado solo en el clon y comprobación en el origen | Ruta y contenido en el clon y prueba de ausencia en el origen; usa dos capturas. |
+| P6-05 | Estado y configuración del origen antes de exportar | Firmware, recursos, discos, red y archivo testigo que esperas recuperar. |
+| P6-06 | Asistente de exportación y OVA generado | VM seleccionada, destino, nombre del paquete y tamaño final. |
+| P6-07 | Asistente de importación y revisión con la VM apagada | Nombre, carpeta, recursos, política de MAC, firmware, controlador y red. |
+| P6-08 | Arranque de la importada | Usuario, versión, archivo testigo y funcionamiento de una aplicación o servicio. Usa las imágenes necesarias. |
 
 **Incluye además:** tabla comparativa de origen, clon e importación con nombre de VM, nombre del equipo, MAC, IP/modo de red, recursos, carpeta, archivo testigo y resultado de arranque. Indica qué estado exportaste y el tamaño del OVA. Responde a la incidencia de IP estática repetida aunque las MAC sean distintas.
 
-**Ejemplo de pie:** «P8-04. El archivo [ruta] existe en el clon y no aparece al comprobar la misma ruta en el origen. La prueba muestra independencia de escrituras; ambas VM todavía pueden estar en el mismo disco físico». Incluye las dos comprobaciones reales.
+**Ejemplo de pie:** «P6-04. El archivo [ruta] existe en el clon y no aparece al comprobar la misma ruta en el origen. La prueba muestra independencia de escrituras; ambas VM todavía pueden estar en el mismo disco físico». Incluye las dos comprobaciones reales.
 
 ### Antes de entregar
 
@@ -88,7 +88,7 @@ Revisa que el PDF incluya todos los pasos, que sus imágenes se lean y que cada 
 
 ## Vídeo explicativo · Instantáneas de VirtualBox
 
-V4: compara retorno de estado y copia independiente. En P7 tomamos la instantánea apagada.
+V4: compara retorno de estado y copia independiente. En P5 tomamos la instantánea apagada.
 
 <div class="video-frame">
 <iframe src="https://mediateca.educa.madrid.org/video/zgauof85771q51t9/fs" title="Instantáneas de VirtualBox" loading="lazy" allowfullscreen></iframe>

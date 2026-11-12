@@ -1,8 +1,8 @@
-# P0–P1 · Preparar el laboratorio
+# P1 · Preparar el laboratorio
 
 [Antes de empezar: materiales, descargas y comprobaciones](preparacion.md).
 
-**Una práctica guiada en clase y una única entrega.** Duración orientativa: 3,5 horas. Primero se audita el puesto y se verifica la ISO; después se crea y se comprueba la VM. No entregues informes separados de P0 y P1.
+**Una práctica guiada en clase y una única entrega.** Duración orientativa: 3,5 horas. Primero se audita el puesto y se verifica la ISO; después se crea y se comprueba la VM. Incluye ambas partes en el mismo informe de P1.
 
 ## Primera parte · Auditoría e ISO
 
@@ -122,7 +122,7 @@ Debes entregar ficha del puesto, presupuesto razonado, identificación de ISO y 
 
 **Teoría relacionada:** [Comprender la virtualización](../b02-virtualizacion.md) · [Hardware virtual y recursos](../b06-hardware-virtual.md)
 
-Duración orientativa: 120 minutos. Necesitas VirtualBox 7.x instalado, la ficha de P0 y la ISO verificada. El docente indicará la versión exacta. Los nombres de algunas secciones varían entre el modo básico y el experto; identifica la función del campo antes de modificarlo.
+Duración orientativa: 120 minutos. Necesitas VirtualBox 7.x instalado, la auditoría de la primera parte y la ISO verificada. El docente indicará la versión exacta. Los nombres de algunas secciones varían entre el modo básico y el experto; identifica la función del campo antes de modificarlo.
 
 ### 1. Reconoce las dos ventanas
 
@@ -136,7 +136,7 @@ En el administrador abre **Ayuda → Acerca de VirtualBox** y anota la versión.
 2. En **Carpeta**, elige la ubicación local aprobada. No uses una carpeta de otra persona ni un dispositivo con espacio insuficiente.
 3. Deja inicialmente el campo **Imagen ISO** sin imagen. Si seleccionas una y aparece **Omitir instalación desatendida**, márcalo: necesitamos recorrer el instalador en P2.
 4. Selecciona **Linux → Ubuntu de 64 bits** o la identificación equivalente de la plantilla. La plantilla propone hardware; todavía no instala Ubuntu.
-5. En **Hardware**, asigna **4096 MB** de memoria y **2 procesadores** si P0 justifica esa cantidad. Registra cualquier ajuste acordado. En el campo de memoria, 4096 MiB corresponden a 4 GiB.
+5. En **Hardware**, asigna **4096 MB** de memoria y **2 procesadores** si la auditoría de la primera parte justifica esa cantidad. Registra cualquier ajuste acordado. En el campo de memoria, 4096 MiB corresponden a 4 GiB.
 6. En **Disco duro**, elige crear un disco nuevo, formato **VDI** y capacidad **50 GiB** o su equivalente mostrado. Mantén la asignación dinámica: no marques **Reservar tamaño completo** si la interfaz ofrece esa casilla.
 7. Revisa el resumen y pulsa **Terminar**. Selecciona la máquina recién creada; comprueba el nombre antes de continuar.
 
@@ -150,7 +150,7 @@ Abre **Almacenamiento**. Debes ver un disco virtual de 50 GiB y una unidad ópti
 
 1. Cierra la configuración con **Aceptar** y pulsa **Iniciar**. Con disco vacío y sin ISO puedes ver el firmware o un aviso de medio no arrancable. Registra lo observado: no hay un mensaje único obligatorio.
 2. Cierra la ventana de ejecución. Como no hay un sistema instalado que apagar, utiliza **Apagar la máquina** cuando el diálogo lo ofrezca. Este es un caso de ensayo con disco vacío, no la forma ordinaria de cerrar un sistema en uso.
-3. De vuelta en el administrador, abre **Configuración → Almacenamiento**. Selecciona la unidad óptica **Vacío**, pulsa el icono de disco de la derecha y elige **Seleccionar un archivo de disco**. Busca la ISO de P0 y ábrela.
+3. De vuelta en el administrador, abre **Configuración → Almacenamiento**. Selecciona la unidad óptica **Vacío**, pulsa el icono de disco de la derecha y elige **Seleccionar un archivo de disco**. Busca la ISO verificada en la primera parte y ábrela.
 4. Comprueba que su nombre aparece junto a la unidad óptica y pulsa **Aceptar → Iniciar**. Ahora debe aparecer el medio de Ubuntu. Todavía no realices la instalación.
 
 ### 5. Ubica los archivos y comprueba el resultado
@@ -173,13 +173,13 @@ V2: la interfaz es anterior y su ejemplo usa Windows 10. Identifica la función 
 
 </div>
 
-## Única entrega · P0–P1
+## Única entrega · P1
 
-Guarda un solo archivo llamado `P0_P1_Apellidos_Nombre.pdf`. Incluye inventario del puesto, presupuesto de recursos, fuente y verificación de la ISO, configuración de la VM y prueba de arranque. Explica el resultado sin confundir crear la máquina con instalar el sistema. Añade las incidencias y sus comprobaciones al mismo informe. No subas ISO ni discos virtuales.
+Guarda un solo archivo llamado `P1_Apellidos_Nombre.pdf`. Incluye inventario del puesto, presupuesto de recursos, fuente y verificación de la ISO, configuración de la VM y prueba de arranque. Explica el resultado sin confundir crear la máquina con instalar el sistema. Añade las incidencias y sus comprobaciones al mismo informe. No subas ISO ni discos virtuales.
 
 ## Plantilla del informe · Copia y completa
 
-Copia esta plantilla en Writer, Word o tu editor de documentos. Sustituye los campos entre corchetes, inserta tus capturas y exporta el resultado como `P0_P1_Apellidos_Nombre.pdf`. Sirve para anfitriones Windows y Linux. Completa solo la ruta que hayas realizado y utiliza tus mediciones reales.
+Copia esta plantilla en Writer, Word o tu editor de documentos. Sustituye los campos entre corchetes, inserta tus capturas y exporta el resultado como `P1_Apellidos_Nombre.pdf`. Sirve para anfitriones Windows y Linux. Completa solo la ruta que hayas realizado y utiliza tus mediciones reales.
 
 ### Portada y preparación
 

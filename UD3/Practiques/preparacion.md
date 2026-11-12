@@ -1,8 +1,8 @@
 # Antes de empezar: materiales y preparación de UD3
 
-Esta guía acompaña las seis prácticas. Léela antes de P0–P1. No genera otra entrega. Conserva tus máquinas para las unidades posteriores.
+Esta guía acompaña las seis prácticas. Léela antes de P1. No genera otra entrega. Conserva tus máquinas para las unidades posteriores.
 
-Para preparar la entrega, utiliza la [plantilla del informe P0–P1](p0-p1-laboratorio.md#plantilla-del-informe-copia-y-completa), con un [ejemplo de redacción](p0-p1-laboratorio.md#ejemplo-breve-de-redaccion-datos-ficticios) y la [lista de capturas de pantalla del proceso](p0-p1-laboratorio.md#capturas-de-pantalla-del-proceso). Inserta las capturas en el informe y explica qué demuestra cada una.
+Para preparar la entrega, utiliza la [plantilla del informe P1](p1-laboratorio.md#plantilla-del-informe-copia-y-completa), con un [ejemplo de redacción](p1-laboratorio.md#ejemplo-breve-de-redaccion-datos-ficticios) y la [lista de capturas de pantalla del proceso](p1-laboratorio.md#capturas-de-pantalla-del-proceso). Inserta las capturas en el informe y explica qué demuestra cada una.
 
 ## 1. Qué recibirás del docente
 
@@ -39,7 +39,7 @@ En la ubicación autorizada crea `UD3_Apellidos_Nombre` y, dentro, `ISO`, `Maqui
 
 En VirtualBox, al crear cada VM, selecciona `Maquinas` como carpeta de destino. Utiliza los nombres de las fichas. No muevas después los VDI manualmente desde el Explorador: puedes romper la referencia al disco.
 
-Los 50 GiB del disco Ubuntu y los 80 GiB del disco Windows son capacidades virtuales. Al ser dinámicos, los archivos crecen conforme se utilizan. No confundas capacidad máxima con espacio físico reservado o disponible. Para P8 necesitas guardar además el clon, el OVA y la importación. Antes de copiar, mide el tamaño real del origen y el espacio libre; si no cabe, solicita el equipo alternativo. No borres el original para dejar sitio a su única copia.
+Los 50 GiB del disco Ubuntu y los 80 GiB del disco Windows son capacidades virtuales. Al ser dinámicos, los archivos crecen conforme se utilizan. No confundas capacidad máxima con espacio físico reservado o disponible. Para P6 necesitas guardar además el clon, el OVA y la importación. Antes de copiar, mide el tamaño real del origen y el espacio libre; si no cabe, solicita el equipo alternativo. No borres el original para dejar sitio a su única copia.
 
 ## 3. Descargar y verificar Ubuntu
 
@@ -62,7 +62,7 @@ ls -lh
 sha256sum -- './nombre-exacto-de-la-imagen.iso'
 ```
 
-La huella aparece antes del nombre del archivo. Consulta también la auditoría completa para Windows y Linux en la [primera parte de P0–P1](p0-p1-laboratorio.md#primera-parte-auditoria-e-iso).
+La huella aparece antes del nombre del archivo. Consulta también la auditoría completa para Windows y Linux en la [primera parte de P1](p1-laboratorio.md#primera-parte-auditoria-e-iso).
 
 Compara los 64 caracteres del resultado con la referencia oficial; las mayúsculas no cambian el valor. Guarda nombre, versión, URL de origen, referencia y resultado de la comparación. Un hash calculado por ti sin referencia no verifica la descarga. Si no coincide, revisa el nombre y la revisión y vuelve a copiar o descargar; no arranques esa imagen.
 
@@ -76,7 +76,7 @@ La ISO no proporciona por sí sola una licencia. La edición y el acceso los det
 
 ## 5. Comprobar el puesto y la red
 
-Realiza la auditoría de P0 antes de asignar recursos. La configuración de referencia de P1 es Ubuntu con el disco indicado en la ficha; la memoria debe ajustarse a los requisitos de la versión elegida y a lo disponible en el puesto. No asignes toda la RAM o todos los procesadores al invitado. Si no caben dos VM, ejecútalas por turnos. Si una sola no cumple los requisitos, utiliza el puesto alternativo.
+Realiza la auditoría de P1 antes de asignar recursos. La configuración de referencia de P1 es Ubuntu con el disco indicado en la ficha; la memoria debe ajustarse a los requisitos de la versión elegida y a lo disponible en el puesto. No asignes toda la RAM o todos los procesadores al invitado. Si no caben dos VM, ejecútalas por turnos. Si una sola no cumple los requisitos, utiliza el puesto alternativo.
 
 Con la VM apagada abre **Configuración → Red → Adaptador 1**: habilitado, conectado a **NAT** y con cable conectado. No necesitas reenvío de puertos para instalar y actualizar. Arranca el invitado, abre su navegador y visita una página oficial. Si falla, comprueba también Internet en el anfitrión y la fecha y hora del invitado. Registra el mensaje; no cambies a adaptador puente al azar. La configuración de redes se desarrolla en UD4.
 
@@ -84,12 +84,12 @@ Con la VM apagada abre **Configuración → Red → Adaptador 1**: habilitado, c
 
 | Práctica | Estado inicial | Comprobación de salida |
 | --- | --- | --- |
-| P0–P1 | Puesto auditado, VirtualBox disponible e ISO Ubuntu verificada | VM creada; distingues disco vacío y arranque desde ISO |
+| P1 | Puesto auditado, VirtualBox disponible e ISO Ubuntu verificada | VM creada; distingues disco vacío y arranque desde ISO |
 | P2 | VM de P1, ISO conectada y destino identificado | Ubuntu arranca sin ISO y conserva un archivo tras reiniciar |
 | P3 | ISO Windows autorizada, método de cuenta y recursos suficientes | Windows arranca sin ISO; registras requisitos, edición y estado real |
-| P6 | Sistemas instalados y conexión NAT comprobada | Registras propuesta, resultado y reinicio si procede; un error no cuenta como éxito |
-| P7 | VM funcional y archivo testigo; evidencias fuera del invitado | Restauras el estado previsto y explicas qué cambios desaparecen |
-| P8 | Ubuntu apagado y espacio para copias e importación | Clon e importación arrancan y conservan el archivo testigo |
+| P4 | Sistemas instalados y conexión NAT comprobada | Registras propuesta, resultado y reinicio si procede; un error no cuenta como éxito |
+| P5 | VM funcional y archivo testigo; evidencias fuera del invitado | Restauras el estado previsto y explicas qué cambios desaparecen |
+| P6 | Ubuntu apagado y espacio para copias e importación | Clon e importación arrancan y conservan el archivo testigo |
 
 Sigue después los pasos completos de cada ficha. Antes de restaurar una instantánea, saca fuera del invitado los documentos que necesites conservar. Al terminar una sesión apaga desde el sistema invitado y espera al estado **Apagada** antes de cerrar VirtualBox o copiar material. La instantánea depende de la VM y sus discos; no sustituye una copia independiente.
 
@@ -99,6 +99,6 @@ En UD3 se realiza una introducción y demostración. No necesitas instalar Docke
 
 ## 8. Evidencias y problemas
 
-Guarda las capturas en `Evidencias` con el código de práctica y una descripción. Deben mostrar el dato necesario y llevar una explicación de qué demuestra. Nunca subas ISO, VDI u OVA a la tarea de Aules: entrega el informe solicitado. P0 y P1 forman un único `P0_P1_Apellidos_Nombre.pdf`.
+Guarda las capturas en `Evidencias` con el código de práctica y una descripción. Deben mostrar el dato necesario y llevar una explicación de qué demuestra. Nunca subas ISO, VDI u OVA a la tarea de Aules: entrega el informe solicitado. La auditoría y la creación de la VM se recogen en un único `P1_Apellidos_Nombre.pdf`.
 
 Si algo falla, anota práctica, paso, mensaje exacto, versión y qué has comprobado. Si aparece medio no arrancable, comprueba la ISO conectada a esa VM. Si vuelve al instalador después de instalar, revisa si sigue conectada la ISO. Si no aparece el archivo testigo, comprueba qué VM y qué estado has arrancado. No reinstales ni borres discos antes de identificar la causa.

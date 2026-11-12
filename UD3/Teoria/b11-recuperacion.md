@@ -21,7 +21,7 @@ Piensa en qué fallos cubre cada operación. Una instantánea ayuda ante un camb
 
 Al volver a una instantánea se pierde o se aparta el estado posterior según la operación elegida. Antes de restaurar, extrae las evidencias que necesites conservar o guarda un estado adicional. Borrar una instantánea no equivale a restaurarla: el hipervisor reorganiza los datos asociados. Nunca elimines manualmente archivos diferenciales.
 
-Una restauración no revierte efectos externos: un archivo modificado en una carpeta compartida del anfitrión, una cuenta en un servicio web o un mensaje enviado seguirán existiendo. La práctica P7 utiliza archivos internos para que el alcance sea observable.
+Una restauración no revierte efectos externos: un archivo modificado en una carpeta compartida del anfitrión, una cuenta en un servicio web o un mensaje enviado seguirán existiendo. La práctica P5 utiliza archivos internos para que el alcance sea observable.
 
 ## Clonar y transferir
 
@@ -51,20 +51,20 @@ Si el centro lo utiliza, antes de crear una instantánea se identifican modo, de
 
 ## Actividades de este apartado
 
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
 
 - [Actividad 3.10 · Escoger una estrategia de recuperación](actividades/A10-escoger-una-estrategia-de-recuperacion.md)
 
 ## Prácticas relacionadas
 
-- [P7 · Recuperar con instantáneas](practicas/p7-instantaneas.md)
-- [P8 · Clonar, exportar e importar](practicas/p8-transferencia.md)
+- [P5 · Recuperar con instantáneas](practicas/p5-instantaneas.md)
+- [P6 · Clonar, exportar e importar](practicas/p6-transferencia.md)
 
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Instantáneas de VirtualBox
 
-V4: compara retorno de estado y copia independiente. En P7 tomamos la instantánea apagada.
+V4: compara retorno de estado y copia independiente. En P5 tomamos la instantánea apagada.
 
 <div class="video-frame">
 <iframe src="https://mediateca.educa.madrid.org/video/zgauof85771q51t9/fs" title="Instantáneas de VirtualBox" loading="lazy" allowfullscreen></iframe>

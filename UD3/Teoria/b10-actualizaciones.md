@@ -40,7 +40,7 @@ En Windows registra estado inicial, actualizaciones propuestas y estado posterio
 
 Una aceptación profesional contiene pruebas y resultados. «Funciona» no basta. Ejemplo: «Tras reiniciar sin ISO, inicio sesión como alumno; index.html permanece; la herramienta tree devuelve versión; se accede al repositorio; no quedan reinicios pendientes observados; el sistema muestra la fecha correcta».
 
-Compara con una línea base: antes/después, versiones y cambios. Una captura debe tener pie que explique lo que demuestra. No se valorará acumular imágenes sin interpretación. Continúa con P6.
+Compara con una línea base: antes/después, versiones y cambios. Una captura debe tener pie que explique lo que demuestra. No se valorará acumular imágenes sin interpretación. Continúa con P4.
 
 ## Formatos de paquete: qué identifica cada uno
 
@@ -70,11 +70,11 @@ Una retirada de Snap puede conservar una instantánea de datos según el comport
 
 ## Actividades de este apartado
 
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
 
 ## Prácticas relacionadas
 
-- [P6 · Actualizar y verificar](practicas/p6-actualizaciones.md)
+- [P4 · Actualizar y verificar](practicas/p4-actualizaciones.md)
 
 ## Lectura técnica para las herramientas
 

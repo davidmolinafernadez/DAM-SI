@@ -1,5 +1,7 @@
 # Reorganización de unidades y horas · 29 de octubre de 2026
 
+> **Nota de actualización (12/11/2026):** este documento conserva la numeración de su fecha. Las prácticas vigentes de UD3 son P1–P6. Consulta las [equivalencias y las entregas actuales](../UD3/Practiques/index.md#equivalencias-con-la-numeracion-anterior). Las entregas ya realizadas no se repiten ni se renombran.
+
 > **Documento histórico.** Prevalece la [secuencia y numeración de 05/11/2026](Secuencia_2026_11_05.md): UD3 Virtualización (27 h), antes de UD4 Redes (28 h).
 
 Redes pasa a UD3 y prepara los conocimientos de direccionamiento, conectividad y diagnóstico que se aplican en instalación y virtualización, ahora UD4. Las máquinas del laboratorio se reutilizan en las unidades posteriores.

@@ -106,7 +106,7 @@ nav:
           - "3.2 · Virtualización y hardware virtual":
               - "3.2.1 · Comprender la virtualización": ud3/b02-virtualizacion.md
               - "3.2.2 · Hardware virtual y recursos": ud3/b06-hardware-virtual.md
-              - P0–P1 · Preparar el laboratorio: ud3/practicas/p0-p1-laboratorio.md
+              - P1 · Preparar el laboratorio: ud3/practicas/p1-laboratorio.md
           - "3.3 · Instalación de sistemas":
               - "3.3.1 · Instalar Ubuntu": ud3/b07-instalar-ubuntu.md
               - P2 · Instalar Ubuntu: ud3/practicas/p2-ubuntu.md
@@ -114,11 +114,11 @@ nav:
               - P3 · Instalar Windows 11: ud3/practicas/p3-windows.md
           - "3.4 · Sistemas de archivos y montaje": ud3/b05-sistemas-de-archivos.md
           - "3.6 · Aplicaciones y actualizaciones": ud3/b10-actualizaciones.md
-          - P6 · Actualizar y verificar: ud3/practicas/p6-actualizaciones.md
+          - P4 · Actualizar y verificar: ud3/practicas/p4-actualizaciones.md
           - "3.7 · Recuperación y transferencia": ud3/b11-recuperacion.md
           - A10 · Recuperación: ud3/actividades/A10-escoger-una-estrategia-de-recuperacion.md
-          - P7 · Instantáneas: ud3/practicas/p7-instantaneas.md
-          - P8 · Transferencia: ud3/practicas/p8-transferencia.md
+          - P5 · Instantáneas: ud3/practicas/p5-instantaneas.md
+          - P6 · Transferencia: ud3/practicas/p6-transferencia.md
           - "3.8 · Contenedores": ud3/b12-contenedores.md
       - Ejercicios de aula resueltos · Sin entrega: ud3/soluciones-clase.md
       - Vídeos: ud3/videos.md
@@ -154,7 +154,7 @@ nav:
       - Presentación: ud5/index.md
       - Sistemas de archivos: ud5/01-sistemas-de-archivos.md
       - Particiones y volúmenes: ud5/02-particiones-y-volumenes.md
-      - P4 · Particionado: ud5/practicas/p4-particionado.md
+      - P1 · Particionado: ud5/practicas/p1-particionado.md
       - Terminal y automatización: ud5/03-terminal-y-automatizacion.md
       - Copias y recuperación: ud5/04-copias-y-recuperacion.md
       - Apuntes de referencia: ud5/apuntes.md

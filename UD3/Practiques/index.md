@@ -6,14 +6,31 @@ El docente demuestra los pasos clave y acompaña el trabajo. El alumnado sigue l
 
 | Entrega | Fichas guiadas | Tiempo de clase |
 | --- | --- | --- |
-| 1 · Preparar el laboratorio | [P0–P1 · Preparar el laboratorio](p0-p1-laboratorio.md) | 3,5 h |
+| 1 · Preparar el laboratorio | [P1 · Preparar el laboratorio](p1-laboratorio.md) | 3,5 h |
 | 2 · Instalar Ubuntu | [P2 · Ubuntu](p2-ubuntu.md) | 3 h |
 | 3 · Instalar Windows | [P3 · Windows 11](p3-windows.md) | 3 h |
-| 4 · Actualizar | [P6 · Actualizar y verificar](p6-actualizaciones.md) | 2 h |
-| 5 · Recuperar | [P7 · Instantáneas](p7-instantaneas.md) | 2 h |
-| 6 · Transferir | [P8 · Clonar, exportar e importar](p8-transferencia.md) | 2,5 h |
+| 4 · Actualizar | [P4 · Actualizar y verificar](p4-actualizaciones.md) | 2 h |
+| 5 · Recuperar | [P5 · Instantáneas](p5-instantaneas.md) | 2 h |
+| 6 · Transferir | [P6 · Clonar, exportar e importar](p6-transferencia.md) | 2,5 h |
 
-**Son seis prácticas guiadas y seis entregas. P0–P1 tiene una sola ficha.** Conservamos los códigos utilizados en las guías para identificar las fichas. No hay que realizar prácticas adicionales en esta unidad.
+**Son seis prácticas guiadas, numeradas de P1 a P6, y seis entregas.** P1 reúne auditoría, verificación de la ISO y creación de la VM. No hay que realizar prácticas adicionales en esta unidad.
+
+## Equivalencias con la numeración anterior
+
+Desde el 12/11/2026, las seis prácticas de UD3 se numeran de P1 a P6.
+
+| Numeración anterior | Numeración vigente |
+| --- | --- |
+| P0–P1 · Auditoría, ISO y creación de VM | P1 · Preparar el laboratorio |
+| P2 · Ubuntu | P2 · Instalar Ubuntu |
+| P3 · Windows | P3 · Instalar Windows |
+| P6 · Actualizaciones | P4 · Actualizar y verificar |
+| P7 · Instantáneas | P5 · Instantáneas y recuperación |
+| P8 · Transferencia | P6 · Clonar, exportar e importar |
+| Antigua UD3/P4 · Particionado | UD5/P1 · Particionar y montar un disco de datos |
+| Antigua UD3/P5 · Redes | UD4/P6 · Redes virtuales y web |
+
+**Si ya has entregado una práctica con el código anterior, no debes repetirla ni renombrar el archivo entregado.** La evidencia y su calificación se conservan. Para las nuevas entregas utiliza el nombre de PDF indicado en la ficha vigente. Los PDF y paquetes antiguos pueden conservar la numeración anterior; sigue las fichas web actuales. No se añaden prácticas ni cambian las horas o los pesos de evaluación.
 
 ## Qué se entrega en cada práctica
 

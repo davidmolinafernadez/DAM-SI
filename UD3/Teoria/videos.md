@@ -24,7 +24,7 @@ Relación: B2 y B6; preparación de P1. Aporta una presentación del laboratorio
 
 Antes: escribe qué diferencia esperas entre el ordenador real y una VM. Durante: dibuja anfitrión, hipervisor e invitado; localiza una decisión sobre hardware virtual. Después: explica por qué poder configurar 8 GiB en una VM no demuestra que el anfitrión tenga memoria suficiente para usarla cómodamente.
 
-Tarea de transferencia: compara el esquema del vídeo con la ficha real de P0. Entrega un diagrama y dos decisiones propias. Criterio: identifica capas y relaciona la asignación con recursos físicos, sin considerar la VM una máquina con recursos ilimitados.
+Tarea de transferencia: compara el esquema del vídeo con la ficha real de P1. Entrega un diagrama y dos decisiones propias. Criterio: identifica capas y relaciona la asignación con recursos físicos, sin considerar la VM una máquina con recursos ilimitados.
 
 ## V2. Crear máquina virtual. Virtualbox
 
@@ -44,7 +44,7 @@ Autor publicado: Agustín N., EducaMadrid. Publicado el 17 de febrero de 2026. C
 
 <iframe src="https://mediateca.educa.madrid.org/video/4dpxwfhdfpr4p799/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
 
-Relación: B7; P2. La transcripción presenta una instalación de Ubuntu en VirtualBox. Los recursos elegidos por el autor son los de su ejemplo, no sustituyen el presupuesto de P0.
+Relación: B7; P2. La transcripción presenta una instalación de Ubuntu en VirtualBox. Los recursos elegidos por el autor son los de su ejemplo, no sustituyen el presupuesto de P1.
 
 Antes: define qué prueba demostraría instalación persistente. Durante: pausa antes de confirmar el destino; identifica disco afectado y opciones de datos. Después: explica qué debes comprobar tras retirar la ISO.
 
@@ -56,11 +56,11 @@ Autora: Susana López Luengo, IES Palomeras-Vallecas, EducaMadrid. Publicado el 
 
 <iframe src="https://mediateca.educa.madrid.org/video/zgauof85771q51t9/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
 
-Relación: B11; P7. Atención didáctica: una instantánea puede tomarse apagada o en ejecución según el caso; no es obligatorio mantener encendida la VM. En esta unidad se usa apagada para simplificar la prueba. La analogía de «copia de seguridad» necesita completarse: depende de la estructura de discos y no cubre la pérdida de esa ubicación.
+Relación: B11; P5. Atención didáctica: una instantánea puede tomarse apagada o en ejecución según el caso; no es obligatorio mantener encendida la VM. En esta unidad se usa apagada para simplificar la prueba. La analogía de «copia de seguridad» necesita completarse: depende de la estructura de discos y no cubre la pérdida de esa ubicación.
 
 Antes: escribe qué esperas recuperar. Durante: dibuja estados A, B y vuelta a A. Después: identifica qué archivo posterior dejaría de estar en el estado restaurado.
 
-Tarea: realiza P7 y añade un párrafo sobre una avería que la instantánea no cubre. Criterio: predice pérdida de cambios y distingue retorno lógico de protección frente a avería física.
+Tarea: realiza P5 y añade un párrafo sobre una avería que la instantánea no cubre. Criterio: predice pérdida de cambios y distingue retorno lógico de protección frente a avería física.
 
 ## V5. Ejercicio 6 y 7 Virtualbox Red NAT
 
@@ -80,7 +80,7 @@ Autora: Susana López Luengo, IES Palomeras-Vallecas, EducaMadrid. Publicado el 
 
 <iframe src="https://mediateca.educa.madrid.org/video/52n4vscswgb1rwq3/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
 
-Relación: B11; P8. El ejemplo usa Windows 10, pero la comparación de clones se traslada al Ubuntu del laboratorio.
+Relación: B11; P6. El ejemplo usa Windows 10, pero la comparación de clones se traslada al Ubuntu del laboratorio.
 
 Antes: predice qué necesita un clon enlazado para arrancar. Durante: registra independencia, ocupación y MAC. Después: explica por qué generar nueva MAC no resuelve automáticamente una IP fija duplicada ni todas las identidades del sistema.
 
@@ -104,7 +104,7 @@ Autora: Susana López Luengo, IES Palomeras-Vallecas, EducaMadrid. Publicado el 
 
 <iframe src="https://mediateca.educa.madrid.org/video/igyhx275rxb5rsfu/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
 
-Relación: B11; P8. Se utiliza para observar exportación e importación. Completa el ejemplo con inventario y prueba posterior: la portabilidad depende del contenido del paquete y de la plataforma de destino.
+Relación: B11; P6. Se utiliza para observar exportación e importación. Completa el ejemplo con inventario y prueba posterior: la portabilidad depende del contenido del paquete y de la plataforma de destino.
 
 Antes: indica tres datos que guardarías además del OVA. Durante: identifica origen, paquete y máquina importada. Después: propone cuatro pruebas para aceptar la importación.
 
@@ -128,11 +128,11 @@ Autora: Susana López Luengo, IES Palomeras-Vallecas, EducaMadrid. Publicado el 
 
 <iframe src="https://mediateca.educa.madrid.org/video/417dd5j5i92wjmop/fs" title="Vídeo explicativo de la unidad 3" loading="lazy" width="100%" height="315" style="border:0;max-width:100%" allowfullscreen></iframe>
 
-Relación: B4-B5 y P4. Permite observar selección de dispositivo, creación de tabla, partición y aplicación de cambios. El ejemplo desarrolla MBR y tamaños propios; nuestra práctica utiliza GPT sobre un VDI secundario de 8 GiB. No se reproduce su mapa sobre el disco del sistema ni se trasladan sus tamaños como requisitos de instalaciones actuales.
+Relación: B4-B5 y UD5/P1. Permite observar selección de dispositivo, creación de tabla, partición y aplicación de cambios. El ejemplo desarrolla MBR y tamaños propios; nuestra práctica utiliza GPT sobre un VDI secundario de 8 GiB. No se reproduce su mapa sobre el disco del sistema ni se trasladan sus tamaños como requisitos de instalaciones actuales.
 
 Antes: señala qué disco estaría excluido del formato. Durante: distingue operación pendiente y aplicada. Después: explica qué cambia al trabajar con GPT en lugar de la estructura extendida/lógica del ejemplo.
 
-Tarea de visionado: dibuja la secuencia identificar → crear tabla → crear partición → revisar → aplicar → montar. La actividad escrita A4 justifica el diseño y P4 lo ejecuta en su disco de laboratorio.
+Tarea de visionado: dibuja la secuencia identificar → crear tabla → crear partición → revisar → aplicar → montar. La actividad escrita A4 justifica el diseño y UD5/P1 lo ejecuta en su disco de laboratorio.
 
 ## Ficha común para cualquier vídeo
 

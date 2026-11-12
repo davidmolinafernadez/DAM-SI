@@ -1,7 +1,7 @@
-# P7. Instantáneas: recuperar y delimitar la pérdida
+# P5. Instantáneas: recuperar y delimitar la pérdida
 
 <div class="lesson-banner" markdown>
-<div class="lesson-number">P7</div>
+<div class="lesson-number">P5</div>
 <div markdown>
 **Práctica guiada de laboratorio**
 
@@ -23,7 +23,7 @@ printf 'ESTADO A\n' > ~/ud3-recuperacion/estado.txt
 cat ~/ud3-recuperacion/estado.txt
 ```
 
-Apaga desde Ubuntu. En VirtualBox comprueba **Apagada**. Selecciona esta VM, abre la vista **Instantáneas** y pulsa **Tomar**. Escribe `P7-A` y una descripción: «estado.txt contiene A; posterior.txt no existe». Confirma. Así defines un criterio que luego podrás verificar.
+Apaga desde Ubuntu. En VirtualBox comprueba **Apagada**. Selecciona esta VM, abre la vista **Instantáneas** y pulsa **Tomar**. Escribe `P5-A` y una descripción: «estado.txt contiene A; posterior.txt no existe». Confirma. Así defines un criterio que luego podrás verificar.
 
 ## 2. Introduce un cambio controlado
 
@@ -31,7 +31,7 @@ Arranca Ubuntu y ejecuta:
 
 ```bash
 printf 'ESTADO B\n' > ~/ud3-recuperacion/estado.txt
-printf 'Creado después de P7-A\n' > ~/ud3-recuperacion/posterior.txt
+printf 'Creado después de P5-A\n' > ~/ud3-recuperacion/posterior.txt
 ls -l ~/ud3-recuperacion
 cat ~/ud3-recuperacion/estado.txt
 ```
@@ -40,7 +40,7 @@ Guarda las capturas y notas que necesites fuera del estado que vas a restaurar: 
 
 ## 4. Restaura la instantánea correcta
 
-Apaga Ubuntu. En el administrador selecciona la VM → **Instantáneas**. Haz clic en `P7-A`, no en el estado actual, y pulsa **Restaurar** o utiliza botón derecho → **Restaurar instantánea**. Lee el diálogo: puede ofrecer crear una instantánea del estado actual antes del retorno. Anota si conservas ese estado adicional y por qué.
+Apaga Ubuntu. En el administrador selecciona la VM → **Instantáneas**. Haz clic en `P5-A`, no en el estado actual, y pulsa **Restaurar** o utiliza botón derecho → **Restaurar instantánea**. Lee el diálogo: puede ofrecer crear una instantánea del estado actual antes del retorno. Anota si conservas ese estado adicional y por qué.
 
 No pulses **Eliminar** pensando que significa volver. Tampoco borres manualmente archivos de la carpeta `Snapshots`. Confirma la restauración elegida y arranca.
 
@@ -54,7 +54,7 @@ Entrega predicción, evidencias de A/B y resultado de restauración. Explica una
 
 ## Qué debes entregar
 
-Entrega **un único informe PDF**, llamado `P7_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
+Entrega **un único informe PDF**, llamado `P5_Apellidos_Nombre.pdf`, que documente la práctica de principio a fin con **una sucesión ordenada de capturas de pantalla propias y una pequeña explicación de cada paso**. Toma las capturas mientras trabajas e insértalas junto al paso correspondiente; utiliza la lista de abajo para no olvidar las pruebas necesarias.
 
 ### Estructura del informe
 
@@ -75,17 +75,17 @@ Entrega **un único informe PDF**, llamado `P7_Apellidos_Nombre.pdf`, que docume
 
 | Captura | Momento del proceso | Explicación que debes escribir |
 | --- | --- | --- |
-| P7-01 | Carpeta de prueba y lectura de `estado.txt` con A | Ruta dentro del disco del invitado y contenido inicial. |
-| P7-02 | VM apagada e instantánea `P7-A` con descripción | Qué estado se ha guardado y qué archivo aún no existe. |
-| P7-03 | Estado B y archivo `posterior.txt` | Qué ha cambiado después de tomar la instantánea. |
-| P7-04 | Evidencias conservadas fuera del invitado y predicción escrita antes de restaurar | Qué esperas recuperar, qué esperas perder y dónde has guardado el informe para conservarlo. |
-| P7-05 | Selección de `P7-A` y diálogo de restauración | Qué punto restauras y si conservas otra instantánea del estado actual. |
-| P7-06 | Carpeta y contenido después de restaurar | Si vuelve A y si desaparece `posterior.txt`; compara con tu predicción. |
-| P7-07 | Nuevo estado C y ocupación de la carpeta de la VM | Cómo continúa el trabajo y qué observas sobre el espacio utilizado, sin editar componentes de la VM. |
+| P5-01 | Carpeta de prueba y lectura de `estado.txt` con A | Ruta dentro del disco del invitado y contenido inicial. |
+| P5-02 | VM apagada e instantánea `P5-A` con descripción | Qué estado se ha guardado y qué archivo aún no existe. |
+| P5-03 | Estado B y archivo `posterior.txt` | Qué ha cambiado después de tomar la instantánea. |
+| P5-04 | Evidencias conservadas fuera del invitado y predicción escrita antes de restaurar | Qué esperas recuperar, qué esperas perder y dónde has guardado el informe para conservarlo. |
+| P5-05 | Selección de `P5-A` y diálogo de restauración | Qué punto restauras y si conservas otra instantánea del estado actual. |
+| P5-06 | Carpeta y contenido después de restaurar | Si vuelve A y si desaparece `posterior.txt`; compara con tu predicción. |
+| P5-07 | Nuevo estado C y ocupación de la carpeta de la VM | Cómo continúa el trabajo y qué observas sobre el espacio utilizado, sin editar componentes de la VM. |
 
 **Incluye además:** tabla con filas para `estado.txt` y `posterior.txt`, y columnas «estado A», «estado B», «predicción» y «resultado tras restaurar». Explica una avería que una instantánea no cubre. Si haces el experimento opcional de carpeta compartida, añade su captura y explica por qué los archivos externos no retroceden.
 
-**Ejemplo de pie:** «P7-06. Tras restaurar `P7-A`, `estado.txt` vuelve a contener A y `posterior.txt` ya no aparece. Coincide con mi predicción porque ambos cambios posteriores estaban en el disco del invitado». Escribe el resultado real si difiere y documenta qué has revisado.
+**Ejemplo de pie:** «P5-06. Tras restaurar `P5-A`, `estado.txt` vuelve a contener A y `posterior.txt` ya no aparece. Coincide con mi predicción porque ambos cambios posteriores estaban en el disco del invitado». Escribe el resultado real si difiere y documenta qué has revisado.
 
 ### Antes de entregar
 
@@ -96,7 +96,7 @@ Revisa que el PDF incluya todos los pasos, que sus imágenes se lean y que cada 
 
 ## Vídeo explicativo · Instantáneas de VirtualBox
 
-V4: compara retorno de estado y copia independiente. En P7 tomamos la instantánea apagada.
+V4: compara retorno de estado y copia independiente. En P5 tomamos la instantánea apagada.
 
 <div class="video-frame">
 <iframe src="https://mediateca.educa.madrid.org/video/zgauof85771q51t9/fs" title="Instantáneas de VirtualBox" loading="lazy" allowfullscreen></iframe>

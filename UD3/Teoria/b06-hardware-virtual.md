@@ -43,11 +43,11 @@ La unidad óptica también tiene dos vistas. Desde el administrador conectas un 
 
 ## Actividades de este apartado
 
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
 
 ## Prácticas relacionadas
 
-- [P8 · Clonar, exportar e importar](practicas/p8-transferencia.md)
+- [P6 · Clonar, exportar e importar](practicas/p6-transferencia.md)
 
 <div class="video-card" markdown>
 

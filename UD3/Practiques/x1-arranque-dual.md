@@ -17,7 +17,7 @@ Duración adicional: 180 minutos. Se usa una VM nueva de 120 GiB compatible con 
 
 Crea la VM desde **Nueva**, con los requisitos y configuración de P3. En la pantalla del instalador que permite elegir el destino, selecciona el espacio del VDI de 120 GiB y utiliza **Nuevo / Crear partición**, si esa revisión lo ofrece, para reservar unos 70 GiB para Windows y sus particiones auxiliares. Deja al menos 45 GiB sin asignar. Revisa los tamaños que realmente muestra el instalador antes de aceptar; la suma debe dejar espacio para ESP, MSR y recuperación.
 
-Termina Windows y comprueba arranque y archivo testigo. Si se ha activado cifrado de dispositivo, confirma el procedimiento y la clave de recuperación de aula antes de continuar. Apaga y crea un clon completo o copia recuperable mediante el procedimiento de P8.
+Termina Windows y comprueba arranque y archivo testigo. Si se ha activado cifrado de dispositivo, confirma el procedimiento y la clave de recuperación de aula antes de continuar. Apaga y crea un clon completo o copia recuperable mediante el procedimiento de P6.
 
 ## 2. Instala Ubuntu en el espacio sin asignar
 

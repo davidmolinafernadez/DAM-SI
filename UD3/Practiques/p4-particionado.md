@@ -1,7 +1,7 @@
-# P4. Particionar y montar un disco de datos
+# UD5/P1. Particionar y montar un disco de datos
 
 <div class="lesson-banner" markdown>
-<div class="lesson-number">P4</div>
+<div class="lesson-number">P1</div>
 <div markdown>
 **Práctica guiada de laboratorio**
 
@@ -51,9 +51,9 @@ Entrega mapas antes/después, identificación del destino, partición ext4, espa
 
 La ampliación de montaje al inicio usa el UUID real, copia de `/etc/fstab`, punto `/mnt/ud3-datos` y validación con `findmnt --verify` y `sudo mount -a` antes de reiniciar. El docente revisará la entrada; no se copia el UUID de otra persona. No hace falta modificar fstab para superar el procedimiento básico.
 
-## Entrega independiente de la práctica
+## Entrega de UD5/P1
 
-Guarda `P4_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Solo A1 y A10 tienen archivo propio. El resto de preguntas se trabaja en clase o dentro de la práctica, sin otra entrega.
+Guarda `P1_Apellidos_Nombre.pdf`. Incluye preparación, decisiones, comprobaciones e incidencia, con las evidencias que pide esta guía. Solo A1 y A10 tienen archivo propio. El resto de preguntas se trabaja en clase o dentro de la práctica, sin otra entrega.
 
 <div class="video-card" markdown>
 

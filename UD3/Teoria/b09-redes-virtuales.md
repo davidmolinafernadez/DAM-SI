@@ -1,6 +1,6 @@
 # 4.6 · Redes virtuales con una finalidad
 
-> **Bloque trasladado a UD4 Redes.** Esta página y su vídeo se conservan como consulta y compatibilidad. El contenido desarrollado se incluye en el cuaderno de teoría de UD4. El [apartado vigente 4.6](../ud4/06-preparar-redes-virtuales.md), la actividad 4.7 y P6 se realizan después de instalación y virtualización; sus horas se cuentan en UD4.
+> **Bloque trasladado a UD4 Redes.** Esta página y su vídeo se conservan como consulta y compatibilidad. El contenido desarrollado se incluye en el cuaderno de teoría de UD4. El [apartado vigente 4.6](../ud4/06-preparar-redes-virtuales.md), la actividad 4.7 y UD4/P6 se realizan después de instalación y virtualización; sus horas se cuentan en UD4.
 
 <div class="lesson-banner" markdown>
 <div class="lesson-number">4.6</div>
@@ -60,13 +60,13 @@ Comparar estos resultados permite acotar un fallo. Si no responde ni dentro del 
 
 ## Actividades de este apartado
 
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
 
 <div class="video-card" markdown>
 
 ## Vídeo explicativo · Red NAT y reenvío
 
-V5: el ejemplo utiliza SSH. Traduce su recorrido al HTTP de P5 con tus direcciones y puertos.
+V5: el ejemplo utiliza SSH. Traduce su recorrido al HTTP de UD4/P6 con tus direcciones y puertos.
 
 <div class="video-frame">
 <iframe src="https://mediateca.educa.madrid.org/video/amomshvzq7iz1llo/fs" title="Red NAT y reenvío" loading="lazy" allowfullscreen></iframe>

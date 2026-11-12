@@ -43,7 +43,7 @@ No copies literalmente la «x»: representa la revisión descargada. El hash cor
 
 ## Integridad y autenticidad
 
-Si alguien sustituyera tanto una imagen como un fichero de hashes, podrían coincidir entre sí. Una firma digital permite comprobar quién firmó el fichero de hashes, siempre que se verifique también la identidad de la clave. Ubuntu publica SHA256SUMS y una firma asociada. La ampliación de P0 propone seguir el procedimiento oficial de verificación de firma, sin importar claves de procedencia desconocida. Referencia F1.
+Si alguien sustituyera tanto una imagen como un fichero de hashes, podrían coincidir entre sí. Una firma digital permite comprobar quién firmó el fichero de hashes, siempre que se verifique también la identidad de la clave. Ubuntu publica SHA256SUMS y una firma asociada. La ampliación de P1 propone seguir el procedimiento oficial de verificación de firma, sin importar claves de procedencia desconocida. Referencia F1.
 
 ## Una descarga se identifica por algo más que su nombre comercial
 
@@ -53,8 +53,8 @@ Una firma comprueba la relación entre un documento y una clave; la identidad de
 
 ## Actividades de este apartado
 
-Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P0–P1 juntas, P2, P3, P6, P7 y P8. Total: ocho entregas en UD3.
+Solo A1 y A10 tienen entrega propia. Las demás actividades son trabajo de aula o refuerzo, sin archivo ni calificación independiente. Las prácticas se entregan según el itinerario: P1, P2, P3, P4, P5 y P6. Total: ocho entregas en UD3.
 
 ## Prácticas relacionadas
 
-- [P0–P1 · Preparar el laboratorio](practicas/p0-p1-laboratorio.md)
+- [P1 · Preparar el laboratorio](practicas/p1-laboratorio.md)
